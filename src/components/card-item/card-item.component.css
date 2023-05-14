@@ -1,0 +1,22 @@
+.color-grey {
+ background-color: #F4F6FA;
+}
+
+.color-blue {
+    color: #0033FF;
+}
+
+.btn-card {
+    background-color: #0033FF;
+    color: white;
+    border-radius: 1.5rem;
+}
+
+.badge-card {
+    background-color: #69EC4B;
+    color: #1B8037;
+}
+
+.img-card {
+    width: 100px;
+}
