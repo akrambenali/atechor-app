@@ -1,0 +1,7 @@
+.color-default {
+    background-color: var(--primaryColor);
+}
+
+.progress {
+    --bs-progress-bg:  #4A505B;
+}

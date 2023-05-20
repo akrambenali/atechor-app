@@ -1,22 +1,26 @@
 .color-grey {
- background-color: #F4F6FA;
+ background-color: var(--card);
 }
 
 .color-blue {
-    color: #0033FF;
+    color: var(--secondaryColor);
 }
 
 .btn-card {
-    background-color: #0033FF;
+    background-color: var(--secondaryColor);
     color: white;
     border-radius: 1.5rem;
 }
 
 .badge-card {
-    background-color: #69EC4B;
-    color: #1B8037;
+    background-color:var(--primaryColor);
+    color: var(--textScoreColor);
 }
 
 .img-card {
     width: 100px;
+}
+
+.no-border {
+    border: none;
 }

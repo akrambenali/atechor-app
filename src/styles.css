@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --primaryColor:  #69EC4B;
+    --secondaryColor: #0033FF;
+    --textScoreColor: #0E6E34;
+    --textOnPrimary: #242529;
+    --textOnSecondary: #000;
+    --background: #fff;
+    --card:#F4F6FA;
+    --score:#CED3E1;
+  }
