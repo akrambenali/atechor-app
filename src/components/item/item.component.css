@@ -1,0 +1,14 @@
+.img {
+    width: 55px;
+}
+
+.card-secteur {
+    width: 389px;
+    height: 144px;
+    border-radius: 35px;
+    background-color: var(--card);
+}
+
+.no-border {
+    border: none;
+}

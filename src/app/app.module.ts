@@ -9,6 +9,9 @@ import { CardItemComponent } from 'src/components/card-item/card-item.component'
 import { HeaderComponent } from 'src/components/header/header.component';
 import { FooterComponent } from 'src/components/footer/footer.component';
 import { ProgressBarComponent } from 'src/components/shared/progress-bar/progress-bar.component';
+import { ResultPageComponent } from 'src/features/result-page/result-page.component';
+import { SecteurPageComponent } from 'src/features/secteur-page/secteur-page.component';
+import { ItemComponent } from 'src/components/item/item.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { ProgressBarComponent } from 'src/components/shared/progress-bar/progres
     CardItemComponent,
     HeaderComponent,
     FooterComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    ResultPageComponent,
+    SecteurPageComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,
