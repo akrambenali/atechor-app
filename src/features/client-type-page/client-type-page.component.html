@@ -1,1 +1,17 @@
-<p>client-type-page works!</p>
+<div class="container">
+  <div class="row mb-4 mt-4">
+    <app-progress-bar></app-progress-bar>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="pb-2 text-center">Qui sont vos clients ?</h3>
+
+  <div
+    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4 py-5"
+  >
+    <app-item-button [title]="'Des professionnels'"></app-item-button>
+    <app-item-button [title]="'Des particuliers'"></app-item-button>
+    <app-item-button [title]="'Les deux'"></app-item-button>
+  </div>
+</div>

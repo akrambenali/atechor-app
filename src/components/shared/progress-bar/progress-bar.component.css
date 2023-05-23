@@ -5,5 +5,5 @@
 .progress {
     --bs-progress-bg:  #4A505B;
     height: 10px;
-    width: 918px;
+    /* width: 918px; */
 }

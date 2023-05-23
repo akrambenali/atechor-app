@@ -12,6 +12,8 @@ import { ProgressBarComponent } from 'src/components/shared/progress-bar/progres
 import { ResultPageComponent } from 'src/features/result-page/result-page.component';
 import { SecteurPageComponent } from 'src/features/secteur-page/secteur-page.component';
 import { ItemComponent } from 'src/components/item/item.component';
+import { ClientTypePageComponent } from 'src/features/client-type-page/client-type-page.component';
+import { ItemButtonComponent } from 'src/components/shared/item-button/item-button.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ItemComponent } from 'src/components/item/item.component';
     ProgressBarComponent,
     ResultPageComponent,
     SecteurPageComponent,
-    ItemComponent
+    ItemComponent,
+    ClientTypePageComponent,
+    ItemButtonComponent
   ],
   imports: [
     BrowserModule,

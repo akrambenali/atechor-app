@@ -1,0 +1,10 @@
+.card-secteur {
+    width: 274px;
+    height: 73px;
+    border-radius: 20px;
+    background-color: var(--card);
+}
+
+.no-border {
+    border: none;
+}
