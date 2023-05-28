@@ -4,6 +4,6 @@
 
 .progress {
     --bs-progress-bg:  #4A505B;
-    height: 10px;
-    /* width: 918px; */
+    height: 0.625rem;
+    width: 57.375rem; 
 }
