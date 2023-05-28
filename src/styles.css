@@ -5,7 +5,18 @@
     --textScoreColor: #0E6E34;
     --textOnPrimary: #242529;
     --textOnSecondary: #000;
+    --textOnScore: #0D1B2A;
     --background: #fff;
     --card:#F4F6FA;
     --score:#CED3E1;
   }
+
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../src/assets/fonts/Poppins-SemiBold.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../src/assets/fonts/Roboto-Medium.ttf');
+  }  

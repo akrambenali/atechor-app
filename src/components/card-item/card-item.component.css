@@ -6,6 +6,12 @@
     color: var(--secondaryColor);
 }
 
+.badge-score {
+    background-color: var(--score);
+    color: var(--textOnScore);
+   
+}
+
 .btn-card {
     background-color: var(--secondaryColor);
     color: white;
@@ -24,3 +30,28 @@
 .no-border {
     border: none;
 }
+
+.list-group-item {
+    background-color: transparent;
+}
+
+.card-title {
+    font-family: Poppins;
+    font-size: 1.563rem;
+}
+
+.card-score {
+    font-family: Roboto;
+    font-size: 1.563rem;   
+}
+
+.item {
+    font-family: Roboto;
+    font-size: 1.125rem;
+      
+}
+
+.pos {
+    margin-right: 20px;
+}
+
