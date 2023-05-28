@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-item-button-steps',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item-button-steps.component.css']
 })
 export class ItemButtonStepsComponent implements OnInit {
-
+  @Input()
+  next!: string ;
   constructor() { }
 
   ngOnInit(): void {
