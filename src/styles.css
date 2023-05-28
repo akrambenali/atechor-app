@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 :root {
     --primaryColor:  #69EC4B;
     --secondaryColor: #0033FF;
+    --borderButton:#4A505B;
     --textScoreColor: #0E6E34;
     --textOnPrimary: #242529;
     --textOnSecondary: #000;

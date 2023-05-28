@@ -1,0 +1,32 @@
+.btn-next{
+    background-color: var(--primaryColor);
+    color: var(--textOnPrimary);
+    font-family: Poppins;
+    font-size: 1.313rem;
+    width: 214px;
+    height: 69px;
+    border-radius: 17px;
+    border: none;
+}
+
+.btn-next:hover {
+    background-color: #fff;
+    color: var(--textOnPrimary);
+    border: 1px var(--textOnPrimary) solid;
+}
+
+.btn-back{
+    color: var(--borderButton);
+    font-family: Poppins;
+    font-size: 1.125rem;
+    width: 214px;
+    height: 69px;
+    border-radius: 17px;
+    border: 1px var(--borderButton) solid;
+}
+
+.btn-back:hover {
+    background-color: var(--borderButton);
+    color: #fff;
+   
+}

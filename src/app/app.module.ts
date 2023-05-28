@@ -14,6 +14,7 @@ import { SecteurPageComponent } from 'src/features/secteur-page/secteur-page.com
 import { ItemComponent } from 'src/components/item/item.component';
 import { ClientTypePageComponent } from 'src/features/client-type-page/client-type-page.component';
 import { ItemButtonComponent } from 'src/components/shared/item-button/item-button.component';
+import { ItemButtonStepsComponent } from 'src/components/shared/item-button-steps/item-button-steps.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ItemButtonComponent } from 'src/components/shared/item-button/item-butt
     SecteurPageComponent,
     ItemComponent,
     ClientTypePageComponent,
-    ItemButtonComponent
+    ItemButtonComponent,
+    ItemButtonStepsComponent
   ],
   imports: [
     BrowserModule,
