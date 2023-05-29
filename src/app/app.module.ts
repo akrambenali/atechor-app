@@ -20,6 +20,7 @@ import { UsersPageComponent } from 'src/features/users-page/users-page.component
 import { ClientDeploymentPageComponent } from 'src/features/client-deployment-page/client-deployment-page.component';
 import { ClientFonctionsPageComponent } from 'src/features/client-fonctions-page/client-fonctions-page.component';
 import { ClientNumbersPageComponent } from 'src/features/client-numbers-page/client-numbers-page.component';
+import { ClientHostingPageComponent } from 'src/features/client-hosting-page/client-hosting-page.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ClientNumbersPageComponent } from 'src/features/client-numbers-page/cli
     UsersPageComponent,
     ClientDeploymentPageComponent,
     ClientFonctionsPageComponent,
-    ClientNumbersPageComponent
+    ClientNumbersPageComponent,
+    ClientHostingPageComponent
   ],
   imports: [
     BrowserModule,

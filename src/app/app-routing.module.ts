@@ -7,6 +7,7 @@ import { SecteurPageComponent } from 'src/features/secteur-page/secteur-page.com
 import { ClientDeploymentPageComponent } from 'src/features/client-deployment-page/client-deployment-page.component';
 import { ClientFonctionsPageComponent } from 'src/features/client-fonctions-page/client-fonctions-page.component';
 import { ClientNumbersPageComponent } from 'src/features/client-numbers-page/client-numbers-page.component';
+import { ClientHostingPageComponent } from 'src/features/client-hosting-page/client-hosting-page.component';
 
 const routes: Routes = [
 
@@ -17,6 +18,7 @@ const routes: Routes = [
 { path: 'deploiment-client', component: ClientDeploymentPageComponent},
 { path: 'fonctions-client', component: ClientFonctionsPageComponent},
 { path: 'numbers-client', component: ClientNumbersPageComponent},
+{ path: 'hosting-client', component: ClientHostingPageComponent},
 { path: 'home', component: SecteurPageComponent},
 { path: '**', component: SecteurPageComponent}
 ];

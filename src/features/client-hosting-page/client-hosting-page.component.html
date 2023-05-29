@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row pos">
+    <app-progress-bar></app-progress-bar>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="pos-title text-center">Hosting</h3>
+
+  <div
+    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4 pos-card"
+  >
+    <secteur-item
+      [title]="'Cloud'"
+      [image]="'assets/icons/cloud.png'"
+    ></secteur-item>
+    <secteur-item
+      [title]="'On-premise'"
+      [image]="'assets/icons/onpremise.png'"
+    ></secteur-item>
+    <secteur-item
+      [title]="'SaaS'"
+      [image]="'assets/icons/saas.png'"
+    ></secteur-item>
+    <secteur-item
+      [title]="'Hybrid'"
+      [image]="'assets/icons/hybride.png'"
+    ></secteur-item>
+    <secteur-item [title]="'No matter'"></secteur-item>
+  </div>
+</div>
+
+<app-item-button-steps [next]="'/type-client'"></app-item-button-steps>
