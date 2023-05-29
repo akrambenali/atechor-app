@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row pos">
+    <app-progress-bar></app-progress-bar>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="pos-title text-center">
+    À quelle échelle sera déployée la solution ?
+  </h3>
+
+  <div class="row justify-content-center pos-card">
+    <div class="col-4">
+      <app-item-button [title]="'Nationale'"></app-item-button>
+    </div>
+    <div class="col-4">
+      <app-item-button [title]="'Internationale'"></app-item-button>
+    </div>
+  </div>
+</div>
+
+<app-item-button-steps [next]="'/fonctions-client'"></app-item-button-steps>

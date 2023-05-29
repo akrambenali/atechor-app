@@ -17,6 +17,9 @@ import { ItemButtonComponent } from 'src/components/shared/item-button/item-butt
 import { ItemButtonStepsComponent } from 'src/components/shared/item-button-steps/item-button-steps.component';
 import { ClientRevenuesPageComponent } from 'src/features/client-revenues-page/client-revenues-page.component';
 import { UsersPageComponent } from 'src/features/users-page/users-page.component';
+import { ClientDeploymentPageComponent } from 'src/features/client-deployment-page/client-deployment-page.component';
+import { ClientFonctionsPageComponent } from 'src/features/client-fonctions-page/client-fonctions-page.component';
+import { ClientNumbersPageComponent } from 'src/features/client-numbers-page/client-numbers-page.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { UsersPageComponent } from 'src/features/users-page/users-page.component
     ItemButtonStepsComponent,
     ClientRevenuesPageComponent,
     UsersPageComponent,
+    ClientDeploymentPageComponent,
+    ClientFonctionsPageComponent,
+    ClientNumbersPageComponent
   ],
   imports: [
     BrowserModule,

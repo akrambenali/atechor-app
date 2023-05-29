@@ -12,3 +12,13 @@
 .no-border {
     border: none;
 }
+
+.card-title {
+    font-family: Roboto;
+    font-size: 1.125rem;   
+}
+
+.pos-title {
+    padding-top: 23px;
+}
+

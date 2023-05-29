@@ -22,3 +22,8 @@
     font-family: 'Roboto';
     src: url('../src/assets/fonts/Roboto-Medium.ttf');
   }  
+
+  h3 {
+    font-family: Poppins;
+    font-size: 1.563rem; 
+  }
