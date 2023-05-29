@@ -21,6 +21,8 @@ import { ClientDeploymentPageComponent } from 'src/features/client-deployment-pa
 import { ClientFonctionsPageComponent } from 'src/features/client-fonctions-page/client-fonctions-page.component';
 import { ClientNumbersPageComponent } from 'src/features/client-numbers-page/client-numbers-page.component';
 import { ClientHostingPageComponent } from 'src/features/client-hosting-page/client-hosting-page.component';
+import { ClientDevPageComponent } from 'src/features/client-dev-page/client-dev-page.component';
+import { ClientConnexionPageComponent } from 'src/features/client-connexion-page/client-connexion-page.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { ClientHostingPageComponent } from 'src/features/client-hosting-page/cli
     ClientDeploymentPageComponent,
     ClientFonctionsPageComponent,
     ClientNumbersPageComponent,
-    ClientHostingPageComponent
+    ClientHostingPageComponent,
+    ClientDevPageComponent,
+    ClientConnexionPageComponent
   ],
   imports: [
     BrowserModule,
