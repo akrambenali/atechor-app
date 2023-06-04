@@ -10,6 +10,8 @@ import { ClientNumbersPageComponent } from 'src/features/client-numbers-page/cli
 import { ClientHostingPageComponent } from 'src/features/client-hosting-page/client-hosting-page.component';
 import { ClientDevPageComponent } from 'src/features/client-dev-page/client-dev-page.component';
 import { ClientConnexionPageComponent } from 'src/features/client-connexion-page/client-connexion-page.component';
+import { ResultPageComponent } from 'src/features/result-page/result-page.component';
+import { ClientDeadlinePageComponent } from 'src/features/client-deadline-page/client-deadline-page.component';
 
 const routes: Routes = [
 
@@ -23,6 +25,11 @@ const routes: Routes = [
 { path: 'hosting-client', component: ClientHostingPageComponent},
 { path: 'dev-client', component: ClientDevPageComponent},
 { path: 'connexion-client', component: ClientConnexionPageComponent},
+{ path: 'resultat-client', component: ResultPageComponent},
+{ path: 'deadline-client', component: ClientDeadlinePageComponent},
+
+
+
 
 { path: 'home', component: SecteurPageComponent},
 { path: '**', component: SecteurPageComponent}

@@ -7,3 +7,11 @@
     height: 0.625rem;
     width: 57.375rem; 
 }
+
+@media only screen and (max-width : 768px) {
+    /* Styles pour cette Media Queries */
+    .progress {
+       
+        width:22.8rem; 
+    }
+    }

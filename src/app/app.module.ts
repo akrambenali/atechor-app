@@ -23,6 +23,7 @@ import { ClientNumbersPageComponent } from 'src/features/client-numbers-page/cli
 import { ClientHostingPageComponent } from 'src/features/client-hosting-page/client-hosting-page.component';
 import { ClientDevPageComponent } from 'src/features/client-dev-page/client-dev-page.component';
 import { ClientConnexionPageComponent } from 'src/features/client-connexion-page/client-connexion-page.component';
+import { ClientDeadlinePageComponent } from 'src/features/client-deadline-page/client-deadline-page.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ClientConnexionPageComponent } from 'src/features/client-connexion-page
     ClientNumbersPageComponent,
     ClientHostingPageComponent,
     ClientDevPageComponent,
-    ClientConnexionPageComponent
+    ClientConnexionPageComponent,
+    ClientDeadlinePageComponent
   ],
   imports: [
     BrowserModule,
