@@ -1,1 +1,34 @@
-<p>client-deadline-page works!</p>
+<div class="container">
+  <div class="row pos">
+    <app-progress-bar></app-progress-bar>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="pos-title text-center">
+    Quand souhaitez-vous implémenter cette solution ?
+  </h3>
+
+  <div class="row justify-content-center pos-item">
+    <div class="col-4">
+      <app-item-button [title]="'< 1 mois'"></app-item-button>
+    </div>
+    <div class="col-4">
+      <app-item-button [title]="'< 6 mois'"></app-item-button>
+    </div>
+    <div class="col-4">
+      <app-item-button [title]="'< 1 an'"></app-item-button>
+    </div>
+  </div>
+
+  <div class="row justify-content-start pos-card">
+    <div class="col-4">
+      <app-item-button [title]="'> 1 an'"></app-item-button>
+    </div>
+    <div class="col-4">
+      <app-item-button [title]="'Peu importe'"></app-item-button>
+    </div>
+  </div>
+</div>
+
+<app-item-button-steps [next]="'/reason-client'"></app-item-button-steps>
