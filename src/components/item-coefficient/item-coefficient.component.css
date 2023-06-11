@@ -1,0 +1,51 @@
+icon-shape {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.icon-sm {
+    width: 1.563rem;
+  
+    
+}
+
+.img-coefficient {
+    width: 35px;
+    height: 35px;
+}
+
+.text-coefficient {
+    font-family: Roboto;
+    font-size: 1.125rem;   
+}
+
+.value-coefficient {
+    font-family: Roboto;
+    font-size: 1.563rem;   
+}
+
+.card-coefficient {
+    width: 385px;
+    height: 75px;
+    background-color: var(--card);
+    border: 20px;
+    align-items: center;
+
+}
+
+.color-input {
+    background-color: transparent;
+}
+
+.img-pos {
+    margin-left: 28px;
+    margin-right: 24px;
+    
+}
+
+.icon-pos {
+    margin-right: 32px;
+}

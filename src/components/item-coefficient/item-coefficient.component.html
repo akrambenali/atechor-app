@@ -1,0 +1,42 @@
+<!-- <div class="col d-flex align-items-start">
+  <div class="card text-center card-secteur no-border">
+    <div class="card-body mt-2">
+      <img src="{{ image }}" alt="" class="img" />
+      <h5 class="card-title pos-title">{{ title }}</h5>
+    </div>
+  </div>
+</div>
+ -->
+
+<div class="d-flex justify-content-center card-coefficient">
+  <img
+    src="assets/icons/application.png"
+    alt=""
+    class="img img-coefficient img-pos"
+  />
+  <div>
+    <p class="text-dark text-coefficient m-0">Logiciel</p>
+  </div>
+  <div class="input-group w-auto justify-content-end align-items-center">
+    <input
+      type="button"
+      value="-"
+      class="button-minus border rounded icon-shape icon-sm mx-1"
+      data-field="quantity"
+    />
+    <input
+      type="number"
+      step="1"
+      max="10"
+      value="1"
+      name="quantity"
+      class="quantity-field border-0 text-center w-25 value-coefficient color-input"
+    />
+    <input
+      type="button"
+      value="+"
+      class="button-plus border rounded icon-shape icon-sm icon-pos"
+      data-field="quantity"
+    />
+  </div>
+</div>

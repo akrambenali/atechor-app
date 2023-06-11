@@ -13,6 +13,7 @@ import { ClientConnexionPageComponent } from 'src/features/client-connexion-page
 import { ResultPageComponent } from 'src/features/result-page/result-page.component';
 import { ClientDeadlinePageComponent } from 'src/features/client-deadline-page/client-deadline-page.component';
 import { ClientReasonPageComponent } from 'src/features/client-reason-page/client-reason-page.component';
+import { ClientCoefficientsPageComponent } from 'src/features/client-coefficients-page/client-coefficients-page.component';
 
 const routes: Routes = [
 
@@ -29,7 +30,8 @@ const routes: Routes = [
 { path: 'resultat-client', component: ResultPageComponent},
 { path: 'deadline-client', component: ClientDeadlinePageComponent},
 { path: 'reason-client', component: ClientReasonPageComponent},
-
+{ path: 'coefficients-client', component: ClientCoefficientsPageComponent},
+ 
 
 
 
