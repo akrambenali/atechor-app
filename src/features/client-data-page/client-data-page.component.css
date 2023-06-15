@@ -1,0 +1,44 @@
+
+.pos {
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+
+.pos-card {
+    padding-bottom: 78px;
+}
+
+.form-control {
+    width: 18.75rem;
+    height: 4.375rem;
+    border-radius: 1.188rem;
+    color: var(--borderButton);
+    border: 1px solid var(--borderButton);
+    font-family: Roboto ;
+    font-size: 1.125rem; 
+}
+
+.form-control-large {
+    width: 41.25rem;
+}
+
+.form-input-size {
+    width: 22.5rem
+}
+
+.form-top {
+    padding-top: 64px;
+}
+
+.form-input-top {
+    padding-top: 35px;
+}
+
+.form-input-bottom {
+    padding-bottom: 35px;
+}
+
+
+
+
+

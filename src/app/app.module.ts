@@ -27,6 +27,7 @@ import { ClientDeadlinePageComponent } from 'src/features/client-deadline-page/c
 import { ClientReasonPageComponent } from 'src/features/client-reason-page/client-reason-page.component';
 import { ClientCoefficientsPageComponent } from 'src/features/client-coefficients-page/client-coefficients-page.component';
 import { ItemCoefficientComponent } from 'src/components/item-coefficient/item-coefficient.component';
+import { ClientDataPageComponent } from 'src/features/client-data-page/client-data-page.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { ItemCoefficientComponent } from 'src/components/item-coefficient/item-c
     ClientReasonPageComponent,
     ClientCoefficientsPageComponent,
     ItemCoefficientComponent,
+    ClientDataPageComponent,
   ],
   imports: [
     BrowserModule,
