@@ -15,7 +15,23 @@
     color: var(--borderButton);
     border: 1px solid var(--borderButton);
     font-family: Roboto ;
-    font-size: 1.125rem; 
+    font-size: 1.125rem;
+}
+
+.form-button {
+  width: 18.75rem;
+  height: 4.375rem;
+  border-radius: 1.188rem;
+  color: var(--borderButton);
+  border: 1px solid var(--card);
+  font-family: Roboto ;
+  font-size: 1rem;
+  background-color: var(--card);
+  text-align: center;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding: 2px;
 }
 
 .form-control-large {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-item-coefficient',
@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item-coefficient.component.css']
 })
 export class ItemCoefficientComponent implements OnInit {
-
+  @Input()
+  title!: string;
+  @Input()
+  icon!: string;
   constructor() { }
 
   ngOnInit(): void {

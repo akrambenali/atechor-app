@@ -11,3 +11,9 @@
 .pos-card {
     padding-bottom: 78px;
 }
+
+app-item-coefficient {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -11,5 +11,12 @@
 
 .card-title {
     font-family: Roboto;
-    font-size: 1.125rem;   
+    font-size: 1.125rem;
+}
+
+.btn-pos {
+  width: 415px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }

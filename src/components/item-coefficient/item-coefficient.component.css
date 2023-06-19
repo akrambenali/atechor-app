@@ -8,8 +8,8 @@ icon-shape {
 
 .icon-sm {
     width: 1.563rem;
-  
-    
+
+
 }
 
 .img-coefficient {
@@ -19,20 +19,20 @@ icon-shape {
 
 .text-coefficient {
     font-family: Roboto;
-    font-size: 1.125rem;   
+    font-size: 1.125rem;
 }
 
 .value-coefficient {
     font-family: Roboto;
-    font-size: 1.563rem;   
+    font-size: 1.563rem;
 }
 
 .card-coefficient {
     width: 385px;
     height: 75px;
     background-color: var(--card);
-    border: 20px;
     align-items: center;
+    border-radius: 20px;
 
 }
 
@@ -43,7 +43,7 @@ icon-shape {
 .img-pos {
     margin-left: 28px;
     margin-right: 24px;
-    
+
 }
 
 .icon-pos {

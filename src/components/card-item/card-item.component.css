@@ -9,7 +9,7 @@
 .badge-score {
     background-color: var(--score);
     color: var(--textOnScore);
-   
+
 }
 
 .btn-card {
@@ -42,16 +42,29 @@
 
 .card-score {
     font-family: Roboto;
-    font-size: 1.563rem;   
+    font-size: 1.563rem;
 }
 
 .item {
     font-family: Roboto;
     font-size: 1.125rem;
-      
+
 }
 
 .pos {
     margin-right: 20px;
+}
+
+.pos-pb {
+  padding-bottom: 35px !important;
+}
+
+.pos-pt {
+  padding-top: 35px !important;
+}
+
+.pos-score-item {
+  padding-left: 32px;
+  padding-bottom: 25px;
 }
 
