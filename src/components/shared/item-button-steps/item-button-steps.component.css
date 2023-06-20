@@ -51,3 +51,31 @@
 .pos {
     padding-bottom: 75px;
 }
+
+.suivant {
+    background-image : url(../../../assets/icons/suivant.png);
+    background-size: cover;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    vertical-align: sub;
+
+}
+
+.retour {
+    background-image : url(../../../assets/icons/retour.png);
+    background-size: cover;
+    display: inline-block;
+    height: 22px;
+    width: 22px;
+    vertical-align: sub;
+}
+
+.reset {
+    background-image : url(../../../assets/icons/recommencer.png);
+    background-size: cover;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    vertical-align: sub;
+}

@@ -28,6 +28,7 @@ import { ClientReasonPageComponent } from 'src/features/client-reason-page/clien
 import { ClientCoefficientsPageComponent } from 'src/features/client-coefficients-page/client-coefficients-page.component';
 import { ItemCoefficientComponent } from 'src/components/item-coefficient/item-coefficient.component';
 import { ClientDataPageComponent } from 'src/features/client-data-page/client-data-page.component';
+import { ButtonOptionsComponent } from 'src/components/shared/button-options/button-options.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { ClientDataPageComponent } from 'src/features/client-data-page/client-da
     ClientCoefficientsPageComponent,
     ItemCoefficientComponent,
     ClientDataPageComponent,
+    ButtonOptionsComponent,
   ],
   imports: [
     BrowserModule,

@@ -16,13 +16,14 @@
     border: 1px solid var(--borderButton);
     font-family: Roboto ;
     font-size: 1.125rem;
+    padding-left: 27px
 }
 
 .form-button {
   width: 18.75rem;
   height: 4.375rem;
   border-radius: 1.188rem;
-  color: var(--borderButton);
+  color: #000;
   border: 1px solid var(--card);
   font-family: Roboto ;
   font-size: 1rem;

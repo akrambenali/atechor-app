@@ -15,7 +15,10 @@
 .btn-card {
     background-color: var(--secondaryColor);
     color: white;
-    border-radius: 1.5rem;
+    border-radius: 15px;
+    font-family: Roboto;
+    font-size: 1.25rem ;
+    height: 60px;
 }
 
 .badge-card {
@@ -66,5 +69,27 @@
 .pos-score-item {
   padding-left: 32px;
   padding-bottom: 25px;
+}
+
+.card{
+    border-radius: 20px !important;
+}
+
+.card-size {
+    width: 25rem;
+}
+
+.badge-score {
+    width: 6.563rem;
+    height: 2.813rem;
+    font-family: Roboto;
+    font-size: 1.563rem ;
+}
+
+.badge-grey {
+    width: 4.375rem;
+    height: 1.875rem;
+    font-family: Roboto;
+    font-size:1.125rem ;
 }
 
