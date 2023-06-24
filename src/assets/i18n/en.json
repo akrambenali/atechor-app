@@ -1,0 +1,45 @@
+{
+    "SECTEUR": {
+        "TITLE":"Your business sector",
+        "SECTEUR_1":"Services",
+        "SECTEUR_2":"Manufacturing",
+        "SECTEUR_3":"Construction",
+        "SECTEUR_4":"Retail",
+        "SECTEUR_5":"Finance",
+        "SECTEUR_6":"Government, NGO",
+        "SECTEUR_7":"Energy - utilities",
+        "SECTEUR_8":"Transport - Logistics",
+        "SECTEUR_9":"Aerospace - defense"
+
+    },
+    "TYPE_CLIENT":  {
+        "TITLE":"Your type of business",
+        "ITEM_1":"B to B",
+        "ITEM_2":"B to C",
+        "ITEM_3":"Both"
+
+    },
+    "INCOME": {
+        "TITLE":"What is your company’s revenue?",
+        "ITEM_1":"Less than $2M",
+        "ITEM_2":"2 to $10M",
+        "ITEM_3":"10 to $50M",
+        "ITEM_4":"50 to $200M",
+        "ITEM_5":"200M to $1B",
+        "ITEM_6":"Over $1B"
+    },
+    "USERS_NUMBERS": {
+        "TITLE":"Number of employees",
+        "ITEM_1":"1 to 25",
+        "ITEM_2":"25 to 75",
+        "ITEM_3":"75 to 200",
+        "ITEM_4":"200 to 700",
+        "ITEM_5":"700 to 2000",
+        "ITEM_6":"Over 2000"
+    },
+    "FOOTER_BUTTONS": {
+        "BUTTON_1":"Back",
+        "BUTTON_2":"Start again",
+        "BUTTON_3":"Next"
+    }
+}

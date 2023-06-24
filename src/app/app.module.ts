@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { CardItemComponent } from 'src/components/card-item/card-item.component';
 import { HeaderComponent } from 'src/components/header/header.component';
@@ -29,6 +32,11 @@ import { ClientCoefficientsPageComponent } from 'src/features/client-coefficient
 import { ItemCoefficientComponent } from 'src/components/item-coefficient/item-coefficient.component';
 import { ClientDataPageComponent } from 'src/features/client-data-page/client-data-page.component';
 import { ButtonOptionsComponent } from 'src/components/shared/button-options/button-options.component';
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient);
+}
 
 @NgModule({
   declarations: [
@@ -61,7 +69,15 @@ import { ButtonOptionsComponent } from 'src/components/shared/button-options/but
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

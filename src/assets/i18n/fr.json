@@ -1,0 +1,28 @@
+{
+    "SECTEUR": {
+        "TITLE":"Votre secteur d’activité",
+        "SECTEUR_1":"Services",
+        "SECTEUR_2":"ManufProduction industrielleacturing",
+        "SECTEUR_3":"Construction",
+        "SECTEUR_4":"Distribution",
+        "SECTEUR_5":"Activités financières",
+        "SECTEUR_6":"Gouvernement - ONG",
+        "SECTEUR_7":"Énergie",
+        "SECTEUR_8":"Transport - Logistique",
+        "SECTEUR_9":"Aérospatial - Défense"
+
+    },
+    "TYPE_CLIENT":  {
+        "TITLE":"Your type of business"
+
+    },
+    "INCOME": {
+        "TITLE":"Your type of business"
+
+    },
+    "FOOTER_BUTTONS": {
+        "BUTTON_1":"Retour",
+        "BUTTON_2":"Recommencer",
+        "BUTTON_3":"Suivant"
+    }
+}
