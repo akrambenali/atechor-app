@@ -5,3 +5,51 @@
 .pos-hr {
     margin-top: 140px ;
 }
+
+.pos-resume{
+    padding-top: 120px;
+    padding-bottom: 40px;
+}
+
+.resume-style {
+    font-family: Roboto;
+    font-size: 1.375rem;
+    color: #494F5A;
+}
+
+.dark {
+    color: #000;
+}
+
+.resume-style  li {
+    padding-bottom: 25px;
+}
+
+.badge-score {
+    background-color: #D3E2F7;
+    color: #0033FF;
+
+}
+
+.badge-grey {
+    width: 4.375rem;
+    height: 1.875rem;
+    font-family: Roboto;
+    font-size:1.125rem ;
+}
+
+.item {
+    font-family: Roboto;
+    font-size: 1.125rem;
+
+}
+
+.pos {
+    margin-right: 20px;
+}
+
+.no-border {
+    border: none;
+}
+
+
