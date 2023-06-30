@@ -15,6 +15,7 @@ import { ClientDeadlinePageComponent } from 'src/features/client-deadline-page/c
 import { ClientReasonPageComponent } from 'src/features/client-reason-page/client-reason-page.component';
 import { ClientCoefficientsPageComponent } from 'src/features/client-coefficients-page/client-coefficients-page.component';
 import { ClientDataPageComponent } from 'src/features/client-data-page/client-data-page.component';
+import { ClientCabinetPageComponent } from 'src/features/client-cabinet-page/client-cabinet-page.component';
 
 const routes: Routes = [
 
@@ -33,6 +34,7 @@ const routes: Routes = [
 { path: 'reason-client', component: ClientReasonPageComponent},
 { path: 'coefficients-client', component: ClientCoefficientsPageComponent},
 { path: 'infos-client', component: ClientDataPageComponent},
+{ path: 'infos-cabinet', component: ClientCabinetPageComponent},
 
  
 

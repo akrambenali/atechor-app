@@ -37,9 +37,146 @@
         "ITEM_5":"700 to 2000",
         "ITEM_6":"Over 2000"
     },
+    "DEPLOYMENT": {
+        "TITLE":"The deployment of the solution will be:",
+        "ITEM_1":"National",
+        "ITEM_2":"International"  
+    },
+    "FONCTIONS": {
+        "TITLE":"Select the features you need",
+        "ITEM_1":"CRM",
+        "ITEM_2":"Finance - Accounting",
+        "ITEM_3":"HR",
+        "ITEM_4":"Procurement",
+        "ITEM_5":"Manufacturing",
+        "ITEM_6":"Project management",
+        "ITEM_7":"Supply Chain",
+        "ITEM_8":"Assets management",
+        "ITEM_9":"R&D"  
+    },
+    "HOSTING": {
+        "TITLE":"Hosting",
+        "ITEM_1":"Cloud",
+        "ITEM_2":"On-premise",
+        "ITEM_3":"SaaS",
+        "ITEM_4":"Hybrid",
+        "ITEM_5":"No matter"
+    },
+    "DEV": {
+        "TITLE":"Do you need to integrate specifics?",
+        "ITEM_1":"Few",
+        "ITEM_2":"Many",
+        "ITEM_3":"Not at all"
+    },
+    "CONNEXION": {
+        "TITLE":"Does the solution need to be connected to other software?",
+        "ITEM_1":"Yes",
+        "ITEM_2":"No"
+    },
+    "DEADLINES": {
+        "TITLE":"When do you plan to implement the solution?",
+        "ITEM_1":"< 1 month",
+        "ITEM_2":"< 6 month",
+        "ITEM_3":"< 1 year",
+        "ITEM_4":"> 1 year",
+        "ITEM_5":"No matter"
+    },
+    "RAISONS": {
+        "TITLE":"Why are you looking to an ERP?",
+        "ITEM_1":"Current ERP is not working",
+        "ITEM_2":"Lack of features",
+        "ITEM_3":"First ERP",
+        "ITEM_4":"Disappointment",
+        "ITEM_5":"Technology watch",
+        "ITEM_6":"Other reason"
+    },
+    "COEFFICIENTS": {
+        "TITLE":"Set your coefficients",
+        "SUBTITLE":"Define coefficients (from 1 to 3) according to what is important for you.",
+        "ITEM_1":"Software",
+        "ITEM_2":"Price",
+        "ITEM_3":"Provider",
+        "ITEM_4":"Compatibility",
+        "ITEM_5":"Positioning"
+    },
+    "FROM_1": {
+        "TITLE":"Tell us who you are!",
+        "ITEM_1":"FIRST NAME",
+        "ITEM_2":"LAST NAME",
+        "ITEM_3":"COMPANY",
+        "ITEM_4":"Are you a consultant? Click here",
+        "ITEM_5":"COUNTRY",
+        "ITEM_6":"ROLE",
+        "ITEM_7":"MAIL",
+        "ITEM_8":"I accept the terms and conditions.",
+        "ITEM_9":"Know more"  
+    },
+    "FROM_2": {
+        "TITLE":"Tell us who you are!",
+        "ITEM_1":"FIRST NAME",
+        "ITEM_2":"LAST NAME",
+        "ITEM_3":"CONSULTING FIRM",
+        "ITEM_4":"END-USER CUSTOMER",
+        "ITEM_5":"COUNTRY",
+        "ITEM_6":"ROLE",
+        "ITEM_7":"MAIL",
+        "ITEM_8":"I accept the terms and conditions.",
+        "ITEM_9":"Know more"  
+    },
+    "RESULTS": {
+        "TITLE":"The 6 most relevant solutions for you:",
+        "ITEM_1":"Software",
+        "ITEM_2":"Price",
+        "ITEM_3":"Provider",
+        "ITEM_4":"Compatibility",
+        "ITEM_5":"Positioning",
+        "ITEM_6":"Site web",
+        "ITEM_7":"Summary:",
+        "ITEM_8":"Coefficients :",
+        "ITEM_9":"Know more",
+        "ITEM_10":"Activity:",
+        "ITEM_11":"Type of clients:",
+        "ITEM_12":"Revenue:",
+        "ITEM_13":"Number of employees:",
+        "ITEM_14":"Deployment",
+        "ITEM_15":"Features",
+        "ITEM_16":"Number of users",
+        "ITEM_17":"Hosting",
+        "ITEM_18":"Specifics",
+        "ITEM_19":"Connectivity",
+        "ITEM_20":"Deadline",
+        "ITEM_21":"Context"
+
+    },
+    "RESULTS_BUTTONS": {
+        "ITEM_1": "Export in PDF",
+        "ITEM_2": "Start again",
+        "ITEM_3": "Evaluation method"
+    },
     "FOOTER_BUTTONS": {
         "BUTTON_1":"Back",
         "BUTTON_2":"Start again",
         "BUTTON_3":"Next"
+    },
+    "FOOTER_BUTTONS_FORMS": {
+        "BUTTON_1":"Back",
+        "BUTTON_2":"Start again",
+        "BUTTON_3":"Get recommendations"
+    },
+    "STEPS": {
+        "STEP_1":"Step 1/12",
+        "STEP_2":"Step 2/12",
+        "STEP_3":"Step 3/12",
+        "STEP_4":"Step 4/12",
+        "STEP_5":"Step 5/12",
+        "STEP_6":"Step 6/12",
+        "STEP_7":"Step 7/12",
+        "STEP_8":"Step 8/12",
+        "STEP_9":"Step 9/12",
+        "STEP_10":"Step 10/12",
+        "STEP_11":"Step 11/12",
+        "STEP_12":"Complete",
+        "STEP_13":"Step 12/12"
+
     }
 }
