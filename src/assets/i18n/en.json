@@ -37,6 +37,15 @@
         "ITEM_5":"700 to 2000",
         "ITEM_6":"Over 2000"
     },
+    "USERS": {
+        "TITLE":"How many users do you expect?",
+        "ITEM_1":"1 to 25",
+        "ITEM_2":"25 to 75",
+        "ITEM_3":"75 to 200",
+        "ITEM_4":"200 to 700",
+        "ITEM_5":"700 to 2000",
+        "ITEM_6":"Over 2000"
+    },
     "DEPLOYMENT": {
         "TITLE":"The deployment of the solution will be:",
         "ITEM_1":"National",
