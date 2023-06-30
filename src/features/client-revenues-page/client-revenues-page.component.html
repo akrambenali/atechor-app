@@ -5,29 +5,29 @@
 </div>
 <div class="container">
   <h3 class="pos-title text-center">
-    Quel est le chiffre d’affaires de votre entreprise ?
+    {{ "INCOME.TITLE" | translate }}
   </h3>
   <div class="row justify-content-center pos-item">
     <div class="col-4">
-      <app-item-button [title]="'Moins de 2 M €'"></app-item-button>
+      <app-item-button [title]="'INCOME.ITEM_1' | translate"></app-item-button>
     </div>
     <div class="col-4">
-      <app-item-button [title]="'2 à 10 M €'"></app-item-button>
+      <app-item-button [title]="'INCOME.ITEM_2' | translate"></app-item-button>
     </div>
     <div class="col-4">
-      <app-item-button [title]="'10 à 50 M €'"></app-item-button>
+      <app-item-button [title]="'INCOME.ITEM_3' | translate"></app-item-button>
     </div>
   </div>
 
   <div class="row justify-content-center pos-card">
     <div class="col-4">
-      <app-item-button [title]="'50 à 200 M €'"></app-item-button>
+      <app-item-button [title]="'INCOME.ITEM_4' | translate"></app-item-button>
     </div>
     <div class="col-4">
-      <app-item-button [title]="'200 M à 1 Mrd €'"></app-item-button>
+      <app-item-button [title]="'INCOME.ITEM_5' | translate"></app-item-button>
     </div>
     <div class="col-4">
-      <app-item-button [title]="'1 Mrd € et plus'"></app-item-button>
+      <app-item-button [title]="'INCOME.ITEM_6' | translate"></app-item-button>
     </div>
   </div>
 </div>
