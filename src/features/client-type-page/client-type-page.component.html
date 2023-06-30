@@ -5,14 +5,22 @@
 </div>
 
 <div class="container">
-  <h3 class="pos-title text-center">Qui sont vos clients ?</h3>
+  <h3 class="pos-title text-center">
+    {{ "TYPE_CLIENT.TITLE" | translate }}
+  </h3>
 
   <div
     class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4 pos-card"
   >
-    <app-item-button [title]="'Des professionnels'"></app-item-button>
-    <app-item-button [title]="'Des particuliers'"></app-item-button>
-    <app-item-button [title]="'Les deux'"></app-item-button>
+    <app-item-button
+      [title]="'TYPE_CLIENT.ITEM_1' | translate"
+    ></app-item-button>
+    <app-item-button
+      [title]="'TYPE_CLIENT.ITEM_1' | translate"
+    ></app-item-button>
+    <app-item-button
+      [title]="'TYPE_CLIENT.ITEM_1' | translate"
+    ></app-item-button>
   </div>
 </div>
 
