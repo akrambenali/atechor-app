@@ -6,15 +6,19 @@
 
 <div class="container">
   <h3 class="pos-title text-center">
-    La solution devra-t-elle être connectée à d’autres logiciels ?
+    {{ "CONNEXION.TITLE" | translate }}
   </h3>
 
   <div class="row justify-content-center pos-card">
     <div class="col-4">
-      <app-item-button [title]="'Oui'"></app-item-button>
+      <app-item-button
+        [title]="'CONNEXION.ITEM_1' | translate"
+      ></app-item-button>
     </div>
     <div class="col-4">
-      <app-item-button [title]="'Non'"></app-item-button>
+      <app-item-button
+        [title]="'CONNEXION.ITEM_2' | translate"
+      ></app-item-button>
     </div>
   </div>
 </div>
