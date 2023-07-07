@@ -23,6 +23,14 @@
     height: 69px;
     border-radius: 17px;
     border: 2px var(--borderButton) solid;
+} &
+.retour {
+    background-image : url(../../../assets/icons/retour.png);
+    background-size: cover;
+    display: inline-block;
+    height: 22px;
+    width: 22px;
+    vertical-align: sub;
 }
 
 .btn-reset{
@@ -41,7 +49,11 @@
    
 }
 
-.btn-reset:hover {
+.btn-back:hover .retour {
+    background-image : url(../../../assets/icons/retour_hover.png);
+}
+
+ .btn-reset:hover {
     background-color: var(--borderButton);
     color: #fff;
    
@@ -62,14 +74,9 @@
 
 }
 
-.retour {
-    background-image : url(../../../assets/icons/retour.png);
-    background-size: cover;
-    display: inline-block;
-    height: 22px;
-    width: 22px;
-    vertical-align: sub;
-}
+
+
+
 
 .reset {
     background-image : url(../../../assets/icons/recommencer.png);
@@ -79,3 +86,8 @@
     width: 20px;
     vertical-align: sub;
 }
+
+.btn-reset:hover .reset {
+    background-image : url(../../../assets/icons/recommencer_hover.png);
+}
+

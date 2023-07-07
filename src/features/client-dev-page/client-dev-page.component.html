@@ -6,18 +6,18 @@
 
 <div class="container">
   <h3 class="pos-title text-center">
-    Dans quelle mesure devrez-vous intégrer des développements spécifiques ?
+    {{ "DEV.TITLE" | translate }}
   </h3>
 
   <div class="row pos-card">
     <div class="col-4">
-      <app-item-button [title]="'Peu'"></app-item-button>
+      <app-item-button [title]="'DEV.ITEM_1' | translate"></app-item-button>
     </div>
     <div class="col-4">
-      <app-item-button [title]="'Beaucoup'"></app-item-button>
+      <app-item-button [title]="'DEV.ITEM_2' | translate"></app-item-button>
     </div>
     <div class="col-4">
-      <app-item-button [title]="'Pas du tout'"></app-item-button>
+      <app-item-button [title]="'DEV.ITEM_3' | translate"></app-item-button>
     </div>
   </div>
 </div>

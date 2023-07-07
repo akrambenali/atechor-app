@@ -11,8 +11,8 @@ export class AppComponent {
   title = 'atechor-app';
   constructor(public translate: TranslateService) {
     translate.addLangs(['en', 'fr']);
-    translate.setDefaultLang('en');
-    translate.use('en');
+    translate.setDefaultLang('fr');
+    translate.use('fr');
   }
 
  

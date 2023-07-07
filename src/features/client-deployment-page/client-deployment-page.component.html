@@ -6,15 +6,19 @@
 
 <div class="container">
   <h3 class="pos-title text-center">
-    À quelle échelle sera déployée la solution ?
+    {{ "DEPLOYMENT.TITLE" | translate }}
   </h3>
 
   <div class="row justify-content-center pos-card">
     <div class="col-4">
-      <app-item-button [title]="'Nationale'"></app-item-button>
+      <app-item-button
+        [title]="'DEPLOYMENT.ITEM_1' | translate"
+      ></app-item-button>
     </div>
     <div class="col-4">
-      <app-item-button [title]="'Internationale'"></app-item-button>
+      <app-item-button
+        [title]="'DEPLOYMENT.ITEM_2' | translate"
+      ></app-item-button>
     </div>
   </div>
 </div>
