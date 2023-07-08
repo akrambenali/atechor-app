@@ -5,7 +5,7 @@
 </div>
 
 <div class="container">
-  <h3 class="text-center">Dites-nous qui vous êtes !</h3>
+  <h3 class="text-center">{{ "FROM_2.TITLE" | translate }}</h3>
 </div>
 
 <div class="container">
@@ -19,7 +19,7 @@
                 type="text"
                 class="form-control"
                 id="firstName"
-                placeholder="PRÉNOM"
+                [placeholder]="'FROM_2.ITEM_1' | translate"
                 value=""
                 required
               />
@@ -31,7 +31,7 @@
                 type="text"
                 class="form-control"
                 id="lastName"
-                placeholder="NOM"
+                [placeholder]="'FROM_2.ITEM_2' | translate"
                 value=""
                 required
               />
@@ -43,7 +43,7 @@
                 type="text"
                 class="form-control"
                 id="firstName"
-                placeholder="CABINET"
+                [placeholder]="'FROM_2.ITEM_3' | translate"
                 value=""
                 required
               />
@@ -55,7 +55,7 @@
                 type="text"
                 class="form-control"
                 id="firstName"
-                placeholder="CLIENT FINAL"
+                [placeholder]="'FROM_2.ITEM_4' | translate"
                 value=""
                 required
               />
@@ -67,7 +67,7 @@
                 type="email"
                 class="form-control form-control-large"
                 id="email"
-                placeholder="PAYS"
+                [placeholder]="'FROM_2.ITEM_5' | translate"
               />
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
@@ -79,7 +79,7 @@
                 type="email"
                 class="form-control form-control-large"
                 id="email"
-                placeholder="FONCTION"
+                [placeholder]="'FROM_2.ITEM_6' | translate"
               />
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
@@ -91,7 +91,7 @@
                 type="text"
                 class="form-control form-control-large"
                 id="address"
-                placeholder="MAIL PROFESSIONNEL"
+                [placeholder]="'FROM_2.ITEM_7' | translate"
                 required
               />
               <div class="invalid-feedback">
@@ -103,8 +103,8 @@
           <div class="form-check form-input-top m-0">
             <input type="checkbox" class="form-check-input" id="same-address" />
             <label class="form-check-label" for="same-address"
-              >J’accepte d’être contacté dans le cadre de mon projet.
-              <a href="#">En savoir plus.</a>
+              >{{ "FROM_2.ITEM_8" | translate }}
+              <a href="#">{{ "FROM_2.ITEM_9" | translate }}</a>
             </label>
           </div>
         </form>

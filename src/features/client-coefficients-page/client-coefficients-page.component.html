@@ -5,30 +5,42 @@
 </div>
 
 <div class="container">
-  <h3 class="text-center">Définissez vos coefficients</h3>
+  <h3 class="text-center">{{ "COEFFICIENTS.TITLE" | translate }}</h3>
   <div class="text-center pos-sub-title">
-    <span
-      >Définissez des coefficients (de 1 à 3) en fonction de ce qui est
-      important pour vous.</span
-    >
+    <span> {{ "COEFFICIENTS.SUBTITLE" | translate }}</span>
   </div>
 
   <div class="container">
     <div class="row justify-content-center pos-card">
       <div class="col-7 col-offset-5">
-        <app-item-coefficient [title]="'Logiciel'" [icon]="'assets/icons/application.png'" ></app-item-coefficient>
+        <app-item-coefficient
+          [title]="'COEFFICIENTS.ITEM_1' | translate"
+          [icon]="'assets/icons/application.png'"
+        ></app-item-coefficient>
       </div>
       <div class="col-7 col-offset-5">
-        <app-item-coefficient [title]="'Prix'" [icon]="'assets/icons/tarifs.png'" ></app-item-coefficient>
+        <app-item-coefficient
+          [title]="'COEFFICIENTS.ITEM_2' | translate"
+          [icon]="'assets/icons/tarifs.png'"
+        ></app-item-coefficient>
       </div>
       <div class="col-7 col-offset-5">
-        <app-item-coefficient [title]="'Éditeur'" [icon]="'assets/icons/editeur.png'" ></app-item-coefficient>
+        <app-item-coefficient
+          [title]="'COEFFICIENTS.ITEM_3' | translate"
+          [icon]="'assets/icons/editeur.png'"
+        ></app-item-coefficient>
       </div>
       <div class="col-7 col-offset-5">
-        <app-item-coefficient [title]="'Compatibilité'" [icon]="'assets/icons/compta.png'" ></app-item-coefficient>
+        <app-item-coefficient
+          [title]="'COEFFICIENTS.ITEM_4' | translate"
+          [icon]="'assets/icons/compta.png'"
+        ></app-item-coefficient>
       </div>
       <div class="col-7 col-offset-5">
-        <app-item-coefficient [title]="'Positionnement'" [icon]="'assets/icons/positionnement.png'" ></app-item-coefficient>
+        <app-item-coefficient
+          [title]="'COEFFICIENTS.ITEM_5' | translate"
+          [icon]="'assets/icons/positionnement.png'"
+        ></app-item-coefficient>
       </div>
     </div>
   </div>
