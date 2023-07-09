@@ -3,17 +3,21 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'secteur-item',
   templateUrl: './item.component.html',
-  styleUrls: ['./item.component.css']
+  styleUrls: ['./item.component.css'],
 })
 export class ItemComponent implements OnInit {
- @Input()
+  @Input()
   title!: string;
- @Input()
+  @Input()
   image!: string;
 
-  constructor() { }
+  status: boolean = false;
 
-  ngOnInit(): void {
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  clickEvent() {
+    this.status = !this.status;
   }
-
 }
