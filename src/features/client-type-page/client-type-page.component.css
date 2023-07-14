@@ -1,5 +1,7 @@
 .pos-card {
     padding-bottom: 200px;
+    display: flex;
+    justify-content: center;
 }
 
 
