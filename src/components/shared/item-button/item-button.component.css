@@ -20,3 +20,10 @@
   margin-right: 15px;
   cursor: pointer;
 }
+
+.active {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    background: var(--card) url(../../../assets/icons/icon-actif.png) no-repeat 0px 0px;
+    background-position: top 20px  right 25px;
+    
+}

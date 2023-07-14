@@ -11,10 +11,15 @@ export class ItemButtonComponent implements OnInit {
  @Input()
   image!: string;
 
+  status: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  clickEvent() {
+    this.status = !this.status;
   }
 
 }
