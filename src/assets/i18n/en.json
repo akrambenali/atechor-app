@@ -157,6 +157,29 @@
         "ITEM_21":"Context"
 
     },
+    "SCORES": {
+        "TITLE":"The 6 most relevant solutions for you:",
+        "ITEM_1":"Coefficients :",
+        "ITEM_2":"Software",
+        "ITEM_3":"Price",
+        "ITEM_4":"Provider",
+        "ITEM_5":"Compatibility",
+        "ITEM_6":"Positionning",
+        "ITEM_7":"Summary:",
+        "ITEM_8":"Activity:",
+        "ITEM_9":"Type of clients:",
+        "ITEM_10":"Revenue:",
+        "ITEM_11":"Number of employees:",
+        "ITEM_12":"Deployment:",
+        "ITEM_13":"Features:",
+        "ITEM_14":"Number of users:",
+        "ITEM_15":"Hosting:",
+        "ITEM_16":"Specifics:",
+        "ITEM_17":"Connectivity:",
+        "ITEM_18":"Deadline:",
+        "ITEM_19":"Context:"
+
+    },
     "RESULTS_BUTTONS": {
         "ITEM_1": "Export in PDF",
         "ITEM_2": "Start again",
@@ -188,4 +211,5 @@
         "STEP_13":"Step 12/12"
 
     }
+
 }

@@ -156,6 +156,29 @@
         "ITEM_21":"Context"
 
     },
+    "SCORES": {
+        "TITLE":"Les 6 solutions les plus pertinentes pour vous :",
+        "ITEM_1":"Coefficients :",
+        "ITEM_2":"Logiciel",
+        "ITEM_3":"Prix",
+        "ITEM_4":"Éditeur",
+        "ITEM_5":"Compatibilité",
+        "ITEM_6":"Positionnement",
+        "ITEM_7":"Résumé de votre recherche :",
+        "ITEM_8":"Secteur d’activité :",
+        "ITEM_9":"Types de clients :",
+        "ITEM_10":"Chiffre d’affaires :",
+        "ITEM_11":"Nombre d’employés :",
+        "ITEM_12":"Échelle d’implémentation :",
+        "ITEM_13":"Périmètre fonctionnel :",
+        "ITEM_14":"Nombre d’utilisateurs :",
+        "ITEM_15":"Mode d’hébergement :",
+        "ITEM_16":"Développements spécifiques :",
+        "ITEM_17":"Connectivité :",
+        "ITEM_18":"Délai d’implémentation :",
+        "ITEM_19":"Contexte :"
+
+    },
     "RESULTS_BUTTONS": {
         "ITEM_1": "Export in PDF",
         "ITEM_2": "Start again",
