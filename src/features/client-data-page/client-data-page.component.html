@@ -115,13 +115,39 @@
               <a href="#">{{ "FROM_1.ITEM_9" | translate }}</a>
             </label>
           </div>
+
+          <div class="row pos-buttons">
+            <div class="col-md-6">
+              <button
+                class="btn btn-outline-secondary btn-back me-md-2"
+                type="button"
+                [routerLink]="'/coefficients-client'"
+              >
+                <!--  <i class="bi bi-chevron-left"></i> -->
+                <i class="retour"></i>
+                Retour
+              </button>
+              <button
+                class="btn btn-outline-secondary btn-reset"
+                type="button"
+                [routerLink]="'/'"
+              >
+                <!--  <i class="bi bi-arrow-counterclockwise"></i> -->
+                <i class="reset"></i>
+                Recommencer
+              </button>
+            </div>
+            <div class="col-md-6 ms-auto text-end">
+              <button class="btn btn-primary me-md-2 btn-next" type="submit">
+                Suivant
+                <!--  <i class="bi bi-arrow-right"></i> -->
+                <i class="suivant"></i>
+              </button>
+              <!--  [routerLink]="'/resultat-client'" -->
+            </div>
+          </div>
         </form>
       </div>
     </div>
   </main>
 </div>
-
-<app-item-button-steps
-  [previous]="'/coefficients-client'"
-  [next]="'/resultat-client'"
-></app-item-button-steps>

@@ -35,6 +35,8 @@ import { ClientDataPageComponent } from 'src/features/client-data-page/client-da
 import { ButtonOptionsComponent } from 'src/components/shared/button-options/button-options.component';
 import { ClientCabinetPageComponent } from 'src/features/client-cabinet-page/client-cabinet-page.component';
 
+import { ClientService } from 'src/features/services/client.services';
+
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -83,7 +85,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       }
     })
   ],
-  providers: [],
+  providers: [ClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
