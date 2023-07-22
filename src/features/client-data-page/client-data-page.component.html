@@ -12,13 +12,19 @@
   <main class="pos-card">
     <div class="row g-5">
       <div class="col-md-7 col-lg-8 offset-md-3">
-        <form class="needs-validation" novalidate>
+        <form
+          class="needs-validation"
+          [formGroup]="contactForm"
+          (ngSubmit)="onSubmit()"
+        >
           <div class="row g-3 form-top">
             <div class="col-sm-6 form-input-size m-0">
               <input
                 type="text"
                 class="form-control"
                 id="firstName"
+                name="firstName"
+                formControlName="firstName"
                 [placeholder]="'FROM_1.ITEM_1' | translate"
                 value=""
                 required
@@ -31,8 +37,9 @@
                 type="text"
                 class="form-control"
                 id="lastName"
+                name="lastName"
+                formControlName="lastName"
                 [placeholder]="'FROM_1.ITEM_2' | translate"
-                value=""
                 required
               />
               <div class="invalid-feedback">Valid last name is required.</div>
@@ -42,9 +49,10 @@
               <input
                 type="text"
                 class="form-control"
-                id="firstName"
+                id="company"
+                name="company"
+                formControlName="company"
                 [placeholder]="'FROM_1.ITEM_3' | translate"
-                value=""
                 required
               />
               <div class="invalid-feedback">Valid first name is required.</div>
@@ -58,22 +66,12 @@
 
             <div class="col-12 form-input-top m-0">
               <input
-                type="email"
+                type="text"
                 class="form-control form-control-large"
-                id="email"
+                id="country"
+                name="country"
+                formControlName="country"
                 [placeholder]="'FROM_1.ITEM_5' | translate"
-              />
-              <div class="invalid-feedback">
-                Please enter a valid email address for shipping updates.
-              </div>
-            </div>
-
-            <div class="col-12 form-input-top m-0">
-              <input
-                type="email"
-                class="form-control form-control-large"
-                id="email"
-                [placeholder]="'FROM_1.ITEM_6' | translate"
               />
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
@@ -84,7 +82,23 @@
               <input
                 type="text"
                 class="form-control form-control-large"
-                id="address"
+                id="role"
+                name="role"
+                formControlName="role"
+                [placeholder]="'FROM_1.ITEM_6' | translate"
+              />
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="col-12 form-input-top m-0">
+              <input
+                type="email"
+                class="form-control form-control-large"
+                id="email"
+                name="email"
+                formControlName="email"
                 [placeholder]="'FROM_1.ITEM_7' | translate"
                 required
               />
