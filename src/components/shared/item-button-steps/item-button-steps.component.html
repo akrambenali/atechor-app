@@ -4,13 +4,17 @@
       <button
         class="btn btn-outline-secondary btn-back me-md-2"
         type="button"
-        [routerLink]="'/'"
+        [routerLink]="previous"
       >
         <!--  <i class="bi bi-chevron-left"></i> -->
         <i class="retour"></i>
         Retour
       </button>
-      <button class="btn btn-outline-secondary btn-reset" type="button">
+      <button
+        class="btn btn-outline-secondary btn-reset"
+        type="button"
+        [routerLink]="'/'"
+      >
         <!--  <i class="bi bi-arrow-counterclockwise"></i> -->
         <i class="reset"></i>
         Recommencer

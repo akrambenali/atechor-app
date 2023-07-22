@@ -8,6 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ItemButtonStepsComponent implements OnInit {
   @Input()
   next!: string ;
+
+  @Input()
+  previous!: string ;
+
   constructor() { }
 
   ngOnInit(): void {
