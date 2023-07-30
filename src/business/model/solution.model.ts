@@ -1,7 +1,8 @@
-export interface Root {
+export interface Solutions {
     solutionName: string
     brandImg: string
     email: string
+    urlCompany: string
     userRate: number
     expertRate: number
     solutionPopularty: number

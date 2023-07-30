@@ -210,6 +210,9 @@
         "STEP_12":"Complete",
         "STEP_13":"Step 12/12"
 
+    },
+    "EMAIL": {
+        "TITLE":"La page de résultats a été envoyée avec succès à : "
     }
 
 }
