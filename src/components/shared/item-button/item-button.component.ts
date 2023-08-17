@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ClientBusiness, CompanySize, Size } from 'src/business/model/solution.model';
+import { ClientBusiness, CompanySize, InternationnalBusiness, Size } from 'src/business/model/solution.model';
 
 @Component({
   selector: 'app-item-button',
@@ -17,6 +17,9 @@ export class ItemButtonComponent implements OnInit {
   companySize!: string;
   @Input()
   clientCompanySize!: string;
+  @Input()
+  clientDeployment!: string;
+
 
   
 
@@ -24,12 +27,14 @@ export class ItemButtonComponent implements OnInit {
   @Output() sendClientTypeEvent = new EventEmitter<any>();
   @Output() sendClientRevenuesEvent = new EventEmitter<any>();
   @Output() sendClienCompanySizeEvent = new EventEmitter<any>();
+  @Output() sendClientDeploymentEvent = new EventEmitter<any>();
 
   status: boolean = false;
 
   item = { b2b: false, b2c: false, both: false } as ClientBusiness;
   itemSize = {A: false, B: false, C: false, D: false, E: false, F: false} as Size
   itemCompanySize = {A: false, B: false, C: false, D: false, E: false, F: false} as CompanySize
+  itemDeployment = {national: false, international: false} as InternationnalBusiness
 
   constructor() {}
 
@@ -94,8 +99,19 @@ export class ItemButtonComponent implements OnInit {
       default:
         break;
     }
+    switch (this.clientDeployment) {
+      case (this.clientDeployment = 'N'):
+        this.itemDeployment.national = true;
+        break;
+      case (this.clientDeployment = 'I'):
+        this.itemDeployment.international = true;
+        break;
+      default:
+        break;
+    }
     this.sendClientTypeEvent.emit(this.item);
     this.sendClientRevenuesEvent.emit(this.itemSize)
     this.sendClienCompanySizeEvent.emit(this.itemCompanySize)
+    this.sendClientDeploymentEvent.emit(this.itemDeployment)
   }
 }

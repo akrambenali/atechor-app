@@ -25,7 +25,6 @@ export interface Solutions {
   export interface InternationnalBusiness {
     national: boolean
     international: boolean
-    both: boolean
   }
   
   export interface Hosting {

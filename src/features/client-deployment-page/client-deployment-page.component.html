@@ -16,11 +16,15 @@
     <div>
       <app-item-button
         [title]="'DEPLOYMENT.ITEM_1' | translate"
+        (sendClientDeploymentEvent)="pushClientinternationnalBusiness($event)"
+        [clientDeployment]="'N'"
       ></app-item-button>
     </div>
     <div>
       <app-item-button
         [title]="'DEPLOYMENT.ITEM_2' | translate"
+        [clientDeployment]="'I'"
+        (sendClientDeploymentEvent)="pushClientinternationnalBusiness($event)"
       ></app-item-button>
     </div>
   </div>
@@ -29,4 +33,5 @@
 <app-item-button-steps
   [previous]="'/users-client'"
   [next]="'/fonctions-client'"
+  [solution]="solutionModel"
 ></app-item-button-steps>
