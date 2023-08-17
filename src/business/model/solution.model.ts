@@ -1,8 +1,4 @@
 export interface Solutions {
-    solutionName: string
-    brandImg: string
-    email: string
-    urlCompany: string
     userRate: number
     expertRate: number
     solutionPopularty: number
@@ -64,6 +60,7 @@ export interface Solutions {
   export interface Compatibility {
     secteur: SecteurItem[]
     size: Size
+    companySize: CompanySize
     implemntation: Implemntation
     position: number
   }
@@ -74,14 +71,22 @@ export interface Solutions {
   }
   
   export interface Size {
-    A: number
-    B: number
-    C: number
-    D: number
-    E: number
-    F: number
+    A: boolean
+    B: boolean
+    C: boolean
+    D: boolean
+    E: boolean
+    F: boolean
   }
-  
+
+  export interface CompanySize {
+    A: boolean
+    B: boolean
+    C: boolean
+    D: boolean
+    E: boolean
+    F: boolean
+  }
   export interface Implemntation {
     M1: boolean
     M6: boolean

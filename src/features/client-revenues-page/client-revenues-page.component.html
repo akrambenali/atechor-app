@@ -12,25 +12,49 @@
   </h3>
   <div class="pos-item">
     <div>
-      <app-item-button [title]="'INCOME.ITEM_1' | translate"></app-item-button>
+      <app-item-button
+        [title]="'INCOME.ITEM_1' | translate"
+        [companySize]="'A'"
+        (sendClientRevenuesEvent)="pushClientRevenues($event)"
+      ></app-item-button>
     </div>
     <div>
-      <app-item-button [title]="'INCOME.ITEM_2' | translate"></app-item-button>
+      <app-item-button
+        [title]="'INCOME.ITEM_2' | translate"
+        [companySize]="'B'"
+        (sendClientRevenuesEvent)="pushClientRevenues($event)"
+      ></app-item-button>
     </div>
     <div>
-      <app-item-button [title]="'INCOME.ITEM_3' | translate"></app-item-button>
+      <app-item-button
+        [title]="'INCOME.ITEM_3' | translate"
+        [companySize]="'C'"
+        (sendClientRevenuesEvent)="pushClientRevenues($event)"
+      ></app-item-button>
     </div>
   </div>
 
   <div class="pos-card">
     <div>
-      <app-item-button [title]="'INCOME.ITEM_4' | translate"></app-item-button>
+      <app-item-button
+        [title]="'INCOME.ITEM_4' | translate"
+        [companySize]="'D'"
+        (sendClientRevenuesEvent)="pushClientRevenues($event)"
+      ></app-item-button>
     </div>
     <div>
-      <app-item-button [title]="'INCOME.ITEM_5' | translate"></app-item-button>
+      <app-item-button
+        [title]="'INCOME.ITEM_5' | translate"
+        [companySize]="'E'"
+        (sendClientRevenuesEvent)="pushClientRevenues($event)"
+      ></app-item-button>
     </div>
     <div>
-      <app-item-button [title]="'INCOME.ITEM_6' | translate"></app-item-button>
+      <app-item-button
+        [title]="'INCOME.ITEM_6' | translate"
+        [companySize]="'F'"
+        (sendClientRevenuesEvent)="pushClientRevenues($event)"
+      ></app-item-button>
     </div>
   </div>
 </div>
@@ -38,4 +62,5 @@
 <app-item-button-steps
   [previous]="'/type-client'"
   [next]="'/users-client'"
+  [solution]="solutionModel"
 ></app-item-button-steps>

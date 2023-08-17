@@ -23,7 +23,7 @@ export class ClientTypePageComponent implements OnInit {
   }
 
   pushClientType(newItem: any) {
-    
+    this.clientBusiness = newItem;
     this.solutionModel.clientBusiness = this.clientBusiness;
     console.log( this.solutionModel);
     

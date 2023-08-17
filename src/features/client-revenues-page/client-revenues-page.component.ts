@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
+import { Size, Solutions } from 'src/business/model/solution.model';
 
 @Component({
   selector: 'app-client-revenues-page',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientRevenuesPageComponent implements OnInit {
 
-  constructor() { }
+  solutionModel = {} as Solutions;
+  companySize = {}  as Size;
+ 
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+    
+  }
 
   ngOnInit(): void {
+
+    this.solutionModel = history.state,
+    console.log('====================================');
+    console.log(this.solutionModel);
+    console.log('====================================');
+  }
+
+  pushClientRevenues(newItem: any) {
+    this.companySize = newItem;
+    this.solutionModel.compatibility.size = this.companySize;
+    console.log( this.solutionModel);
+    
   }
 
 }

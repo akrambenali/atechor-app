@@ -14,16 +14,22 @@
     <div>
       <app-item-button
         [title]="'USERS_NUMBERS.ITEM_1' | translate"
+        [clientCompanySize]="'A'"
+        (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
       ></app-item-button>
     </div>
     <div>
       <app-item-button
         [title]="'USERS_NUMBERS.ITEM_2' | translate"
+        [clientCompanySize]="'B'"
+        (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
       ></app-item-button>
     </div>
     <div>
       <app-item-button
         [title]="'USERS_NUMBERS.ITEM_3' | translate"
+        [clientCompanySize]="'C'"
+        (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
       ></app-item-button>
     </div>
   </div>
@@ -32,16 +38,22 @@
     <div>
       <app-item-button
         [title]="'USERS_NUMBERS.ITEM_4' | translate"
+        [clientCompanySize]="'D'"
+        (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
       ></app-item-button>
     </div>
     <div>
       <app-item-button
         [title]="'USERS_NUMBERS.ITEM_5' | translate"
+        [clientCompanySize]="'E'"
+        (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
       ></app-item-button>
     </div>
     <div>
       <app-item-button
         [title]="'USERS_NUMBERS.ITEM_6' | translate"
+        [clientCompanySize]="'F'"
+        (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
       ></app-item-button>
     </div>
   </div>
@@ -49,5 +61,6 @@
   <app-item-button-steps
     [previous]="'/revenue-client'"
     [next]="'/deploiment-client'"
+    [solution]="solutionModel"
   ></app-item-button-steps>
 </div>
