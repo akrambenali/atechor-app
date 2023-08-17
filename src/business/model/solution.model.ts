@@ -12,11 +12,18 @@ export interface Solutions {
     performance: number
     connectivity: number
     internationnalBusiness: InternationnalBusiness
+    clientBusiness: ClientBusiness
     hosting: Hosting
     dev: Dev
     valueForMoney: number
     software: Software
     compatibility: Compatibility
+  }
+
+  export interface ClientBusiness {
+    b2b: boolean
+    b2c: boolean
+    both: boolean
   }
   
   export interface InternationnalBusiness {
@@ -55,22 +62,15 @@ export interface Solutions {
   }
   
   export interface Compatibility {
-    secteur: Secteur
+    secteur: SecteurItem[]
     size: Size
     implemntation: Implemntation
     position: number
   }
   
-  export interface Secteur {
-    services: number
-    manufacturing: number
-    construction: number
-    retail: number
-    finance: number
-    govNgo: number
-    energy: number
-    transport: number
-    aerospace: number
+  export interface SecteurItem {
+      title: string
+      value: boolean
   }
   
   export interface Size {

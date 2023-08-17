@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Solutions } from 'src/business/model/solution.model';
 
 @Component({
   selector: 'app-item-button-steps',
@@ -12,9 +14,17 @@ export class ItemButtonStepsComponent implements OnInit {
   @Input()
   previous!: string ;
 
-  constructor() { }
+  @Input()
+  solution!: Solutions;
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
+
+  goToRoute(route:string): void {
+    this.router.navigateByUrl( route, { state: this.solution } );
+
+}
 
 }

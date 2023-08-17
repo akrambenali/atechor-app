@@ -211,6 +211,23 @@
         "STEP_13":"Step 12/12"
 
     },
+    "STEPSIZE": {
+        "STEP_1":"width: 7.70%",
+        "STEP_2":"width: 15.4%",
+        "STEP_3":"width: 23.1%",
+        "STEP_4":"width: 30.8%",
+        "STEP_5":"width: 38.5%",
+        "STEP_6":"width: 46.20%",
+        "STEP_7":"width: 53.9%",
+        "STEP_8":"width: 61.6%",
+        "STEP_9":"width: 69.3%",
+        "STEP_10":"width: 77%",
+        "STEP_11":"width: 84.7%",
+        "STEP_12":"width: 92.4%",
+        "STEP_13":"width: 100%",
+        "STEP_14":"width: 100%"
+
+    },
     "EMAIL": {
         "TITLE":"La page de résultats a été envoyée avec succès à : "
     }

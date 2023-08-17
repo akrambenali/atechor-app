@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ClientBusiness } from 'src/business/model/solution.model';
 
 @Component({
   selector: 'app-item-button',
@@ -11,7 +12,11 @@ export class ItemButtonComponent implements OnInit {
  @Input()
   image!: string;
 
+  @Output() sendClientTypeEvent = new EventEmitter<any>();
+
   status: boolean = false;
+
+  item = {} as ClientBusiness;
 
   constructor() { }
 
@@ -20,6 +25,7 @@ export class ItemButtonComponent implements OnInit {
 
   clickEvent() {
     this.status = !this.status;
+    this.sendClientTypeEvent.emit(this.item);
   }
 
 }

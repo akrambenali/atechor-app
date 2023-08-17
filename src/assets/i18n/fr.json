@@ -48,7 +48,7 @@
     },
     "DEPLOYMENT": {
         "TITLE":"À quelle échelle sera déployée la solution ?",
-        "ITEM_1":"National",
+        "ITEM_1":"Nationale",
         "ITEM_2":"Internationale"  
     },
     "FONCTIONS": {
@@ -196,19 +196,38 @@
         "BUTTON_3":"Terminer"
     },
     "STEPS": {
-        "STEP_1":"Étape 1/12",
-        "STEP_2":"Étape 2/12",
-        "STEP_3":"Étape 3/12",
-        "STEP_4":"Étape 4/12",
-        "STEP_5":"Étape 5/12",
-        "STEP_6":"Étape 6/12",
-        "STEP_7":"Étape 7/12",
-        "STEP_8":"Étape 8/12",
-        "STEP_9":"Étape 9/12",
-        "STEP_10":"Étape 10/12",
-        "STEP_11":"Étape 11/12",
-        "STEP_12":"Dernière étape",
-        "STEP_13":"Étape 12/12"
+        "STEP_1":"Étape 1/13",
+        "STEP_2":"Étape 2/13",
+        "STEP_3":"Étape 3/13",
+        "STEP_4":"Étape 4/13",
+        "STEP_5":"Étape 5/13",
+        "STEP_6":"Étape 6/13",
+        "STEP_7":"Étape 7/13",
+        "STEP_8":"Étape 8/13",
+        "STEP_9":"Étape 9/13",
+        "STEP_10":"Étape 10/13",
+        "STEP_11":"Étape 11/13",
+        "STEP_12":"Étape 12/13",
+        "STEP_13":"Étape 13/13",
+        "STEP_14":"Dernière étape"
+        
+
+    },
+    "STEPSIZE": {
+        "STEP_1":"width: 7.70%",
+        "STEP_2":"width: 15.4%",
+        "STEP_3":"width: 23.1%",
+        "STEP_4":"width: 30.8%",
+        "STEP_5":"width: 38.5%",
+        "STEP_6":"width: 46.20%",
+        "STEP_7":"width: 53.9%",
+        "STEP_8":"width: 61.6%",
+        "STEP_9":"width: 69.3%",
+        "STEP_10":"width: 77%",
+        "STEP_11":"width: 84.7%",
+        "STEP_12":"width: 92.4%",
+        "STEP_13":"width: 100%",
+        "STEP_14":"width: 100%"
 
     },
     "EMAIL": {

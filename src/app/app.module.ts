@@ -37,6 +37,7 @@ import { ClientCabinetPageComponent } from 'src/features/client-cabinet-page/cli
 import { ClientMailPageComponent } from 'src/features/client-mail-page/client-mail-page.component';
 
 import { ClientService } from 'src/features/services/client.services';
+import { SolutionService } from 'src/features/services/solution.services';
 
 
 // AoT requires an exported function for factories
@@ -88,7 +89,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       }
     })
   ],
-  providers: [ClientService],
+  providers: [ClientService, SolutionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
