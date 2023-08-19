@@ -58,6 +58,8 @@ export interface Solutions {
   
   export interface Compatibility {
     secteur: SecteurItem[]
+    fonctions: FonctionItem[]
+    usersNumber: UsersNumber
     size: Size
     companySize: CompanySize
     implemntation: Implemntation
@@ -68,6 +70,11 @@ export interface Solutions {
       title: string
       value: boolean
   }
+
+  export interface FonctionItem {
+    title: string
+    value: boolean
+}
   
   export interface Size {
     A: boolean
@@ -86,6 +93,16 @@ export interface Solutions {
     E: boolean
     F: boolean
   }
+
+  export interface UsersNumber {
+    A: boolean
+    B: boolean
+    C: boolean
+    D: boolean
+    E: boolean
+    F: boolean
+  }
+
   export interface Implemntation {
     M1: boolean
     M6: boolean

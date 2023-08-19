@@ -16,35 +16,47 @@
     <secteur-item
       [title]="'FONCTIONS.ITEM_1' | translate"
       [image]="'assets/icons/crm.png'"
+      (sendFonctionEvent)="pushFonction($event)"
     ></secteur-item>
     <secteur-item
       [title]="'FONCTIONS.ITEM_2' | translate"
       [image]="'assets/icons/comptabilite.png'"
+      (sendFonctionEvent)="pushFonction($event)"
     ></secteur-item>
-    <secteur-item [title]="'RH'" [image]="'assets/icons/rh.png'"></secteur-item>
+    <secteur-item
+      [title]="'RH'"
+      [image]="'assets/icons/rh.png'"
+      (sendFonctionEvent)="pushFonction($event)"
+    ></secteur-item>
     <secteur-item
       [title]="'FONCTIONS.ITEM_3' | translate"
       [image]="'assets/icons/achats.png'"
+      (sendFonctionEvent)="pushFonction($event)"
     ></secteur-item>
     <secteur-item
       [title]="'FONCTIONS.ITEM_4' | translate"
       [image]="'assets/icons/production.png'"
+      (sendFonctionEvent)="pushFonction($event)"
     ></secteur-item>
     <secteur-item
       [title]="'FONCTIONS.ITEM_5' | translate"
       [image]="'assets/icons/projet.png'"
+      (sendFonctionEvent)="pushFonction($event)"
     ></secteur-item>
     <secteur-item
       [title]="'FONCTIONS.ITEM_6' | translate"
       [image]="'assets/icons/logistique.png'"
+      (sendFonctionEvent)="pushFonction($event)"
     ></secteur-item>
     <secteur-item
       [title]="'FONCTIONS.ITEM_7' | translate"
       [image]="'assets/icons/actifs.png'"
+      (sendFonctionEvent)="pushFonction($event)"
     ></secteur-item>
     <secteur-item
       [title]="'FONCTIONS.ITEM_8' | translate"
       [image]="'assets/icons/RD.png'"
+      (sendFonctionEvent)="pushFonction($event)"
     ></secteur-item>
   </div>
 </div>
@@ -52,4 +64,5 @@
 <app-item-button-steps
   [previous]="'/deploiment-client'"
   [next]="'/numbers-client'"
+  [solution]="solutionModel"
 ></app-item-button-steps>

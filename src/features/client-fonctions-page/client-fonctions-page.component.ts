@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Solutions } from 'src/business/model/solution.model';
+import { FonctionItem, Solutions } from 'src/business/model/solution.model';
 
 @Component({
   selector: 'app-client-fonstions-page',
@@ -11,6 +11,7 @@ import { Solutions } from 'src/business/model/solution.model';
 export class ClientFonctionsPageComponent implements OnInit {
 
   solutionModel = {} as Solutions;
+  fonctions: FonctionItem[] = [];
   
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     
@@ -22,6 +23,27 @@ export class ClientFonctionsPageComponent implements OnInit {
     console.log('====================================');
     console.log(this.solutionModel);
     console.log('====================================');
+  }
+
+  pushFonction(newItem: any) {
+    const found = this.fonctions.some((el) => el.title === newItem.title);
+    if (!found) {
+      this.fonctions.push(newItem);
+    } else {
+      this.fonctions = this.removeObjectWithId(this.fonctions, newItem.title);
+    }
+    this.solutionModel.compatibility.fonctions = this.fonctions;
+    console.log( this.solutionModel);
+    
+  }
+
+  removeObjectWithId(arr: FonctionItem[], title: string) {
+    const objWithIdIndex = arr.findIndex((obj) => obj.title === title);
+
+    if (objWithIdIndex > -1) {
+      arr.splice(objWithIdIndex, 1);
+    }
+    return arr;
   }
 
 

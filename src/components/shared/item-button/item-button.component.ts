@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ClientBusiness, CompanySize, InternationnalBusiness, Size } from 'src/business/model/solution.model';
+import { ClientBusiness, CompanySize, InternationnalBusiness, Size, UsersNumber } from 'src/business/model/solution.model';
 
 @Component({
   selector: 'app-item-button',
@@ -19,6 +19,8 @@ export class ItemButtonComponent implements OnInit {
   clientCompanySize!: string;
   @Input()
   clientDeployment!: string;
+  @Input()
+  usersNumber!: string;
 
 
   
@@ -28,6 +30,7 @@ export class ItemButtonComponent implements OnInit {
   @Output() sendClientRevenuesEvent = new EventEmitter<any>();
   @Output() sendClienCompanySizeEvent = new EventEmitter<any>();
   @Output() sendClientDeploymentEvent = new EventEmitter<any>();
+  @Output() sendClientUsersNumberEvent = new EventEmitter<any>();
 
   status: boolean = false;
 
@@ -35,6 +38,7 @@ export class ItemButtonComponent implements OnInit {
   itemSize = {A: false, B: false, C: false, D: false, E: false, F: false} as Size
   itemCompanySize = {A: false, B: false, C: false, D: false, E: false, F: false} as CompanySize
   itemDeployment = {national: false, international: false} as InternationnalBusiness
+  itemUsersNumber = {A: false, B: false, C: false, D: false, E: false, F: false} as UsersNumber
 
   constructor() {}
 
@@ -109,9 +113,32 @@ export class ItemButtonComponent implements OnInit {
       default:
         break;
     }
+    switch (this.usersNumber) {
+      case (this.usersNumber = 'A'):
+        this.itemUsersNumber.A = true;
+        break;
+      case (this.usersNumber = 'B'):
+        this.itemUsersNumber.B = true;
+        break;
+      case (this.usersNumber = 'C'):
+        this.itemUsersNumber.C = true;
+        break;
+        case (this.usersNumber = 'D'):
+        this.itemUsersNumber.D = true;
+        break;
+      case (this.usersNumber = 'E'):
+        this.itemUsersNumber.E = true;
+        break;
+      case (this.usersNumber = 'F'):
+        this.itemUsersNumber.F = true;
+        break;  
+      default:
+        break;
+    }
     this.sendClientTypeEvent.emit(this.item);
     this.sendClientRevenuesEvent.emit(this.itemSize)
     this.sendClienCompanySizeEvent.emit(this.itemCompanySize)
     this.sendClientDeploymentEvent.emit(this.itemDeployment)
+    this.sendClientUsersNumberEvent.emit(this.itemUsersNumber)
   }
 }

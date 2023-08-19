@@ -12,25 +12,49 @@
 
   <div class="pos-item">
     <div>
-      <app-item-button [title]="'USERS.ITEM_1' | translate"></app-item-button>
+      <app-item-button
+        [title]="'USERS.ITEM_1' | translate"
+        [usersNumber]="'A'"
+        (sendClientUsersNumberEvent)="pushUsersNumber($event)"
+      ></app-item-button>
     </div>
     <div>
-      <app-item-button [title]="'USERS.ITEM_2' | translate"></app-item-button>
+      <app-item-button
+        [title]="'USERS.ITEM_2' | translate"
+        [usersNumber]="'B'"
+        (sendClientUsersNumberEvent)="pushUsersNumber($event)"
+      ></app-item-button>
     </div>
     <div>
-      <app-item-button [title]="'USERS.ITEM_3' | translate"></app-item-button>
+      <app-item-button
+        [title]="'USERS.ITEM_3' | translate"
+        [usersNumber]="'C'"
+        (sendClientUsersNumberEvent)="pushUsersNumber($event)"
+      ></app-item-button>
     </div>
   </div>
 
   <div class="pos-card">
     <div>
-      <app-item-button [title]="'USERS.ITEM_4' | translate"></app-item-button>
+      <app-item-button
+        [title]="'USERS.ITEM_4' | translate"
+        [usersNumber]="'D'"
+        (sendClientUsersNumberEvent)="pushUsersNumber($event)"
+      ></app-item-button>
     </div>
     <div>
-      <app-item-button [title]="'USERS.ITEM_5' | translate"></app-item-button>
+      <app-item-button
+        [title]="'USERS.ITEM_5' | translate"
+        [usersNumber]="'E'"
+        (sendClientUsersNumberEvent)="pushUsersNumber($event)"
+      ></app-item-button>
     </div>
     <div>
-      <app-item-button [title]="'USERS.ITEM_6' | translate"></app-item-button>
+      <app-item-button
+        [title]="'USERS.ITEM_6' | translate"
+        [usersNumber]="'F'"
+        (sendClientUsersNumberEvent)="pushUsersNumber($event)"
+      ></app-item-button>
     </div>
   </div>
 </div>
@@ -38,4 +62,5 @@
 <app-item-button-steps
   [previous]="'/fonctions-client'"
   [next]="'/hosting-client'"
+  [solution]="solutionModel"
 ></app-item-button-steps>
