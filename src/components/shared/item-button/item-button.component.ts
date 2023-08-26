@@ -1,5 +1,13 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ClientBusiness, CompanySize, InternationnalBusiness, Size, UsersNumber } from 'src/business/model/solution.model';
+import {
+  ClientBusiness,
+  CompanySize,
+  Dev,
+  Implemntation,
+  InternationnalBusiness,
+  Size,
+  UsersNumber,
+} from 'src/business/model/solution.model';
 
 @Component({
   selector: 'app-item-button',
@@ -21,24 +29,61 @@ export class ItemButtonComponent implements OnInit {
   clientDeployment!: string;
   @Input()
   usersNumber!: string;
-
-
-  
-
+  @Input()
+  dev!: string;
+  @Input()
+  connexion!: boolean;
+  @Input()
+  deadlineType!: string;
 
   @Output() sendClientTypeEvent = new EventEmitter<any>();
   @Output() sendClientRevenuesEvent = new EventEmitter<any>();
   @Output() sendClienCompanySizeEvent = new EventEmitter<any>();
   @Output() sendClientDeploymentEvent = new EventEmitter<any>();
   @Output() sendClientUsersNumberEvent = new EventEmitter<any>();
+  @Output() sendClientDevEvent = new EventEmitter<any>();
+  @Output() sendClientConnexionEvent = new EventEmitter<any>();
+  @Output() sendClientDeadlineEvent = new EventEmitter<any>();
 
   status: boolean = false;
 
   item = { b2b: false, b2c: false, both: false } as ClientBusiness;
-  itemSize = {A: false, B: false, C: false, D: false, E: false, F: false} as Size
-  itemCompanySize = {A: false, B: false, C: false, D: false, E: false, F: false} as CompanySize
-  itemDeployment = {national: false, international: false} as InternationnalBusiness
-  itemUsersNumber = {A: false, B: false, C: false, D: false, E: false, F: false} as UsersNumber
+  itemSize = {
+    A: false,
+    B: false,
+    C: false,
+    D: false,
+    E: false,
+    F: false,
+  } as Size;
+  itemCompanySize = {
+    A: false,
+    B: false,
+    C: false,
+    D: false,
+    E: false,
+    F: false,
+  } as CompanySize;
+  itemDeployment = {
+    national: false,
+    international: false,
+  } as InternationnalBusiness;
+  itemUsersNumber = {
+    A: false,
+    B: false,
+    C: false,
+    D: false,
+    E: false,
+    F: false,
+  } as UsersNumber;
+  itemDev = { low: false, high: false, none: false } as Dev;
+  itemDeadline = {
+    M1: false,
+    M6: false,
+    A1: false,
+    A100: false,
+    any: false,
+  } as Implemntation;
 
   constructor() {}
 
@@ -69,7 +114,7 @@ export class ItemButtonComponent implements OnInit {
       case (this.companySize = 'C'):
         this.itemSize.C = true;
         break;
-        case (this.companySize = 'D'):
+      case (this.companySize = 'D'):
         this.itemSize.D = true;
         break;
       case (this.companySize = 'E'):
@@ -77,7 +122,7 @@ export class ItemButtonComponent implements OnInit {
         break;
       case (this.companySize = 'F'):
         this.itemSize.F = true;
-        break;  
+        break;
       default:
         break;
     }
@@ -91,7 +136,7 @@ export class ItemButtonComponent implements OnInit {
       case (this.clientCompanySize = 'C'):
         this.itemCompanySize.C = true;
         break;
-        case (this.clientCompanySize = 'D'):
+      case (this.clientCompanySize = 'D'):
         this.itemCompanySize.D = true;
         break;
       case (this.clientCompanySize = 'E'):
@@ -99,7 +144,7 @@ export class ItemButtonComponent implements OnInit {
         break;
       case (this.clientCompanySize = 'F'):
         this.itemCompanySize.F = true;
-        break;  
+        break;
       default:
         break;
     }
@@ -123,7 +168,7 @@ export class ItemButtonComponent implements OnInit {
       case (this.usersNumber = 'C'):
         this.itemUsersNumber.C = true;
         break;
-        case (this.usersNumber = 'D'):
+      case (this.usersNumber = 'D'):
         this.itemUsersNumber.D = true;
         break;
       case (this.usersNumber = 'E'):
@@ -131,14 +176,49 @@ export class ItemButtonComponent implements OnInit {
         break;
       case (this.usersNumber = 'F'):
         this.itemUsersNumber.F = true;
-        break;  
+        break;
+      default:
+        break;
+    }
+    switch (this.dev) {
+      case (this.dev = 'L'):
+        this.itemDev.low = true;
+        break;
+      case (this.dev = 'H'):
+        this.itemDev.high = true;
+        break;
+      case (this.dev = 'N'):
+        this.itemDev.none = true;
+        break;
+      default:
+        break;
+    }
+    switch (this.deadlineType) {
+      case (this.deadlineType = 'M1'):
+        this.itemDeadline.M1 = true;
+        break;
+      case (this.deadlineType = 'M6'):
+        this.itemDeadline.M6 = true;
+        break;
+      case (this.deadlineType = 'A1'):
+        this.itemDeadline.A1 = true;
+        break;
+      case (this.deadlineType = 'A100'):
+        this.itemDeadline.A100 = true;
+        break;
+      case (this.deadlineType = 'ANY'):
+        this.itemDeadline.any = true;
+        break;
       default:
         break;
     }
     this.sendClientTypeEvent.emit(this.item);
-    this.sendClientRevenuesEvent.emit(this.itemSize)
-    this.sendClienCompanySizeEvent.emit(this.itemCompanySize)
-    this.sendClientDeploymentEvent.emit(this.itemDeployment)
-    this.sendClientUsersNumberEvent.emit(this.itemUsersNumber)
+    this.sendClientRevenuesEvent.emit(this.itemSize);
+    this.sendClienCompanySizeEvent.emit(this.itemCompanySize);
+    this.sendClientDeploymentEvent.emit(this.itemDeployment);
+    this.sendClientUsersNumberEvent.emit(this.itemUsersNumber);
+    this.sendClientDevEvent.emit(this.itemDev);
+    this.sendClientConnexionEvent.emit(this.connexion);
+    this.sendClientDeadlineEvent.emit(this.itemDeadline);
   }
 }

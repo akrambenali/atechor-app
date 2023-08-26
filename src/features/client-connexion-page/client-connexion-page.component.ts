@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Solutions } from 'src/business/model/solution.model';
 
 @Component({
   selector: 'app-client-connexion-page',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientConnexionPageComponent implements OnInit {
 
-  constructor() { }
+  solutionModel = {} as Solutions;
+
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
+    (this.solutionModel = history.state),
+      console.log('====================================');
+    console.log(this.solutionModel);
+    console.log('====================================');
   }
 
+  pushClientConnexion(newItem: any) {
+    this.solutionModel.connexion = newItem;
+    console.log(this.solutionModel);
+  }
 }
+

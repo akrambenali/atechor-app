@@ -16,16 +16,19 @@
     <div>
       <app-item-button
         [title]="'DEADLINES.ITEM_1' | translate"
+        [deadlineType]="'M1'"
       ></app-item-button>
     </div>
     <div>
       <app-item-button
         [title]="'DEADLINES.ITEM_2' | translate"
+        [deadlineType]="'M6'"
       ></app-item-button>
     </div>
     <div>
       <app-item-button
         [title]="'DEADLINES.ITEM_3' | translate"
+        [deadlineType]="'A1'"
       ></app-item-button>
     </div>
   </div>
@@ -34,11 +37,13 @@
     <div>
       <app-item-button
         [title]="'DEADLINES.ITEM_4' | translate"
+        [deadlineType]="'A100'"
       ></app-item-button>
     </div>
     <div>
       <app-item-button
         [title]="'DEADLINES.ITEM_5' | translate"
+        [deadlineType]="'ANY'"
       ></app-item-button>
     </div>
   </div>
@@ -47,4 +52,5 @@
 <app-item-button-steps
   [previous]="'/connexion-client'"
   [next]="'/reason-client'"
+  [solution]="solutionModel"
 ></app-item-button-steps>

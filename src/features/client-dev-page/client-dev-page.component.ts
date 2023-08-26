@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Dev, Solutions } from 'src/business/model/solution.model';
 
 @Component({
   selector: 'app-client-dev-page',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientDevPageComponent implements OnInit {
 
-  constructor() { }
+  solutionModel = {} as Solutions;
+  dev = {} as Dev;
+
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
+    (this.solutionModel = history.state),
+      console.log('====================================');
+    console.log(this.solutionModel);
+    console.log('====================================');
+  }
+
+  pushClientDev(newItem: any) {
+    this.dev = newItem;
+    this.solutionModel.dev = this.dev;
+    console.log(this.solutionModel);
   }
 
 }

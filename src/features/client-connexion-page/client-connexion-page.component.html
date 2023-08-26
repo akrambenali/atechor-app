@@ -16,11 +16,15 @@
     <div>
       <app-item-button
         [title]="'CONNEXION.ITEM_1' | translate"
+        [connexion]="true"
+        (sendClientConnexionEvent)="pushClientConnexion($event)"
       ></app-item-button>
     </div>
     <div>
       <app-item-button
         [title]="'CONNEXION.ITEM_2' | translate"
+        [connexion]="false"
+        (sendClientConnexionEvent)="pushClientConnexion($event)"
       ></app-item-button>
     </div>
   </div>
@@ -29,4 +33,5 @@
 <app-item-button-steps
   [previous]="'/dev-client'"
   [next]="'/deadline-client'"
+  [solution]="solutionModel"
 ></app-item-button-steps>

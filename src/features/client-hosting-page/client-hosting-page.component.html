@@ -16,24 +16,37 @@
     <secteur-item
       [title]="'HOSTING.ITEM_1' | translate"
       [image]="'assets/icons/cloud.png'"
+      [hostingType]="'A'"
+      (sendHostingEvent)="pushClientHosting($event)"
     ></secteur-item>
     <secteur-item
       [title]="'HOSTING.ITEM_2' | translate"
       [image]="'assets/icons/onpremise.png'"
+      [hostingType]="'B'"
+      (sendHostingEvent)="pushClientHosting($event)"
     ></secteur-item>
     <secteur-item
       [title]="'HOSTING.ITEM_3' | translate"
       [image]="'assets/icons/saas.png'"
+      [hostingType]="'C'"
+      (sendHostingEvent)="pushClientHosting($event)"
     ></secteur-item>
     <secteur-item
       [title]="'HOSTING.ITEM_4' | translate"
       [image]="'assets/icons/hybride.png'"
+      [hostingType]="'D'"
+      (sendHostingEvent)="pushClientHosting($event)"
     ></secteur-item>
-    <secteur-item [title]="'No matter'"></secteur-item>
+    <secteur-item
+      [title]="'No matter'"
+      [hostingType]="'E'"
+      (sendHostingEvent)="pushClientHosting($event)"
+    ></secteur-item>
   </div>
 </div>
 
 <app-item-button-steps
   [previous]="'/numbers-client'"
   [next]="'/dev-client'"
+  [solution]="solutionModel"
 ></app-item-button-steps>

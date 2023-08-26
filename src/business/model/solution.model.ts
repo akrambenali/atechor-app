@@ -14,6 +14,7 @@ export interface Solutions {
     valueForMoney: number
     software: Software
     compatibility: Compatibility
+    connexion: boolean
   }
 
   export interface ClientBusiness {
