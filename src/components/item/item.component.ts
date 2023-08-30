@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import {
   FonctionItem,
   Hosting,
+  Reason,
   SecteurItem,
 } from 'src/business/model/solution.model';
 
@@ -17,10 +18,13 @@ export class ItemComponent implements OnInit {
   image!: string;
   @Input()
   hostingType!: string;
+  @Input()
+  reasonType!: string;
 
   @Output() sendSecteurEvent = new EventEmitter<any>();
   @Output() sendFonctionEvent = new EventEmitter<any>();
   @Output() sendHostingEvent = new EventEmitter<any>();
+  @Output() sendReasonEvent = new EventEmitter<any>();
 
   status: boolean = false;
   item: SecteurItem = {
@@ -39,6 +43,15 @@ export class ItemComponent implements OnInit {
     saas: false,
     any: false,
   } as Hosting;
+
+  itemReason = {
+    sao: false,
+    mf: false,
+    pi: false,
+    in: false,
+    vt: false,
+    other: false
+  } as Reason;
 
   constructor() {}
 
@@ -69,8 +82,31 @@ export class ItemComponent implements OnInit {
       default:
         break;
     }
+    switch (this.reasonType) {
+      case (this.reasonType = 'SAO'):
+        this.itemReason.sao = true;
+        break;
+      case (this.reasonType = 'MF'):
+        this.itemReason.mf = true;
+        break;
+      case (this.reasonType = 'PI'):
+        this.itemReason.pi = true;
+        break;
+      case (this.reasonType = 'IN'):
+        this.itemReason.in = true;
+        break;
+      case (this.reasonType = 'VT'):
+        this.itemReason.vt = true;
+        break;
+      case (this.reasonType = 'ANY'):
+        this.itemReason.other = true;
+        break;
+      default:
+        break;
+    }
     this.sendSecteurEvent.emit(this.item);
     this.sendFonctionEvent.emit(this.fonction);
     this.sendHostingEvent.emit(this.itemHosting);
+    this.sendReasonEvent.emit(this.itemReason);
   }
 }

@@ -18,26 +18,38 @@
     <secteur-item
       [title]="'RAISONS.ITEM_1' | translate"
       [image]="'assets/icons/solution_obsolete.png'"
+      [reasonType]="'SAO'"
+      (sendReasonEvent)="pushReasonDev($event)"
     ></secteur-item>
     <secteur-item
       [title]="'RAISONS.ITEM_2' | translate"
       [image]="'assets/icons/features_missing.png'"
+      [reasonType]="'MF'"
+      (sendReasonEvent)="pushReasonDev($event)"
     ></secteur-item>
     <secteur-item
       [title]="'RAISONS.ITEM_3' | translate"
       [image]="'assets/icons/first_deployment.png'"
+      [reasonType]="'PI'"
+      (sendReasonEvent)="pushReasonDev($event)"
     ></secteur-item>
     <secteur-item
       [title]="'RAISONS.ITEM_4' | translate"
       [image]="'assets/icons/insatisfaction.png'"
+      [reasonType]="'IN'"
+      (sendReasonEvent)="pushReasonDev($event)"
     ></secteur-item>
     <secteur-item
       [title]="'RAISONS.ITEM_5' | translate"
       [image]="'assets/icons/old.png'"
+      [reasonType]="'VT'"
+      (sendReasonEvent)="pushReasonDev($event)"
     ></secteur-item>
     <secteur-item
       [title]="'RAISONS.ITEM_6' | translate"
       [image]="'assets/icons/other.png'"
+      [reasonType]="'ANY'"
+      (sendReasonEvent)="pushReasonDev($event)"
     ></secteur-item>
   </div>
 </div>
@@ -45,4 +57,5 @@
 <app-item-button-steps
   [previous]="'/deadline-client'"
   [next]="'/coefficients-client'"
+  [solution]="solutionModel"
 ></app-item-button-steps>

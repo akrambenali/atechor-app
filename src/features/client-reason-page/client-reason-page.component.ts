@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Solutions } from 'src/business/model/solution.model';
+import { Reason, Solutions } from 'src/business/model/solution.model';
 
 @Component({
   selector: 'app-client-reason-page',
@@ -9,7 +9,7 @@ import { Solutions } from 'src/business/model/solution.model';
 })
 export class ClientReasonPageComponent implements OnInit {
   solutionModel = {} as Solutions;
-
+  reason = {} as Reason;
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
@@ -17,5 +17,11 @@ export class ClientReasonPageComponent implements OnInit {
       console.log('====================================');
     console.log(this.solutionModel);
     console.log('====================================');
+  }
+
+  pushReasonDev(newItem: any) {
+    this.reason = newItem;
+    this.solutionModel.compatibility.reason = this.reason;
+    console.log(this.solutionModel);
   }
 }

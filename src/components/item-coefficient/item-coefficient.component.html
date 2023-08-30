@@ -9,13 +9,9 @@
  -->
 
 <div class="d-flex justify-content-center card-coefficient m-3">
-  <img
-    src="{{icon}}"
-    alt=""
-    class="img img-coefficient img-pos"
-  />
+  <img src="{{ icon }}" alt="" class="img img-coefficient img-pos" />
   <div>
-    <p class="text-dark text-coefficient m-0">{{title}}</p>
+    <p class="text-dark text-coefficient m-0">{{ title }}</p>
   </div>
   <div class="input-group w-auto justify-content-end align-items-center">
     <input
@@ -23,12 +19,12 @@
       value="-"
       class="button-minus border rounded icon-shape icon-sm mx-1"
       data-field="quantity"
+      (click)="onDecrement()"
     />
     <input
       type="number"
-      step="1"
       max="10"
-      value="1"
+      [value]="this.value"
       name="quantity"
       class="quantity-field border-0 text-center w-25 value-coefficient color-input"
     />
@@ -37,6 +33,7 @@
       value="+"
       class="button-plus border rounded icon-shape icon-sm icon-pos"
       data-field="quantity"
+      (click)="onIncrement()"
     />
   </div>
 </div>
