@@ -65,7 +65,8 @@ export interface Compatibility {
   companySize: CompanySize;
   implemntation: Implemntation;
   position: number;
-  reason: Reason
+  reason: Reason;
+  coefficients: Coefficients
 }
 
 export interface SecteurItem {

@@ -15,13 +15,19 @@
   <main class="pos-card">
     <div class="row g-5">
       <div class="col-md-7 col-lg-8 offset-md-3">
-        <form class="needs-validation" novalidate>
+        <form
+          class="needs-validation"
+          [formGroup]="cabinetContactForm"
+          (ngSubmit)="onSubmit()"
+        >
           <div class="row g-3 form-top">
             <div class="col-sm-6 form-input-size m-0">
               <input
                 type="text"
                 class="form-control"
                 id="firstName"
+                name="firstName"
+                formControlName="firstName"
                 [placeholder]="'FROM_2.ITEM_1' | translate"
                 value=""
                 required
@@ -34,6 +40,8 @@
                 type="text"
                 class="form-control"
                 id="lastName"
+                name="lastName"
+                formControlName="lastName"
                 [placeholder]="'FROM_2.ITEM_2' | translate"
                 value=""
                 required
@@ -45,7 +53,9 @@
               <input
                 type="text"
                 class="form-control"
-                id="firstName"
+                id="country"
+                name="country"
+                formControlName="country"
                 [placeholder]="'FROM_2.ITEM_3' | translate"
                 value=""
                 required
@@ -57,7 +67,9 @@
               <input
                 type="text"
                 class="form-control"
-                id="firstName"
+                id="office"
+                name="office"
+                formControlName="office"
                 [placeholder]="'FROM_2.ITEM_4' | translate"
                 value=""
                 required
@@ -67,22 +79,12 @@
 
             <div class="col-12 form-input-top m-0">
               <input
-                type="email"
+                type="text"
                 class="form-control form-control-large"
-                id="email"
+                id="endClient"
+                name="endClient"
+                formControlName="endClient"
                 [placeholder]="'FROM_2.ITEM_5' | translate"
-              />
-              <div class="invalid-feedback">
-                Please enter a valid email address for shipping updates.
-              </div>
-            </div>
-
-            <div class="col-12 form-input-top m-0">
-              <input
-                type="email"
-                class="form-control form-control-large"
-                id="email"
-                [placeholder]="'FROM_2.ITEM_6' | translate"
               />
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
@@ -93,7 +95,23 @@
               <input
                 type="text"
                 class="form-control form-control-large"
-                id="address"
+                id="role"
+                name="role"
+                formControlName="role"
+                [placeholder]="'FROM_2.ITEM_6' | translate"
+              />
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="col-12 form-input-top m-0">
+              <input
+                type="email"
+                class="form-control form-control-large"
+                id="email"
+                name="email"
+                formControlName="email"
                 [placeholder]="'FROM_2.ITEM_7' | translate"
                 required
               />
@@ -110,13 +128,38 @@
               <a href="#">{{ "FROM_2.ITEM_9" | translate }}</a>
             </label>
           </div>
+          <div class="row pos-buttons">
+            <div class="col-md-6">
+              <button
+                class="btn btn-outline-secondary btn-back me-md-2"
+                type="button"
+                [routerLink]="'/coefficients-client'"
+              >
+                <!--  <i class="bi bi-chevron-left"></i> -->
+                <i class="retour"></i>
+                {{ "FOOTER_BUTTONS_FORMS.BUTTON_1" | translate }}
+              </button>
+              <button
+                class="btn btn-outline-secondary btn-reset"
+                type="button"
+                [routerLink]="'/'"
+              >
+                <!--  <i class="bi bi-arrow-counterclockwise"></i> -->
+                <i class="reset"></i>
+                {{ "FOOTER_BUTTONS_FORMS.BUTTON_2" | translate }}
+              </button>
+            </div>
+            <div class="col-md-6 ms-auto text-end">
+              <button class="btn btn-primary me-md-2 btn-next" type="submit">
+                {{ "FOOTER_BUTTONS_FORMS.BUTTON_3" | translate }}
+                <!--  <i class="bi bi-arrow-right"></i> -->
+                <i class="suivant"></i>
+              </button>
+              <!--  [routerLink]="'/resultat-client'" -->
+            </div>
+          </div>
         </form>
       </div>
     </div>
   </main>
 </div>
-
-<app-item-button-steps
-  [previous]="'/coefficients-client'"
-  [next]="'/resultat-client'"
-></app-item-button-steps>

@@ -4,19 +4,15 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 import { Client } from 'src/business/model/client.model';
-
-
+import { Cabinet } from 'src/business/model/cabinet.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ClientService {
+  constructor(private _httpClient: HttpClient) {}
 
-  
-  constructor(private _httpClient: HttpClient) { }
-
-
-/*   public getStores() : Observable<Store[]> {
+  /*   public getStores() : Observable<Store[]> {
     return this._httpClient.get<Store[]>(`${environment.apiUrl}stores`);
   }
   public getStore(id: string) : Observable<Store> {
@@ -27,13 +23,19 @@ export class ClientService {
   public deleteStore(id: string) {
     return this._httpClient.delete(`${environment.apiUrl}stores/` + id)
   } */
-  public addClient (client : Client) {
-    const headers = { 'content-type': 'application/json'}  
-    const body=JSON.stringify(client);
-    return this._httpClient.post(`${environment.apiUrl}clients/`, body,{'headers':headers})
+  public addClient(client: Client) {
+    const headers = { 'content-type': 'application/json' };
+    const body = JSON.stringify(client);
+    return this._httpClient.post(`${environment.apiUrl}clients/`, body, {
+      headers: headers,
+    });
   }
- 
-  
- 
-  
+
+  public addCabinet(cabinet: Cabinet) {
+    const headers = { 'content-type': 'application/json' };
+    const body = JSON.stringify(cabinet);
+    return this._httpClient.post(`${environment.apiUrl}cclients/`, body, {
+      headers: headers,
+    });
+  }
 }

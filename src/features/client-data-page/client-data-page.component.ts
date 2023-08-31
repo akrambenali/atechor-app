@@ -3,6 +3,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { ClientService } from '../services/client.services';
 import { Client } from 'src/business/model/client.model';
+import { Solutions } from 'src/business/model/solution.model';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-client-data-page',
@@ -12,8 +14,13 @@ import { Client } from 'src/business/model/client.model';
 export class ClientDataPageComponent implements OnInit {
   RespMessage: any;
   clientData!: Client;
+  solutionModel = {} as Solutions;
 
-  constructor(private clientService: ClientService ) {}
+  constructor(
+    private clientService: ClientService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {}
   contactForm = new FormGroup({
     firstName: new FormControl(),
     lastName: new FormControl(),
@@ -23,11 +30,16 @@ export class ClientDataPageComponent implements OnInit {
     email: new FormControl(),
   });
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    (this.solutionModel = history.state),
+    console.log('====================================');
+    console.log(this.solutionModel);
+    console.log('====================================');
+  }
 
   onSubmit() {
     console.log(this.contactForm.value);
-    this.clientData = this.contactForm.value as Client ;
+    this.clientData = this.contactForm.value as Client;
     this.clientService.addClient(this.clientData).subscribe((res: any) => {
       this.RespMessage = res;
       console.log('====================================');

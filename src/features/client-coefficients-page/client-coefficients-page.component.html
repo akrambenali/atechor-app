@@ -19,30 +19,40 @@
         <app-item-coefficient
           [title]="'COEFFICIENTS.ITEM_1' | translate"
           [icon]="'assets/icons/application.png'"
+          [type]="'software'"
+          (sendcoefficientsEvent)="pushClientCoefficients($event)"
         ></app-item-coefficient>
       </div>
       <div class="col-7 col-offset-5">
         <app-item-coefficient
           [title]="'COEFFICIENTS.ITEM_2' | translate"
           [icon]="'assets/icons/tarifs.png'"
+          [type]="'price'"
+          (sendcoefficientsEvent)="pushClientCoefficients($event)"
         ></app-item-coefficient>
       </div>
       <div class="col-7 col-offset-5">
         <app-item-coefficient
           [title]="'COEFFICIENTS.ITEM_3' | translate"
           [icon]="'assets/icons/editeur.png'"
+          [type]="'vendor'"
+          (sendcoefficientsEvent)="pushClientCoefficients($event)"
         ></app-item-coefficient>
       </div>
       <div class="col-7 col-offset-5">
         <app-item-coefficient
           [title]="'COEFFICIENTS.ITEM_4' | translate"
           [icon]="'assets/icons/compta.png'"
+          [type]="'Compatibility'"
+          (sendcoefficientsEvent)="pushClientCoefficients($event)"
         ></app-item-coefficient>
       </div>
       <div class="col-7 col-offset-5">
         <app-item-coefficient
           [title]="'COEFFICIENTS.ITEM_5' | translate"
           [icon]="'assets/icons/positionnement.png'"
+          [type]="'postion'"
+          (sendcoefficientsEvent)="pushClientCoefficients($event)"
         ></app-item-coefficient>
       </div>
     </div>
@@ -52,4 +62,5 @@
 <app-item-button-steps
   [previous]="'/reason-client'"
   [next]="'/infos-client'"
+  [solution]="solutionModel"
 ></app-item-button-steps>
