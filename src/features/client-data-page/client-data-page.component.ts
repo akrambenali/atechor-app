@@ -46,5 +46,11 @@ export class ClientDataPageComponent implements OnInit {
       console.log(this.RespMessage);
       console.log('====================================');
     });
+
+    this.clientService.getSolutions(this.solutionModel).subscribe((res)=> {
+      console.log('====================================');
+      console.log(res);
+      console.log('====================================');
+    })
   }
 }

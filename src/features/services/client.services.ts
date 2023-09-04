@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 
 import { Client } from 'src/business/model/client.model';
 import { Cabinet } from 'src/business/model/cabinet.model';
+import { Solutions } from 'src/business/model/solution.model';
 
 @Injectable({
   providedIn: 'root',
@@ -38,4 +39,13 @@ export class ClientService {
       headers: headers,
     });
   }
+
+  public getSolutions(solution: Solutions) : Observable<any> {
+    const headers = { 'content-type': 'application/json' };
+    const body = solution;
+    return this._httpClient.post(`${environment.apiUrl}solutions/`, body, {
+      headers: headers,
+    });
+  }
+
 }
