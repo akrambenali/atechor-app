@@ -25,6 +25,7 @@
         class="btn btn-primary me-md-2 btn-next"
         type="button"
         (click)="goToRoute(next)"
+        [disabled]="isEmpty"
       >
         Suivant
         <!--  <i class="bi bi-arrow-right"></i> -->

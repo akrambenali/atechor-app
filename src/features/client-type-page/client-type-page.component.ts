@@ -10,6 +10,8 @@ import { ClientBusiness, Solutions } from 'src/business/model/solution.model';
 export class ClientTypePageComponent implements OnInit {
   solutionModel = {} as Solutions;
   clientBusiness = {} as ClientBusiness;
+  isEmpty: boolean = true;
+
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     
@@ -25,6 +27,7 @@ export class ClientTypePageComponent implements OnInit {
   pushClientType(newItem: any) {
     this.clientBusiness = newItem;
     this.solutionModel.clientBusiness = this.clientBusiness;
+    this.isEmpty =  false;
     console.log( this.solutionModel);
     
   }

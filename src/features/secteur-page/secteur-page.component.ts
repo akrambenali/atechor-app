@@ -14,6 +14,7 @@ export class SecteurPageComponent implements OnInit {
   solutionModel = {} as Solutions;
   compatibility = {} as Compatibility;
   secteur: SecteurItem[] = [];
+  isEmpty: boolean = true;
 
   constructor() {}
 
@@ -26,10 +27,14 @@ export class SecteurPageComponent implements OnInit {
     } else {
       this.secteur = this.removeObjectWithId(this.secteur, newItem.title);
     }
-    this.compatibility.secteur =  this.secteur;
+    this.compatibility.secteur = this.secteur;
+    if (this.compatibility.secteur.length > 0) {
+      console.log('change');
+
+      this.isEmpty = false;
+    }
     this.solutionModel.compatibility = this.compatibility;
-    console.log( this.solutionModel);
-    
+    console.log(this.solutionModel);
   }
 
   removeObjectWithId(arr: SecteurItem[], title: string) {
@@ -37,6 +42,10 @@ export class SecteurPageComponent implements OnInit {
 
     if (objWithIdIndex > -1) {
       arr.splice(objWithIdIndex, 1);
+    }
+    if (arr.length === 0) {
+      console.log('change');
+      this.isEmpty = true;
     }
     return arr;
   }

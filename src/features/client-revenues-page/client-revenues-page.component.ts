@@ -12,6 +12,7 @@ export class ClientRevenuesPageComponent implements OnInit {
 
   solutionModel = {} as Solutions;
   companySize = {}  as Size;
+  isEmpty: boolean = true;
  
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     
@@ -28,6 +29,7 @@ export class ClientRevenuesPageComponent implements OnInit {
   pushClientRevenues(newItem: any) {
     this.companySize = newItem;
     this.solutionModel.compatibility.size = this.companySize;
+    this.isEmpty =  false;
     console.log( this.solutionModel);
     
   }

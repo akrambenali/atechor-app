@@ -17,6 +17,9 @@ export class ItemButtonStepsComponent implements OnInit {
   @Input()
   solution!: Solutions;
 
+  @Input()
+  isEmpty!: Boolean;
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
