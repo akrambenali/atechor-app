@@ -12,6 +12,7 @@ export class ClientFonctionsPageComponent implements OnInit {
 
   solutionModel = {} as Solutions;
   fonctions: FonctionItem[] = [];
+  isEmpty: boolean = true;
   
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     
@@ -33,6 +34,7 @@ export class ClientFonctionsPageComponent implements OnInit {
       this.fonctions = this.removeObjectWithId(this.fonctions, newItem.title);
     }
     this.solutionModel.compatibility.fonctions = this.fonctions;
+    this.isEmpty =  false;
     console.log( this.solutionModel);
     
   }
@@ -42,6 +44,9 @@ export class ClientFonctionsPageComponent implements OnInit {
 
     if (objWithIdIndex > -1) {
       arr.splice(objWithIdIndex, 1);
+    }
+    if(arr.length === 0) {
+      this.isEmpty =  true;
     }
     return arr;
   }

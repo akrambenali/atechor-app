@@ -11,6 +11,8 @@ export class ClientDeadlinePageComponent implements OnInit {
 
   solutionModel = {} as Solutions;
   deadline = {} as Implemntation;
+  isEmpty: boolean = true;
+  
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
@@ -24,6 +26,7 @@ export class ClientDeadlinePageComponent implements OnInit {
   pushClientDeadline(newItem: any) {
     this.deadline = newItem;
     this.solutionModel.compatibility.implemntation = this.deadline;
+    this.isEmpty = false;
     console.log(this.solutionModel);
   }
 

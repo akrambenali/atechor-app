@@ -10,7 +10,8 @@ import { CompanySize, Solutions } from 'src/business/model/solution.model';
 export class UsersPageComponent implements OnInit {
 
   solutionModel = {} as Solutions;
-  companySize = {}  as CompanySize
+  companySize = {}  as CompanySize;
+  isEmpty: boolean = true;
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     
   }
@@ -26,6 +27,7 @@ export class UsersPageComponent implements OnInit {
   pushClientCompanySize(newItem: any) {
     this.companySize = newItem;
     this.solutionModel.compatibility.companySize = this.companySize;
+    this.isEmpty =  false;
     console.log( this.solutionModel);
     
   }

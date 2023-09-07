@@ -10,7 +10,9 @@ import { InternationnalBusiness, Solutions } from 'src/business/model/solution.m
 export class ClientDeploymentPageComponent implements OnInit {
 
   solutionModel = {} as Solutions;
-  internationnalBusiness = {} as InternationnalBusiness
+  internationnalBusiness = {} as InternationnalBusiness;
+  isEmpty: boolean = true;
+  
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     
@@ -27,6 +29,7 @@ export class ClientDeploymentPageComponent implements OnInit {
   pushClientinternationnalBusiness(newItem: any) {
     this.internationnalBusiness = newItem;
     this.solutionModel.internationnalBusiness = this.internationnalBusiness;
+    this.isEmpty =  false;
     console.log( this.solutionModel);
     
   }

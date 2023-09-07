@@ -11,6 +11,7 @@ export class ClientDevPageComponent implements OnInit {
 
   solutionModel = {} as Solutions;
   dev = {} as Dev;
+  isEmpty: boolean = true;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
@@ -24,6 +25,7 @@ export class ClientDevPageComponent implements OnInit {
   pushClientDev(newItem: any) {
     this.dev = newItem;
     this.solutionModel.dev = this.dev;
+    this.isEmpty = false;
     console.log(this.solutionModel);
   }
 

@@ -11,6 +11,7 @@ export class ClientNumbersPageComponent implements OnInit {
 
   solutionModel = {} as Solutions;
   usersNumber = {} as  UsersNumber;
+  isEmpty: boolean = true;
   
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     
@@ -27,6 +28,7 @@ export class ClientNumbersPageComponent implements OnInit {
   pushUsersNumber(newItem: any) {
     this.usersNumber = newItem;
     this.solutionModel.compatibility.usersNumber = this.usersNumber;
+    this.isEmpty =  false;
     console.log( this.solutionModel);
     
   }

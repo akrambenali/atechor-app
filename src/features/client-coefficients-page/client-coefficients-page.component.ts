@@ -16,6 +16,7 @@ export class ClientCoefficientsPageComponent implements OnInit {
     Compatibility: 0,
     postion: 0,
   } as Coefficients;
+  isEmpty: boolean = true;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
@@ -49,6 +50,7 @@ export class ClientCoefficientsPageComponent implements OnInit {
     }
 
     this.solutionModel.compatibility.coefficients = this.coefficients;
+    this.isEmpty = false;
     console.log(this.solutionModel);
   }
 }

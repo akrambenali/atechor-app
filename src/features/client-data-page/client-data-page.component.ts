@@ -15,6 +15,7 @@ export class ClientDataPageComponent implements OnInit {
   RespMessage: any;
   clientData!: Client;
   solutionModel = {} as Solutions;
+  
 
   constructor(
     private clientService: ClientService,

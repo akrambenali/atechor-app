@@ -10,6 +10,7 @@ import { Hosting, Solutions } from 'src/business/model/solution.model';
 export class ClientHostingPageComponent implements OnInit {
   solutionModel = {} as Solutions;
   hosting = {} as Hosting;
+  isEmpty: boolean = true;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
@@ -23,6 +24,7 @@ export class ClientHostingPageComponent implements OnInit {
   pushClientHosting(newItem: any) {
     this.hosting = newItem;
     this.solutionModel.hosting = this.hosting;
+    this.isEmpty = false;
     console.log(this.solutionModel);
   }
 }

@@ -10,6 +10,8 @@ import { Reason, Solutions } from 'src/business/model/solution.model';
 export class ClientReasonPageComponent implements OnInit {
   solutionModel = {} as Solutions;
   reason = {} as Reason;
+  isEmpty: boolean = true;
+
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
@@ -22,6 +24,7 @@ export class ClientReasonPageComponent implements OnInit {
   pushReasonDev(newItem: any) {
     this.reason = newItem;
     this.solutionModel.compatibility.reason = this.reason;
+    this.isEmpty = false;
     console.log(this.solutionModel);
   }
 }

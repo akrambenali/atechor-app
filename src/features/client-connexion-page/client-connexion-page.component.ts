@@ -10,6 +10,7 @@ import { Solutions } from 'src/business/model/solution.model';
 export class ClientConnexionPageComponent implements OnInit {
 
   solutionModel = {} as Solutions;
+  isEmpty: boolean = true;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
@@ -22,6 +23,7 @@ export class ClientConnexionPageComponent implements OnInit {
 
   pushClientConnexion(newItem: any) {
     this.solutionModel.connexion = newItem;
+    this.isEmpty = true;
     console.log(this.solutionModel);
   }
 }
