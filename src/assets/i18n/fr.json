@@ -1,237 +1,225 @@
 {
-    "SECTEUR": {
-        "TITLE":"Votre secteur d’activité",
-        "SECTEUR_1":"Services",
-        "SECTEUR_2":"Production industrielle",
-        "SECTEUR_3":"Construction",
-        "SECTEUR_4":"Distribution",
-        "SECTEUR_5":"Activités financières",
-        "SECTEUR_6":"Gouvernement - ONG",
-        "SECTEUR_7":"Énergie",
-        "SECTEUR_8":"Transport - Logistique",
-        "SECTEUR_9":"Aérospatial - Défense"
-
-    },
-    "TYPE_CLIENT":  {
-        "TITLE":"Qui sont vos clients ?",
-        "ITEM_1":"Des professionnels",
-        "ITEM_2":"Des particuliers",
-        "ITEM_3":"Les deux"
-
-    },
-    "INCOME": {
-        "TITLE":"Quel est le chiffre d’affaires de votre entreprise ?",
-        "ITEM_1":"Moins de 2 M €",
-        "ITEM_2":"2 à 10 M €",
-        "ITEM_3":"10 à 50 M €",
-        "ITEM_4":"50 à 200 M €",
-        "ITEM_5":"200 M à 1 Mrd €",
-        "ITEM_6":"1 Mrd € et plus"
-    },
-    "USERS_NUMBERS": {
-        "TITLE":"Nombre d’employés",
-        "ITEM_1":"1 à 25",
-        "ITEM_2":"25 à 75",
-        "ITEM_3":"75 à 200",
-        "ITEM_4":"200 à 700",
-        "ITEM_5":"700 à 2000",
-        "ITEM_6":"Plus de 2000"
-    },
-    "USERS": {
-        "TITLE":"Combien d’utilisateurs prévoyez-vous ?",
-        "ITEM_1":"1 à 25",
-        "ITEM_2":"25 à 75",
-        "ITEM_3":"75 à 200",
-        "ITEM_4":"200 à 700",
-        "ITEM_5":"700 à 2000",
-        "ITEM_6":"Plus de 2000"
-    },
-    "DEPLOYMENT": {
-        "TITLE":"À quelle échelle sera déployée la solution ?",
-        "ITEM_1":"Nationale",
-        "ITEM_2":"Internationale"  
-    },
-    "FONCTIONS": {
-        "TITLE":"Périmètre fonctionnel souhaité",
-        "ITEM_1":"CRM",
-        "ITEM_2":"Finance et comptabilité",
-        "ITEM_3":"RH",
-        "ITEM_4":"Achats",
-        "ITEM_5":"Production",
-        "ITEM_6":"Gestion de projet",
-        "ITEM_7":"Logistique",
-        "ITEM_8":"Gestion des actifs",
-        "ITEM_9":"R&D"  
-    },
-    "HOSTING": {
-        "TITLE":"Mode d’hébergement",
-        "ITEM_1":"Cloud",
-        "ITEM_2":"Sur site (On-premise)",
-        "ITEM_3":"SaaS",
-        "ITEM_4":"Hybride",
-        "ITEM_5":"Peu importe"
-    },
-    "DEV": {
-        "TITLE":"Dans quelle mesure devrez-vous intégrer des développements spécifiques ?",
-        "ITEM_1":"Peu",
-        "ITEM_2":"Beaucoup",
-        "ITEM_3":"Pas du tout"
-    },
-    "CONNEXION": {
-        "TITLE":"La solution devra-t-elle être connectée à d’autres logiciels ?",
-        "ITEM_1":"Oui",
-        "ITEM_2":"Non"
-    },
-    "DEADLINES": {
-        "TITLE":"Quand souhaitez-vous implémenter cette solution ?",
-        "ITEM_1":"< 1 mois",
-        "ITEM_2":"< 6 mois",
-        "ITEM_3":"< 1 an",
-        "ITEM_4":"> 1 an",
-        "ITEM_5":"Peu importe"
-    },
-    "RAISONS": {
-        "TITLE":"Pour quelle(s) raison(s) recherchez-vous un ERP ?",
-        "ITEM_1":"Solution actuelle obsolète",
-        "ITEM_2":"Manque de fonctionnalités",
-        "ITEM_3":"Première implémentation",
-        "ITEM_4":"Insatisfaction",
-        "ITEM_5":"Veille technologique",
-        "ITEM_6":"Autre raison"
-    },
-    "COEFFICIENTS": {
-        "TITLE":"Définissez vos coefficients",
-        "SUBTITLE":"Définissez des coefficients (de 1 à 3) en fonction de ce qui est important pour vous.",
-        "ITEM_1":"Logiciel",
-        "ITEM_2":"Prix",
-        "ITEM_3":"Éditeur",
-        "ITEM_4":"Compatibilité",
-        "ITEM_5":"Positionnement"
-    },
-    "FROM_1": {
-        "TITLE":"Dites-nous qui vous êtes !",
-        "ITEM_1":"PRÉNOM",
-        "ITEM_2":"NOM",
-        "ITEM_3":"ENTREPRISE",
-        "ITEM_4":"Vous êtes un cabinet de conseil ? Cliquez ici",
-        "ITEM_5":"PAYS",
-        "ITEM_6":"FONCTION",
-        "ITEM_7":"MAIL PROFESSIONNEL",
-        "ITEM_8":"J’accepte d’être contacté dans le cadre de mon projet.",
-        "ITEM_9":"En savoir plus."  
-    },
-    "FROM_2": {
-        "TITLE":"Dites-nous qui vous êtes !",
-        "ITEM_1":"PRÉNOM",
-        "ITEM_2":"NOM",
-        "ITEM_3":"CABINET",
-        "ITEM_4":"CLIENT FINAL",
-        "ITEM_5":"PAYS",
-        "ITEM_6":"FONCTION",
-        "ITEM_7":"MAIL PROFESSIONNEL",
-        "ITEM_8":"J’accepte d’être contacté dans le cadre de mon projet.",
-        "ITEM_9":"En savoir plus."  
-    },
-    "RESULTS": {
-        "TITLE":"The 6 most relevant solutions for you:",
-        "ITEM_1":"Software",
-        "ITEM_2":"Price",
-        "ITEM_3":"Provider",
-        "ITEM_4":"Compatibility",
-        "ITEM_5":"Positioning",
-        "ITEM_6":"Site web",
-        "ITEM_7":"Summary:",
-        "ITEM_8":"Coefficients :",
-        "ITEM_9":"Know more",
-        "ITEM_10":"Activity:",
-        "ITEM_11":"Type of clients:",
-        "ITEM_12":"Revenue:",
-        "ITEM_13":"Number of employees:",
-        "ITEM_14":"Deployment",
-        "ITEM_15":"Features",
-        "ITEM_16":"Number of users",
-        "ITEM_17":"Hosting",
-        "ITEM_18":"Specifics",
-        "ITEM_19":"Connectivity",
-        "ITEM_20":"Deadline",
-        "ITEM_21":"Context"
-
-    },
-    "SCORES": {
-        "TITLE":"Les 6 solutions les plus pertinentes pour vous :",
-        "ITEM_1":"Coefficients :",
-        "ITEM_2":"Logiciel",
-        "ITEM_3":"Prix",
-        "ITEM_4":"Éditeur",
-        "ITEM_5":"Compatibilité",
-        "ITEM_6":"Positionnement",
-        "ITEM_7":"Résumé de votre recherche :",
-        "ITEM_8":"Secteur d’activité :",
-        "ITEM_9":"Types de clients :",
-        "ITEM_10":"Chiffre d’affaires :",
-        "ITEM_11":"Nombre d’employés :",
-        "ITEM_12":"Échelle d’implémentation :",
-        "ITEM_13":"Périmètre fonctionnel :",
-        "ITEM_14":"Nombre d’utilisateurs :",
-        "ITEM_15":"Mode d’hébergement :",
-        "ITEM_16":"Développements spécifiques :",
-        "ITEM_17":"Connectivité :",
-        "ITEM_18":"Délai d’implémentation :",
-        "ITEM_19":"Contexte :"
-
-    },
-    "RESULTS_BUTTONS": {
-        "ITEM_1": "Export in PDF",
-        "ITEM_2": "Start again",
-        "ITEM_3": "Evaluation method"
-    },
-    "FOOTER_BUTTONS": {
-        "BUTTON_1":"Retour",
-        "BUTTON_2":"Recommencer",
-        "BUTTON_3":"Suivant"
-    },
-    "FOOTER_BUTTONS_FORMS": {
-        "BUTTON_1":"Retour",
-        "BUTTON_2":"Recommencer",
-        "BUTTON_3":"Terminer"
-    },
-    "STEPS": {
-        "STEP_1":"1/13",
-        "STEP_2":"2/13",
-        "STEP_3":"3/13",
-        "STEP_4":"4/13",
-        "STEP_5":"5/13",
-        "STEP_6":"6/13",
-        "STEP_7":"7/13",
-        "STEP_8":"8/13",
-        "STEP_9":"9/13",
-        "STEP_10":"10/13",
-        "STEP_11":"11/13",
-        "STEP_12":"12/13",
-        "STEP_13":"13/13",
-        "STEP_14":"Dernière étape"
-        
-
-    },
-    "STEPSIZE": {
-        "STEP_1":"width: 7.70%",
-        "STEP_2":"width: 15.4%",
-        "STEP_3":"width: 23.1%",
-        "STEP_4":"width: 30.8%",
-        "STEP_5":"width: 38.5%",
-        "STEP_6":"width: 46.20%",
-        "STEP_7":"width: 53.9%",
-        "STEP_8":"width: 61.6%",
-        "STEP_9":"width: 69.3%",
-        "STEP_10":"width: 77%",
-        "STEP_11":"width: 84.7%",
-        "STEP_12":"width: 92.4%",
-        "STEP_13":"width: 100%",
-        "STEP_14":"width: 100%"
-
-    },
-    "EMAIL": {
-        "TITLE":"La page de résultats a été envoyée avec succès à : "
-    }
-  
+  "SECTEUR": {
+    "TITLE": "Votre secteur d’activité",
+    "SECTEUR_1": "Services",
+    "SECTEUR_2": "Production industrielle",
+    "SECTEUR_3": "Construction",
+    "SECTEUR_4": "Distribution",
+    "SECTEUR_5": "Activités financières",
+    "SECTEUR_6": "Gouvernement - ONG",
+    "SECTEUR_7": "Énergie",
+    "SECTEUR_8": "Transport - Logistique",
+    "SECTEUR_9": "Aérospatial - Défense"
+  },
+  "TYPE_CLIENT": {
+    "TITLE": "Qui sont vos clients ?",
+    "ITEM_1": "Des professionnels",
+    "ITEM_2": "Des particuliers",
+    "ITEM_3": "Les deux"
+  },
+  "INCOME": {
+    "TITLE": "Quel est le chiffre d’affaires de votre entreprise ?",
+    "ITEM_1": "Moins de 2 M €",
+    "ITEM_2": "2 à 10 M €",
+    "ITEM_3": "10 à 50 M €",
+    "ITEM_4": "50 à 200 M €",
+    "ITEM_5": "200 M à 1 Mrd €",
+    "ITEM_6": "1 Mrd € et plus"
+  },
+  "USERS_NUMBERS": {
+    "TITLE": "Nombre d’employés",
+    "ITEM_1": "1 à 25",
+    "ITEM_2": "25 à 75",
+    "ITEM_3": "75 à 200",
+    "ITEM_4": "200 à 700",
+    "ITEM_5": "700 à 2000",
+    "ITEM_6": "Plus de 2000"
+  },
+  "USERS": {
+    "TITLE": "Combien d’utilisateurs prévoyez-vous ?",
+    "ITEM_1": "1 à 25",
+    "ITEM_2": "25 à 75",
+    "ITEM_3": "75 à 200",
+    "ITEM_4": "200 à 700",
+    "ITEM_5": "700 à 2000",
+    "ITEM_6": "Plus de 2000"
+  },
+  "DEPLOYMENT": {
+    "TITLE": "À quelle échelle sera déployée la solution ?",
+    "ITEM_1": "Nationale",
+    "ITEM_2": "Internationale"
+  },
+  "FONCTIONS": {
+    "TITLE": "Périmètre fonctionnel souhaité",
+    "ITEM_1": "CRM",
+    "ITEM_2": "Finance et comptabilité",
+    "ITEM_3": "RH",
+    "ITEM_4": "Achats",
+    "ITEM_5": "Production",
+    "ITEM_6": "Gestion de projet",
+    "ITEM_7": "Logistique",
+    "ITEM_8": "Gestion des actifs",
+    "ITEM_9": "R&D"
+  },
+  "HOSTING": {
+    "TITLE": "Mode d’hébergement",
+    "ITEM_1": "Cloud",
+    "ITEM_2": "Sur site (On-premise)",
+    "ITEM_3": "SaaS",
+    "ITEM_4": "Hybride",
+    "ITEM_5": "Peu importe"
+  },
+  "DEV": {
+    "TITLE": "Dans quelle mesure devrez-vous intégrer des développements spécifiques ?",
+    "ITEM_1": "Peu",
+    "ITEM_2": "Beaucoup",
+    "ITEM_3": "Pas du tout"
+  },
+  "CONNEXION": {
+    "TITLE": "La solution devra-t-elle être connectée à d’autres logiciels ?",
+    "ITEM_1": "Oui",
+    "ITEM_2": "Non"
+  },
+  "DEADLINES": {
+    "TITLE": "Quand souhaitez-vous implémenter cette solution ?",
+    "ITEM_1": "< 1 mois",
+    "ITEM_2": "< 6 mois",
+    "ITEM_3": "< 1 an",
+    "ITEM_4": "> 1 an",
+    "ITEM_5": "Peu importe"
+  },
+  "RAISONS": {
+    "TITLE": "Pour quelle(s) raison(s) recherchez-vous un ERP ?",
+    "ITEM_1": "Solution actuelle obsolète",
+    "ITEM_2": "Manque de fonctionnalités",
+    "ITEM_3": "Première implémentation",
+    "ITEM_4": "Insatisfaction",
+    "ITEM_5": "Veille technologique",
+    "ITEM_6": "Autre raison"
+  },
+  "COEFFICIENTS": {
+    "TITLE": "Définissez vos coefficients",
+    "SUBTITLE": "Définissez des coefficients (de 1 à 3) en fonction de ce qui est important pour vous.",
+    "ITEM_1": "Logiciel",
+    "ITEM_2": "Prix",
+    "ITEM_3": "Éditeur",
+    "ITEM_4": "Compatibilité",
+    "ITEM_5": "Positionnement"
+  },
+  "FROM_1": {
+    "TITLE": "Dites-nous qui vous êtes !",
+    "ITEM_1": "PRÉNOM",
+    "ITEM_2": "NOM",
+    "ITEM_3": "ENTREPRISE",
+    "ITEM_4": "Vous êtes un cabinet de conseil ? Cliquez ici",
+    "ITEM_5": "PAYS",
+    "ITEM_6": "FONCTION",
+    "ITEM_7": "MAIL PROFESSIONNEL",
+    "ITEM_8": "J’accepte d’être contacté dans le cadre de mon projet.",
+    "ITEM_9": "En savoir plus."
+  },
+  "FROM_2": {
+    "TITLE": "Dites-nous qui vous êtes !",
+    "ITEM_1": "PRÉNOM",
+    "ITEM_2": "NOM",
+    "ITEM_3": "CABINET",
+    "ITEM_4": "CLIENT FINAL",
+    "ITEM_5": "PAYS",
+    "ITEM_6": "FONCTION",
+    "ITEM_7": "MAIL PROFESSIONNEL",
+    "ITEM_8": "J’accepte d’être contacté dans le cadre de mon projet.",
+    "ITEM_9": "En savoir plus."
+  },
+  "RESULTS": {
+    "TITLE": "The 6 most relevant solutions for you:",
+    "ITEM_1": "Software",
+    "ITEM_2": "Price",
+    "ITEM_3": "Provider",
+    "ITEM_4": "Compatibility",
+    "ITEM_5": "Positioning",
+    "ITEM_6": "Site web",
+    "ITEM_7": "Summary:",
+    "ITEM_8": "Coefficients :",
+    "ITEM_9": "Know more",
+    "ITEM_10": "Activity:",
+    "ITEM_11": "Type of clients:",
+    "ITEM_12": "Revenue:",
+    "ITEM_13": "Number of employees:",
+    "ITEM_14": "Deployment",
+    "ITEM_15": "Features",
+    "ITEM_16": "Number of users",
+    "ITEM_17": "Hosting",
+    "ITEM_18": "Specifics",
+    "ITEM_19": "Connectivity",
+    "ITEM_20": "Deadline",
+    "ITEM_21": "Context"
+  },
+  "SCORES": {
+    "TITLE": "Les 6 solutions les plus pertinentes pour vous :",
+    "ITEM_1": "Coefficients :",
+    "ITEM_2": "Logiciel",
+    "ITEM_3": "Prix",
+    "ITEM_4": "Éditeur",
+    "ITEM_5": "Compatibilité",
+    "ITEM_6": "Positionnement",
+    "ITEM_7": "Résumé de votre recherche :",
+    "ITEM_8": "Secteur d’activité :",
+    "ITEM_9": "Types de clients :",
+    "ITEM_10": "Chiffre d’affaires :",
+    "ITEM_11": "Nombre d’employés :",
+    "ITEM_12": "Échelle d’implémentation :",
+    "ITEM_13": "Périmètre fonctionnel :",
+    "ITEM_14": "Nombre d’utilisateurs :",
+    "ITEM_15": "Mode d’hébergement :",
+    "ITEM_16": "Développements spécifiques :",
+    "ITEM_17": "Connectivité :",
+    "ITEM_18": "Délai d’implémentation :",
+    "ITEM_19": "Contexte :"
+  },
+  "RESULTS_BUTTONS": {
+    "ITEM_1": "Export in PDF",
+    "ITEM_2": "Start again",
+    "ITEM_3": "Evaluation method"
+  },
+  "FOOTER_BUTTONS": {
+    "BUTTON_1": "Ok"
+  },
+  "FOOTER_BUTTONS_FORMS": {
+    "BUTTON_1": "Ok"
+  },
+  "STEPS": {
+    "STEP_1": "1/13",
+    "STEP_2": "2/13",
+    "STEP_3": "3/13",
+    "STEP_4": "4/13",
+    "STEP_5": "5/13",
+    "STEP_6": "6/13",
+    "STEP_7": "7/13",
+    "STEP_8": "8/13",
+    "STEP_9": "9/13",
+    "STEP_10": "10/13",
+    "STEP_11": "11/13",
+    "STEP_12": "12/13",
+    "STEP_13": "13/13",
+    "STEP_14": "Dernière étape"
+  },
+  "STEPSIZE": {
+    "STEP_1": "width: 7.70%",
+    "STEP_2": "width: 15.4%",
+    "STEP_3": "width: 23.1%",
+    "STEP_4": "width: 30.8%",
+    "STEP_5": "width: 38.5%",
+    "STEP_6": "width: 46.20%",
+    "STEP_7": "width: 53.9%",
+    "STEP_8": "width: 61.6%",
+    "STEP_9": "width: 69.3%",
+    "STEP_10": "width: 77%",
+    "STEP_11": "width: 84.7%",
+    "STEP_12": "width: 92.4%",
+    "STEP_13": "width: 100%",
+    "STEP_14": "width: 100%"
+  },
+  "EMAIL": {
+    "TITLE": "La page de résultats a été envoyée avec succès à : "
+  }
 }
