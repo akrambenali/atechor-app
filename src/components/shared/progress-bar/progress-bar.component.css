@@ -3,7 +3,7 @@
 }
 
 .progress {
-    --bs-progress-bg:  #4A505B;
+    --bs-progress-bg: #E8ECFF;
     height: 0.625rem;
     width: 57.375rem; 
 }

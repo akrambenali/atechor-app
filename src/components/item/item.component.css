@@ -1,36 +1,43 @@
 .img {
-    width: 55px;
+  width: 40px;
+  margin-right: 40px;
 }
 
 .card-secteur {
-    width: 389px;
-    height: 144px;
-    border-radius: 35px;
-    background-color: var(--card);
-    cursor: pointer;
+  width: 360px;
+  height: 75px;
+  border-radius: 25px;
+  background-color: var(--card);
+  cursor: pointer;
 }
 
 .card-secteur:hover {
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.10)!important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
 }
 
 .active {
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.10)!important;
-    background: var(--card) url(../../assets/icons/icon-actif.png) no-repeat 0px 0px;
-    background-position: top 25px  right 25px;
-    
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+  background: var(--card) url(../../assets/icons/icon-actif.png) no-repeat 0px
+    0px;
+  background-position: top 20px right 25px;
+  background-size: 20px;
 }
 
 .no-border {
-    border: none;
+  border: none;
 }
 
 .card-title {
-    font-family: Roboto;
-    font-size: 1.125rem;   
+  font-family: Roboto;
+  font-size: 1.188rem;
 }
 
 .pos-title {
-    padding-top: 23px;
+  /* padding-top: 23px; */
 }
 
+.card-body {
+  display: flex;
+  align-items: center;
+  padding-left: 45px;
+}

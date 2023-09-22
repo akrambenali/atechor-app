@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 :root {
-    --primaryColor:  #69EC4B;
+    --primaryColor:  #0033FF;
     --secondaryColor: #0033FF;
     --borderButton:#4A505B;
     --textScoreColor: #0E6E34;
@@ -12,18 +12,13 @@
     --card:#F4F6FA;
     --score:#CED3E1;
   }
-
-  @font-face {
-    font-family: 'Poppins';
-    src: url('../src/assets/fonts/Poppins-SemiBold.ttf');
-  }
-  
+   
   @font-face {
     font-family: 'Roboto';
     src: url('../src/assets/fonts/Roboto-Medium.ttf');
   }  
 
   h3 {
-    font-family: Poppins;
+    font-family: Roboto;
     font-size: 1.563rem; 
   }

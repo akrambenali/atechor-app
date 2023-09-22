@@ -196,19 +196,19 @@
         "BUTTON_3":"Get recommendations"
     },
     "STEPS": {
-        "STEP_1":"Step 1/12",
-        "STEP_2":"Step 2/12",
-        "STEP_3":"Step 3/12",
-        "STEP_4":"Step 4/12",
-        "STEP_5":"Step 5/12",
-        "STEP_6":"Step 6/12",
-        "STEP_7":"Step 7/12",
-        "STEP_8":"Step 8/12",
-        "STEP_9":"Step 9/12",
-        "STEP_10":"Step 10/12",
-        "STEP_11":"Step 11/12",
+        "STEP_1":"1/12",
+        "STEP_2":"2/12",
+        "STEP_3":"3/12",
+        "STEP_4":"4/12",
+        "STEP_5":"5/12",
+        "STEP_6":"6/12",
+        "STEP_7":"7/12",
+        "STEP_8":"8/12",
+        "STEP_9":"9/12",
+        "STEP_10":"10/12",
+        "STEP_11":"11/12",
         "STEP_12":"Complete",
-        "STEP_13":"Step 12/12"
+        "STEP_13":"12/12"
 
     },
     "STEPSIZE": {

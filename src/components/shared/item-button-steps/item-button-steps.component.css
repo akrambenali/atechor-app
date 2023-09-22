@@ -1,7 +1,7 @@
 .btn-next{
     background-color: var(--primaryColor);
     color: var(--textOnPrimary);
-    font-family: Poppins;
+    font-family: Roboto;
     font-size: 1.313rem;
     width: 214px;
     height: 69px;
@@ -17,7 +17,7 @@
 
 .btn-back{
     color: var(--borderButton);
-    font-family: Poppins;
+    font-family: Roboto;
     font-size: 1.125rem;
     width: 175px;
     height: 69px;
@@ -36,7 +36,7 @@
 
 .btn-reset{
     color: var(--borderButton);
-    font-family: Poppins;
+    font-family: Roboto;
     font-size: 1.125rem;
     width: 214px;
     height: 69px;

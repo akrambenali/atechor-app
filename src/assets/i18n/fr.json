@@ -196,19 +196,19 @@
         "BUTTON_3":"Terminer"
     },
     "STEPS": {
-        "STEP_1":"Étape 1/13",
-        "STEP_2":"Étape 2/13",
-        "STEP_3":"Étape 3/13",
-        "STEP_4":"Étape 4/13",
-        "STEP_5":"Étape 5/13",
-        "STEP_6":"Étape 6/13",
-        "STEP_7":"Étape 7/13",
-        "STEP_8":"Étape 8/13",
-        "STEP_9":"Étape 9/13",
-        "STEP_10":"Étape 10/13",
-        "STEP_11":"Étape 11/13",
-        "STEP_12":"Étape 12/13",
-        "STEP_13":"Étape 13/13",
+        "STEP_1":"1/13",
+        "STEP_2":"2/13",
+        "STEP_3":"3/13",
+        "STEP_4":"4/13",
+        "STEP_5":"5/13",
+        "STEP_6":"6/13",
+        "STEP_7":"7/13",
+        "STEP_8":"8/13",
+        "STEP_9":"9/13",
+        "STEP_10":"10/13",
+        "STEP_11":"11/13",
+        "STEP_12":"12/13",
+        "STEP_13":"13/13",
         "STEP_14":"Dernière étape"
         
 

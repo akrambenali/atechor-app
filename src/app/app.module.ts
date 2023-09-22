@@ -10,7 +10,6 @@ import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { CardItemComponent } from 'src/components/card-item/card-item.component';
-import { HeaderComponent } from 'src/components/header/header.component';
 import { FooterComponent } from 'src/components/footer/footer.component';
 import { ProgressBarComponent } from 'src/components/shared/progress-bar/progress-bar.component';
 import { ResultPageComponent } from 'src/features/result-page/result-page.component';
@@ -49,7 +48,6 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   declarations: [
     AppComponent,
     CardItemComponent,
-    HeaderComponent,
     FooterComponent,
     ProgressBarComponent,
     ResultPageComponent,
