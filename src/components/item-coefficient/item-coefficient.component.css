@@ -6,10 +6,16 @@ icon-shape {
     vertical-align: middle !important;
 }
 
-.icon-sm {
+.icon-sm-down {
     width: 1.563rem;
+ 
 
 
+}
+
+.icon-sm-up {
+    width: 1.563rem;
+   
 }
 
 .img-coefficient {
@@ -48,4 +54,23 @@ icon-shape {
 
 .icon-pos {
     margin-right: 32px;
+}
+
+.up {
+    background : url(../../assets/icons/caret-up-fill.svg) no-repeat;
+    background-size: 16px;
+    display: inline-block;
+    vertical-align: sub;
+    background-color: #E7F5E4;
+    background-position: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+    
+}
+.down {
+    background : url(../../assets/icons/caret-down-fill.svg) no-repeat;
+    background-size: 16px;
+    display: inline-block;
+    vertical-align: sub;
+    background-color: #FCAEB2;
+    background-position: center;
 }

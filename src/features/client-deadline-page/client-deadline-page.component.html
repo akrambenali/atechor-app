@@ -17,18 +17,21 @@
       <app-item-button
         [title]="'DEADLINES.ITEM_1' | translate"
         [deadlineType]="'M1'"
+        (sendClientDeadlineEvent)="pushClientDeadline($event)"
       ></app-item-button>
     </div>
     <div>
       <app-item-button
         [title]="'DEADLINES.ITEM_2' | translate"
         [deadlineType]="'M6'"
+        (sendClientDeadlineEvent)="pushClientDeadline($event)"
       ></app-item-button>
     </div>
     <div>
       <app-item-button
         [title]="'DEADLINES.ITEM_3' | translate"
         [deadlineType]="'A1'"
+        (sendClientDeadlineEvent)="pushClientDeadline($event)"
       ></app-item-button>
     </div>
   </div>
@@ -38,12 +41,14 @@
       <app-item-button
         [title]="'DEADLINES.ITEM_4' | translate"
         [deadlineType]="'A100'"
+        (sendClientDeadlineEvent)="pushClientDeadline($event)"
       ></app-item-button>
     </div>
     <div>
       <app-item-button
         [title]="'DEADLINES.ITEM_5' | translate"
         [deadlineType]="'ANY'"
+        (sendClientDeadlineEvent)="pushClientDeadline($event)"
       ></app-item-button>
     </div>
   </div>

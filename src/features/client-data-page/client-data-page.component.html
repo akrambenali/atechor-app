@@ -61,30 +61,16 @@
               <div class="invalid-feedback">Valid first name is required.</div>
             </div>
 
-            <div class="col-sm-6 form-input-top m-0">
+            <div class="col-sm-6 form-input-size form-input-top m-0">
               <div class="form-button shadow" [routerLink]="'/infos-cabinet'">
                 <b>{{ "FROM_1.ITEM_4" | translate }}</b>
               </div>
             </div>
 
-            <div class="col-12 form-input-top m-0">
+            <div class="col-sm-6 form-input-size form-input-top m-0">
               <input
                 type="text"
-                class="form-control form-control-large"
-                id="country"
-                name="country"
-                formControlName="country"
-                [placeholder]="'FROM_1.ITEM_5' | translate"
-              />
-              <div class="invalid-feedback">
-                Please enter a valid email address for shipping updates.
-              </div>
-            </div>
-
-            <div class="col-12 form-input-top m-0">
-              <input
-                type="text"
-                class="form-control form-control-large"
+                class="form-control"
                 id="role"
                 name="role"
                 formControlName="role"
@@ -95,10 +81,10 @@
               </div>
             </div>
 
-            <div class="col-12 form-input-top m-0">
+            <div class="col-sm-6 form-input-top m-0">
               <input
                 type="email"
-                class="form-control form-control-large"
+                class="form-control"
                 id="email"
                 name="email"
                 formControlName="email"
@@ -119,34 +105,54 @@
             </label>
           </div>
 
+          <div class="form-check form-input-top m-0">
+            <input type="checkbox" class="form-check-input" id="same-address" />
+            <label
+              class="form-check-label required"
+              for="same-address"
+              [innerHTML]="'FROM_1.ITEM_10' | translate"
+            >
+            </label>
+          </div>
+
           <div class="row pos-buttons">
-            <div class="col-md-6">
-              <button
-                class="btn btn-outline-secondary btn-back me-md-2"
-                type="button"
-                [routerLink]="'/coefficients-client'"
-              >
-                <!--  <i class="bi bi-chevron-left"></i> -->
-                <i class="retour"></i>
-                {{ "FOOTER_BUTTONS_FORMS.BUTTON_1" | translate }}
-              </button>
-              <button
-                class="btn btn-outline-secondary btn-reset"
-                type="button"
-                [routerLink]="'/'"
-              >
-                <!--  <i class="bi bi-arrow-counterclockwise"></i> -->
-                <i class="reset"></i>
-                {{ "FOOTER_BUTTONS_FORMS.BUTTON_2" | translate }}
-              </button>
-            </div>
-            <div class="col-md-6 ms-auto text-end">
-              <button class="btn btn-primary me-md-2 btn-next" type="submit">
-                {{ "FOOTER_BUTTONS_FORMS.BUTTON_3" | translate }}
-                <!--  <i class="bi bi-arrow-right"></i> -->
-                <i class="suivant"></i>
-              </button>
-              <!--  [routerLink]="'/resultat-client'" -->
+            <div class="row">
+              <div class="col-md-4">
+                <div
+                  class="btn-group"
+                  role="group"
+                  aria-label="Default button group"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-back"
+                    [routerLink]="'/coefficients-client'"
+                  >
+                    <i class="retour"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-reset"
+                    [routerLink]="'/'"
+                  >
+                    <i class="reset"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="col-md-4 text-center">
+                <button class="btn btn-primary me-md-2 btn-next" type="submit">
+                  {{ "FOOTER_BUTTONS.BUTTON_1" | translate }}
+                  <i class="suivant"></i>
+                </button>
+              </div>
+              <div class="col-md-4 ms-auto text-end align-self-end">
+                <a href="https://atechor.com/">
+                  <img
+                    class="logo"
+                    src="assets/logo/atechor-logo-png.png"
+                    alt=""
+                /></a>
+              </div>
             </div>
           </div>
         </form>

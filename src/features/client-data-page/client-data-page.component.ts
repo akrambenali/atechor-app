@@ -26,7 +26,6 @@ export class ClientDataPageComponent implements OnInit {
     firstName: new FormControl(),
     lastName: new FormControl(),
     company: new FormControl(),
-    country: new FormControl(),
     role: new FormControl(),
     email: new FormControl(),
   });

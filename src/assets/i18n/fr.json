@@ -116,7 +116,8 @@
     "ITEM_6": "FONCTION",
     "ITEM_7": "MAIL PROFESSIONNEL",
     "ITEM_8": "J’accepte d’être contacté dans le cadre de mon projet.",
-    "ITEM_9": "En savoir plus."
+    "ITEM_9": "En savoir plus.",
+    "ITEM_10": "Je souhaite être mis en relation avec des partenaires m’accompagner dans <br> mon projet."
   },
   "FROM_2": {
     "TITLE": "Dites-nous qui vous êtes !",
@@ -128,7 +129,8 @@
     "ITEM_6": "FONCTION",
     "ITEM_7": "MAIL PROFESSIONNEL",
     "ITEM_8": "J’accepte d’être contacté dans le cadre de mon projet.",
-    "ITEM_9": "En savoir plus."
+    "ITEM_9": "En savoir plus.",
+    "ITEM_10": "Je souhaite être mis en relation avec des partenaires m’accompagner dans mon projet."
   },
   "RESULTS": {
     "TITLE": "The 6 most relevant solutions for you:",

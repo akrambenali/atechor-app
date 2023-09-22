@@ -23,7 +23,7 @@ export class ClientConnexionPageComponent implements OnInit {
 
   pushClientConnexion(newItem: any) {
     this.solutionModel.connexion = newItem;
-    this.isEmpty = true;
+    this.isEmpty = false;
     console.log(this.solutionModel);
   }
 }

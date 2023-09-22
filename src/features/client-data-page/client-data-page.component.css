@@ -1,25 +1,24 @@
-
 .pos {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .pos-buttons {
-    padding-top: 78px;
+  padding-top: 78px;
 }
 
 .pos-card {
-    padding-bottom: 78px;
+  padding-bottom: 78px;
 }
 
 .form-control {
-    width: 18.75rem;
-    height: 4.375rem;
-    border-radius: 1.188rem;
-    color: var(--borderButton);
-    border: 1px solid var(--borderButton);
-    font-family: Roboto ;
-    font-size: 1.125rem;
-    padding-left: 27px
+  width: 18.75rem;
+  height: 4.375rem;
+  border-radius: 1.188rem;
+  color: var(--borderButton);
+  border: 1px solid var(--borderButton);
+  font-family: Roboto;
+  font-size: 1.125rem;
+  padding-left: 27px;
 }
 
 .form-button {
@@ -28,7 +27,7 @@
   border-radius: 1.188rem;
   color: #000;
   border: 1px solid var(--card);
-  font-family: Roboto ;
+  font-family: Roboto;
   font-size: 1rem;
   background-color: var(--card);
   text-align: center;
@@ -39,122 +38,93 @@
 }
 
 .form-control-large {
-    width: 41.25rem;
+  width: 41.25rem;
 }
 
 .form-input-size {
-    width: 22.5rem
+  width: 22.5rem;
 }
 
 .form-top {
-    padding-top: 64px;
+  padding-top: 64px;
 }
 
 .form-input-top {
-    padding-top: 35px;
+  padding-top: 35px;
 }
 
 .form-input-bottom {
-    padding-bottom: 35px;
-}
-
-.btn-next{
-    background-color: var(--primaryColor);
-    color: var(--textOnPrimary);
-    font-family: Roboto;
-    font-size: 1.313rem;
-    width: 214px;
-    height: 69px;
-    border-radius: 17px;
-    border: none;
-}
-
-.btn-next:hover {
-    background-color: var(--textOnPrimary);
-    color: var(--primaryColor);
-    border: 1px var(--textOnPrimary) solid;
-}
-
-.btn-back{
-    color: var(--borderButton);
-    font-family: Roboto;
-    font-size: 1.125rem;
-    width: 175px;
-    height: 69px;
-    border-radius: 17px;
-    border: 2px var(--borderButton) solid;
-} &
-.retour {
-    background-image : url(../../assets/icons/retour.png);
-    background-size: cover;
-    display: inline-block;
-    height: 22px;
-    width: 22px;
-    vertical-align: sub;
-    margin-right: 15px;
-}
-
-.btn-reset{
-    color: var(--borderButton);
-    font-family: Roboto;
-    font-size: 1.125rem;
-    width: 214px;
-    height: 69px;
-    border-radius: 17px;
-    border: 1px var(--borderButton) solid;
-}
-
-.btn-back:hover {
-    background-color: var(--borderButton);
-    color: #fff;
-   
-}
-
-.btn-back:hover .retour {
-    background-image : url(../../assets/icons/retour_hover.png);
-}
-
- .btn-reset:hover {
-    background-color: var(--borderButton);
-    color: #fff;
-   
+  padding-bottom: 35px;
 }
 
 .pos {
-    padding-bottom: 75px;
+  padding-bottom: 75px;
+}
+
+.btn-next {
+  background-color: #0033ff;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 1.313rem;
+  width: 151px;
+  height: 69px;
+  border-radius: 21px;
+  border: none;
+}
+
+.btn-back {
+  background-color: #7c91f1;
+  width: 88px;
+  height: 69px;
+  border-radius: 17px;
+  border: 2px #fff solid;
+}
+
+.retour {
+  background-image: url(../../assets/icons/retour.png);
+  background-size: cover;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  vertical-align: sub;
+}
+
+.btn-reset {
+  background-color: #5d70c9;
+  width: 88px;
+  height: 69px;
+  border-radius: 17px;
+  border: 2px #fff solid;
+}
+
+.pos {
+  padding-bottom: 75px;
 }
 
 .suivant {
-    background-image : url(../../assets/icons/suivant.png);
-    background-size: cover;
-    display: inline-block;
-    height: 25px;
-    width: 25px;
-    vertical-align: sub;
-    margin-left: 15px;
+  background-image: url(../../assets/icons/ok.png);
+  background-size: cover;
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  vertical-align: sub;
+  margin-left: 15px;
 }
 
 .reset {
-    background-image : url(../../assets/icons/recommencer.png);
-    background-size: cover;
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    vertical-align: sub;
-    margin-right: 15px;
+  background-image: url(../../assets/icons/recommencer.png);
+  background-size: cover;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  vertical-align: sub;
 }
 
-.btn-reset:hover .reset {
-    background-image : url(../../assets/icons/recommencer_hover.png);
+.logo {
+  width: 115px;
 }
 
-.btn-next:hover .suivant {
-    background-image: url(../../assets/icons/suivant-hover.png);
+.required:after {
+  content: " *";
+  color: red;
 }
-
-
-
-
-
-
-

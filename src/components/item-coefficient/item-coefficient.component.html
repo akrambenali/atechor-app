@@ -16,11 +16,11 @@
   <div class="input-group w-auto justify-content-end align-items-center">
     <input
       type="button"
-      value="-"
-      class="button-minus border rounded icon-shape icon-sm mx-1"
+      class="button-minus border rounded icon-shape icon-sm-down mx-1 down"
       data-field="quantity"
       (click)="onDecrement()"
     />
+
     <input
       type="number"
       max="10"
@@ -30,8 +30,7 @@
     />
     <input
       type="button"
-      value="+"
-      class="button-plus border rounded icon-shape icon-sm icon-pos"
+      class="button-plus border rounded icon-shape icon-sm-up icon-pos up"
       data-field="quantity"
       (click)="onIncrement()"
     />
