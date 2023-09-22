@@ -1,14 +1,18 @@
 <div class="container">
+  <div class="text-center logo-pos">
+    <img class="logo" src="assets/logo/atechor-logo-png.png" alt="" />
+  </div>
+
   <h3 class="pos-title text-center">
     {{ "SCORES.TITLE" | translate }}
   </h3>
 </div>
 <div class="container py-3">
   <main>
-    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-      <app-card-item></app-card-item>
-      <app-card-item></app-card-item>
-      <app-card-item></app-card-item>
+    <div class="row mb-3 text-center">
+      <div class="col card-pos"><app-card-item></app-card-item></div>
+      <div class="col card-pos"><app-card-item></app-card-item></div>
+      <div class="col card-pos"><app-card-item></app-card-item></div>
     </div>
   </main>
 </div>

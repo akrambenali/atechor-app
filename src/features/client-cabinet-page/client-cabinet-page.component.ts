@@ -20,7 +20,6 @@ export class ClientCabinetPageComponent implements OnInit {
   cabinetContactForm = new FormGroup({
     firstName: new FormControl(),
     lastName: new FormControl(),
-    country: new FormControl(),
     office: new FormControl(),
     endClient: new FormControl(),
     role: new FormControl(),

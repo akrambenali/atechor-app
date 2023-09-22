@@ -1,55 +1,65 @@
 .pos-title {
-    padding-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 .pos-hr {
-    margin-top: 140px ;
+  margin-top: 140px;
 }
 
-.pos-resume{
-    padding-top: 120px;
-    padding-bottom: 40px;
+.pos-resume {
+  padding-top: 120px;
+  padding-bottom: 40px;
 }
 
 .resume-style {
-    font-family: Roboto;
-    font-size: 1.375rem;
-    color: #494F5A;
+  font-family: Roboto;
+  font-size: 1.375rem;
+  color: #494f5a;
 }
 
 .dark {
-    color: #000;
+  color: #000;
 }
 
-.resume-style  li {
-    padding-bottom: 25px;
+.resume-style li {
+  padding-bottom: 25px;
 }
 
 .badge-score {
-    background-color: #D3E2F7;
-    color: #0033FF;
-
+  background-color: #d3e2f7;
+  color: #0033ff;
 }
 
 .badge-grey {
-    width: 4.375rem;
-    height: 1.875rem;
-    font-family: Roboto;
-    font-size:1.125rem ;
+  width: 4.375rem;
+  height: 1.875rem;
+  font-family: Roboto;
+  font-size: 1.125rem;
 }
 
 .item {
-    font-family: Roboto;
-    font-size: 1.125rem;
-
+  font-family: Roboto;
+  font-size: 1.125rem;
 }
 
 .pos {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .no-border {
-    border: none;
+  border: none;
 }
 
+.logo {
+  width: 165px;
+}
 
+.logo-pos {
+    margin-top: 100px;
+    margin-bottom: 75px;
+}
+
+.card-pos {
+    padding-left: 30px;
+    padding-right: 30px;
+}

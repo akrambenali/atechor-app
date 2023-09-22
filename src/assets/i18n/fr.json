@@ -179,9 +179,8 @@
     "ITEM_19": "Contexte :"
   },
   "RESULTS_BUTTONS": {
-    "ITEM_1": "Export in PDF",
-    "ITEM_2": "Start again",
-    "ITEM_3": "Evaluation method"
+    "ITEM_1": "Exporter en PDF",
+    "ITEM_2": "Recommencer"
   },
   "FOOTER_BUTTONS": {
     "BUTTON_1": "Ok"

@@ -7,8 +7,8 @@
 }
 
 .badge-score {
-    background-color: var(--score);
-    color: var(--textOnScore);
+    background-color: #E8ECFF;
+    color:#000000;
 
 }
 
@@ -22,12 +22,14 @@
 }
 
 .badge-card {
-    background-color:var(--primaryColor);
-    color: var(--textScoreColor);
+    background-color: #B7EDAC;
+    color: #003329;
 }
 
 .img-card {
-    width: 100px;
+    width: 125px;
+    padding-top: 49px;
+    padding-bottom: 25px;
 }
 
 .no-border {
@@ -40,17 +42,17 @@
 
 .card-title {
     font-family: Roboto;
-    font-size: 1.563rem;
+    font-size: 1.688rem;
 }
 
 .card-score {
     font-family: Roboto;
-    font-size: 1.563rem;
+    font-size: 18px;
 }
 
 .item {
     font-family: Roboto;
-    font-size: 1.125rem;
+    font-size: 18px;
 
 }
 
@@ -59,7 +61,7 @@
 }
 
 .pos-pb {
-  padding-bottom: 35px !important;
+  padding-bottom: 30px !important;
 }
 
 .pos-pt {
@@ -67,7 +69,7 @@
 }
 
 .pos-score-item {
-  padding-left: 32px;
+  padding-left: 86px;
   padding-bottom: 25px;
 }
 
@@ -75,15 +77,11 @@
     border-radius: 20px !important;
 }
 
-.card-size {
-    width: 25rem;
-}
-
 .badge-score {
-    width: 6.563rem;
-    height: 2.813rem;
+    width: 155px;
+    height: 45px;
     font-family: Roboto;
-    font-size: 1.563rem ;
+    font-size: 25px ;
 }
 
 .badge-grey {
