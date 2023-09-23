@@ -1,35 +1,52 @@
-.btn-option {
-  width: 272px;
-  height: 65px;
-  background-color: var(--card);
-  font-size: 1.125rem;
-  font-family: Roboto;
-  margin-right: 40px;
-}
+
 
 .pdf {
-    background-image : url(../../../assets/icons/pdf.png);
-    background-size: cover;
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    vertical-align: sub;
+  background-image: url(../../../assets/icons/pdf.png);
+  background-size: cover;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  vertical-align: sub;
 }
 
 .reset {
-    background-image : url(../../../assets/icons/recommencer_result.png);
-    background-size: cover;
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    vertical-align: sub;
+  background-image: url(../../../assets/icons/recommencer_result.png);
+  background-size: cover;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  vertical-align: sub;
 }
 
 .details {
-    background-image : url(../../../assets/icons/details.png);
-    background-size: cover;
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    vertical-align: sub;
+  background-image: url(../../../assets/icons/details.png);
+  background-size: cover;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  vertical-align: sub;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Styles pour cette Media Queries */
+  .btn-option {
+    width: 272px;
+    height: 65px;
+    background-color: var(--card);
+    font-size: 1.125rem;
+    font-family: Roboto;
+    margin-right: 40px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Styles pour cette Media Queries */
+  .btn-option {
+    width: 272px;
+    height: 65px;
+    background-color: var(--card);
+    font-size: 1.125rem;
+    font-family: Roboto;
+    
+  }
 }
