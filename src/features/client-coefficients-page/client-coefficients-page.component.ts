@@ -51,6 +51,7 @@ export class ClientCoefficientsPageComponent implements OnInit {
 
     this.solutionModel.compatibility.coefficients = this.coefficients;
     this.isEmpty = false;
-    console.log(this.solutionModel);
+    console.log(JSON.stringify(this.solutionModel));
+    
   }
 }

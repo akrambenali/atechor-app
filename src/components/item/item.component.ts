@@ -20,6 +20,8 @@ export class ItemComponent implements OnInit {
   hostingType!: string;
   @Input()
   reasonType!: string;
+  @Input()
+  code!: string;
 
   @Output() sendSecteurEvent = new EventEmitter<any>();
   @Output() sendFonctionEvent = new EventEmitter<any>();
@@ -32,6 +34,7 @@ export class ItemComponent implements OnInit {
     value: false,
   };
   fonction: FonctionItem = {
+    code: '',
     title: '',
     value: false,
   };
@@ -61,6 +64,7 @@ export class ItemComponent implements OnInit {
     this.status = !this.status;
     this.item.title = this.title;
     this.item.value = true;
+    this.fonction.code = this.code;
     this.fonction.title = this.title;
     this.fonction.value = true;
     switch (this.hostingType) {

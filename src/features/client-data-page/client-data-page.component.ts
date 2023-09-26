@@ -33,7 +33,7 @@ export class ClientDataPageComponent implements OnInit {
   ngOnInit(): void {
     (this.solutionModel = history.state),
     console.log('====================================');
-    console.log(this.solutionModel);
+    console.log(JSON.stringify(this.solutionModel));
     console.log('====================================');
   }
 
@@ -51,6 +51,9 @@ export class ClientDataPageComponent implements OnInit {
       console.log('====================================');
       console.log(res);
       console.log('====================================');
+      if(res)  {
+        this.router.navigate(['/mail-client'])
+      }
     })
   }
 }

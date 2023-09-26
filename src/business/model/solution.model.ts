@@ -75,6 +75,7 @@ export interface SecteurItem {
 }
 
 export interface FonctionItem {
+  code: string
   title: string;
   value: boolean;
 }

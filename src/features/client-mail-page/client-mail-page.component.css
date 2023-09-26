@@ -14,3 +14,12 @@
 .pos-card {
     padding-bottom: 78px;
 }
+
+.btn-reset {
+    background-color: #fff; 
+    color: #4A505B;
+    width: 227px;
+    height: 69px;
+    border-radius: 17px;
+    border: 2px #4A505B solid;
+  }

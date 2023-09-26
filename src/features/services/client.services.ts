@@ -43,7 +43,7 @@ export class ClientService {
   public getSolutions(solution: Solutions) : Observable<any> {
     const headers = { 'content-type': 'application/json' };
     const body = solution;
-    return this._httpClient.post(`${environment.apiUrl}solutions/`, body, {
+    return this._httpClient.post(`${environment.apiUrl}search/`, body, {
       headers: headers,
     });
   }

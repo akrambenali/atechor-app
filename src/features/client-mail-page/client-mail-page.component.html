@@ -1,8 +1,26 @@
+<nav class="navbar" style="background-color: #fff">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img
+        src="assets/logo/atechor-logo-png.png"
+        alt="Bootstrap"
+        width="200"
+        height="41"
+      />
+    </a>
+  </div>
+</nav>
 <div class="container">
   <h3 class="pos-title text-center mt-2">
     {{ "EMAIL.TITLE" | translate }}
   </h3>
   <div class="text-center">
     <img src="assets/icons/mail.png" class="img-fluid" alt="..." />
+    <div>
+      <button type="button" class="btn btn-reset" [routerLink]="'/'">
+        <i class="reset"></i>
+        Recommencer
+      </button>
+    </div>
   </div>
 </div>
