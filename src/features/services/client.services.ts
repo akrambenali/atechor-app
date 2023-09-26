@@ -48,4 +48,8 @@ export class ClientService {
     });
   }
 
+  public getScores(id: string) : Observable<any> {
+    return this._httpClient.get(`${environment.apiUrl}scores/` + id)
+   }
+
 }

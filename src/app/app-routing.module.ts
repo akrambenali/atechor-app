@@ -30,7 +30,7 @@ const routes: Routes = [
 { path: 'hosting-client', component: ClientHostingPageComponent},
 { path: 'dev-client', component: ClientDevPageComponent},
 { path: 'connexion-client', component: ClientConnexionPageComponent},
-{ path: 'resultat-client', component: ResultPageComponent},
+{ path: 'resultat-client/:id', component: ResultPageComponent},
 { path: 'deadline-client', component: ClientDeadlinePageComponent},
 { path: 'reason-client', component: ClientReasonPageComponent},
 { path: 'coefficients-client', component: ClientCoefficientsPageComponent},
