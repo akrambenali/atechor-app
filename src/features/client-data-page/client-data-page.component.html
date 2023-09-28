@@ -103,6 +103,8 @@
               class="form-check-input"
               formControlName="acceptTerms"
               id="acceptTerms"
+              [(ngModel)]="terms"
+              binary="true"
             />
             <label class="form-check-label required" for="acceptTerms"
               >{{ "FROM_1.ITEM_8" | translate }}
@@ -111,10 +113,16 @@
           </div>
 
           <div class="form-check form-input-top m-0">
-            <input type="checkbox" class="form-check-input" id="same-address" />
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="contactOk"
+              formControlName="contactOk"
+              [(ngModel)]="contactforms"
+            />
             <label
               class="form-check-label"
-              for="same-address"
+              for="contactOk"
               [innerHTML]="'FROM_1.ITEM_10' | translate"
             >
             </label>

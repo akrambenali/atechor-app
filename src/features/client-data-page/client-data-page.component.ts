@@ -14,6 +14,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ClientDataPageComponent implements OnInit {
   RespMessage: any;
   clientData!: Client;
+  terms = true;
+  contactforms =  false;
   solutionModel = {} as Solutions;
   
 
@@ -28,6 +30,8 @@ export class ClientDataPageComponent implements OnInit {
     company: new FormControl(),
     role: new FormControl(),
     email: new FormControl(),
+    acceptTerms: new FormControl(),
+    contactOk: new FormControl(),
   });
 
   ngOnInit(): void {
