@@ -1,31 +1,64 @@
 <div class="container pos">
-  <div class="row">
-    <div class="col-md-4">
-      <div class="btn-group" role="group" aria-label="Default button group">
-        <button type="button" class="btn btn-back" [routerLink]="previous">
-          <i class="retour"></i>
-        </button>
-        <button type="button" class="btn btn-reset" [routerLink]="'/'">
-          <i class="reset"></i>
+  <div class="hidden-desktop">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="btn-group" role="group" aria-label="Default button group">
+          <button type="button" class="btn btn-back" [routerLink]="previous">
+            <i class="retour"></i>
+          </button>
+          <button type="button" class="btn btn-reset" [routerLink]="'/'">
+            <i class="reset"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <button
+          class="btn btn-primary me-md-2 btn-next"
+          type="button"
+          (click)="goToRoute(next)"
+          [disabled]="isEmpty"
+        >
+          {{ "FOOTER_BUTTONS.BUTTON_1" | translate }}
+          <!--  <i class="bi bi-arrow-right"></i> -->
+          <i class="suivant"></i>
         </button>
       </div>
+      <div class="col-md-4 ms-auto text-end align-self-end">
+        <a href="https://atechor.com/">
+          <img class="logo" src="assets/logo/atechor-logo-png.png" alt=""
+        /></a>
+      </div>
     </div>
-    <div class="col-md-4 text-center">
-      <button
-        class="btn btn-primary me-md-2 btn-next"
-        type="button"
-        (click)="goToRoute(next)"
-        [disabled]="isEmpty"
-      >
-        {{ "FOOTER_BUTTONS.BUTTON_1" | translate }}
-        <!--  <i class="bi bi-arrow-right"></i> -->
-        <i class="suivant"></i>
-      </button>
-    </div>
-    <div class="col-md-4 ms-auto text-end align-self-end">
-      <a href="https://atechor.com/">
-        <img class="logo" src="assets/logo/atechor-logo-png.png" alt=""
-      /></a>
+  </div>
+
+  <div class="hidden-mobile">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="btn-group" role="group" aria-label="Default button group">
+          <button type="button" class="btn btn-back" [routerLink]="previous">
+            <i class="retour"></i>
+          </button>
+          <button type="button" class="btn btn-reset" [routerLink]="'/'">
+            <i class="reset"></i>
+          </button>
+        </div>
+        <button
+          class="btn btn-primary btn-next pos-mobile"
+          type="button"
+          (click)="goToRoute(next)"
+          [disabled]="isEmpty"
+        >
+          {{ "FOOTER_BUTTONS.BUTTON_1" | translate }}
+          <!--  <i class="bi bi-arrow-right"></i> -->
+          <i class="suivant"></i>
+        </button>
+      </div>
+      <div class="col-xs-6"></div>
+      <div class="col-xs-12 mt-4 text-center">
+        <a href="https://atechor.com/">
+          <img class="logo" src="assets/logo/atechor-logo-png.png" alt=""
+        /></a>
+      </div>
     </div>
   </div>
 </div>

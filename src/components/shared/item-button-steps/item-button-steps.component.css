@@ -27,7 +27,7 @@
 }
 
 .btn-reset {
-  background-color: #5D70C9; 
+  background-color: #5d70c9;
   width: 88px;
   height: 69px;
   border-radius: 17px;
@@ -58,5 +58,30 @@
 }
 
 .logo {
-  width: 115px;  
+  width: 115px;
+}
+
+@media (max-width: 768px) {
+  .hidden-mobile {
+    display: block;
+  }
+  .hidden-desktop {
+    display: none;
+  }
+
+  .pos-mobile {
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+  }
+}
+
+@media (min-width: 769px) {
+  .hidden-mobile {
+    display: none;
+  }
+
+  .hidden-desktop {
+    display: block;
+  }
 }

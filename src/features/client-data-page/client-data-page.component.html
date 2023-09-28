@@ -98,8 +98,13 @@
           </div>
 
           <div class="form-check form-input-top m-0">
-            <input type="checkbox" class="form-check-input" id="same-address" />
-            <label class="form-check-label" for="same-address"
+            <input
+              type="checkbox"
+              class="form-check-input"
+              formControlName="acceptTerms"
+              id="acceptTerms"
+            />
+            <label class="form-check-label required" for="acceptTerms"
               >{{ "FROM_1.ITEM_8" | translate }}
               <a href="#">{{ "FROM_1.ITEM_9" | translate }}</a>
             </label>
@@ -108,7 +113,7 @@
           <div class="form-check form-input-top m-0">
             <input type="checkbox" class="form-check-input" id="same-address" />
             <label
-              class="form-check-label required"
+              class="form-check-label"
               for="same-address"
               [innerHTML]="'FROM_1.ITEM_10' | translate"
             >
