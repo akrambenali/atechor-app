@@ -10,11 +10,11 @@ import { Coefficients, Solutions } from 'src/business/model/solution.model';
 export class ClientCoefficientsPageComponent implements OnInit {
   solutionModel = {} as Solutions;
   coefficients = {
-    software: 0,
-    price: 0,
-    vendor: 0,
-    Compatibility: 0,
-    postion: 0,
+    software: 1,
+    price: 1,
+    vendor: 1,
+    Compatibility: 1,
+    postion: 1,
   } as Coefficients;
   isEmpty: boolean = true;
 

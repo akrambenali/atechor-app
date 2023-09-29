@@ -14,7 +14,7 @@ export class ItemCoefficientComponent implements OnInit {
   @Input()
   type!: string;
 
-  value: number = 0;
+  value: number = 1;
   coefficient = {} as Coefficient;
 
 
@@ -26,8 +26,8 @@ export class ItemCoefficientComponent implements OnInit {
 
   onIncrement(): void {
     this.value += 1;
-    if(this.value >= 10) {
-      this.value= 10;
+    if(this.value >= 3) {
+      this.value= 3;
     }
     this.coefficient.type =  this.type ;
     this.coefficient.value = this.value
@@ -36,8 +36,8 @@ export class ItemCoefficientComponent implements OnInit {
 
   onDecrement(): void {
     this.value -= 1;
-    if(this.value <= 0)  {
-      this.value = 0;
+    if(this.value <= 1)  {
+      this.value = 1;
     }
     this.coefficient.type =  this.type ;
     this.coefficient.value = this.value
