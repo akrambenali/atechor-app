@@ -15,16 +15,14 @@ export class ClientHostingPageComponent implements OnInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    (this.solutionModel = history.state),
-      console.log('====================================');
-    console.log(this.solutionModel);
-    console.log('====================================');
+    (this.solutionModel = history. state);
+       
   }
 
   pushClientHosting(newItem: any) {
     this.hosting = newItem;
     this.solutionModel.hosting = this.hosting;
     this.isEmpty = false;
-    console.log(this.solutionModel);
+    
   }
 }

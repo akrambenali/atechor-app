@@ -15,16 +15,14 @@ export class ClientReasonPageComponent implements OnInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    (this.solutionModel = history.state),
-      console.log('====================================');
-    console.log(this.solutionModel);
-    console.log('====================================');
+    (this.solutionModel = history. state);
+       
   }
 
   pushReasonDev(newItem: any) {
     this.reason = newItem;
     this.solutionModel.compatibility.reason = this.reason;
     this.isEmpty = false;
-    console.log(this.solutionModel);
+    
   }
 }

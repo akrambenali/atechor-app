@@ -19,10 +19,8 @@ export class ClientNumbersPageComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.solutionModel = history.state,
-    console.log('====================================');
-    console.log(this.solutionModel);
-    console.log('====================================');
+    this.solutionModel = history. state;
+     
   }
 
   pushUsersNumber(newItem: any) {

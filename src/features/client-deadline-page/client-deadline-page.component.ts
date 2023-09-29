@@ -17,17 +17,15 @@ export class ClientDeadlinePageComponent implements OnInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    (this.solutionModel = history.state),
-      console.log('====================================');
-    console.log(this.solutionModel);
-    console.log('====================================');
+    (this.solutionModel = history. state);
+       
   }
 
   pushClientDeadline(newItem: any) {
     this.deadline = newItem;
     this.solutionModel.compatibility.implemntation = this.deadline;
     this.isEmpty = false;
-    console.log(this.solutionModel);
+    
   }
 
 }

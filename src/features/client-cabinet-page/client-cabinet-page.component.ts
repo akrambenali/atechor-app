@@ -15,7 +15,11 @@ export class ClientCabinetPageComponent implements OnInit {
   cabinetData!: Cabinet;
   solutionModel = {} as Solutions;
 
-  constructor(private clientService: ClientService, private router: Router, private activatedRoute: ActivatedRoute) {}
+  constructor(
+    private clientService: ClientService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
   cabinetContactForm = new FormGroup({
     firstName: new FormControl(),
@@ -27,10 +31,7 @@ export class ClientCabinetPageComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    (this.solutionModel = history.state),
-      console.log('====================================');
-    console.log(this.solutionModel);
-    console.log('====================================');
+    this.solutionModel = history.state;
   }
 
   onSubmit() {

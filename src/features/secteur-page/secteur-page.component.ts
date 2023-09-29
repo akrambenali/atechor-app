@@ -29,12 +29,9 @@ export class SecteurPageComponent implements OnInit {
     }
     this.compatibility.secteur = this.secteur;
     if (this.compatibility.secteur.length > 0) {
-      console.log('change');
-
       this.isEmpty = false;
     }
     this.solutionModel.compatibility = this.compatibility;
-    console.log(this.solutionModel);
   }
 
   removeObjectWithId(arr: SecteurItem[], title: string) {
@@ -44,10 +41,8 @@ export class SecteurPageComponent implements OnInit {
       arr.splice(objWithIdIndex, 1);
     }
     if (arr.length === 0) {
-      console.log('change');
       this.isEmpty = true;
     }
     return arr;
   }
-
 }

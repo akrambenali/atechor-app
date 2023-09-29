@@ -25,7 +25,6 @@ export class ClientCoefficientsPageComponent implements OnInit {
   }
 
   pushClientCoefficients(newItem: any) {
-    console.log(newItem);
     switch (newItem.type) {
       case (newItem.type = 'software'):
         this.coefficients.software = newItem.value;
@@ -48,6 +47,5 @@ export class ClientCoefficientsPageComponent implements OnInit {
 
     this.solutionModel.compatibility.coefficients = this.coefficients;
     this.isEmpty = false;
-    
   }
 }

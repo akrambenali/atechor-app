@@ -16,17 +16,15 @@ export class ClientDevPageComponent implements OnInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    (this.solutionModel = history.state),
-      console.log('====================================');
-    console.log(this.solutionModel);
-    console.log('====================================');
+    (this.solutionModel = history. state);
+       
   }
 
   pushClientDev(newItem: any) {
     this.dev = newItem;
     this.solutionModel.dev = this.dev;
     this.isEmpty = false;
-    console.log(this.solutionModel);
+    
   }
 
 }
