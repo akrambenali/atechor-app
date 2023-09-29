@@ -104,11 +104,12 @@
               formControlName="acceptTerms"
               id="acceptTerms"
               [(ngModel)]="terms"
-              binary="true"
             />
             <label class="form-check-label required" for="acceptTerms"
               >{{ "FROM_1.ITEM_8" | translate }}
-              <a href="#">{{ "FROM_1.ITEM_9" | translate }}</a>
+              <a href="https://atechor.com/mentions-legales">{{
+                "FROM_1.ITEM_9" | translate
+              }}</a>
             </label>
           </div>
 
@@ -119,6 +120,7 @@
               id="contactOk"
               formControlName="contactOk"
               [(ngModel)]="contactforms"
+              binary="true"
             />
             <label
               class="form-check-label"

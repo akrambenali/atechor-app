@@ -107,7 +107,7 @@
     "ITEM_5": "Positionnement"
   },
   "FROM_1": {
-    "TITLE": "Dites-nous qui vous êtes !",
+    "TITLE": "Coordonnées ",
     "ITEM_1": "PRÉNOM",
     "ITEM_2": "NOM",
     "ITEM_3": "ENTREPRISE",
@@ -115,7 +115,7 @@
     "ITEM_5": "PAYS",
     "ITEM_6": "FONCTION",
     "ITEM_7": "MAIL PROFESSIONNEL",
-    "ITEM_8": "J’accepte d’être contacté dans le cadre de mon projet.",
+    "ITEM_8": "J’accepte la sauvegarde de mes données, conformément au RGPD.",
     "ITEM_9": "En savoir plus.",
     "ITEM_10": "Je souhaite être mis en relation avec des partenaires m’accompagner dans <br> mon projet."
   },

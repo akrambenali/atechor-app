@@ -14,8 +14,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ClientDataPageComponent implements OnInit {
   RespMessage: any;
   clientData!: Client;
-  terms = true;
-  contactforms =  false;
+  terms = false;
+  contactforms =  true;
   solutionModel = {} as Solutions;
   
 

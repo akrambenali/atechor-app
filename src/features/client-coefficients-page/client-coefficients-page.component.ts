@@ -21,10 +21,7 @@ export class ClientCoefficientsPageComponent implements OnInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    (this.solutionModel = history.state),
-    console.log('====================================');
-    console.log(this.solutionModel);
-    console.log('====================================');
+    this.solutionModel = history.state;
   }
 
   pushClientCoefficients(newItem: any) {
@@ -51,7 +48,6 @@ export class ClientCoefficientsPageComponent implements OnInit {
 
     this.solutionModel.compatibility.coefficients = this.coefficients;
     this.isEmpty = false;
-    console.log(JSON.stringify(this.solutionModel));
     
   }
 }

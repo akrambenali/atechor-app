@@ -1,114 +1,129 @@
-<div class="container">
-  <div class="text-center logo-pos">
-    <img class="logo" src="assets/logo/atechor-logo-png.png" alt="" />
-  </div>
-
-  <h3 class="pos-title text-center">
-    {{ "SCORES.TITLE" | translate }}
-  </h3>
-</div>
-<div class="container py-3">
-  <main>
-    <div class="row mb-3 text-center">
-      <div class="col card-pos"><app-card-item></app-card-item></div>
-      <div class="col card-pos"><app-card-item></app-card-item></div>
-      <div class="col card-pos"><app-card-item></app-card-item></div>
+<div #content id="content">
+  <div class="container">
+    <div class="text-center logo-pos">
+      <img class="logo" src="assets/logo/atechor-logo-png.png" alt="" />
     </div>
-  </main>
-</div>
-<div class="container mt-4 mb-6">
-  <app-button-options></app-button-options>
-  <div class="pos-hr"><hr class="py-1" /></div>
 
-  <div class="clearfix">
-    <div class="col-md-3 float-md-end mb-3 ms-md-3">
-      <h3 class="pos-resume">{{ "SCORES.ITEM_1" | translate }}</h3>
-      <ul class="list-group">
-        <li
-          class="list-group-item d-flex align-items-center no-border justify-content-between"
-        >
-          <span class="item">
-            <b>{{ "SCORES.ITEM_2" | translate }}</b></span
+    <h3 class="pos-title text-center">
+      {{ "SCORES.TITLE" | translate }}
+    </h3>
+  </div>
+  <div class="container py-3">
+    <main>
+      <div class="row mb-3 text-center">
+        <div class="col card-pos"><app-card-item></app-card-item></div>
+        <div class="col card-pos"><app-card-item></app-card-item></div>
+        <div class="col card-pos"><app-card-item></app-card-item></div>
+      </div>
+    </main>
+  </div>
+  <div class="container mt-4 mb-6">
+    <div class="pos-hr"><hr class="py-1" /></div>
+
+    <div class="clearfix">
+      <div class="col-md-3 float-md-end mb-3 ms-md-3">
+        <h3 class="pos-resume">{{ "SCORES.ITEM_1" | translate }}</h3>
+        <ul class="list-group">
+          <li
+            class="list-group-item d-flex align-items-center no-border justify-content-between"
           >
-          <span class="badge badge-score badge-grey item pos">3</span>
+            <span class="item">
+              <b>{{ "SCORES.ITEM_2" | translate }}</b></span
+            >
+            <span class="badge badge-score badge-grey item pos">3</span>
+          </li>
+          <li
+            class="list-group-item d-flex align-items-center no-border justify-content-between"
+          >
+            <span class="item">
+              <b>{{ "SCORES.ITEM_3" | translate }}</b></span
+            >
+            <span class="badge badge-score badge-grey item pos">2</span>
+          </li>
+          <li
+            class="list-group-item d-flex align-items-center no-border justify-content-between"
+          >
+            <span class="item">
+              <b>{{ "SCORES.ITEM_4" | translate }}</b></span
+            >
+            <span class="badge badge-score badge-grey item pos">1</span>
+          </li>
+          <li
+            class="list-group-item d-flex align-items-center no-border justify-content-between"
+          >
+            <span class="item">
+              <b>{{ "SCORES.ITEM_5" | translate }}</b></span
+            >
+            <span class="badge badge-score badge-grey item pos">2</span>
+          </li>
+          <li
+            class="list-group-item d-flex align-items-center no-border justify-content-between"
+          >
+            <span class="item">
+              <b>{{ "SCORES.ITEM_6" | translate }}</b></span
+            >
+            <span class="badge badge-score badge-grey item pos">1</span>
+          </li>
+        </ul>
+      </div>
+
+      <h3 class="pos-resume">{{ "SCORES.ITEM_7" | translate }}</h3>
+      <ul class="list-unstyled resume-style">
+        <li>
+          <b class="dark">{{ "SCORES.ITEM_8" | translate }}</b> Construction ;
+          Manufacturing ; Services
         </li>
-        <li
-          class="list-group-item d-flex align-items-center no-border justify-content-between"
-        >
-          <span class="item">
-            <b>{{ "SCORES.ITEM_3" | translate }}</b></span
-          >
-          <span class="badge badge-score badge-grey item pos">2</span>
+        <li>
+          <b class="dark">{{ "SCORES.ITEM_9" | translate }} </b>Professionnels
         </li>
-        <li
-          class="list-group-item d-flex align-items-center no-border justify-content-between"
-        >
-          <span class="item">
-            <b>{{ "SCORES.ITEM_4" | translate }}</b></span
-          >
-          <span class="badge badge-score badge-grey item pos">1</span>
+        <li>
+          <b class="dark">{{ "SCORES.ITEM_10" | translate }}</b> 100 à 500
+          millions d’€
         </li>
-        <li
-          class="list-group-item d-flex align-items-center no-border justify-content-between"
-        >
-          <span class="item">
-            <b>{{ "SCORES.ITEM_5" | translate }}</b></span
-          >
-          <span class="badge badge-score badge-grey item pos">2</span>
+        <li>
+          <b class="dark">{{ "SCORES.ITEM_11" | translate }}</b> 250 à 700
         </li>
-        <li
-          class="list-group-item d-flex align-items-center no-border justify-content-between"
-        >
-          <span class="item">
-            <b>{{ "SCORES.ITEM_6" | translate }}</b></span
-          >
-          <span class="badge badge-score badge-grey item pos">1</span>
+        <li>
+          <b class="dark">{{ "SCORES.ITEM_12" | translate }}</b> Internationale
+        </li>
+        <li>
+          <b class="dark">{{ "SCORES.ITEM_13" | translate }}</b> Finance,
+          comptabilité ; RH ; CRM ; Gestion d’actifs
+        </li>
+        <li>
+          <b class="dark">{{ "SCORES.ITEM_14" | translate }}</b> 75 à 200
+        </li>
+        <li>
+          <b class="dark">{{ "SCORES.ITEM_15" | translate }}</b> Cloud ; SaaS
+        </li>
+        <li>
+          <b class="dark">{{ "SCORES.ITEM_16" | translate }}</b> Peu
+        </li>
+        <li>
+          <b class="dark">{{ "SCORES.ITEM_17" | translate }}</b> Oui
+        </li>
+        <li>
+          <b class="dark">{{ "SCORES.ITEM_18" | translate }}</b> < 1 an
+        </li>
+        <li>
+          <b class="dark">{{ "SCORES.ITEM_19" | translate }}</b> Manque de
+          fonctionnalités
         </li>
       </ul>
     </div>
-
-    <h3 class="pos-resume">{{ "SCORES.ITEM_7" | translate }}</h3>
-    <ul class="list-unstyled resume-style">
-      <li>
-        <b class="dark">{{ "SCORES.ITEM_8" | translate }}</b> Construction ;
-        Manufacturing ; Services
-      </li>
-      <li>
-        <b class="dark">{{ "SCORES.ITEM_9" | translate }} </b>Professionnels
-      </li>
-      <li>
-        <b class="dark">{{ "SCORES.ITEM_10" | translate }}</b> 100 à 500
-        millions d’€
-      </li>
-      <li>
-        <b class="dark">{{ "SCORES.ITEM_11" | translate }}</b> 250 à 700
-      </li>
-      <li>
-        <b class="dark">{{ "SCORES.ITEM_12" | translate }}</b> Internationale
-      </li>
-      <li>
-        <b class="dark">{{ "SCORES.ITEM_13" | translate }}</b> Finance,
-        comptabilité ; RH ; CRM ; Gestion d’actifs
-      </li>
-      <li>
-        <b class="dark">{{ "SCORES.ITEM_14" | translate }}</b> 75 à 200
-      </li>
-      <li>
-        <b class="dark">{{ "SCORES.ITEM_15" | translate }}</b> Cloud ; SaaS
-      </li>
-      <li>
-        <b class="dark">{{ "SCORES.ITEM_16" | translate }}</b> Peu
-      </li>
-      <li>
-        <b class="dark">{{ "SCORES.ITEM_17" | translate }}</b> Oui
-      </li>
-      <li>
-        <b class="dark">{{ "SCORES.ITEM_18" | translate }}</b> < 1 an
-      </li>
-      <li>
-        <b class="dark">{{ "SCORES.ITEM_19" | translate }}</b> Manque de
-        fonctionnalités
-      </li>
-    </ul>
   </div>
+</div>
+<div class="d-grid gap-2 d-md-flex justify-content-end pb-5">
+  <button
+    class="btn btn-option me-md-4 shadow"
+    type="button"
+    (click)="openPDF()"
+  >
+    <i class="pdf"></i>
+    {{ "RESULTS_BUTTONS.ITEM_1" | translate }}
+  </button>
+  <button class="btn btn-option shadow me-md-4" type="button">
+    <i class="reset"></i>
+    {{ "RESULTS_BUTTONS.ITEM_2" | translate }}
+  </button>
 </div>
