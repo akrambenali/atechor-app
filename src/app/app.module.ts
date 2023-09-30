@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { LayoutModule } from '@angular/cdk/layout';
 
 import { CardItemComponent } from 'src/components/card-item/card-item.component';
 import { FooterComponent } from 'src/components/footer/footer.component';
@@ -79,6 +80,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     ReactiveFormsModule,
     NgbModule,
     HttpClientModule,
+    LayoutModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

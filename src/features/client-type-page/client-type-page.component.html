@@ -12,23 +12,55 @@
     {{ "TYPE_CLIENT.TITLE" | translate }}
   </h3>
 
-  <div class="g-4 pos-card">
-    <app-item-button
-      [title]="'TYPE_CLIENT.ITEM_1' | translate"
-      [clientType]="'b2b'"
-      (sendClientTypeEvent)="pushClientType($event)"
-    ></app-item-button>
-    <app-item-button
-      [title]="'TYPE_CLIENT.ITEM_2' | translate"
-      [clientType]="'b2c'"
-      (sendClientTypeEvent)="pushClientType($event)"
-    ></app-item-button>
-    <app-item-button
-      [title]="'TYPE_CLIENT.ITEM_3' | translate"
-      [clientType]="'both'"
-      (sendClientTypeEvent)="pushClientType($event)"
-    ></app-item-button>
-  </div>
+  <ng-container
+    *ngIf="responsive.deviceType === 'Handset'; then mobile; else web"
+  ></ng-container>
+
+  <ng-template #web
+    ><div class="g-4 pos-card">
+      <app-item-button
+        [title]="'TYPE_CLIENT.ITEM_1' | translate"
+        [clientType]="'b2b'"
+        (sendClientTypeEvent)="pushClientType($event)"
+      ></app-item-button>
+      <app-item-button
+        [title]="'TYPE_CLIENT.ITEM_2' | translate"
+        [clientType]="'b2c'"
+        (sendClientTypeEvent)="pushClientType($event)"
+      ></app-item-button>
+      <app-item-button
+        [title]="'TYPE_CLIENT.ITEM_3' | translate"
+        [clientType]="'both'"
+        (sendClientTypeEvent)="pushClientType($event)"
+      ></app-item-button></div
+  ></ng-template>
+  <ng-template #mobile
+    ><div class="g-4 pos-card-mobile">
+      <div class="row justify-content-md-center">
+        <div class="col-12 mb-4">
+          <app-item-button
+            [title]="'TYPE_CLIENT.ITEM_1' | translate"
+            [clientType]="'b2b'"
+            (sendClientTypeEvent)="pushClientType($event)"
+          ></app-item-button>
+        </div>
+        <div class="col-12 mb-4">
+          <app-item-button
+            [title]="'TYPE_CLIENT.ITEM_2' | translate"
+            [clientType]="'b2c'"
+            (sendClientTypeEvent)="pushClientType($event)"
+          ></app-item-button>
+        </div>
+        <div class="col-12 mb-4">
+          <app-item-button
+            [title]="'TYPE_CLIENT.ITEM_3' | translate"
+            [clientType]="'both'"
+            (sendClientTypeEvent)="pushClientType($event)"
+          ></app-item-button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
 </div>
 
 <app-item-button-steps

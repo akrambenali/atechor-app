@@ -1,34 +1,51 @@
-.card-secteur {
+.no-border {
+  border: none;
+}
+
+.card-title {
+  font-family: Roboto;
+  font-size: 1.125rem;
+}
+
+.card-secteur:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+  background: var(--card) url(../../../assets/icons/icon-actif.png) no-repeat
+    0px 0px;
+  background-position: top 20px right 25px;
+  background-size: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .card-secteur {
     width: 274px;
     height: 73px;
     border-radius: 20px;
     background-color: var(--card);
+  }
+
+  .btn-pos {
+    width: 274px;
+    margin-left: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+  }
 }
 
-.no-border {
-    border: none;
-}
+@media only screen and (max-width: 768px) {
+  /* Styles pour cette Media Queries */
+  .card-secteur {
+    height: 73px;
+    border-radius: 20px;
+    background-color: var(--card);
+  }
 
-.card-title {
-    font-family: Roboto;
-    font-size: 1.125rem;
-}
-
-.btn-pos {
-  width: 274px;
-  margin-left: 15px;
-  margin-right: 15px;
-  cursor: pointer;
-}
-
-.card-secteur:hover {
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.10)!important;
-}
-
-.active {
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.10)!important;
-    background: var(--card) url(../../../assets/icons/icon-actif.png) no-repeat 0px 0px;
-    background-position: top 20px  right 25px;
-    background-size: 20px;
-    
+  .btn-pos {
+    margin-left: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+  }
 }
