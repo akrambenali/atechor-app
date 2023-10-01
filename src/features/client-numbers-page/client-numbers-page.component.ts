@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Solutions, UsersNumber } from 'src/business/model/solution.model';
+import { ResponsiveService } from '../services/responsive/responsive.service';
 
 @Component({
   selector: 'app-client-numbers-page',
@@ -13,7 +14,7 @@ export class ClientNumbersPageComponent implements OnInit {
   usersNumber = {} as  UsersNumber;
   isEmpty: boolean = true;
   
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, public responsive: ResponsiveService) {
     
   }
 

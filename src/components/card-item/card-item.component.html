@@ -1,46 +1,60 @@
 <div class="card mb-4 rounded-3 shadow-sm color-grey no-border">
   <div class="card-body p-0">
-    <img src="assets/vendors/Oracle.png" alt="" class="img-card" />
+    <img [src]="score.urlImage" alt="" class="img-card" />
     <h5 class="card-title pricing-card-title pos-pb m-0">
-      Miscrosoft Dynamics 365
+      {{ score.title }}
     </h5>
     <div class="card-score pos-pb">
-      <div class="badge badge-card badge-score">8.5</div>
+      <div class="badge badge-card badge-score">
+        {{ score.Score | number : "1.2-2" }}
+      </div>
     </div>
     <ul class="list-group mt-3 mb-4">
       <li
         class="list-group-item d-flex align-items-center no-border pos-score-item"
       >
-        <span class="badge badge-score badge-grey item pos">8.5</span
-        ><span class="item">10 users included</span>
+        <span class="badge badge-score badge-grey item pos">{{
+          score.software | number : "1.2-2"
+        }}</span
+        ><span class="item"> {{ "COEFFICIENTS.ITEM_1" | translate }}</span>
       </li>
       <li
         class="list-group-item d-flex align-items-center no-border pos-score-item"
       >
-        <span class="badge badge-score badge-grey item pos">8.5</span>
-        <span class="item">2 GB of storage</span>
+        <span class="badge badge-score badge-grey item pos">{{
+          score.price | number : "1.2-2"
+        }}</span>
+        <span class="item"> {{ "COEFFICIENTS.ITEM_2" | translate }}</span>
       </li>
       <li
         class="list-group-item d-flex align-items-center no-border pos-score-item"
       >
-        <span class="badge badge-score badge-grey item pos">8.5</span>
-        <span class="item">Email support</span>
+        <span class="badge badge-score badge-grey item pos">{{
+          score.provider | number : "1.2-2"
+        }}</span>
+        <span class="item"> {{ "COEFFICIENTS.ITEM_3" | translate }}</span>
       </li>
       <li
         class="list-group-item d-flex align-items-center no-border pos-score-item"
       >
-        <div class="badge badge-score badge-grey item pos">8.5</div>
-        <span class="item">Help center access</span>
+        <div class="badge badge-score badge-grey item pos">
+          {{ score.compatibility | number : "1.2-2" }}
+        </div>
+        <span class="item"> {{ "COEFFICIENTS.ITEM_4" | translate }}</span>
       </li>
       <li
         class="list-group-item d-flex align-items-center no-border pos-score-item"
       >
-        <div class="badge badge-score badge-grey item pos">8.5</div>
-        <span class="item">Help center access</span>
+        <div class="badge badge-score badge-grey item pos">
+          {{ score.positionning | number : "1.2-2" }}
+        </div>
+        <span class="item"> {{ "COEFFICIENTS.ITEM_5" | translate }}</span>
       </li>
     </ul>
     <div class="d-grid gap-2 col-10 mx-auto pb-40">
-      <button class="btn btn-card" type="button">site web</button>
+      <a class="btn btn-card" type="button" [href]="score.urlCompany"
+        >site web</a
+      >
     </div>
   </div>
 </div>

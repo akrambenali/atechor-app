@@ -19,6 +19,9 @@
     font-family: Roboto;
     font-size: 1.25rem ;
     height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .badge-card {

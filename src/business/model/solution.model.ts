@@ -72,6 +72,7 @@ export interface Compatibility {
 export interface SecteurItem {
   title: string;
   value: boolean;
+  codeSecteur: string
 }
 
 export interface FonctionItem {

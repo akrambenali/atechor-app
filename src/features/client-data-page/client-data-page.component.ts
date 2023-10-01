@@ -46,15 +46,9 @@ export class ClientDataPageComponent implements OnInit {
     this.clientData = this.contactForm.value as Client;
     this.clientService.addClient(this.clientData).subscribe((res: any) => {
       this.RespMessage = res;
-      console.log('====================================');
-      console.log(this.RespMessage);
-      console.log('====================================');
     });
 
     this.clientService.getSolutions(this.solutionModel).subscribe((res)=> {
-      console.log('====================================');
-      console.log(res);
-      console.log('====================================');
       if(res)  {
         this.router.navigate(['/mail-client'])
       }

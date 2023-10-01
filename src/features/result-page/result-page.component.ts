@@ -11,9 +11,13 @@ import html2canvas from 'html2canvas';
 })
 export class ResultPageComponent implements OnInit {
   id: any;
-  Scores: any;
+  result: any;
+  history : any;
+  secteur !: string
+  
 
   @ViewChild('content') htmlData!: ElementRef;
+
 
   constructor(private clientService: ClientService, private route: ActivatedRoute) { }
 
@@ -22,11 +26,14 @@ export class ResultPageComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
     this.getScores(this.id);
+    
+    
   }
 
   public getScores(id : string) {
     this.clientService.getScores(id).subscribe( res => {
-      this.Scores= res;
+      this.result= res;
+      this.extractHistory(this.result.history) 
      });
   }
 
@@ -42,5 +49,23 @@ export class ResultPageComponent implements OnInit {
       PDF.save('Atechor.pdf');
     });
   } 
+
+  public  extractHistory(history: any)  {
+   
+    this.history = JSON.parse(history[0])
+    console.log('====================================');
+    console.log(this.history);
+    console.log('====================================');
+    for (let index = 0; index < this.history.compatibility.secteur.length; index++) {
+      const element = this.history.compatibility.secteur[index];
+      this.secteur = element.title
+      
+    }
+    
+    
+
+  }
+
+  
 
 }

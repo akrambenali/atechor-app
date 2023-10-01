@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Hosting, Solutions } from 'src/business/model/solution.model';
+import { ResponsiveService } from '../services/responsive/responsive.service';
 
 @Component({
   selector: 'app-client-hosting-page',
@@ -12,7 +13,7 @@ export class ClientHostingPageComponent implements OnInit {
   hosting = {} as Hosting;
   isEmpty: boolean = true;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, public responsive: ResponsiveService) {}
 
   ngOnInit(): void {
     (this.solutionModel = history. state);

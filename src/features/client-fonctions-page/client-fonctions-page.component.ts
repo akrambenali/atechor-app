@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { FonctionItem, Solutions } from 'src/business/model/solution.model';
+import { ResponsiveService } from '../services/responsive/responsive.service';
 
 @Component({
   selector: 'app-client-fonstions-page',
@@ -14,7 +15,7 @@ export class ClientFonctionsPageComponent implements OnInit {
   fonctions: FonctionItem[] = [];
   isEmpty: boolean = true;
   
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, public responsive: ResponsiveService) {
     
   }
 

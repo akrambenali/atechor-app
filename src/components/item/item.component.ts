@@ -22,6 +22,8 @@ export class ItemComponent implements OnInit {
   reasonType!: string;
   @Input()
   code!: string;
+  @Input()
+  codeSecteur!: string;
 
   @Output() sendSecteurEvent = new EventEmitter<any>();
   @Output() sendFonctionEvent = new EventEmitter<any>();
@@ -32,6 +34,7 @@ export class ItemComponent implements OnInit {
   item: SecteurItem = {
     title: '',
     value: false,
+    codeSecteur: ''
   };
   fonction: FonctionItem = {
     code: '',
@@ -64,6 +67,7 @@ export class ItemComponent implements OnInit {
     this.status = !this.status;
     this.item.title = this.title;
     this.item.value = true;
+    this.item.codeSecteur = this.codeSecteur;
     this.fonction.code = this.code;
     this.fonction.title = this.title;
     this.fonction.value = true;
