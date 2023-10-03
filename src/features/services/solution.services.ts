@@ -19,9 +19,9 @@ export class SolutionService {
 
 
   public sendSolution (solution : Solutions) {
-    const headers = { 'content-type': 'application/json'}  
+    const headers = { 'content-type': 'application/json' , 'Access-Control-Allow-Origin':'*' , 'Access-Control-Allow-Headers': 'X-Requested-With,content-type' , 'Access-Control-Allow-Methods':'POST'}; 
     const body=JSON.stringify(solution);
-    return this._httpClient.post(`${environment.apiUrl}solutions/`, body,{'headers':headers})
+    return this._httpClient.post(`${environment.apiUrl}/v1/solutions/`, body,{'headers':headers})
   }
  
   

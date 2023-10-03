@@ -25,31 +25,35 @@ export class ClientService {
     return this._httpClient.delete(`${environment.apiUrl}stores/` + id)
   } */
   public addClient(client: Client) {
-    const headers = { 'content-type': 'application/json' };
+    const headers = { 'content-type': 'application/json' , 'Access-Control-Allow-Origin':'*' , 'Access-Control-Allow-Headers': 'X-Requested-With,content-type' , 'Access-Control-Allow-Methods':'POST'};
     const body = JSON.stringify(client);
-    return this._httpClient.post(`${environment.apiUrl}clients/`, body, {
+    return this._httpClient.post(`${environment.apiUrl}/v1/clients/`, body, {
       headers: headers,
     });
   }
 
   public addCabinet(cabinet: Cabinet) {
-    const headers = { 'content-type': 'application/json' };
+    const headers = { 'content-type': 'application/json' , 'Access-Control-Allow-Origin':'*' , 'Access-Control-Allow-Headers': 'X-Requested-With,content-type' , 'Access-Control-Allow-Methods':'POST'};
     const body = JSON.stringify(cabinet);
-    return this._httpClient.post(`${environment.apiUrl}cclients/`, body, {
+    return this._httpClient.post(`${environment.apiUrl}/v1/cclients/`, body, {
       headers: headers,
     });
   }
 
   public getSolutions(solution: Solutions) : Observable<any> {
-    const headers = { 'content-type': 'application/json' };
+    const headers = { 'content-type': 'application/json' , 'Access-Control-Allow-Origin':'*' , 'Access-Control-Allow-Headers': 'X-Requested-With,content-type' , 'Access-Control-Allow-Methods':'POST'};
     const body = solution;
-    return this._httpClient.post(`${environment.apiUrl}search/`, body, {
+    return this._httpClient.post(`${environment.apiUrl}/v1/search/`, body, {
       headers: headers,
     });
   }
 
   public getScores(id: string) : Observable<any> {
-    return this._httpClient.get(`${environment.apiUrl}scores/` + id)
+    const headers = { 'content-type': 'application/json' , 'Access-Control-Allow-Origin':'*' , 'Access-Control-Allow-Headers': 'X-Requested-With,content-type' , 'Access-Control-Allow-Methods':'GET'};
+    return this._httpClient.get(`${environment.apiUrl}/v1/scores/` + id ,{
+      headers: headers,
+    });
+   
    }
 
 }
