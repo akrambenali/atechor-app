@@ -20,3 +20,15 @@
     justify-content: center;
 }
 
+.pos-card-mobile {
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pos-item-mobile  {
+    display: flex;
+    flex-direction: column;
+}
+
+

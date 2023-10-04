@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ResponsiveService } from 'src/features/services/responsive/responsive.service';
 
 @Component({
   selector: 'app-item-coefficient',
@@ -20,7 +21,7 @@ export class ItemCoefficientComponent implements OnInit {
 
   @Output() sendcoefficientsEvent = new EventEmitter<any>();
 
-  constructor() {}
+  constructor(public responsive: ResponsiveService) {}
 
   ngOnInit(): void {}
 

@@ -14,3 +14,9 @@
     padding-bottom: 70px;
 }
 
+.pos-card-mobile {
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+

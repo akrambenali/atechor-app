@@ -19,6 +19,11 @@ icon-shape {
   height: 35px;
 }
 
+.img-coefficient-mobile {
+  width: 30px;
+  height: 30px;
+}
+
 .text-coefficient {
   font-family: Roboto;
   font-size: 1.125rem;
@@ -78,4 +83,9 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.text-coefficient-mobile {
+  font-family: Roboto;
+  font-size: 1rem;
 }

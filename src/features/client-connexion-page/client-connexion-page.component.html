@@ -11,23 +11,47 @@
   <h3 class="pos-title text-center">
     {{ "CONNEXION.TITLE" | translate }}
   </h3>
-
-  <div class="pos-card">
-    <div>
-      <app-item-button
-        [title]="'CONNEXION.ITEM_1' | translate"
-        [connexion]="true"
-        (sendClientConnexionEvent)="pushClientConnexion($event)"
-      ></app-item-button>
+  <ng-container
+    *ngIf="responsive.deviceType === 'Handset'; then mobile; else web"
+  ></ng-container>
+  <ng-template #web>
+    <div class="pos-card">
+      <div>
+        <app-item-button
+          [title]="'CONNEXION.ITEM_1' | translate"
+          [connexion]="true"
+          (sendClientConnexionEvent)="pushClientConnexion($event)"
+        ></app-item-button>
+      </div>
+      <div>
+        <app-item-button
+          [title]="'CONNEXION.ITEM_2' | translate"
+          [connexion]="false"
+          (sendClientConnexionEvent)="pushClientConnexion($event)"
+        ></app-item-button>
+      </div>
     </div>
-    <div>
-      <app-item-button
-        [title]="'CONNEXION.ITEM_2' | translate"
-        [connexion]="false"
-        (sendClientConnexionEvent)="pushClientConnexion($event)"
-      ></app-item-button>
+  </ng-template>
+  <ng-template #mobile>
+    <div class="pos-card-mobile">
+      <div class="row justify-content-md-center">
+        <div class="col-12 mb-4">
+          <app-item-button
+            [title]="'CONNEXION.ITEM_1' | translate"
+            [connexion]="true"
+            (sendClientConnexionEvent)="pushClientConnexion($event)"
+          ></app-item-button>
+        </div>
+        <div class="col-12 mb-4">
+          <app-item-button
+            [title]="'CONNEXION.ITEM_2' | translate"
+            [connexion]="false"
+            (sendClientConnexionEvent)="pushClientConnexion($event)"
+          ></app-item-button>
+        </div>
+      </div>
     </div>
-  </div>
+  </ng-template>
 </div>
 
 <app-item-button-steps

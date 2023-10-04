@@ -9,9 +9,27 @@
  -->
 
 <div class="d-flex justify-content-center card-coefficient m-3">
-  <img src="{{ icon }}" alt="" class="img img-coefficient img-pos" />
+  <img
+    src="{{ icon }}"
+    alt=""
+    class="img img-pos"
+    [ngClass]="
+      responsive.deviceType === 'Handset'
+        ? 'img-coefficient-mobile'
+        : 'img-coefficient'
+    "
+  />
   <div>
-    <p class="text-dark text-coefficient m-0">{{ title }}</p>
+    <p
+      class="text-dark m-0"
+      [ngClass]="
+        responsive.deviceType === 'Handset'
+          ? 'text-coefficient-mobile'
+          : 'text-coefficient'
+      "
+    >
+      {{ title }}
+    </p>
   </div>
   <div class="input-group w-auto justify-content-end align-items-center">
     <input
