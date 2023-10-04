@@ -9,54 +9,110 @@
 
 <div class="container">
   <h3 class="pos-title text-center">{{ "USERS_NUMBERS.TITLE" | translate }}</h3>
+  <ng-container
+    *ngIf="responsive.deviceType === 'Handset'; then mobile; else web"
+  ></ng-container>
+  <ng-template #web>
+    <div class="pos-item">
+      <div>
+        <app-item-button
+          [title]="'USERS_NUMBERS.ITEM_1' | translate"
+          [clientCompanySize]="'A'"
+          (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
+        ></app-item-button>
+      </div>
+      <div>
+        <app-item-button
+          [title]="'USERS_NUMBERS.ITEM_2' | translate"
+          [clientCompanySize]="'B'"
+          (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
+        ></app-item-button>
+      </div>
+      <div>
+        <app-item-button
+          [title]="'USERS_NUMBERS.ITEM_3' | translate"
+          [clientCompanySize]="'C'"
+          (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
+        ></app-item-button>
+      </div>
+    </div>
 
-  <div class="pos-item">
-    <div>
-      <app-item-button
-        [title]="'USERS_NUMBERS.ITEM_1' | translate"
-        [clientCompanySize]="'A'"
-        (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
-      ></app-item-button>
+    <div class="pos-card">
+      <div>
+        <app-item-button
+          [title]="'USERS_NUMBERS.ITEM_4' | translate"
+          [clientCompanySize]="'D'"
+          (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
+        ></app-item-button>
+      </div>
+      <div>
+        <app-item-button
+          [title]="'USERS_NUMBERS.ITEM_5' | translate"
+          [clientCompanySize]="'E'"
+          (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
+        ></app-item-button>
+      </div>
+      <div>
+        <app-item-button
+          [title]="'USERS_NUMBERS.ITEM_6' | translate"
+          [clientCompanySize]="'F'"
+          (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
+        ></app-item-button>
+      </div>
     </div>
-    <div>
-      <app-item-button
-        [title]="'USERS_NUMBERS.ITEM_2' | translate"
-        [clientCompanySize]="'B'"
-        (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
-      ></app-item-button>
+  </ng-template>
+  <ng-template #mobile>
+    <div class="pos-item-mobile">
+      <div class="row justify-content-md-center">
+        <div class="col-12 mb-4">
+          <app-item-button
+            [title]="'USERS_NUMBERS.ITEM_1' | translate"
+            [clientCompanySize]="'A'"
+            (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
+          ></app-item-button>
+        </div>
+        <div class="col-12 mb-4">
+          <app-item-button
+            [title]="'USERS_NUMBERS.ITEM_2' | translate"
+            [clientCompanySize]="'B'"
+            (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
+          ></app-item-button>
+        </div>
+        <div class="col-12 mb-4">
+          <app-item-button
+            [title]="'USERS_NUMBERS.ITEM_3' | translate"
+            [clientCompanySize]="'C'"
+            (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
+          ></app-item-button>
+        </div>
+      </div>
     </div>
-    <div>
-      <app-item-button
-        [title]="'USERS_NUMBERS.ITEM_3' | translate"
-        [clientCompanySize]="'C'"
-        (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
-      ></app-item-button>
+    <div class="pos-card-mobile">
+      <div class="row justify-content-md-center">
+        <div class="col-12 mb-4">
+          <app-item-button
+            [title]="'USERS_NUMBERS.ITEM_4' | translate"
+            [clientCompanySize]="'D'"
+            (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
+          ></app-item-button>
+        </div>
+        <div class="col-12 mb-4">
+          <app-item-button
+            [title]="'USERS_NUMBERS.ITEM_5' | translate"
+            [clientCompanySize]="'E'"
+            (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
+          ></app-item-button>
+        </div>
+        <div class="col-12 mb-4">
+          <app-item-button
+            [title]="'USERS_NUMBERS.ITEM_6' | translate"
+            [clientCompanySize]="'F'"
+            (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
+          ></app-item-button>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div class="pos-card">
-    <div>
-      <app-item-button
-        [title]="'USERS_NUMBERS.ITEM_4' | translate"
-        [clientCompanySize]="'D'"
-        (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
-      ></app-item-button>
-    </div>
-    <div>
-      <app-item-button
-        [title]="'USERS_NUMBERS.ITEM_5' | translate"
-        [clientCompanySize]="'E'"
-        (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
-      ></app-item-button>
-    </div>
-    <div>
-      <app-item-button
-        [title]="'USERS_NUMBERS.ITEM_6' | translate"
-        [clientCompanySize]="'F'"
-        (sendClienCompanySizeEvent)="pushClientCompanySize($event)"
-      ></app-item-button>
-    </div>
-  </div>
+  </ng-template>
 
   <app-item-button-steps
     [next]="'/deploiment-client'"
