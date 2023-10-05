@@ -2,7 +2,7 @@
   "SECTEUR": {
     "TITLE": "Votre secteur d’activité",
     "SECTEUR_1": "Services",
-    "SECTEUR_2": "Production industrielle",
+    "SECTEUR_2": "Production",
     "SECTEUR_3": "Construction",
     "SECTEUR_4": "Distribution",
     "SECTEUR_5": "Activités financières",
@@ -52,7 +52,7 @@
   "FONCTIONS": {
     "TITLE": "Périmètre fonctionnel souhaité",
     "ITEM_1": "CRM",
-    "ITEM_2": "Finance et comptabilité",
+    "ITEM_2": "Finance",
     "ITEM_3": "RH",
     "ITEM_4": "Achats",
     "ITEM_5": "Production",
@@ -70,7 +70,7 @@
     "ITEM_5": "Peu importe"
   },
   "DEV": {
-    "TITLE": "Dans quelle mesure devrez-vous intégrer des développements spécifiques ?",
+    "TITLE": "Dans quelle mesure souhaitez-vous personnaliser le logiciel ?",
     "ITEM_1": "Peu",
     "ITEM_2": "Beaucoup",
     "ITEM_3": "Pas du tout"
