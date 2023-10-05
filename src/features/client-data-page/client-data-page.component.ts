@@ -5,6 +5,7 @@ import { ClientService } from '../services/client.services';
 import { Client } from 'src/business/model/client.model';
 import { Solutions } from 'src/business/model/solution.model';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ResponsiveService } from '../services/responsive/responsive.service';
 
 @Component({
   selector: 'app-client-data-page',
@@ -22,7 +23,8 @@ export class ClientDataPageComponent implements OnInit {
   constructor(
     private clientService: ClientService,
     private router: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    public responsive: ResponsiveService
   ) {}
   contactForm = new FormGroup({
     firstName: new FormControl(),
