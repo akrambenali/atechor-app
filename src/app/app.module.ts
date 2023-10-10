@@ -35,9 +35,11 @@ import { ClientDataPageComponent } from 'src/features/client-data-page/client-da
 import { ButtonOptionsComponent } from 'src/components/shared/button-options/button-options.component';
 import { ClientCabinetPageComponent } from 'src/features/client-cabinet-page/client-cabinet-page.component';
 import { ClientMailPageComponent } from 'src/features/client-mail-page/client-mail-page.component';
+import { CoefficientsComponent } from 'src/features/result-page/components/coefficients/coefficients.component';
 
 import { ClientService } from 'src/features/services/client.services';
 import { SolutionService } from 'src/features/services/solution.services';
+
 
 
 // AoT requires an exported function for factories
@@ -72,7 +74,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     ClientDataPageComponent,
     ButtonOptionsComponent,
     ClientCabinetPageComponent,
-    ClientMailPageComponent
+    ClientMailPageComponent,
+    CoefficientsComponent
   ],
   imports: [
     BrowserModule,

@@ -19,87 +19,46 @@
       </ng-container>
     </main>
   </div>
-  <ng-container *ngIf="history">
+  <ng-container>
     <div class="container mt-4 mb-6">
       <div class="pos-hr"><hr class="py-1" /></div>
 
       <div class="clearfix">
-        <ng-container *ngIf="history">
+        <ng-container *ngIf="coefficientsViewModel">
           <div class="col-md-3 float-md-end mb-3 ms-md-3">
-            <h3 class="pos-resume">{{ "SCORES.ITEM_1" | translate }}</h3>
-            <ul class="list-group">
-              <li
-                class="list-group-item d-flex align-items-center no-border justify-content-between"
-              >
-                <span class="item">
-                  <b>{{ "SCORES.ITEM_2" | translate }}</b></span
-                >
-                <span class="badge badge-score badge-grey item pos">{{
-                  history.compatibility.coefficients.software
-                }}</span>
-              </li>
-              <li
-                class="list-group-item d-flex align-items-center no-border justify-content-between"
-              >
-                <span class="item">
-                  <b>{{ "SCORES.ITEM_3" | translate }}</b></span
-                >
-                <span class="badge badge-score badge-grey item pos">{{
-                  history.compatibility.coefficients.price
-                }}</span>
-              </li>
-              <li
-                class="list-group-item d-flex align-items-center no-border justify-content-between"
-              >
-                <span class="item">
-                  <b>{{ "SCORES.ITEM_4" | translate }}</b></span
-                >
-                <span class="badge badge-score badge-grey item pos">{{
-                  history.compatibility.coefficients.vendor
-                }}</span>
-              </li>
-              <li
-                class="list-group-item d-flex align-items-center no-border justify-content-between"
-              >
-                <span class="item">
-                  <b>{{ "SCORES.ITEM_5" | translate }}</b></span
-                >
-                <span class="badge badge-score badge-grey item pos">{{
-                  history.compatibility.coefficients.Compatibility
-                }}</span>
-              </li>
-              <li
-                class="list-group-item d-flex align-items-center no-border justify-content-between"
-              >
-                <span class="item">
-                  <b>{{ "SCORES.ITEM_6" | translate }}</b></span
-                >
-                <span class="badge badge-score badge-grey item pos">{{
-                  history.compatibility.coefficients.position
-                }}</span>
-              </li>
-            </ul>
+            <app-coefficients
+              [coefficients]="coefficientsViewModel"
+            ></app-coefficients>
           </div>
         </ng-container>
 
         <h3 class="pos-resume">{{ "SCORES.ITEM_7" | translate }}</h3>
         <ul class="list-unstyled resume-style">
           <li>
-            <b class="dark">{{ "SCORES.ITEM_8" | translate }}</b> {{ secteur }}
+            <b class="dark">{{ "SCORES.ITEM_8" | translate }}</b>
+            <ng-container *ngIf="secteur.length > 0">
+              <span *ngFor="let item of secteur"> {{ item }}</span>
+            </ng-container>
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_9" | translate }} </b>Professionnels
+            <b class="dark">{{ "SCORES.ITEM_9" | translate }} </b>
+            <ng-container *ngIf="clientType"> {{ clientType }}</ng-container>
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_10" | translate }}</b> 100 à 500
-            millions d’€
+            <b class="dark">{{ "SCORES.ITEM_10" | translate }}</b>
+            <ng-container *ngIf="cA"> {{ cA }}</ng-container>
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_11" | translate }}</b> 250 à 700
+            <b class="dark">{{ "SCORES.ITEM_11" | translate }}</b>
+            <ng-container *ngIf="employNumber">
+              {{ employNumber }}</ng-container
+            >
           </li>
           <li>
             <b class="dark">{{ "SCORES.ITEM_12" | translate }}</b>
-            Internationale
+            <ng-container *ngIf="internationnalBusiness">
+              {{ internationnalBusiness }}</ng-container
+            >
           </li>
           <li>
             <b class="dark">{{ "SCORES.ITEM_13" | translate }}</b> Finance,
@@ -112,10 +71,12 @@
             <b class="dark">{{ "SCORES.ITEM_15" | translate }}</b> Cloud ; SaaS
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_16" | translate }}</b> Peu
+            <b class="dark">{{ "SCORES.ITEM_16" | translate }}</b>
+            <ng-container *ngIf="dev"> {{ dev }}</ng-container>
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_17" | translate }}</b> Oui
+            <b class="dark">{{ "SCORES.ITEM_17" | translate }}</b>
+            <ng-container *ngIf="connexion"> {{ connexion }}</ng-container>
           </li>
           <li>
             <b class="dark">{{ "SCORES.ITEM_18" | translate }}</b> < 1 an
