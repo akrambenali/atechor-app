@@ -68,7 +68,10 @@
             <b class="dark">{{ "SCORES.ITEM_14" | translate }}</b> 75 à 200
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_15" | translate }}</b> Cloud ; SaaS
+            <b class="dark">{{ "SCORES.ITEM_15" | translate }}</b>
+            <ng-container *ngIf="hostingType.length > 0">
+              <span *ngFor="let item of hostingType"> {{ item }}</span>
+            </ng-container>
           </li>
           <li>
             <b class="dark">{{ "SCORES.ITEM_16" | translate }}</b>
@@ -79,11 +82,16 @@
             <ng-container *ngIf="connexion"> {{ connexion }}</ng-container>
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_18" | translate }}</b> < 1 an
+            <b class="dark">{{ "SCORES.ITEM_18" | translate }}</b>
+            <ng-container *ngIf="implemntation">
+              {{ implemntation }}</ng-container
+            >
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_19" | translate }}</b> Manque de
-            fonctionnalités
+            <b class="dark">{{ "SCORES.ITEM_19" | translate }}</b>
+            <ng-container *ngIf="reasonType.length > 0">
+              <span *ngFor="let item of reasonType"> {{ item }}</span>
+            </ng-container>
           </li>
         </ul>
       </div>
