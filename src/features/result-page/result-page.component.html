@@ -61,11 +61,14 @@
             >
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_13" | translate }}</b> Finance,
-            comptabilité ; RH ; CRM ; Gestion d’actifs
+            <b class="dark">{{ "SCORES.ITEM_13" | translate }}</b>
+            <ng-container *ngIf="fonctions.length > 0">
+              <span *ngFor="let item of fonctions"> {{ item }}</span>
+            </ng-container>
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_14" | translate }}</b> 75 à 200
+            <b class="dark">{{ "SCORES.ITEM_14" | translate }}</b>
+            <ng-container *ngIf="usersNumber"> {{ usersNumber }}</ng-container>
           </li>
           <li>
             <b class="dark">{{ "SCORES.ITEM_15" | translate }}</b>

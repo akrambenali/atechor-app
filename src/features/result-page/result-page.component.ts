@@ -8,6 +8,7 @@ import { ClientService } from '../services/client.services';
 import { ReasonEnum } from 'src/business/model/views.model/reasonEnum';
 import { implemntationEnum } from 'src/business/model/views.model/implemntationEnum';
 import { HostingEnum } from 'src/business/model/views.model/hostinhEnum';
+import { UsersNumberEnum } from 'src/business/model/views.model/usersNumberEnum';
 
 @Component({
   selector: 'app-result-page',
@@ -29,6 +30,8 @@ export class ResultPageComponent implements OnInit {
   reasonType: string[] = [];
   implemntation!: string;
   hostingType: string[] = [];
+  usersNumber!: string;
+  fonctions: string[] = [];
 
   @ViewChild('content') htmlData!: ElementRef;
 
@@ -207,11 +210,37 @@ export class ResultPageComponent implements OnInit {
         if (history[0].hosting.any) {
           this.hostingType.push(HostingEnum.any);
         }
-       
       }
-
-
-      
+      if (history[0].compatibility.usersNumber) {
+        if (history[0].compatibility.usersNumber.A) {
+          this.usersNumber = UsersNumberEnum.A;
+        }
+        if (history[0].compatibility.usersNumber.B) {
+          this.usersNumber = UsersNumberEnum.B;
+        }
+        if (history[0].compatibility.usersNumber.C) {
+          this.usersNumber = UsersNumberEnum.C;
+        }
+        if (history[0].compatibility.usersNumber.D) {
+          this.usersNumber = UsersNumberEnum.D;
+        }
+        if (history[0].compatibility.usersNumber.E) {
+          this.usersNumber = UsersNumberEnum.E;
+        }
+        if (history[0].compatibility.usersNumber.F) {
+          this.usersNumber = UsersNumberEnum.F;
+        }
+      }
+      if (history[0].compatibility.fonctions) {
+        for (
+          let index = 0;
+          index < history[0].compatibility.fonctions.length;
+          index++
+        ) {
+          const element = history[0].compatibility.fonctions[index].title;
+          this.fonctions.push(element);
+        }
+      }
     }
   }
 }
