@@ -22,6 +22,7 @@ export class ClientCoefficientsPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.solutionModel = history.state;
+    this.solutionModel.compatibility.coefficients = this.coefficients;
   }
 
   pushClientCoefficients(newItem: any) {
