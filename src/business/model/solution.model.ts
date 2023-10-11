@@ -130,7 +130,7 @@ export interface Coefficients {
   price:  number;
   vendor: number;
   Compatibility: number;
-  postion: number;
+  position: number;
 
 
 }

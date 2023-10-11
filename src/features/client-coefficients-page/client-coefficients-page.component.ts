@@ -15,7 +15,7 @@ export class ClientCoefficientsPageComponent implements OnInit {
     price: 1,
     vendor: 1,
     Compatibility: 1,
-    postion: 1,
+    position: 1,
   } as Coefficients;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute, public responsive: ResponsiveService) {}
@@ -39,7 +39,7 @@ export class ClientCoefficientsPageComponent implements OnInit {
         this.coefficients.Compatibility = newItem.value;
         break;
       case (newItem.type = 'position'):
-        this.coefficients.postion = newItem.value;
+        this.coefficients.position = newItem.value;
         break;
       default:
         break;
