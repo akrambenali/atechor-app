@@ -18,16 +18,20 @@
     <div class="pos-card">
       <div>
         <app-item-button
+          id="Y"
           [title]="'CONNEXION.ITEM_1' | translate"
           [connexion]="true"
           (sendClientConnexionEvent)="pushClientConnexion($event)"
+          (sendStatusEvent)="getStatus($event)"
         ></app-item-button>
       </div>
       <div>
         <app-item-button
+          id="N"
           [title]="'CONNEXION.ITEM_2' | translate"
           [connexion]="false"
           (sendClientConnexionEvent)="pushClientConnexion($event)"
+          (sendStatusEvent)="getStatus($event)"
         ></app-item-button>
       </div>
     </div>
@@ -37,16 +41,20 @@
       <div class="row justify-content-md-center">
         <div class="col-12 mb-4">
           <app-item-button
+            id="Y"
             [title]="'CONNEXION.ITEM_1' | translate"
             [connexion]="true"
             (sendClientConnexionEvent)="pushClientConnexion($event)"
+            (sendStatusEvent)="getStatus($event)"
           ></app-item-button>
         </div>
         <div class="col-12 mb-4">
           <app-item-button
+            id="N"
             [title]="'CONNEXION.ITEM_2' | translate"
             [connexion]="false"
             (sendClientConnexionEvent)="pushClientConnexion($event)"
+            (sendStatusEvent)="getStatus($event)"
           ></app-item-button>
         </div>
       </div>

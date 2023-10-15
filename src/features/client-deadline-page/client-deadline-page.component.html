@@ -18,23 +18,29 @@
     <div class="pos-item">
       <div>
         <app-item-button
+          id="M1"
           [title]="'DEADLINES.ITEM_1' | translate"
           [deadlineType]="'M1'"
           (sendClientDeadlineEvent)="pushClientDeadline($event)"
+          (sendStatusEvent)="getStatus($event)"
         ></app-item-button>
       </div>
       <div>
         <app-item-button
+          id="M6"
           [title]="'DEADLINES.ITEM_2' | translate"
           [deadlineType]="'M6'"
           (sendClientDeadlineEvent)="pushClientDeadline($event)"
+          (sendStatusEvent)="getStatus($event)"
         ></app-item-button>
       </div>
       <div>
         <app-item-button
+          id="A1"
           [title]="'DEADLINES.ITEM_3' | translate"
           [deadlineType]="'A1'"
           (sendClientDeadlineEvent)="pushClientDeadline($event)"
+          (sendStatusEvent)="getStatus($event)"
         ></app-item-button>
       </div>
     </div>
@@ -42,16 +48,20 @@
     <div class="pos-card">
       <div>
         <app-item-button
+          id="A100"
           [title]="'DEADLINES.ITEM_4' | translate"
           [deadlineType]="'A100'"
           (sendClientDeadlineEvent)="pushClientDeadline($event)"
+          (sendStatusEvent)="getStatus($event)"
         ></app-item-button>
       </div>
       <div>
         <app-item-button
+          id="any"
           [title]="'DEADLINES.ITEM_5' | translate"
           [deadlineType]="'ANY'"
           (sendClientDeadlineEvent)="pushClientDeadline($event)"
+          (sendStatusEvent)="getStatus($event)"
         ></app-item-button>
       </div>
     </div>
@@ -61,23 +71,29 @@
       <div class="row justify-content-md-center">
         <div class="col-12 mb-4">
           <app-item-button
+            id="M1"
             [title]="'DEADLINES.ITEM_1' | translate"
             [deadlineType]="'M1'"
             (sendClientDeadlineEvent)="pushClientDeadline($event)"
+            (sendStatusEvent)="getStatus($event)"
           ></app-item-button>
         </div>
         <div class="col-12 mb-4">
           <app-item-button
+            id="M6"
             [title]="'DEADLINES.ITEM_2' | translate"
             [deadlineType]="'M6'"
             (sendClientDeadlineEvent)="pushClientDeadline($event)"
+            (sendStatusEvent)="getStatus($event)"
           ></app-item-button>
         </div>
         <div class="col-12 mb-4">
           <app-item-button
+            id="A1"
             [title]="'DEADLINES.ITEM_3' | translate"
             [deadlineType]="'A1'"
             (sendClientDeadlineEvent)="pushClientDeadline($event)"
+            (sendStatusEvent)="getStatus($event)"
           ></app-item-button>
         </div>
       </div>
@@ -87,16 +103,20 @@
       <div class="row justify-content-md-center">
         <div class="col-12 mb-4">
           <app-item-button
+            id="A100"
             [title]="'DEADLINES.ITEM_4' | translate"
             [deadlineType]="'A100'"
             (sendClientDeadlineEvent)="pushClientDeadline($event)"
+            (sendStatusEvent)="getStatus($event)"
           ></app-item-button>
         </div>
         <div class="col-12 mb-4">
           <app-item-button
+            id="any"
             [title]="'DEADLINES.ITEM_5' | translate"
             [deadlineType]="'ANY'"
             (sendClientDeadlineEvent)="pushClientDeadline($event)"
+            (sendStatusEvent)="getStatus($event)"
           ></app-item-button>
         </div>
       </div>

@@ -23,9 +23,49 @@ export class ClientDevPageComponent implements OnInit {
 
   pushClientDev(newItem: any) {
     this.dev = newItem;
+    this.checkDisabledItem(this.dev)
     this.solutionModel.dev = this.dev;
     this.isEmpty = false;
     
+  }
+
+  checkDisabledItem(item: Dev) {
+    const L = document.getElementById('L');
+    const H = document.getElementById('H');
+    const N = document.getElementById('N');
+    if (item.low === true) {
+      if (H != null && N != null ) {
+        H.classList.add('disabled');
+        N.classList.add('disabled');
+      
+      }
+    } else if (item.high === true) {
+      if (L != null && N != null ) {
+        L.classList.add('disabled');
+        N.classList.add('disabled');
+       
+      }
+    } else if (item.none === true) {
+      if (L != null && H != null  ) {
+        L.classList.add('disabled');
+        H.classList.add('disabled');
+       
+      }
+    }
+  }
+
+  getStatus(status: boolean) {
+    const L = document.getElementById('L');
+    const H = document.getElementById('H');
+    const N = document.getElementById('N');
+   
+    if (!status) {
+      if (L != null && H != null && N != null) {
+        L.classList.remove('disabled');
+        H.classList.remove('disabled');
+        N.classList.remove('disabled');
+      }
+    }
   }
 
 }
