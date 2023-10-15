@@ -28,7 +28,6 @@ export class ClientNumbersPageComponent implements OnInit {
     this.usersNumber = newItem;
     this.solutionModel.compatibility.usersNumber = this.usersNumber;
     this.isEmpty =  false;
-    console.log( this.solutionModel);
     
   }
 }

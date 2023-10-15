@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import {
   Compatibility,
   SecteurItem,
@@ -16,9 +17,15 @@ export class SecteurPageComponent implements OnInit {
   secteur: SecteurItem[] = [];
   isEmpty: boolean = true;
 
-  constructor() {}
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+ if(history) {
+    console.log('====================================');
+    console.log( history);
+    console.log('====================================');
+  }
+  }
 
   pushSecteur(newItem: any) {
     const found = this.secteur.some((el) => el.title === newItem.title);

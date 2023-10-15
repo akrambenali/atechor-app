@@ -44,6 +44,7 @@ export class ItemButtonComponent implements OnInit {
   @Output() sendClientDevEvent = new EventEmitter<any>();
   @Output() sendClientConnexionEvent = new EventEmitter<any>();
   @Output() sendClientDeadlineEvent = new EventEmitter<any>();
+  @Output() sendStatusEvent = new EventEmitter<any>();
 
   status: boolean = false;
 
@@ -220,5 +221,6 @@ export class ItemButtonComponent implements OnInit {
     this.sendClientDevEvent.emit(this.itemDev);
     this.sendClientConnexionEvent.emit(this.connexion);
     this.sendClientDeadlineEvent.emit(this.itemDeadline);
+    this.sendStatusEvent.emit(this.status);
   }
 }

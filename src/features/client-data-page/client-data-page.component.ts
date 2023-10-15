@@ -39,7 +39,7 @@ export class ClientDataPageComponent implements OnInit {
   ngOnInit(): void {
     (this.solutionModel = history. state);
     console.log('====================================');
-    console.log(JSON.stringify(this.solutionModel));
+    console.log(this.solutionModel);
     console.log('====================================');
   }
 

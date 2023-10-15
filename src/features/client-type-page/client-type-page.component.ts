@@ -13,15 +13,58 @@ export class ClientTypePageComponent implements OnInit {
   clientBusiness = {} as ClientBusiness;
   isEmpty: boolean = true;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, public responsive: ResponsiveService) {}
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    public responsive: ResponsiveService
+  ) {}
 
   ngOnInit(): void {
     this.solutionModel = history.state;
+    console.log('====================================');
+    console.log(this.solutionModel);
+    console.log('====================================');
   }
 
   pushClientType(newItem: any) {
     this.clientBusiness = newItem;
+    this.checkDisabledItem(this.clientBusiness);
     this.solutionModel.clientBusiness = this.clientBusiness;
     this.isEmpty = false;
+  }
+
+  checkDisabledItem(item: ClientBusiness) {
+    const b2b = document.getElementById('b2b');
+    const b2c = document.getElementById('b2c');
+    const both = document.getElementById('both');
+    if (item.b2b === true) {
+      if (b2c != null && both != null) {
+        b2c.classList.add('disabled');
+        both.classList.add('disabled');
+      }
+    } else if (item.b2c === true) {
+      if (b2b != null && both != null) {
+        b2b.classList.add('disabled');
+        both.classList.add('disabled');
+      }
+    } else if (item.both === true) {
+      if (b2b != null && b2c != null) {
+        b2b.classList.add('disabled');
+        b2c.classList.add('disabled');
+      }
+    }
+  }
+
+  getStatus(status: boolean) {
+    const b2b = document.getElementById('b2b');
+    const b2c = document.getElementById('b2c');
+    const both = document.getElementById('both');
+    if (!status) {
+      if (b2b != null && b2c != null && both != null) {
+        b2b.classList.remove('disabled');
+        b2c.classList.remove('disabled');
+        both.classList.remove('disabled');
+      }
+    }
   }
 }

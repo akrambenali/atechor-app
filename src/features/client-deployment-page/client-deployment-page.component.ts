@@ -29,7 +29,6 @@ export class ClientDeploymentPageComponent implements OnInit {
     this.internationnalBusiness = newItem;
     this.solutionModel.internationnalBusiness = this.internationnalBusiness;
     this.isEmpty =  false;
-    console.log( this.solutionModel);
     
   }
 

@@ -34,7 +34,6 @@ export class ClientFonctionsPageComponent implements OnInit {
     }
     this.solutionModel.compatibility.fonctions = this.fonctions;
     this.isEmpty =  false;
-    console.log( this.solutionModel);
     
   }
 

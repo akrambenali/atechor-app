@@ -1,32 +1,37 @@
 .pos-card {
-    padding-bottom: 200px;
-    display: flex;
-    justify-content: center;
+  padding-bottom: 200px;
+  display: flex;
+  justify-content: center;
 }
 
-
 .pos {
-    margin-top: 50px;
-    margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .pos-title {
-    padding-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 .pos-item {
-    padding-bottom: 30px;
-    display: flex;
-    justify-content: center;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .pos-card-mobile {
-    padding-bottom: 50px;
-    display: flex;
-    flex-direction: column;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
-.pos-item-mobile  {
-    display: flex;
-    flex-direction: column;
+.pos-item-mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+.disabled {
+  cursor: none;
+  opacity: 0.65;
+  pointer-events: none;
 }
