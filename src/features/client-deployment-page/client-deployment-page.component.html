@@ -19,16 +19,20 @@
     <div class="pos-card">
       <div>
         <app-item-button
+          id="N"
           [title]="'DEPLOYMENT.ITEM_1' | translate"
           (sendClientDeploymentEvent)="pushClientinternationnalBusiness($event)"
           [clientDeployment]="'N'"
+          (sendStatusEvent)="getStatus($event)"
         ></app-item-button>
       </div>
       <div>
         <app-item-button
+          id="I"
           [title]="'DEPLOYMENT.ITEM_2' | translate"
           [clientDeployment]="'I'"
           (sendClientDeploymentEvent)="pushClientinternationnalBusiness($event)"
+          (sendStatusEvent)="getStatus($event)"
         ></app-item-button>
       </div></div
   ></ng-template>
@@ -37,20 +41,24 @@
       <div class="row justify-content-md-center">
         <div class="col-12 mb-4">
           <app-item-button
+            id="N"
             [title]="'DEPLOYMENT.ITEM_1' | translate"
             (sendClientDeploymentEvent)="
               pushClientinternationnalBusiness($event)
             "
             [clientDeployment]="'N'"
+            (sendStatusEvent)="getStatus($event)"
           ></app-item-button>
         </div>
         <div class="col-12 mb-4">
           <app-item-button
+            id="I"
             [title]="'DEPLOYMENT.ITEM_2' | translate"
             [clientDeployment]="'I'"
             (sendClientDeploymentEvent)="
               pushClientinternationnalBusiness($event)
             "
+            (sendStatusEvent)="getStatus($event)"
           ></app-item-button>
         </div>
       </div>
