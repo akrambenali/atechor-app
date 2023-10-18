@@ -42,15 +42,15 @@ export class ClientDataPageComponent implements OnInit {
 
   onSubmit() {
     this.clientData = this.contactForm.value as Client;
-    this.router.navigate(['/mail-client'],   { queryParams: { email: this.clientData.email} })
-   /*  this.clientService.addClient(this.clientData).subscribe((res: any) => {
+    
+    this.clientService.addClient(this.clientData).subscribe((res: any) => {
       this.RespMessage = res;
-    }); */
+    });
 
-  /*   this.clientService.getSolutions(this.solutionModel).subscribe((res)=> {
+    this.clientService.getSolutions(this.solutionModel).subscribe((res)=> {
       if(res)  {
         this.router.navigate(['/mail-client'],   { queryParams: { email: this.clientData.email} })
       }
-    }) */
+    })
   }
 }
