@@ -35,13 +35,9 @@ export class ClientCabinetPageComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.cabinetContactForm.value);
     this.cabinetData = this.cabinetContactForm.value as Cabinet;
     this.clientService.addCabinet(this.cabinetData).subscribe((res: any) => {
       this.RespMessage = res;
-      console.log('====================================');
-      console.log(this.RespMessage);
-      console.log('====================================');
     });
   }
 }

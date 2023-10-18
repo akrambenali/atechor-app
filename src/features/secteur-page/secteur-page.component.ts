@@ -20,11 +20,7 @@ export class SecteurPageComponent implements OnInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
- if(history) {
-    console.log('====================================');
-    console.log( history);
-    console.log('====================================');
-  }
+ 
   }
 
   pushSecteur(newItem: any) {

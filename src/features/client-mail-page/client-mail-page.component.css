@@ -7,10 +7,6 @@
     margin-bottom: 90px;
 }
 
-.pos-title {
-    padding-bottom: 50px;
-}
-
 .pos-card {
     padding-bottom: 78px;
 }
@@ -22,4 +18,27 @@
     height: 69px;
     border-radius: 17px;
     border: 2px #4A505B solid;
+  }
+
+  @media only screen and (min-width: 768px) {
+    /* Styles pour cette Media Queries */
+    .img-size {
+        width: 40%;
+    }
+
+    .pos-title {
+        padding-bottom: 50px;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    /* Styles pour cette Media Queries */
+    .img-size {
+        width: 75%;
+    }
+
+    .pos-title {
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
   }

@@ -32,8 +32,13 @@ export class ResultPageComponent implements OnInit {
   hostingType: string[] = [];
   usersNumber!: string;
   fonctions: string[] = [];
+  fonctionsStr!: string;
+  reasonTypeStr!: string;
+  secteurStr!: string;
+  hostingTypeStr!: string;
 
   @ViewChild('content') htmlData!: ElementRef;
+  
 
   constructor(
     private clientService: ClientService,
@@ -55,7 +60,7 @@ export class ResultPageComponent implements OnInit {
   public openPDF(): void {
     let DATA: any = document.getElementById('content');
     html2canvas(DATA).then((canvas) => {
-      let fileWidth = 208;
+      let fileWidth = 180;
       let fileHeight = (canvas.height * fileWidth) / canvas.width;
       const FILEURI = canvas.toDataURL('application/pdf:base64');
       let PDF = new jsPDF('p', 'mm', 'a4');
@@ -75,7 +80,9 @@ export class ResultPageComponent implements OnInit {
       ) {
         const element = history[0].compatibility.secteur[index].title;
         this.secteur.push(element);
+        
       }
+      this.secteurStr = this.secteur.join(', ')
       if (history[0].clientBusiness) {
         if (history[0].clientBusiness.b2b) {
           this.clientType = 'B2B';
@@ -175,6 +182,7 @@ export class ResultPageComponent implements OnInit {
         if (history[0].compatibility.reason.other) {
           this.reasonType.push(ReasonEnum.other);
         }
+        this.reasonTypeStr = this.reasonType.join(", ");
       }
 
       if (history[0].compatibility.implemntation) {
@@ -210,6 +218,7 @@ export class ResultPageComponent implements OnInit {
         if (history[0].hosting.any) {
           this.hostingType.push(HostingEnum.any);
         }
+        this.hostingTypeStr = this.hostingType.join(", ");
       }
       if (history[0].compatibility.usersNumber) {
         if (history[0].compatibility.usersNumber.A) {
@@ -239,7 +248,10 @@ export class ResultPageComponent implements OnInit {
         ) {
           const element = history[0].compatibility.fonctions[index].title;
           this.fonctions.push(element);
+          
+          
         }
+        this.fonctionsStr = this.fonctions.join(", ");
       }
     }
   }

@@ -3,7 +3,7 @@
     <a class="navbar-brand" href="#">
       <img
         src="assets/logo/atechor-logo-png.png"
-        alt="Bootstrap"
+        alt="atechor"
         width="200"
         height="41"
       />
@@ -14,9 +14,10 @@
   <h3 class="pos-title text-center mt-2">
     {{ "EMAIL.TITLE" | translate }}
   </h3>
+  <h3 class="text-center mt-1">{{ email }}</h3>
   <div class="text-center">
-    <img src="assets/icons/mail.png" class="img-fluid" alt="..." />
-    <div>
+    <img src="assets/icons/mail.png" class="img-fluid img-size" alt="..." />
+    <div class="mt-4">
       <button type="button" class="btn btn-reset" [routerLink]="'/'">
         <i class="reset"></i>
         Recommencer

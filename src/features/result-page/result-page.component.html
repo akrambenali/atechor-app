@@ -21,7 +21,7 @@
   </div>
   <ng-container>
     <div class="container mt-4 mb-6">
-      <div class="pos-hr"><hr class="py-1" /></div>
+      <div class="pos-hr"><hr class="py-5" /></div>
 
       <div class="clearfix">
         <ng-container *ngIf="coefficientsViewModel">
@@ -37,7 +37,7 @@
           <li>
             <b class="dark">{{ "SCORES.ITEM_8" | translate }}</b>
             <ng-container *ngIf="secteur.length > 0">
-              <span *ngFor="let item of secteur"> {{ item }}</span>
+              <span> {{ secteurStr }}</span>
             </ng-container>
           </li>
           <li>
@@ -63,7 +63,7 @@
           <li>
             <b class="dark">{{ "SCORES.ITEM_13" | translate }}</b>
             <ng-container *ngIf="fonctions.length > 0">
-              <span *ngFor="let item of fonctions"> {{ item }}</span>
+              <span> {{ fonctionsStr }}</span>
             </ng-container>
           </li>
           <li>
@@ -73,7 +73,7 @@
           <li>
             <b class="dark">{{ "SCORES.ITEM_15" | translate }}</b>
             <ng-container *ngIf="hostingType.length > 0">
-              <span *ngFor="let item of hostingType"> {{ item }}</span>
+              <span> {{ hostingTypeStr }}</span>
             </ng-container>
           </li>
           <li>
@@ -93,7 +93,7 @@
           <li>
             <b class="dark">{{ "SCORES.ITEM_19" | translate }}</b>
             <ng-container *ngIf="reasonType.length > 0">
-              <span *ngFor="let item of reasonType"> {{ item }}</span>
+              <span> {{ reasonTypeStr }}</span>
             </ng-container>
           </li>
         </ul>
@@ -101,16 +101,20 @@
     </div>
   </ng-container>
 </div>
-<div class="d-grid gap-2 d-md-flex justify-content-end pb-5">
+<div class="d-grid gap-2 d-md-flex justify-content-center pb-5">
   <button
-    class="btn btn-option me-md-4 shadow"
+    class="btn btn-option me-md-4 shadow-sm"
     type="button"
     (click)="openPDF()"
   >
     <i class="pdf"></i>
     {{ "RESULTS_BUTTONS.ITEM_1" | translate }}
   </button>
-  <button class="btn btn-option shadow me-md-4" type="button">
+  <button
+    class="btn btn-option shadow-sm me-md-4"
+    type="button"
+    [routerLink]="'/'"
+  >
     <i class="reset"></i>
     {{ "RESULTS_BUTTONS.ITEM_2" | translate }}
   </button>

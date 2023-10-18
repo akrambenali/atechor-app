@@ -21,9 +21,7 @@ export class ClientTypePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.solutionModel = history.state;
-    console.log('====================================');
-    console.log(this.solutionModel);
-    console.log('====================================');
+
   }
 
   pushClientType(newItem: any) {

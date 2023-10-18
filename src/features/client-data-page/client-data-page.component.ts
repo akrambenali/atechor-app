@@ -37,23 +37,20 @@ export class ClientDataPageComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    (this.solutionModel = history. state);
-    console.log('====================================');
-    console.log(this.solutionModel);
-    console.log('====================================');
+    this.solutionModel = history. state;
   }
 
   onSubmit() {
-    console.log(this.contactForm.value);
     this.clientData = this.contactForm.value as Client;
-    this.clientService.addClient(this.clientData).subscribe((res: any) => {
+    this.router.navigate(['/mail-client'],   { queryParams: { email: this.clientData.email} })
+   /*  this.clientService.addClient(this.clientData).subscribe((res: any) => {
       this.RespMessage = res;
-    });
+    }); */
 
-    this.clientService.getSolutions(this.solutionModel).subscribe((res)=> {
+  /*   this.clientService.getSolutions(this.solutionModel).subscribe((res)=> {
       if(res)  {
-        this.router.navigate(['/mail-client'])
+        this.router.navigate(['/mail-client'],   { queryParams: { email: this.clientData.email} })
       }
-    })
+    }) */
   }
 }
