@@ -12,7 +12,10 @@
     <main>
       <ng-container *ngIf="result && result.scores.length > 0">
         <div class="row mb-3 text-center">
-          <div class="col-4 card-pos" *ngFor="let item of result.scores">
+          <div
+            class="col-md-4 col-lg-4 col-sm-12 card-pos"
+            *ngFor="let item of result.scores"
+          >
             <app-card-item [score]="item"></app-card-item>
           </div>
         </div>
