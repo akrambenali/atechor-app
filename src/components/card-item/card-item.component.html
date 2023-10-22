@@ -6,31 +6,27 @@
     </h5>
     <div class="card-score pos-pb">
       <div class="badge badge-card badge-score">
-        {{ score.Score | number : "1.2-2" }}
+        {{ solutionScore }}
       </div>
     </div>
     <ul class="list-group mt-3 mb-4">
       <li
         class="list-group-item d-flex align-items-center no-border pos-score-item"
       >
-        <span class="badge badge-score badge-grey item pos">{{
-          score.software | number : "1.2-2"
-        }}</span
+        <span class="badge badge-score badge-grey item pos">{{ software }}</span
         ><span class="item"> {{ "COEFFICIENTS.ITEM_1" | translate }}</span>
       </li>
       <li
         class="list-group-item d-flex align-items-center no-border pos-score-item"
       >
-        <span class="badge badge-score badge-grey item pos">{{
-          score.price | number : "1.2-2"
-        }}</span>
+        <span class="badge badge-score badge-grey item pos">{{ price }}</span>
         <span class="item"> {{ "COEFFICIENTS.ITEM_2" | translate }}</span>
       </li>
       <li
         class="list-group-item d-flex align-items-center no-border pos-score-item"
       >
         <span class="badge badge-score badge-grey item pos">{{
-          score.provider | number : "1.2-2"
+          provider
         }}</span>
         <span class="item"> {{ "COEFFICIENTS.ITEM_3" | translate }}</span>
       </li>
@@ -38,7 +34,7 @@
         class="list-group-item d-flex align-items-center no-border pos-score-item"
       >
         <div class="badge badge-score badge-grey item pos">
-          {{ score.compatibility | number : "1.2-2" }}
+          {{ compatibility }}
         </div>
         <span class="item"> {{ "COEFFICIENTS.ITEM_4" | translate }}</span>
       </li>
@@ -46,7 +42,7 @@
         class="list-group-item d-flex align-items-center no-border pos-score-item"
       >
         <div class="badge badge-score badge-grey item pos">
-          {{ score.positionning | number : "1.2-2" }}
+          {{ positionning }}
         </div>
         <span class="item"> {{ "COEFFICIENTS.ITEM_5" | translate }}</span>
       </li>
