@@ -1,10 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import {
-  FonctionItem,
-  Hosting,
-  Reason,
-  SecteurItem,
-} from 'src/business/model/solution.model';
+import { FonctionItem, SecteurItem } from 'src/business/model/solution.model';
 
 @Component({
   selector: 'secteur-item',
@@ -34,7 +29,7 @@ export class ItemComponent implements OnInit {
   item: SecteurItem = {
     title: '',
     value: false,
-    codeSecteur: ''
+    codeSecteur: '',
   };
   fonction: FonctionItem = {
     code: '',
@@ -42,22 +37,9 @@ export class ItemComponent implements OnInit {
     value: false,
   };
 
-  itemHosting = {
-    cloud: false,
-    onPremise: false,
-    hybrid: false,
-    saas: false,
-    any: false,
-  } as Hosting;
+  itemHosting = {};
 
-  itemReason = {
-    sao: false,
-    mf: false,
-    pi: false,
-    in: false,
-    vt: false,
-    other: false
-  } as Reason;
+  itemReason = {};
 
   constructor() {}
 
@@ -73,41 +55,41 @@ export class ItemComponent implements OnInit {
     this.fonction.value = true;
     switch (this.hostingType) {
       case (this.hostingType = 'A'):
-        this.itemHosting.cloud = true;
+        this.itemHosting = { cloud: true, value: this.hostingType };
         break;
       case (this.hostingType = 'B'):
-        this.itemHosting.onPremise = true;
+        this.itemHosting = { onPremise: true, value: this.hostingType };
         break;
       case (this.hostingType = 'C'):
-        this.itemHosting.hybrid = true;
+        this.itemHosting = { hybrid: true, value: this.hostingType };
         break;
       case (this.hostingType = 'D'):
-        this.itemHosting.saas = true;
+        this.itemHosting = { saas: true, value: this.hostingType };
         break;
       case (this.hostingType = 'E'):
-        this.itemHosting.any = true;
+        this.itemHosting = { any: true, value: this.hostingType };
         break;
       default:
         break;
     }
     switch (this.reasonType) {
       case (this.reasonType = 'SAO'):
-        this.itemReason.sao = true;
+        this.itemReason = { sao: true, value: this.reasonType };
         break;
       case (this.reasonType = 'MF'):
-        this.itemReason.mf = true;
+        this.itemReason = { mf: true, value: this.reasonType };
         break;
       case (this.reasonType = 'PI'):
-        this.itemReason.pi = true;
+        this.itemReason = { pi: true, value: this.reasonType };
         break;
       case (this.reasonType = 'IN'):
-        this.itemReason.in = true;
+        this.itemReason = { in: true, value: this.reasonType };
         break;
       case (this.reasonType = 'VT'):
-        this.itemReason.vt = true;
+        this.itemReason = { vt: true, value: this.reasonType };
         break;
       case (this.reasonType = 'ANY'):
-        this.itemReason.other = true;
+        this.itemReason = { other: true, value: this.reasonType };
         break;
       default:
         break;

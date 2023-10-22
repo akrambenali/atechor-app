@@ -17,3 +17,9 @@ app-item-coefficient {
   justify-content: center;
   align-items: center;
 }
+
+app-item-coefficient:last-child {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+  }

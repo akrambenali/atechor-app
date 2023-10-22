@@ -15,9 +15,9 @@ import { ResponsiveService } from '../services/responsive/responsive.service';
 export class ClientDataPageComponent implements OnInit {
   RespMessage: any;
   clientData!: Client;
-  terms = false;
   contactforms =  true;
   solutionModel = {} as Solutions;
+  submitted = false;
   
 
   constructor(
@@ -32,7 +32,7 @@ export class ClientDataPageComponent implements OnInit {
     company: new FormControl(),
     role: new FormControl(),
     email: new FormControl(),
-    acceptTerms: new FormControl(),
+    acceptTerms: new FormControl( false, Validators.requiredTrue),
     contactOk: new FormControl(),
   });
 
@@ -40,9 +40,14 @@ export class ClientDataPageComponent implements OnInit {
     this.solutionModel = history. state;
   }
 
+  get f() { return this.contactForm.controls; }
+
   onSubmit() {
+    this.submitted = true;
+    if (this.contactForm.invalid) {
+      return;
+    }
     this.clientData = this.contactForm.value as Client;
-    
     this.clientService.addClient(this.clientData).subscribe((res: any) => {
       this.RespMessage = res;
     });

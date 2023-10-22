@@ -111,7 +111,9 @@
                 class="form-check-input"
                 formControlName="acceptTerms"
                 id="acceptTerms"
-                [(ngModel)]="terms"
+                [ngClass]="{
+                  'is-invalid': submitted && f.acceptTerms.errors
+                }"
               />
               <label class="form-check-label required" for="acceptTerms"
                 >{{ "FROM_1.ITEM_8" | translate }}
@@ -119,6 +121,12 @@
                   "FROM_1.ITEM_9" | translate
                 }}</a>
               </label>
+              <div
+                *ngIf="submitted && f.acceptTerms.errors"
+                class="invalid-feedback"
+              >
+                {{ "FROM_1.ITEM_11" | translate }}
+              </div>
             </div>
 
             <div class="form-check form-input-top m-0">
@@ -285,7 +293,9 @@
                   class="form-check-input"
                   formControlName="acceptTerms"
                   id="acceptTerms"
-                  [(ngModel)]="terms"
+                  [ngClass]="{
+                    'is-invalid': submitted && f.acceptTerms.errors
+                  }"
                 />
                 <label class="form-check-label required" for="acceptTerms"
                   >{{ "FROM_1.ITEM_8" | translate }}
@@ -293,6 +303,12 @@
                     "FROM_1.ITEM_9" | translate
                   }}</a>
                 </label>
+                <div
+                  *ngIf="submitted && f.acceptTerms.errors"
+                  class="invalid-feedback"
+                >
+                  Accept Ts & Cs is required
+                </div>
               </div>
 
               <div class="col-12 form-check form-input-top ml">

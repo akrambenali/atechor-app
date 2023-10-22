@@ -9,7 +9,7 @@ export interface Solutions {
   connectivity: number;
   internationnalBusiness: InternationnalBusiness;
   clientBusiness: ClientBusiness;
-  hosting: Hosting;
+  hosting: any;
   dev: Dev;
   valueForMoney: number;
   software: Software;
@@ -26,14 +26,6 @@ export interface ClientBusiness {
 export interface InternationnalBusiness {
   national: boolean;
   international: boolean;
-}
-
-export interface Hosting {
-  cloud: boolean;
-  onPremise: boolean;
-  hybrid: boolean;
-  saas: boolean;
-  any: boolean;
 }
 
 export interface Dev {
@@ -65,7 +57,7 @@ export interface Compatibility {
   companySize: CompanySize;
   implemntation: Implemntation;
   position: number;
-  reason: Reason;
+  reason: any;
   coefficients: Coefficients
 }
 
@@ -116,14 +108,14 @@ export interface Implemntation {
   any: boolean;
 }
 
-export interface Reason {
+/* export interface Reason {
   sao: boolean;
   mf: boolean;
   pi: boolean;
   in: boolean;
   vt: boolean;
   other: boolean;
-}
+} */
 
 export interface Coefficients {
   software:  number;

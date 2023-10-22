@@ -117,7 +117,9 @@
     "ITEM_7": "MAIL PROFESSIONNEL",
     "ITEM_8": "J’accepte la sauvegarde de mes données, conformément au RGPD.",
     "ITEM_9": "En savoir plus.",
-    "ITEM_10": "Je souhaite être mis en relation avec des partenaires m’accompagner dans <br> mon projet."
+    "ITEM_10": "Je souhaite être mis en relation avec des partenaires m’accompagner dans <br> mon projet.",
+    "ITEM_11": "Ce champs est obligatoire"
+
   },
   "FROM_2": {
     "TITLE": "Dites-nous qui vous êtes !",

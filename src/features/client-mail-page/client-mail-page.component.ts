@@ -13,7 +13,6 @@ export class ClientMailPageComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
       this.email = params['email'];
-      console.log(this.email);
     });
   }
 }

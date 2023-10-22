@@ -38,7 +38,6 @@ export class ResultPageComponent implements OnInit {
   hostingTypeStr!: string;
 
   @ViewChild('content') htmlData!: ElementRef;
-  
 
   constructor(
     private clientService: ClientService,
@@ -80,9 +79,8 @@ export class ResultPageComponent implements OnInit {
       ) {
         const element = history[0].compatibility.secteur[index].title;
         this.secteur.push(element);
-        
       }
-      this.secteurStr = this.secteur.join(', ')
+      this.secteurStr = this.secteur.join(', ');
       if (history[0].clientBusiness) {
         if (history[0].clientBusiness.b2b) {
           this.clientType = 'B2B';
@@ -164,25 +162,33 @@ export class ResultPageComponent implements OnInit {
       }
 
       if (history[0].compatibility.reason) {
-        if (history[0].compatibility.reason.sao) {
-          this.reasonType.push(ReasonEnum.sao);
+        for (
+          let index = 0;
+          index < history[0].compatibility.reason.length;
+          index++
+        ) {
+          const element = history[0].compatibility.reason[index];
+          if (element.sao) {
+            this.reasonType.push(ReasonEnum.sao);
+          }
+          if (element.mf) {
+            this.reasonType.push(ReasonEnum.mf);
+          }
+          if (element.pi) {
+            this.reasonType.push(ReasonEnum.pi);
+          }
+          if (element.in) {
+            this.reasonType.push(ReasonEnum.in);
+          }
+          if (element.vt) {
+            this.reasonType.push(ReasonEnum.vt);
+          }
+          if (element.other) {
+            this.reasonType.push(ReasonEnum.other);
+          }
         }
-        if (history[0].compatibility.reason.mf) {
-          this.reasonType.push(ReasonEnum.mf);
-        }
-        if (history[0].compatibility.reason.pi) {
-          this.reasonType.push(ReasonEnum.pi);
-        }
-        if (history[0].compatibility.reason.in) {
-          this.reasonType.push(ReasonEnum.in);
-        }
-        if (history[0].compatibility.reason.vt) {
-          this.reasonType.push(ReasonEnum.vt);
-        }
-        if (history[0].compatibility.reason.other) {
-          this.reasonType.push(ReasonEnum.other);
-        }
-        this.reasonTypeStr = this.reasonType.join(", ");
+
+        this.reasonTypeStr = this.reasonType.join(', ');
       }
 
       if (history[0].compatibility.implemntation) {
@@ -203,22 +209,26 @@ export class ResultPageComponent implements OnInit {
         }
       }
       if (history[0].hosting) {
-        if (history[0].hosting.cloud) {
-          this.hostingType.push(HostingEnum.cloud);
+        for (let index = 0; index < history[0].hosting.length; index++) {
+          const element = history[0].hosting[index];
+          if (element.cloud) {
+            this.hostingType.push(HostingEnum.cloud);
+          }
+          if (element.onPremise) {
+            this.hostingType.push(HostingEnum.onPremise);
+          }
+          if (element.hybrid) {
+            this.hostingType.push(HostingEnum.hybrid);
+          }
+          if (element.saas) {
+            this.hostingType.push(HostingEnum.saas);
+          }
+          if (element.any) {
+            this.hostingType.push(HostingEnum.any);
+          }
         }
-        if (history[0].hosting.onPremise) {
-          this.hostingType.push(HostingEnum.onPremise);
-        }
-        if (history[0].hosting.hybrid) {
-          this.hostingType.push(HostingEnum.hybrid);
-        }
-        if (history[0].hosting.saas) {
-          this.hostingType.push(HostingEnum.saas);
-        }
-        if (history[0].hosting.any) {
-          this.hostingType.push(HostingEnum.any);
-        }
-        this.hostingTypeStr = this.hostingType.join(", ");
+
+        this.hostingTypeStr = this.hostingType.join(', ');
       }
       if (history[0].compatibility.usersNumber) {
         if (history[0].compatibility.usersNumber.A) {
@@ -248,10 +258,8 @@ export class ResultPageComponent implements OnInit {
         ) {
           const element = history[0].compatibility.fonctions[index].title;
           this.fonctions.push(element);
-          
-          
         }
-        this.fonctionsStr = this.fonctions.join(", ");
+        this.fonctionsStr = this.fonctions.join(', ');
       }
     }
   }
