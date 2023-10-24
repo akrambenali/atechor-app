@@ -159,7 +159,7 @@
     "ITEM_21": "Context"
   },
   "SCORES": {
-    "TITLE": "Les 6 solutions les plus pertinentes pour vous :",
+    "TITLE": "Les {{length}} solutions les plus pertinentes pour vous :",
     "ITEM_1": "Coefficients :",
     "ITEM_2": "Logiciel",
     "ITEM_3": "Prix",
