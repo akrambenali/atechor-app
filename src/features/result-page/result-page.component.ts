@@ -36,6 +36,7 @@ export class ResultPageComponent implements OnInit {
   reasonTypeStr!: string;
   secteurStr!: string;
   hostingTypeStr!: string;
+  scores!: any;
 
   @ViewChild('content') htmlData!: ElementRef;
 
@@ -52,6 +53,7 @@ export class ResultPageComponent implements OnInit {
   public getScores(id: string) {
     this.clientService.getScores(id).subscribe((res) => {
       this.result = res;
+      this.scores = this.result.scores.slice(0,6);
       this.extractHistory(this.result.history);
     });
   }

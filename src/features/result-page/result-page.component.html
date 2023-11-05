@@ -5,7 +5,7 @@
     </div>
 
     <h3 class="pos-title text-center">
-      {{ "SCORES.TITLE" | translate : { length: result.scores.length } }}
+      {{ "SCORES.TITLE" | translate : { length: result?.scores?.length } }}
     </h3>
   </div>
   <div class="container py-3">
@@ -14,7 +14,7 @@
         <div class="row mb-3 text-center">
           <div
             class="col-md-4 col-lg-4 col-sm-12 card-pos"
-            *ngFor="let item of result.scores"
+            *ngFor="let item of scores"
           >
             <app-card-item [score]="item"></app-card-item>
           </div>
