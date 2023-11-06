@@ -53,60 +53,55 @@ export class ResultPageComponent implements OnInit {
   public getScores(id: string) {
     this.clientService.getScores(id).subscribe((res) => {
       this.result = res;
-      this.scores = this.result.scores.slice(0,6);
+      this.scores = this.result.scores.slice(0, 6);
       this.extractHistory(this.result.history);
     });
   }
 
   public openPDF(): void {
-    let SCORES: any = document.getElementById('content');
-html2canvas(SCORES).then((canvas:any) => {
-  const imgWidth = 208;
-  const pageHeight = 295;
-  const imgHeight = (canvas.height * imgWidth) / canvas.width;
-  let heightLeft = imgHeight;
-  let position = 0;
-  heightLeft -= pageHeight;
-  const doc = new jsPDF('p', 'mm');
-  doc.addImage(canvas, 'PNG', 0, position, imgWidth, imgHeight +70 , '', 'FAST');
-  while (heightLeft >= 0) {
-    position = heightLeft - imgHeight;
-    doc.addPage();
-    doc.addImage(canvas, 'PNG', 0, position, imgWidth, imgHeight +100, '', 'FAST');
-    heightLeft -= pageHeight;
-  }
-  doc.save('Atechor.pdf');
-});
-     
-  /*   window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
     setTimeout(() => {
-        setTimeout(() => {
-            //setLoader(true);
-        }, 100);
-        const divToPrint: any = document.querySelector('#content');
-        html2canvas(divToPrint).then(canvas => {
-            const imgData = canvas.toDataURL('image/png');
-            const imgWidth = 190;
-            const pageHeight = 290;
-            const imgHeight = (canvas.height * imgWidth) / canvas.width;
-            let heightLeft = imgHeight;
-            const doc = new jsPDF('p', 'mm');
-            let position = 0;
-            doc.addImage(imgData, 'PNG', 10, 0, imgWidth, imgHeight + 25);
-            heightLeft -= pageHeight;
-            while (heightLeft >= 0) {
-                position = heightLeft - imgHeight;
-                doc.addPage();
-                doc.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight + 25);
-                heightLeft -= pageHeight;
-            }
-            doc.save('download.pdf');
-            //setLoader(false);
-        });
-    }, 1000); */
-
-}
-  
+      setTimeout(() => {
+        //setLoader(true);
+      }, 100);
+      let SCORES: any = document.getElementById('content');
+      html2canvas(SCORES).then((canvas: any) => {
+        const imgWidth = 208;
+        const pageHeight = 295;
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+        let heightLeft = imgHeight;
+        let position = 0;
+        heightLeft -= pageHeight;
+        const doc = new jsPDF('p', 'mm');
+        doc.addImage(
+          canvas,
+          'PNG',
+          0,
+          position,
+          imgWidth,
+          imgHeight + 70,
+          '',
+          'FAST'
+        );
+        while (heightLeft >= 0) {
+          position = heightLeft - imgHeight;
+          doc.addPage();
+          doc.addImage(
+            canvas,
+            'PNG',
+            0,
+            position,
+            imgWidth,
+            imgHeight + 100,
+            '',
+            'FAST'
+          );
+          heightLeft -= pageHeight;
+        }
+        doc.save('Atechor.pdf');
+      });
+    }, 1000);
+  }
 
   public extractHistory(history: any) {
     if (history && history.length > 0) {
