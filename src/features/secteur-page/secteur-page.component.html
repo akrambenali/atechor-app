@@ -14,58 +14,76 @@
     class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4 pos-card"
   >
     <secteur-item
+      id="A"
       [codeSecteur]="'services'"
       [title]="'SECTEUR.SECTEUR_1' | translate"
       [image]="'assets/icons/services 128px.png'"
       (sendSecteurEvent)="pushSecteur($event)"
+      (sendStatusEvent)="getStatus($event)"
     ></secteur-item>
     <secteur-item
+      id="B"
       [codeSecteur]="'manufacturing'"
       [title]="'SECTEUR.SECTEUR_2' | translate"
       [image]="'assets/icons/production 128px.png'"
       (sendSecteurEvent)="pushSecteur($event)"
+      (sendStatusEvent)="getStatus($event)"
     ></secteur-item>
     <secteur-item
+      id="C"
       [codeSecteur]="'construction'"
       [title]="'SECTEUR.SECTEUR_3' | translate"
       [image]="'assets/icons/construction 128px.png'"
       (sendSecteurEvent)="pushSecteur($event)"
+      (sendStatusEvent)="getStatus($event)"
     ></secteur-item>
     <secteur-item
+      id="D"
       [codeSecteur]="'retail'"
       [title]="'SECTEUR.SECTEUR_4' | translate"
       [image]="'assets/icons/distribution 128px.png'"
       (sendSecteurEvent)="pushSecteur($event)"
+      (sendStatusEvent)="getStatus($event)"
     ></secteur-item>
     <secteur-item
+      id="E"
       [codeSecteur]="'finance'"
       [title]="'SECTEUR.SECTEUR_5' | translate"
       [image]="'assets/icons/finance 128px.png'"
       (sendSecteurEvent)="pushSecteur($event)"
+      (sendStatusEvent)="getStatus($event)"
     ></secteur-item>
     <secteur-item
+      id="F"
       [codeSecteur]="'govNgo'"
       [title]="'SECTEUR.SECTEUR_6' | translate"
       [image]="'assets/icons/gouv.png'"
       (sendSecteurEvent)="pushSecteur($event)"
+      (sendStatusEvent)="getStatus($event)"
     ></secteur-item>
     <secteur-item
+      id="G"
       [codeSecteur]="'energy'"
       [title]="'SECTEUR.SECTEUR_7' | translate"
       [image]="'assets/icons/energie 64px.png'"
       (sendSecteurEvent)="pushSecteur($event)"
+      (sendStatusEvent)="getStatus($event)"
     ></secteur-item>
     <secteur-item
+      id="H"
       [codeSecteur]="'transport'"
       [title]="'SECTEUR.SECTEUR_8' | translate"
       [image]="'assets/icons/logistique 64px.png'"
       (sendSecteurEvent)="pushSecteur($event)"
+      (sendStatusEvent)="getStatus($event)"
     ></secteur-item>
     <secteur-item
+      id="I"
       [codeSecteur]="'aerospace'"
       [title]="'SECTEUR.SECTEUR_9' | translate"
       [image]="'assets/icons/aerospatial 64px.png'"
       (sendSecteurEvent)="pushSecteur($event)"
+      (sendStatusEvent)="getStatus($event)"
     ></secteur-item>
   </div>
 </div>

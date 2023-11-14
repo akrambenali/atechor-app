@@ -50,7 +50,7 @@ export interface Software {
 }
 
 export interface Compatibility {
-  secteur: SecteurItem[];
+  secteur: SecteurItem;
   fonctions: FonctionItem[];
   usersNumber: UsersNumber;
   size: Size;
