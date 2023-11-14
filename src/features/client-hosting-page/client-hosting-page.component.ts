@@ -10,7 +10,7 @@ import { ResponsiveService } from '../services/responsive/responsive.service';
 })
 export class ClientHostingPageComponent implements OnInit {
   solutionModel = {} as Solutions;
-  hosting: any = [];
+  hosting: any ;
   isEmpty: boolean = true;
 
   constructor(
@@ -24,29 +24,75 @@ export class ClientHostingPageComponent implements OnInit {
   }
 
   pushClientHosting(newItem: any) {
-    const found = this.hosting.some(
-      (el: { value: any }) => el.value === newItem.value
-    );
-    if (!found) {
-      this.hosting.push(newItem);
-    } else {
-      this.hosting = this.removeObjectWithId(this.hosting, newItem.value);
-    }
-    if (this.hosting.length > 0) {
-      this.isEmpty = false;
-    }
+    this.hosting = newItem;
+    this.checkDisabledItem(this.hosting)
     this.solutionModel.hosting = this.hosting;
+    this.isEmpty = false;
+   
   }
 
-  removeObjectWithId(arr: any[], value: string) {
-    const objWithIdIndex = arr.findIndex((obj) => obj.value === value);
+ 
 
-    if (objWithIdIndex > -1) {
-      arr.splice(objWithIdIndex, 1);
+  checkDisabledItem(item: any) {
+    const A = document.getElementById('A');
+    const B = document.getElementById('B');
+    const C = document.getElementById('C');
+    const D = document.getElementById('D');
+    const E = document.getElementById('E');
+    if (item.cloud === true) {
+      if (B != null && C != null && D != null && E != null) {
+        B.classList.add('disabled');
+        C.classList.add('disabled');
+        D.classList.add('disabled');
+        E.classList.add('disabled');
+      }
+    } else if (item.onPremise === true) {
+      if (A != null && C != null && D != null && E != null ) {
+        A.classList.add('disabled');
+        C.classList.add('disabled');
+        D.classList.add('disabled');
+        E.classList.add('disabled');
+      }
+    } else if (item.hybrid === true) {
+      if (A != null && B != null && D != null && E != null ) {
+        A.classList.add('disabled');
+        B.classList.add('disabled');
+        D.classList.add('disabled');
+        E.classList.add('disabled');
+      }
     }
-    if (arr.length === 0) {
-      this.isEmpty = true;
+    else if(item.saas === true ) {
+      if (A != null && B != null && C != null && E != null ) {
+        A.classList.add('disabled');
+        B.classList.add('disabled');
+        C.classList.add('disabled');
+        E.classList.add('disabled');
+      }
+
+    } else  if(item.any === true) {
+      if (A != null && B != null && C != null && D != null  ) {
+        A.classList.add('disabled');
+        B.classList.add('disabled');
+        C.classList.add('disabled');
+        D.classList.add('disabled');
+      }
+    } 
+  }
+
+  getStatus(status: boolean) {
+    const A = document.getElementById('A');
+    const B = document.getElementById('B');
+    const C = document.getElementById('C');
+    const D = document.getElementById('D');
+    const E = document.getElementById('E');
+    if (!status) {
+      if (A != null && B != null && C != null && D != null && E != null) {
+        A.classList.remove('disabled');
+        B.classList.remove('disabled');
+        C.classList.remove('disabled');
+        D.classList.remove('disabled');
+        E.classList.remove('disabled');
+      }
     }
-    return arr;
   }
 }

@@ -4,4 +4,5 @@ export interface Client {
     company:   string;
     role:      string;
     email:     string;
+    phoneNumber: string;
 }

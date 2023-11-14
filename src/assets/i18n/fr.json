@@ -118,22 +118,11 @@
     "ITEM_8": "J’accepte la sauvegarde de mes données, conformément au RGPD.",
     "ITEM_9": "En savoir plus.",
     "ITEM_10": "Je souhaite être mis en relation avec des partenaires m’accompagner dans <br> mon projet.",
-    "ITEM_11": "Ce champs est obligatoire"
+    "ITEM_11": "Ce champs est obligatoire",
+    "ITEM_12": "TÉLÉPHONE"
 
   },
-  "FROM_2": {
-    "TITLE": "Dites-nous qui vous êtes !",
-    "ITEM_1": "PRÉNOM",
-    "ITEM_2": "NOM",
-    "ITEM_3": "CABINET",
-    "ITEM_4": "CLIENT FINAL",
-    "ITEM_5": "PAYS",
-    "ITEM_6": "FONCTION",
-    "ITEM_7": "MAIL PROFESSIONNEL",
-    "ITEM_8": "J’accepte d’être contacté dans le cadre de mon projet.",
-    "ITEM_9": "En savoir plus.",
-    "ITEM_10": "Je souhaite être mis en relation avec des partenaires m’accompagner dans mon projet."
-  },
+  
   "RESULTS": {
     "TITLE": "The 6 most relevant solutions for you:",
     "ITEM_1": "Software",
@@ -224,5 +213,9 @@
   },
   "EMAIL": {
     "TITLE": "Vous recevrez le résultat dans un instant sur : "
+  },
+  "RATING": {
+    "TITLE": "Dites-nous ce que vous pensez d’Atechor !"
   }
+
 }

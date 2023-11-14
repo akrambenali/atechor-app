@@ -24,6 +24,7 @@ export class ItemComponent implements OnInit {
   @Output() sendFonctionEvent = new EventEmitter<any>();
   @Output() sendHostingEvent = new EventEmitter<any>();
   @Output() sendReasonEvent = new EventEmitter<any>();
+  @Output() sendStatusEvent = new EventEmitter<any>();
 
   status: boolean = false;
   item: SecteurItem = {
@@ -98,5 +99,6 @@ export class ItemComponent implements OnInit {
     this.sendFonctionEvent.emit(this.fonction);
     this.sendHostingEvent.emit(this.itemHosting);
     this.sendReasonEvent.emit(this.itemReason);
+    this.sendStatusEvent.emit(this.status);
   }
 }

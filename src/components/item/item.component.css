@@ -41,3 +41,9 @@
   align-items: center;
   padding-left: 45px;
 }
+
+.disabled {
+  cursor: none;
+  opacity: 0.65;
+  pointer-events: none;
+}

@@ -33,12 +33,11 @@ import { ClientCoefficientsPageComponent } from 'src/features/client-coefficient
 import { ItemCoefficientComponent } from 'src/components/item-coefficient/item-coefficient.component';
 import { ClientDataPageComponent } from 'src/features/client-data-page/client-data-page.component';
 import { ButtonOptionsComponent } from 'src/components/shared/button-options/button-options.component';
-import { ClientCabinetPageComponent } from 'src/features/client-cabinet-page/client-cabinet-page.component';
 import { ClientMailPageComponent } from 'src/features/client-mail-page/client-mail-page.component';
 import { CoefficientsComponent } from 'src/features/result-page/components/coefficients/coefficients.component';
-
 import { ClientService } from 'src/features/services/client.services';
 import { SolutionService } from 'src/features/services/solution.services';
+import { RatingComponent } from 'src/features/result-page/components/rating/rating.component';
 
 
 
@@ -73,9 +72,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     ItemCoefficientComponent,
     ClientDataPageComponent,
     ButtonOptionsComponent,
-    ClientCabinetPageComponent,
     ClientMailPageComponent,
-    CoefficientsComponent
+    CoefficientsComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,

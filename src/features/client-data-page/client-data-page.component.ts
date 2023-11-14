@@ -32,6 +32,7 @@ export class ClientDataPageComponent implements OnInit {
     company: new FormControl(),
     role: new FormControl(),
     email: new FormControl(),
+    phoneNumber: new FormControl(),
     acceptTerms: new FormControl( false, Validators.requiredTrue),
     contactOk: new FormControl(),
   });

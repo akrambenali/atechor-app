@@ -75,7 +75,7 @@
           </li>
           <li>
             <b class="dark">{{ "SCORES.ITEM_15" | translate }}</b>
-            <ng-container *ngIf="hostingType.length > 0">
+            <ng-container *ngIf="hostingTypeStr">
               <span> {{ hostingTypeStr }}</span>
             </ng-container>
           </li>
@@ -104,21 +104,6 @@
     </div>
   </ng-container>
 </div>
-<div class="d-grid gap-2 d-md-flex justify-content-center pb-5">
-  <!-- <button
-    class="btn btn-option me-md-4 shadow-sm"
-    type="button"
-    (click)="openPDF()"
-  >
-    <i class="pdf"></i>
-    {{ "RESULTS_BUTTONS.ITEM_1" | translate }}
-  </button> -->
-  <button
-    class="btn btn-option shadow-sm me-md-4"
-    type="button"
-    [routerLink]="'/'"
-  >
-    <i class="reset"></i>
-    {{ "RESULTS_BUTTONS.ITEM_2" | translate }}
-  </button>
-</div>
+<!-- <div class="d-grid gap-2 d-md-flex justify-content-center pb-5">
+  <app-rating></app-rating>
+</div> -->

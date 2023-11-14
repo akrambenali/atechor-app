@@ -243,24 +243,23 @@ export class ResultPageComponent implements OnInit {
         }
       }
       if (history[0].hosting) {
-        for (let index = 0; index < history[0].hosting.length; index++) {
-          const element = history[0].hosting[index];
-          if (element.cloud) {
+       
+          if (history[0].hosting.cloud) {
             this.hostingType.push(HostingEnum.cloud);
           }
-          if (element.onPremise) {
+          if (history[0].hosting.onPremise) {
             this.hostingType.push(HostingEnum.onPremise);
           }
-          if (element.hybrid) {
+          if (history[0].hosting.hybrid) {
             this.hostingType.push(HostingEnum.hybrid);
           }
-          if (element.saas) {
+          if (history[0].hosting.saas) {
             this.hostingType.push(HostingEnum.saas);
           }
-          if (element.any) {
+          if (history[0].hosting.any) {
             this.hostingType.push(HostingEnum.any);
           }
-        }
+        
 
         this.hostingTypeStr = this.hostingType.join(', ');
       }

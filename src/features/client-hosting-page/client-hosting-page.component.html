@@ -17,30 +17,40 @@
       [title]="'HOSTING.ITEM_1' | translate"
       [image]="'assets/icons/cloud.png'"
       [hostingType]="'A'"
+      id="A"
       (sendHostingEvent)="pushClientHosting($event)"
+      (sendStatusEvent)="getStatus($event)"
     ></secteur-item>
     <secteur-item
       [title]="'HOSTING.ITEM_2' | translate"
       [image]="'assets/icons/onpremise.png'"
       [hostingType]="'B'"
+      id="B"
       (sendHostingEvent)="pushClientHosting($event)"
+      (sendStatusEvent)="getStatus($event)"
     ></secteur-item>
     <secteur-item
       [title]="'HOSTING.ITEM_3' | translate"
       [image]="'assets/icons/saas.png'"
       [hostingType]="'C'"
+      id="C"
       (sendHostingEvent)="pushClientHosting($event)"
+      (sendStatusEvent)="getStatus($event)"
     ></secteur-item>
     <secteur-item
       [title]="'HOSTING.ITEM_4' | translate"
       [image]="'assets/icons/hybride.png'"
       [hostingType]="'D'"
+      id="D"
       (sendHostingEvent)="pushClientHosting($event)"
+      (sendStatusEvent)="getStatus($event)"
     ></secteur-item>
     <secteur-item
       [title]="'HOSTING.ITEM_5' | translate"
       [hostingType]="'E'"
+      id="E"
       (sendHostingEvent)="pushClientHosting($event)"
+      (sendStatusEvent)="getStatus($event)"
     ></secteur-item>
   </div>
 </div>

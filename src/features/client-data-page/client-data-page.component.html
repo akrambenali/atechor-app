@@ -70,8 +70,17 @@
               </div>
 
               <div class="col-sm-6 form-input-size form-input-top m-0">
-                <div class="form-button shadow" [routerLink]="'/infos-cabinet'">
-                  <b>{{ "FROM_1.ITEM_4" | translate }}</b>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  formControlName="phoneNumber"
+                  [placeholder]="'FROM_1.ITEM_12' | translate"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Valid first name is required.
                 </div>
               </div>
 
