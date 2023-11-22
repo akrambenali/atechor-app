@@ -32,11 +32,53 @@ export class ItemComponent implements OnInit {
     value: false,
     codeSecteur: '',
   };
-  fonction: FonctionItem = {
-    code: '',
-    title: '',
-    value: false,
-  };
+  fonctions: FonctionItem [] = [
+    {
+      "code": "CRM",
+      "title": "CRM",
+      "value": false
+    },
+    {
+      "code": "finance",
+      "title": "Finance",
+      "value": false
+    },
+    {
+      "code": "RH",
+      "title": "RH",
+      "value": false
+    },
+    {
+      "code": "projets",
+      "title": "Gestion de projet",
+      "value": false
+    },
+    {
+      "code": "production",
+      "title": "Production",
+      "value": false
+    },
+    {
+      "code": "achats",
+      "title": "Achats",
+      "value": false
+    },
+    {
+      "code": "logistique",
+      "title": "Logistique",
+      "value": false
+    },
+    {
+      "code": "actifs",
+      "title": "Gestion des actifs",
+      "value": false
+    },
+    {
+      "code": "rnd",
+      "title": "R&D",
+      "value": false
+    }
+  ];
 
   itemHosting = {};
 
@@ -51,9 +93,12 @@ export class ItemComponent implements OnInit {
     this.item.title = this.title;
     this.item.value = true;
     this.item.codeSecteur = this.codeSecteur;
-    this.fonction.code = this.code;
-    this.fonction.title = this.title;
-    this.fonction.value = true;
+   for (let index = 0; index < this.fonctions.length; index++) {
+    const element = this.fonctions[index];
+    if(element.code === this.code) {
+      element.value = true;
+    }
+   }
     switch (this.hostingType) {
       case (this.hostingType = 'A'):
         this.itemHosting = { cloud: true, value: this.hostingType };
@@ -96,7 +141,7 @@ export class ItemComponent implements OnInit {
         break;
     }
     this.sendSecteurEvent.emit(this.item);
-    this.sendFonctionEvent.emit(this.fonction);
+    this.sendFonctionEvent.emit(this.fonctions);
     this.sendHostingEvent.emit(this.itemHosting);
     this.sendReasonEvent.emit(this.itemReason);
     this.sendStatusEvent.emit(this.status);

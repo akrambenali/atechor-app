@@ -106,12 +106,8 @@ export class ResultPageComponent implements OnInit {
   public extractHistory(history: any) {
     if (history && history.length > 0) {
       this.coefficientsViewModel = history[0].compatibility.coefficients;
-      for (
-        let index = 0;
-        index < history[0].compatibility.secteur.length;
-        index++
-      ) {
-        const element = history[0].compatibility.secteur[index].title;
+      if (history[0].compatibility.secteur) {
+        const element = history[0].compatibility.secteur.title;
         this.secteur.push(element);
       }
       this.secteurStr = this.secteur.join(', ');
@@ -243,23 +239,21 @@ export class ResultPageComponent implements OnInit {
         }
       }
       if (history[0].hosting) {
-       
-          if (history[0].hosting.cloud) {
-            this.hostingType.push(HostingEnum.cloud);
-          }
-          if (history[0].hosting.onPremise) {
-            this.hostingType.push(HostingEnum.onPremise);
-          }
-          if (history[0].hosting.hybrid) {
-            this.hostingType.push(HostingEnum.hybrid);
-          }
-          if (history[0].hosting.saas) {
-            this.hostingType.push(HostingEnum.saas);
-          }
-          if (history[0].hosting.any) {
-            this.hostingType.push(HostingEnum.any);
-          }
-        
+        if (history[0].hosting.cloud) {
+          this.hostingType.push(HostingEnum.cloud);
+        }
+        if (history[0].hosting.onPremise) {
+          this.hostingType.push(HostingEnum.onPremise);
+        }
+        if (history[0].hosting.hybrid) {
+          this.hostingType.push(HostingEnum.hybrid);
+        }
+        if (history[0].hosting.saas) {
+          this.hostingType.push(HostingEnum.saas);
+        }
+        if (history[0].hosting.any) {
+          this.hostingType.push(HostingEnum.any);
+        }
 
         this.hostingTypeStr = this.hostingType.join(', ');
       }
