@@ -215,7 +215,11 @@
     "TITLE": "Vous recevrez le résultat dans un instant sur : "
   },
   "RATING": {
-    "TITLE": "Dites-nous ce que vous pensez d’Atechor !"
+    "TITLE": "Dites-nous ce que vous pensez d’Atechor !",
+    "PLACEHOLDER":"Cela nous aidera à améliorer notre comparateur.",
+    "SUCCES":"Merci pour votre réponse !",
+    "BUTTON_1": "Envoyer"
+
   }
 
 }

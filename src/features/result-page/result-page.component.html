@@ -65,7 +65,7 @@
           </li>
           <li>
             <b class="dark">{{ "SCORES.ITEM_13" | translate }}</b>
-            <ng-container *ngIf="fonctions.length > 0">
+            <ng-container *ngIf="fonctionsStr">
               <span> {{ fonctionsStr }}</span>
             </ng-container>
           </li>
@@ -104,6 +104,6 @@
     </div>
   </ng-container>
 </div>
-<!-- <div class="d-grid gap-2 d-md-flex justify-content-center pb-5">
+<div class="d-grid gap-2 d-md-flex justify-content-center pb-5">
   <app-rating></app-rating>
-</div> -->
+</div>

@@ -277,14 +277,16 @@ export class ResultPageComponent implements OnInit {
           this.usersNumber = UsersNumberEnum.F;
         }
       }
-      if (history[0].compatibility.fonctions) {
+      if (history[0].compatibility.fonctions[0]) {
         for (
           let index = 0;
-          index < history[0].compatibility.fonctions.length;
+          index < history[0].compatibility.fonctions[0].length;
           index++
         ) {
-          const element = history[0].compatibility.fonctions[index].title;
-          this.fonctions.push(element);
+          if (history[0].compatibility.fonctions[0][index].value === true) {
+            const element = history[0].compatibility.fonctions[0][index].title;
+            this.fonctions.push(element);
+          }
         }
         this.fonctionsStr = this.fonctions.join(', ');
       }

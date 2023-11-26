@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Rating } from 'src/business/model/rating.model';
 import { ClientService } from 'src/features/services/client.services';
@@ -9,7 +9,7 @@ import { ResponsiveService } from 'src/features/services/responsive/responsive.s
   selector: 'app-rating',
   templateUrl: './rating.component.html',
   styleUrls: ['./rating.component.css'],
-  providers: [NgbRatingConfig], 
+  providers: [NgbRatingConfig],
 })
 export class RatingComponent implements OnInit {
   RespMessage: any;
@@ -17,31 +17,30 @@ export class RatingComponent implements OnInit {
   contactforms = true;
   submitted = false;
   currentRate!: number;
+  send = false
 
   constructor(
     private clientService: ClientService,
     public responsive: ResponsiveService,
     public config: NgbRatingConfig
-  ) {
-    config.max = 5;
-    config.readonly = true;
-  }
+  ) {}
 
   ratingForm = new FormGroup({
-    rating: new FormControl(),
-    Comment: new FormControl(),
+    rate: new FormControl<number | null>(null, Validators.required),
+    comment: new FormControl<string | null>(null, Validators.required),
   });
 
   ngOnInit(): void {}
 
-  onSubmit() {
+  submit() {
     this.submitted = true;
     if (this.ratingForm.invalid) {
       return;
     }
     this.ratingData = this.ratingForm.value as Rating;
-    this.clientService.addRating(this.ratingData).subscribe((res: any) => {
+     this.clientService.addRating(this.ratingData).subscribe((res: any) => {
       this.RespMessage = res;
-    });
+      this.send =  true
+    }); 
   }
 }

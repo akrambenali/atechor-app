@@ -1,3 +1,42 @@
-<div class="container">
+<div class="container" *ngIf="!send">
   <h3 class="text-center">{{ "RATING.TITLE" | translate }}</h3>
+  <div class="row text-center">
+    <form [formGroup]="ratingForm" (ngSubmit)="submit()">
+      <div class="form-group pos-form-group">
+        <ng-template #t let-fill="fill">
+          <i class="bi-star-fill">
+            <i
+              *ngIf="fill > 0"
+              class="bi-star-fill filled"
+              [style.width.%]="fill"
+            ></i>
+          </i>
+        </ng-template>
+        <ngb-rating
+          [max]="5"
+          formControlName="rate"
+          [starTemplate]="t"
+        ></ngb-rating>
+      </div>
+      <div class="form-group">
+        <textarea
+          class="form-control"
+          formControlName="comment"
+          [placeholder]="'RATING.PLACEHOLDER' | translate"
+          rows="3"
+        ></textarea>
+      </div>
+
+      <button
+        [disabled]="ratingForm.invalid || ratingForm.disabled"
+        class="btn btn-primary me-md-2 btn-next mt-4"
+      >
+        {{ "RATING.BUTTON_1" | translate }}
+      </button>
+    </form>
+  </div>
 </div>
+
+<ng-container *ngIf="send">
+  <h3 class="text-center">{{ "RATING.SUCCES" | translate }}</h3>
+</ng-container>
