@@ -124,12 +124,17 @@
                   'is-invalid': submitted && f.acceptTerms.errors
                 }"
               />
-              <label class="form-check-label required" for="acceptTerms"
-                >{{ "FROM_1.ITEM_8" | translate }}
-                <a href="https://atechor.com/mentions-legales">{{
-                  "FROM_1.ITEM_9" | translate
-                }}</a>
-              </label>
+              <p class="form-check-label required mb-0" for="acceptTerms">
+                <strong
+                  >{{ "FROM_1.ITEM_8" | translate }}
+                  <a href="https://atechor.com/mentions-legales">{{
+                    "FROM_1.ITEM_9" | translate
+                  }}</a>
+                </strong>
+              </p>
+              <p class="mb-0">
+                {{ "FROM_1.ITEM_13" | translate }}
+              </p>
               <div
                 *ngIf="submitted && f.acceptTerms.errors"
                 class="invalid-feedback"
@@ -147,12 +152,12 @@
                 [(ngModel)]="contactforms"
                 binary="true"
               />
-              <label
-                class="form-check-label"
-                for="contactOk"
-                [innerHTML]="'FROM_1.ITEM_10' | translate"
-              >
-              </label>
+              <p class="form-check-label">
+                <strong
+                  for="contactOk"
+                  [innerHTML]="'FROM_1.ITEM_10' | translate"
+                ></strong>
+              </p>
             </div>
 
             <div class="row pos-buttons">
@@ -309,12 +314,17 @@
                     'is-invalid': submitted && f.acceptTerms.errors
                   }"
                 />
-                <label class="form-check-label required" for="acceptTerms"
-                  >{{ "FROM_1.ITEM_8" | translate }}
-                  <a href="https://atechor.com/mentions-legales">{{
-                    "FROM_1.ITEM_9" | translate
-                  }}</a>
-                </label>
+                <p class="form-check-label required mb-0" for="acceptTerms">
+                  <strong
+                    >{{ "FROM_1.ITEM_8" | translate }}
+                    <a href="https://atechor.com/mentions-legales">{{
+                      "FROM_1.ITEM_9" | translate
+                    }}</a>
+                  </strong>
+                </p>
+                <p class="mb-0">
+                  {{ "FROM_1.ITEM_13" | translate }}
+                </p>
                 <div
                   *ngIf="submitted && f.acceptTerms.errors"
                   class="invalid-feedback"
@@ -332,12 +342,12 @@
                   [(ngModel)]="contactforms"
                   binary="true"
                 />
-                <label
-                  class="form-check-label"
-                  for="contactOk"
-                  [innerHTML]="'FROM_1.ITEM_10' | translate"
-                >
-                </label>
+                <p class="form-check-label">
+                  <strong
+                    for="contactOk"
+                    [innerHTML]="'FROM_1.ITEM_10' | translate"
+                  ></strong>
+                </p>
               </div>
             </div>
 

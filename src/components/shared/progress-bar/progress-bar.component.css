@@ -1,5 +1,6 @@
 .color-default {
     background-color: var(--primaryColor);
+    border-radius: 0.375rem;
 }
 
 .progress {
