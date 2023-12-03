@@ -260,12 +260,15 @@
               </div>
 
               <div class="col-12 form-input-top">
-                <div
-                  class="form-button-mobile shadow"
-                  [routerLink]="'/infos-cabinet'"
-                >
-                  <b>{{ "FROM_1.ITEM_4" | translate }}</b>
-                </div>
+                <input
+                  type="text"
+                  class="form-control-mobile"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  formControlName="phoneNumber"
+                  [placeholder]="'FROM_1.ITEM_12' | translate"
+                  required
+                />
               </div>
 
               <div class="col-12 form-input-top">

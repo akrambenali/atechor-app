@@ -38,6 +38,7 @@ import { CoefficientsComponent } from 'src/features/result-page/components/coeff
 import { ClientService } from 'src/features/services/client.services';
 import { SolutionService } from 'src/features/services/solution.services';
 import { RatingComponent } from 'src/features/result-page/components/rating/rating.component';
+import { ClientCabinetConseilComponent } from 'src/features/client-cabinet-conseil-page/client-cabinet-conseil-page.component';
 
 
 
@@ -74,7 +75,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     ButtonOptionsComponent,
     ClientMailPageComponent,
     CoefficientsComponent,
-    RatingComponent
+    RatingComponent,
+    ClientCabinetConseilComponent
   ],
   imports: [
     BrowserModule,

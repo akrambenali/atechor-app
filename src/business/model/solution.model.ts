@@ -15,6 +15,7 @@ export interface Solutions {
   software: Software;
   compatibility: Compatibility;
   connexion: boolean;
+  cabinetConseil: boolean;
 }
 
 export interface ClientBusiness {

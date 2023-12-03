@@ -120,9 +120,8 @@
     "ITEM_10": "Je souhaite être mis en relation avec des partenaires m’accompagner dans <br> mon projet.",
     "ITEM_11": "Ce champs est obligatoire",
     "ITEM_12": "TÉLÉPHONE"
-
   },
-  
+
   "RESULTS": {
     "TITLE": "The 6 most relevant solutions for you:",
     "ITEM_1": "Software",
@@ -180,46 +179,52 @@
     "BUTTON_1": "Ok"
   },
   "STEPS": {
-    "STEP_1": "1/13",
-    "STEP_2": "2/13",
-    "STEP_3": "3/13",
-    "STEP_4": "4/13",
-    "STEP_5": "5/13",
-    "STEP_6": "6/13",
-    "STEP_7": "7/13",
-    "STEP_8": "8/13",
-    "STEP_9": "9/13",
-    "STEP_10": "10/13",
-    "STEP_11": "11/13",
-    "STEP_12": "12/13",
-    "STEP_13": "13/13",
-    "STEP_14": "Dernière étape"
+    "STEP_1": "1/14",
+    "STEP_2": "2/14",
+    "STEP_3": "3/14",
+    "STEP_4": "4/14",
+    "STEP_5": "5/14",
+    "STEP_6": "6/14",
+    "STEP_7": "7/14",
+    "STEP_8": "8/14",
+    "STEP_9": "9/14",
+    "STEP_10": "10/14",
+    "STEP_11": "11/14",
+    "STEP_12": "12/14",
+    "STEP_13": "13/14",
+    "STEP_14": "Dernière étape",
+    "STEP_15": "14/14"
   },
   "STEPSIZE": {
-    "STEP_1": "width: 7.70%",
-    "STEP_2": "width: 15.4%",
-    "STEP_3": "width: 23.1%",
-    "STEP_4": "width: 30.8%",
-    "STEP_5": "width: 38.5%",
-    "STEP_6": "width: 46.20%",
-    "STEP_7": "width: 53.9%",
-    "STEP_8": "width: 61.6%",
-    "STEP_9": "width: 69.3%",
-    "STEP_10": "width: 77%",
-    "STEP_11": "width: 84.7%",
-    "STEP_12": "width: 92.4%",
-    "STEP_13": "width: 100%",
-    "STEP_14": "width: 100%"
+    "STEP_1": "width: 6.66%",
+    "STEP_2": "width: 13.33%",
+    "STEP_3": "width: 19.98%",
+    "STEP_4": "width: 26.33%",
+    "STEP_5": "width: 32.97%",
+    "STEP_6": "width: 39.63%",
+    "STEP_7": "width: 46.29%",
+    "STEP_8": "width: 52.95%",
+    "STEP_9": "width: 59.61%",
+    "STEP_10": "width: 66.27%",
+    "STEP_11": "width: 72.93%",
+    "STEP_12": "width: 79.59%",
+    "STEP_13": "width: 86.25%",
+    "STEP_14": "width: 100%",
+    "STEP_15": "width: 100%"
   },
   "EMAIL": {
     "TITLE": "Vous recevrez le résultat dans un instant sur : "
   },
   "RATING": {
     "TITLE": "Dites-nous ce que vous pensez d’Atechor !",
-    "PLACEHOLDER":"Cela nous aidera à améliorer notre comparateur.",
-    "SUCCES":"Merci pour votre réponse !",
+    "PLACEHOLDER": "Cela nous aidera à améliorer notre comparateur.",
+    "SUCCES": "Merci pour votre réponse !",
     "BUTTON_1": "Envoyer"
+  },
 
+  "ISCABINETCONSEIL": {
+    "TITLE": "Êtes-vous déjà accompagné par un cabinet de conseil ?",
+    "BUTTON_1": "Oui",
+    "BUTTON_2": "Non"
   }
-
 }

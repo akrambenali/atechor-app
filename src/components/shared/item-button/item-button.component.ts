@@ -35,6 +35,8 @@ export class ItemButtonComponent implements OnInit {
   connexion!: boolean;
   @Input()
   deadlineType!: string;
+  @Input()
+  isCabinetConseil!: boolean;
 
   @Output() sendClientTypeEvent = new EventEmitter<any>();
   @Output() sendClientRevenuesEvent = new EventEmitter<any>();
@@ -45,6 +47,7 @@ export class ItemButtonComponent implements OnInit {
   @Output() sendClientConnexionEvent = new EventEmitter<any>();
   @Output() sendClientDeadlineEvent = new EventEmitter<any>();
   @Output() sendStatusEvent = new EventEmitter<any>();
+  @Output() sendClientCbinetConseil = new EventEmitter<any>();
 
   status: boolean = false;
 
@@ -220,6 +223,7 @@ export class ItemButtonComponent implements OnInit {
     this.sendClientUsersNumberEvent.emit(this.itemUsersNumber);
     this.sendClientDevEvent.emit(this.itemDev);
     this.sendClientConnexionEvent.emit(this.connexion);
+    this.sendClientCbinetConseil.emit(this.isCabinetConseil)
     this.sendClientDeadlineEvent.emit(this.itemDeadline);
     this.sendStatusEvent.emit(this.status);
   }
