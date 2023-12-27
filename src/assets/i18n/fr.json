@@ -1,6 +1,6 @@
 {
   "SECTEUR": {
-    "TITLE": "Votre secteur d’activité",
+    "TITLE": "Votre principal secteur d’activité",
     "SECTEUR_1": "Services",
     "SECTEUR_2": "Production",
     "SECTEUR_3": "Construction",
@@ -115,9 +115,9 @@
     "ITEM_5": "PAYS",
     "ITEM_6": "FONCTION",
     "ITEM_7": "MAIL PROFESSIONNEL",
-    "ITEM_8": "J’accepte la sauvegarde de mes données, conformément au RGPD.",
+    "ITEM_8": "J’accepte l’usage de mes données conformément au RGPD",
     "ITEM_9": "En savoir plus.",
-    "ITEM_10": "Je souhaite être mis en relation avec des partenaires m’accompagner dans <br> mon projet.",
+    "ITEM_10": "Je souhaite être mis en relation avec des partenaires d’Atechor.",
     "ITEM_11": "Ce champs est obligatoire",
     "ITEM_12": "TÉLÉPHONE",
     "ITEM_13": "Pas de spam, ni d’appel. Nous conservons ces données à des fins statistiques."
