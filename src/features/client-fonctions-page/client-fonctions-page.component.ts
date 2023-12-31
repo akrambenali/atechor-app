@@ -12,7 +12,51 @@ import { ResponsiveService } from '../services/responsive/responsive.service';
 export class ClientFonctionsPageComponent implements OnInit {
 
   solutionModel = {} as Solutions;
-  fonctions: FonctionItem[] = [];
+  fonctions: FonctionItem[] = [{
+    "code": "CRM",
+    "title": "CRM",
+    "value": false
+  },
+  {
+    "code": "finance",
+    "title": "Finance",
+    "value": false
+  },
+  {
+    "code": "RH",
+    "title": "RH",
+    "value": false
+  },
+  {
+    "code": "projets",
+    "title": "Gestion de projet",
+    "value": false
+  },
+  {
+    "code": "production",
+    "title": "Production",
+    "value": false
+  },
+  {
+    "code": "achats",
+    "title": "Achats",
+    "value": false
+  },
+  {
+    "code": "logistique",
+    "title": "Logistique",
+    "value": false
+  },
+  {
+    "code": "actifs",
+    "title": "Gestion des actifs",
+    "value": false
+  },
+  {
+    "code": "rnd",
+    "title": "R&D",
+    "value": false
+  }];
   isEmpty: boolean = true;
   
   constructor(private router: Router, private activatedRoute: ActivatedRoute, public responsive: ResponsiveService) {
@@ -26,9 +70,14 @@ export class ClientFonctionsPageComponent implements OnInit {
   }
 
   pushFonction(newItem: any) {
-    const found = this.fonctions.some((el) => el.title === newItem.title);
+    const found = this.fonctions.find((el) => el.title === newItem.title && el.value === true);
     if (!found) {
-      this.fonctions.push(newItem);
+      for (let index = 0; index < this.fonctions.length; index++) {
+        const element = this.fonctions[index];
+        if(element.code === newItem.code) {
+          element.value = true;
+        }
+       }
     } else {
       this.fonctions = this.removeObjectWithId(this.fonctions, newItem.title);
     }
@@ -41,7 +90,7 @@ export class ClientFonctionsPageComponent implements OnInit {
     const objWithIdIndex = arr.findIndex((obj) => obj.title === title);
 
     if (objWithIdIndex > -1) {
-      arr.splice(objWithIdIndex, 1);
+      arr[objWithIdIndex].value = false;
     }
     if(arr.length === 0) {
       this.isEmpty =  true;

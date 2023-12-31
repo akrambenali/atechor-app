@@ -32,53 +32,11 @@ export class ItemComponent implements OnInit {
     value: false,
     codeSecteur: '',
   };
-  fonctions: FonctionItem [] = [
-    {
-      "code": "CRM",
-      "title": "CRM",
-      "value": false
-    },
-    {
-      "code": "finance",
-      "title": "Finance",
-      "value": false
-    },
-    {
-      "code": "RH",
-      "title": "RH",
-      "value": false
-    },
-    {
-      "code": "projets",
-      "title": "Gestion de projet",
-      "value": false
-    },
-    {
-      "code": "production",
-      "title": "Production",
-      "value": false
-    },
-    {
-      "code": "achats",
-      "title": "Achats",
-      "value": false
-    },
-    {
-      "code": "logistique",
-      "title": "Logistique",
-      "value": false
-    },
-    {
-      "code": "actifs",
-      "title": "Gestion des actifs",
-      "value": false
-    },
-    {
-      "code": "rnd",
-      "title": "R&D",
-      "value": false
-    }
-  ];
+  fonctions: FonctionItem = {
+    code: '',
+    title: '',
+    value: false
+  };
 
   itemHosting = {};
 
@@ -93,12 +51,9 @@ export class ItemComponent implements OnInit {
     this.item.title = this.title;
     this.item.value = true;
     this.item.codeSecteur = this.codeSecteur;
-   for (let index = 0; index < this.fonctions.length; index++) {
-    const element = this.fonctions[index];
-    if(element.code === this.code) {
-      element.value = true;
+    if(this.code) {
+      this.updateCodeFeature(this.code , this.title)
     }
-   }
     switch (this.hostingType) {
       case (this.hostingType = 'A'):
         this.itemHosting = { cloud: true, value: this.hostingType };
@@ -145,5 +100,17 @@ export class ItemComponent implements OnInit {
     this.sendHostingEvent.emit(this.itemHosting);
     this.sendReasonEvent.emit(this.itemReason);
     this.sendStatusEvent.emit(this.status);
+  }
+
+  updateCodeFeature(code: string, title: string) {
+
+    this.fonctions.code = code;
+    this.fonctions.title =  title;
+    this.fonctions.value = true
+    
+      
+    
+      
+     
   }
 }

@@ -280,11 +280,11 @@ export class ResultPageComponent implements OnInit {
       if (history[0].compatibility.fonctions[0]) {
         for (
           let index = 0;
-          index < history[0].compatibility.fonctions[0].length;
+          index < history[0].compatibility.fonctions.length;
           index++
         ) {
-          if (history[0].compatibility.fonctions[0][index].value === true) {
-            const element = history[0].compatibility.fonctions[0][index].title;
+          if (history[0].compatibility.fonctions[index].value === true) {
+            const element = history[0].compatibility.fonctions[index].title;
             this.fonctions.push(element);
           }
         }
