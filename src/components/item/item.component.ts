@@ -35,7 +35,7 @@ export class ItemComponent implements OnInit {
   fonctions: FonctionItem = {
     code: '',
     title: '',
-    value: false
+    value: false,
   };
 
   itemHosting = {};
@@ -51,8 +51,8 @@ export class ItemComponent implements OnInit {
     this.item.title = this.title;
     this.item.value = true;
     this.item.codeSecteur = this.codeSecteur;
-    if(this.code) {
-      this.updateCodeFeature(this.code , this.title)
+    if (this.code) {
+      this.updateCodeFeature(this.code, this.title);
     }
     switch (this.hostingType) {
       case (this.hostingType = 'A'):
@@ -103,14 +103,8 @@ export class ItemComponent implements OnInit {
   }
 
   updateCodeFeature(code: string, title: string) {
-
     this.fonctions.code = code;
-    this.fonctions.title =  title;
-    this.fonctions.value = true
-    
-      
-    
-      
-     
+    this.fonctions.title = title;
+    this.fonctions.value = true;
   }
 }
