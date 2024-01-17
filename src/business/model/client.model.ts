@@ -5,4 +5,5 @@ export interface Client {
     role:      string;
     email:     string;
     phoneNumber: string;
+    contactOk: boolean;
 }

@@ -1,0 +1,77 @@
+.pos-card {
+  padding-bottom: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.pos {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.pos-title {
+  padding-bottom: 70px;
+}
+
+.pos-card-mobile {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.disabled {
+  cursor: none;
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+
+.no-border {
+  border: none;
+}
+
+.card-title {
+  font-family: Roboto;
+  font-size: 1.125rem;
+}
+
+.card-secteur:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.disabled {
+  cursor: none;
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .card-secteur {
+    width: 274px;
+    height: 73px;
+    border-radius: 20px;
+    background-color: var(--card);
+  }
+
+  .btn-pos {
+    width: 274px;
+    margin-left: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Styles pour cette Media Queries */
+  .card-secteur {
+    height: 73px;
+    border-radius: 20px;
+    background-color: var(--card);
+  }
+
+  .btn-pos {
+    margin-left: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+}

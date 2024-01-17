@@ -222,9 +222,13 @@
     "SUCCES": "Merci pour votre réponse !",
     "BUTTON_1": "Envoyer"
   },
-
   "ISCABINETCONSEIL": {
     "TITLE": "Êtes-vous déjà accompagné par un cabinet de conseil ?",
+    "BUTTON_1": "Oui",
+    "BUTTON_2": "Non"
+  },
+  "CLIENTDATASELECT": {
+    "TITLE": "Souhaitez-vous être mis en contact avec les éditeurs recommandés ?",
     "BUTTON_1": "Oui",
     "BUTTON_2": "Non"
   }

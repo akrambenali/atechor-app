@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 
 import { ClientService } from '../services/client.services';
 import { Client } from 'src/business/model/client.model';
@@ -8,14 +8,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ResponsiveService } from '../services/responsive/responsive.service';
 
 @Component({
-  selector: 'app-client-data-page',
-  templateUrl: './client-data-page.component.html',
-  styleUrls: ['./client-data-page.component.css'],
+  selector: 'app-client-data-light-page',
+  templateUrl: './client-data-light-page.component.html',
+  styleUrls: ['./client-data-light-page.component.css'],
 })
-export class ClientDataPageComponent implements OnInit {
+export class ClientDataPageLightComponent implements OnInit {
   RespMessage: any;
   clientData!: Client;
-  contactforms = true;
+  contactforms = false;
   solutionModel = {} as Solutions;
   submitted = false;
 
@@ -25,31 +25,20 @@ export class ClientDataPageComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     public responsive: ResponsiveService
   ) {}
-  contactForm = new FormGroup({
-    firstName: new FormControl(),
-    lastName: new FormControl(),
-    company: new FormControl(),
-    role: new FormControl(),
+  contactFormLight = new FormGroup({
     email: new FormControl(),
-    phoneNumber: new FormControl(),
-    acceptTerms: new FormControl(false, Validators.requiredTrue),
-    contactOk: new FormControl(true),
+    contactOk: new FormControl(),
   });
 
   ngOnInit(): void {
     this.solutionModel = history.state;
   }
 
-  get f() {
-    return this.contactForm.controls;
-  }
-
   onSubmit() {
     this.submitted = true;
-    if (this.contactForm.invalid) {
-      return;
-    }
-    this.clientData = this.contactForm.value as Client;
+    this.clientData = this.contactFormLight.value as Client;
+    this.clientData.contactOk = false;
+
     this.clientService.addClient(this.clientData).subscribe((res: any) => {
       this.RespMessage = res;
     });

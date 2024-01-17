@@ -39,6 +39,8 @@ import { ClientService } from 'src/features/services/client.services';
 import { SolutionService } from 'src/features/services/solution.services';
 import { RatingComponent } from 'src/features/result-page/components/rating/rating.component';
 import { ClientCabinetConseilComponent } from 'src/features/client-cabinet-conseil-page/client-cabinet-conseil-page.component';
+import { ClientDataSelectPageComponent } from 'src/features/client-data-select-page/client-data-select-page .component';
+import { ClientDataPageLightComponent } from 'src/features/client-data-light-page/client-data-light-page.component';
 
 
 
@@ -76,7 +78,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     ClientMailPageComponent,
     CoefficientsComponent,
     RatingComponent,
-    ClientCabinetConseilComponent
+    ClientCabinetConseilComponent,
+    ClientDataSelectPageComponent,
+    ClientDataPageLightComponent
   ],
   imports: [
     BrowserModule,

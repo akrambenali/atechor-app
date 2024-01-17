@@ -17,6 +17,8 @@ import { ClientCoefficientsPageComponent } from 'src/features/client-coefficient
 import { ClientDataPageComponent } from 'src/features/client-data-page/client-data-page.component';
 import { ClientMailPageComponent } from 'src/features/client-mail-page/client-mail-page.component';
 import { ClientCabinetConseilComponent } from 'src/features/client-cabinet-conseil-page/client-cabinet-conseil-page.component';
+import { ClientDataSelectPageComponent } from 'src/features/client-data-select-page/client-data-select-page .component';
+import { ClientDataPageLightComponent } from 'src/features/client-data-light-page/client-data-light-page.component';
 
 const routes: Routes = [
 
@@ -37,6 +39,9 @@ const routes: Routes = [
 { path: 'infos-client', component: ClientDataPageComponent},
 { path: 'mail-client', component: ClientMailPageComponent},
 { path: 'cabinet-conseil',  component: ClientCabinetConseilComponent},
+{ path: 'select-data',  component: ClientDataSelectPageComponent},
+{ path: 'infos-client-light',  component: ClientDataPageLightComponent},
+
 
  
 
