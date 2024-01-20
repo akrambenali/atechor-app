@@ -28,7 +28,7 @@ export class ClientHostingPageComponent implements OnInit {
     this.checkDisabledItem(this.hosting)
     this.solutionModel.hosting = this.hosting;
     this.isEmpty = false;
-   
+    this.goToRoute('/dev-client');
   }
 
  
@@ -94,5 +94,9 @@ export class ClientHostingPageComponent implements OnInit {
         E.classList.remove('disabled');
       }
     }
+  }
+
+  goToRoute(route: string): void {
+    this.router.navigateByUrl(route, { state: this.solutionModel });
   }
 }

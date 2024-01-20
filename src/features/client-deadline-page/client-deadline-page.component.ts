@@ -28,6 +28,7 @@ export class ClientDeadlinePageComponent implements OnInit {
     this.checkDisabledItem(this.deadline);
     this.solutionModel.compatibility.implemntation = this.deadline;
     this.isEmpty = false;
+    this.goToRoute('/reason-client');
   }
 
   checkDisabledItem(item: Implemntation) {
@@ -96,4 +97,9 @@ export class ClientDeadlinePageComponent implements OnInit {
       }
     }
   }
+
+  goToRoute(route: string): void {
+    this.router.navigateByUrl(route, { state: this.solutionModel });
+  }
+
 }

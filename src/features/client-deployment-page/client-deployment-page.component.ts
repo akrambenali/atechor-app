@@ -31,6 +31,7 @@ export class ClientDeploymentPageComponent implements OnInit {
     this.checkDisabledItem(this.internationnalBusiness);
     this.solutionModel.internationnalBusiness = this.internationnalBusiness;
     this.isEmpty = false;
+    this.goToRoute('/fonctions-client');
   }
 
   checkDisabledItem(item: InternationnalBusiness) {
@@ -57,5 +58,9 @@ export class ClientDeploymentPageComponent implements OnInit {
         I.classList.remove('disabled');
       }
     }
+  }
+
+  goToRoute(route: string): void {
+    this.router.navigateByUrl(route, { state: this.solutionModel });
   }
 }

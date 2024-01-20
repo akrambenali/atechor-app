@@ -29,6 +29,7 @@ export class ClientTypePageComponent implements OnInit {
     this.checkDisabledItem(this.clientBusiness);
     this.solutionModel.clientBusiness = this.clientBusiness;
     this.isEmpty = false;
+    this.goToRoute('/revenue-client')
   }
 
   checkDisabledItem(item: ClientBusiness) {
@@ -64,5 +65,9 @@ export class ClientTypePageComponent implements OnInit {
         both.classList.remove('disabled');
       }
     }
+  }
+
+  goToRoute(route: string): void {
+    this.router.navigateByUrl(route, { state: this.solutionModel });
   }
 }

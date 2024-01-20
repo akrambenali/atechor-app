@@ -26,6 +26,7 @@ export class ClientConnexionPageComponent implements OnInit {
     this.solutionModel.connexion = newItem;
     this.checkDisabledItem(newItem);
     this.isEmpty = false;
+    this.goToRoute('/deadline-client');
   }
 
   checkDisabledItem(item: boolean) {
@@ -52,5 +53,9 @@ export class ClientConnexionPageComponent implements OnInit {
         N.classList.remove('disabled');
       }
     }
+  }
+
+  goToRoute(route: string): void {
+    this.router.navigateByUrl(route, { state: this.solutionModel });
   }
 }

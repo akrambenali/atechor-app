@@ -26,7 +26,7 @@ export class ClientDevPageComponent implements OnInit {
     this.checkDisabledItem(this.dev)
     this.solutionModel.dev = this.dev;
     this.isEmpty = false;
-    
+    this.goToRoute('/connexion-client');
   }
 
   checkDisabledItem(item: Dev) {
@@ -66,6 +66,10 @@ export class ClientDevPageComponent implements OnInit {
         N.classList.remove('disabled');
       }
     }
+  }
+
+  goToRoute(route: string): void {
+    this.router.navigateByUrl(route, { state: this.solutionModel });
   }
 
 }

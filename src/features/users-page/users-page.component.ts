@@ -23,6 +23,7 @@ export class UsersPageComponent implements OnInit {
     this.checkDisabledItem(this.companySize);
     this.solutionModel.compatibility.companySize = this.companySize;
     this.isEmpty = false;
+    this.goToRoute('/deploiment-client');
   }
   
   checkDisabledItem(item: CompanySize) {
@@ -102,5 +103,9 @@ export class UsersPageComponent implements OnInit {
         F.classList.remove('disabled');
       }
     }
+  }
+
+  goToRoute(route: string): void {
+    this.router.navigateByUrl(route, { state: this.solutionModel });
   }
 }

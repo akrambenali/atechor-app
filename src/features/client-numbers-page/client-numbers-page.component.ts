@@ -29,6 +29,7 @@ export class ClientNumbersPageComponent implements OnInit {
     this.checkDisabledItem(this.usersNumber);
     this.solutionModel.compatibility.usersNumber = this.usersNumber;
     this.isEmpty =  false;
+    this.goToRoute('/hosting-client');
     
   }
   checkDisabledItem(item: UsersNumber) {
@@ -108,5 +109,9 @@ export class ClientNumbersPageComponent implements OnInit {
         F.classList.remove('disabled');
       }
     }
+  }
+
+  goToRoute(route: string): void {
+    this.router.navigateByUrl(route, { state: this.solutionModel });
   }
 }

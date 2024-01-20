@@ -27,6 +27,7 @@ export class SecteurPageComponent implements OnInit {
     this.isEmpty = false;
     this.compatibility.secteur = this.secteur;
     this.solutionModel.compatibility = this.compatibility;
+    this.goToRoute('/type-client')
   }
 
   checkDisabledItem(item: SecteurItem) {
@@ -255,5 +256,9 @@ export class SecteurPageComponent implements OnInit {
         I.classList.remove('disabled');
       }
     }
+  }
+
+  goToRoute(route: string): void {
+    this.router.navigateByUrl(route, { state: this.solutionModel });
   }
 }

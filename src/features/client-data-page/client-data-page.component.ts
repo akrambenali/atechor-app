@@ -62,4 +62,8 @@ export class ClientDataPageComponent implements OnInit {
       }
     });
   }
+
+  goToRoute(route: string): void {
+    this.router.navigateByUrl(route, { state: this.solutionModel });
+  }
 }
