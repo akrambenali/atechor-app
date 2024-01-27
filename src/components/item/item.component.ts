@@ -19,6 +19,8 @@ export class ItemComponent implements OnInit {
   code!: string;
   @Input()
   codeSecteur!: string;
+  @Input()
+  isReason!: boolean;
 
   @Output() sendSecteurEvent = new EventEmitter<any>();
   @Output() sendFonctionEvent = new EventEmitter<any>();

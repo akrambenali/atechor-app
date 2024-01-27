@@ -86,10 +86,9 @@
       (sendStatusEvent)="getStatus($event)"
     ></secteur-item>
   </div>
+  <app-item-button-steps
+    [next]="'/type-client'"
+    [solution]="solutionModel"
+    [isEmpty]="isEmpty"
+  ></app-item-button-steps>
 </div>
-
-<app-item-button-steps
-  [next]="'/type-client'"
-  [solution]="solutionModel"
-  [isEmpty]="isEmpty"
-></app-item-button-steps>

@@ -26,7 +26,7 @@ icon-shape {
 
 .text-coefficient {
   font-family: Roboto;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 .value-coefficient {
@@ -39,7 +39,7 @@ icon-shape {
   height: 75px;
   background-color: var(--card);
   align-items: center;
-  border-radius: 20px;
+  border-radius: 12px;
 }
 
 .color-input {

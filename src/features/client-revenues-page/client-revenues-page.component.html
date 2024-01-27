@@ -140,10 +140,9 @@
       </div>
     </div>
   </ng-template>
+  <app-item-button-steps
+    [next]="'/users-client'"
+    [solution]="solutionModel"
+    [isEmpty]="isEmpty"
+  ></app-item-button-steps>
 </div>
-
-<app-item-button-steps
-  [next]="'/users-client'"
-  [solution]="solutionModel"
-  [isEmpty]="isEmpty"
-></app-item-button-steps>

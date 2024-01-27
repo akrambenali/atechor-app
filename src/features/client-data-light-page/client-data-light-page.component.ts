@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { ClientService } from '../services/client.services';
 import { Client } from 'src/business/model/client.model';
@@ -26,7 +26,11 @@ export class ClientDataPageLightComponent implements OnInit {
     public responsive: ResponsiveService
   ) {}
   contactFormLight = new FormGroup({
-    email: new FormControl(),
+    email: new FormControl('', [
+      Validators.required,
+      Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
+    ]),
+
     contactOk: new FormControl(),
   });
 
@@ -34,8 +38,13 @@ export class ClientDataPageLightComponent implements OnInit {
     this.solutionModel = history.state;
   }
 
+  get f() { return this.contactFormLight.controls; }
+
   onSubmit() {
     this.submitted = true;
+    if (this.contactFormLight.invalid) {
+      return;
+  }
     this.clientData = this.contactFormLight.value as Client;
     this.clientData.contactOk = false;
 

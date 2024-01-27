@@ -88,23 +88,11 @@
   padding-bottom: 75px;
 }
 
-.btn-next {
-  background-color: #0033ff;
-  color: #fff;
-  font-family: Roboto;
-  font-size: 1.313rem;
-  width: 151px;
-  height: 69px;
-  border-radius: 21px;
-  border: none;
-}
-
 .btn-back {
-  background-color: #7c91f1;
+  background-color: #18191b;
   width: 88px;
   height: 69px;
-  border-radius: 17px;
-  border: 2px #fff solid;
+  border-radius: 12px;
 }
 
 .retour {
@@ -117,11 +105,10 @@
 }
 
 .btn-reset {
-  background-color: #5d70c9;
+  background-color: #494f5a;
   width: 88px;
   height: 69px;
-  border-radius: 17px;
-  border: 2px #fff solid;
+  border-radius: 12px;
 }
 
 .pos {
@@ -158,4 +145,30 @@
 
 .ml {
   margin-left: 36px;
+}
+
+@media (max-width: 769px) {
+  .btn-next {
+    background-color: #066fef;
+    color: #fff;
+    font-family: Roboto;
+    font-size: 1.313rem;
+    width: 150px;
+    height: 69px;
+    border-radius: 12px;
+    border: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .btn-next {
+    background-color: #066fef;
+    color: #fff;
+    font-family: Roboto;
+    font-size: 1.313rem;
+    width: 250px;
+    height: 69px;
+    border-radius: 12px;
+    border: none;
+  }
 }

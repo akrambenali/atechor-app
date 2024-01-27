@@ -29,7 +29,7 @@
   .card-secteur {
     width: 274px;
     height: 73px;
-    border-radius: 20px;
+    border-radius: 12px;
     background-color: var(--card);
   }
 
@@ -45,7 +45,7 @@
   /* Styles pour cette Media Queries */
   .card-secteur {
     height: 73px;
-    border-radius: 20px;
+    border-radius: 12px;
     background-color: var(--card);
   }
 

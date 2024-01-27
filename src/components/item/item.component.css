@@ -6,7 +6,7 @@
 .card-secteur {
   width: 360px;
   height: 75px;
-  border-radius: 25px;
+  border-radius: 12px;
   background-color: var(--card);
   cursor: pointer;
 }
@@ -19,7 +19,7 @@
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
   background: var(--card) url(../../assets/icons/icon-actif.png) no-repeat 0px
     0px;
-  background-position: top 45%  right 25px;
+  background-position: top 45% right 25px;
   background-size: 20px;
 }
 
@@ -29,16 +29,15 @@
 
 .card-title {
   font-family: Roboto;
-  font-size: 1.188rem;
-}
-
-.pos-title {
-  /* padding-top: 23px; */
+  font-size: 1rem;
 }
 
 .card-body {
   display: flex;
   align-items: center;
+}
+
+.pos-card {
   padding-left: 45px;
 }
 

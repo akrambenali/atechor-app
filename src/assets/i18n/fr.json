@@ -174,10 +174,10 @@
     "ITEM_2": "Recommencer"
   },
   "FOOTER_BUTTONS": {
-    "BUTTON_1": "Ok"
+    "BUTTON_1": "Suivant"
   },
   "FOOTER_BUTTONS_FORMS": {
-    "BUTTON_1": "Ok"
+    "BUTTON_1": "Suivant"
   },
   "STEPS": {
     "STEP_1": "1/14",
@@ -214,7 +214,7 @@
     "STEP_15": "width: 100%"
   },
   "EMAIL": {
-    "TITLE": "Vous recevrez le résultat dans un instant sur : "
+    "TITLE": "Vous recevrez nos recommandations dans un instant sur : "
   },
   "RATING": {
     "TITLE": "Dites-nous ce que vous pensez d’Atechor !",
