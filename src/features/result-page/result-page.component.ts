@@ -138,23 +138,23 @@ export class ResultPageComponent implements OnInit {
         this.connexion = 'Non';
       }
 
-      if (history[0].compatibility.companySize) {
-        if (history[0].compatibility.companySize.A) {
+      if (history[0].compatibility.size) {
+        if (history[0].compatibility.size.A) {
           this.cA = 'Moins de 2 M €';
         }
-        if (history[0].compatibility.companySize.B) {
+        if (history[0].compatibility.size.B) {
           this.cA = '2 à 10 M €';
         }
-        if (history[0].compatibility.companySize.C) {
+        if (history[0].compatibility.size.C) {
           this.cA = '10 à 50 M €';
         }
-        if (history[0].compatibility.companySize.D) {
+        if (history[0].compatibility.size.D) {
           this.cA = '50 à 200 M €';
         }
-        if (history[0].compatibility.companySize.E) {
+        if (history[0].compatibility.size.E) {
           this.cA = '200 M à 1 Mrd €';
         }
-        if (history[0].compatibility.companySize.F) {
+        if (history[0].compatibility.size.F) {
           this.cA = '1 Mrd € et plus';
         }
       }
@@ -170,23 +170,23 @@ export class ResultPageComponent implements OnInit {
         }
       }
 
-      if (history[0].compatibility.size) {
-        if (history[0].compatibility.size.A) {
+      if (history[0].compatibility.companySize) {
+        if (history[0].compatibility.companySize.A) {
           this.employNumber = '1 à 25';
         }
-        if (history[0].compatibility.size.B) {
+        if (history[0].compatibility.companySize.B) {
           this.employNumber = '25 à 75';
         }
-        if (history[0].compatibility.size.C) {
+        if (history[0].compatibility.companySize.C) {
           this.employNumber = '75 à 200';
         }
-        if (history[0].compatibility.size.D) {
+        if (history[0].compatibility.companySize.D) {
           this.employNumber = '200 à 700';
         }
-        if (history[0].compatibility.size.E) {
+        if (history[0].compatibility.companySize.E) {
           this.employNumber = '700 à 2000';
         }
-        if (history[0].compatibility.size.F) {
+        if (history[0].compatibility.companySize.F) {
           this.employNumber = 'Plus de 2000';
         }
       }

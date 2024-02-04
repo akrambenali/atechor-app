@@ -14,7 +14,11 @@ export class ClientRevenuesPageComponent implements OnInit {
   companySize = {} as Size;
   isEmpty: boolean = true;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, public responsive: ResponsiveService) {}
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    public responsive: ResponsiveService
+  ) {}
 
   ngOnInit(): void {
     this.solutionModel = history.state;
@@ -22,7 +26,7 @@ export class ClientRevenuesPageComponent implements OnInit {
 
   pushClientRevenues(newItem: any) {
     this.companySize = newItem;
-    this.checkDisabledItem(this.companySize)
+    this.checkDisabledItem(this.companySize);
     this.solutionModel.compatibility.size = this.companySize;
     this.isEmpty = false;
     this.goToRoute('/users-client');
@@ -36,7 +40,7 @@ export class ClientRevenuesPageComponent implements OnInit {
     const E = document.getElementById('E');
     const F = document.getElementById('F');
     if (item.A === true) {
-      if (B != null && C != null && D != null && E != null && F !=null) {
+      if (B != null && C != null && D != null && E != null && F != null) {
         B.classList.add('disabled');
         C.classList.add('disabled');
         D.classList.add('disabled');
@@ -44,7 +48,7 @@ export class ClientRevenuesPageComponent implements OnInit {
         F.classList.add('disabled');
       }
     } else if (item.B === true) {
-      if (A != null && C != null && D != null && E != null && F != null ) {
+      if (A != null && C != null && D != null && E != null && F != null) {
         A.classList.add('disabled');
         C.classList.add('disabled');
         D.classList.add('disabled');
@@ -52,33 +56,31 @@ export class ClientRevenuesPageComponent implements OnInit {
         F.classList.add('disabled');
       }
     } else if (item.C === true) {
-      if (A != null && B != null && D != null && E != null && F != null ) {
+      if (A != null && B != null && D != null && E != null && F != null) {
         A.classList.add('disabled');
         B.classList.add('disabled');
         D.classList.add('disabled');
         E.classList.add('disabled');
         F.classList.add('disabled');
       }
-    }
-    else if(item.D === true ) {
-      if (A != null && B != null && C != null && E != null && F != null ) {
+    } else if (item.D === true) {
+      if (A != null && B != null && C != null && E != null && F != null) {
         A.classList.add('disabled');
         B.classList.add('disabled');
         C.classList.add('disabled');
         E.classList.add('disabled');
         F.classList.add('disabled');
       }
-
-    } else  if(item.E === true) {
-      if (A != null && B != null && C != null && D != null && F != null ) {
+    } else if (item.E === true) {
+      if (A != null && B != null && C != null && D != null && F != null) {
         A.classList.add('disabled');
         B.classList.add('disabled');
         C.classList.add('disabled');
         D.classList.add('disabled');
         F.classList.add('disabled');
       }
-    } else if(item.F === true) {
-      if (A != null && B != null && C != null && D != null && E != null ) {
+    } else if (item.F === true) {
+      if (A != null && B != null && C != null && D != null && E != null) {
         A.classList.add('disabled');
         B.classList.add('disabled');
         C.classList.add('disabled');
@@ -96,7 +98,14 @@ export class ClientRevenuesPageComponent implements OnInit {
     const E = document.getElementById('E');
     const F = document.getElementById('F');
     if (!status) {
-      if (A != null && B != null && C != null && D != null && E != null && F != null) {
+      if (
+        A != null &&
+        B != null &&
+        C != null &&
+        D != null &&
+        E != null &&
+        F != null
+      ) {
         A.classList.remove('disabled');
         B.classList.remove('disabled');
         C.classList.remove('disabled');
