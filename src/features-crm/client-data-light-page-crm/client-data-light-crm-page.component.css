@@ -1,0 +1,174 @@
+.pos {
+  margin-top: 50px;
+}
+
+.pos-buttons {
+  padding-top: 78px;
+}
+
+.pos-card {
+  padding-bottom: 78px;
+}
+
+.form-control {
+  height: 4.375rem;
+  border-radius: 1.188rem;
+  color: var(--borderButton);
+  border: 1px solid var(--borderButton);
+  font-family: Roboto;
+  font-size: 1.125rem;
+  padding-left: 27px;
+}
+
+.form-control-mobile {
+  width: 100%;
+  height: 4.375rem;
+  border-radius: 1.188rem;
+  color: var(--borderButton);
+  border: 1px solid var(--borderButton);
+  font-family: Roboto;
+  font-size: 1.125rem;
+  padding-left: 27px;
+}
+
+.form-button {
+  width: 18.75rem;
+  height: 4.375rem;
+  border-radius: 1.188rem;
+  color: #000;
+  border: 1px solid var(--card);
+  font-family: Roboto;
+  font-size: 1rem;
+  background-color: var(--card);
+  text-align: center;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding: 2px;
+}
+
+.form-button-mobile {
+  width: 100%;
+  height: 4.375rem;
+  border-radius: 1.188rem;
+  color: #000;
+  border: 1px solid var(--card);
+  font-family: Roboto;
+  font-size: 1rem;
+  background-color: var(--card);
+  text-align: center;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+
+.form-control-large {
+  width: 41.25rem;
+}
+
+.form-input-size {
+  width: 22.5rem;
+}
+
+.form-top {
+  padding-top: 64px;
+}
+
+.form-input-top {
+  padding-top: 35px;
+}
+
+.form-input-bottom {
+  padding-bottom: 35px;
+}
+
+.pos {
+  padding-bottom: 75px;
+}
+
+.btn-back {
+  background-color: #18191b;
+  width: 88px;
+  height: 69px;
+  border-radius: 12px;
+}
+
+.retour {
+  background-image: url(../../assets/icons/retour.png);
+  background-size: cover;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  vertical-align: sub;
+}
+
+.btn-reset {
+  background-color: #494f5a;
+  width: 88px;
+  height: 69px;
+  border-radius: 12px;
+}
+
+.pos {
+  padding-bottom: 75px;
+}
+
+.suivant {
+  background-image: url(../../assets/icons/ok.png);
+  background-size: cover;
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  vertical-align: sub;
+  margin-left: 15px;
+}
+
+.reset {
+  background-image: url(../../assets/icons/recommencer.png);
+  background-size: cover;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  vertical-align: sub;
+}
+
+.logo {
+  width: 115px;
+}
+
+.required:after {
+  content: " *";
+  color: red;
+}
+
+.ml {
+  margin-left: 36px;
+}
+
+@media (max-width: 769px) {
+  .btn-next {
+    background-color: #066fef;
+    color: #fff;
+    font-family: Roboto;
+    font-size: 1.313rem;
+    width: 150px;
+    height: 69px;
+    border-radius: 12px;
+    border: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .btn-next {
+    background-color: #066fef;
+    color: #fff;
+    font-family: Roboto;
+    font-size: 1.313rem;
+    width: 250px;
+    height: 69px;
+    border-radius: 12px;
+    border: none;
+  }
+}

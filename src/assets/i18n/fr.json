@@ -231,5 +231,18 @@
     "TITLE": "Souhaitez-vous être mis en contact avec les éditeurs recommandés ?",
     "BUTTON_1": "Oui",
     "BUTTON_2": "Non"
+  },
+  "FONCTIONS_CRM": {
+    "TITLE": "Fonctionnalités souhaitées",
+    "ITEM_1": "Contacts et clients",
+    "ITEM_2": "Vente",
+    "ITEM_3": "Campagnes marketing automatisées",
+    "ITEM_4": "Service client",
+    "ITEM_5": "Reporting et analyse",
+    "ITEM_6": "Prospection",
+    "ITEM_7": "Segmentation et personnalisation",
+    "ITEM_8": "Planification et collaboration",
+    "ITEM_9": "Gestion des documents"
   }
+
 }

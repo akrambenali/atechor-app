@@ -17,7 +17,7 @@ export class ClientRevenuesPageComponent implements OnInit {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    public responsive: ResponsiveService
+    public responsive: ResponsiveService,
   ) {}
 
   ngOnInit(): void {
@@ -29,7 +29,7 @@ export class ClientRevenuesPageComponent implements OnInit {
     this.checkDisabledItem(this.companySize);
     this.solutionModel.compatibility.size = this.companySize;
     this.isEmpty = false;
-    this.goToRoute('/users-client');
+    this.goToRoute('erp/users-client');
   }
 
   checkDisabledItem(item: Size) {
@@ -98,14 +98,7 @@ export class ClientRevenuesPageComponent implements OnInit {
     const E = document.getElementById('E');
     const F = document.getElementById('F');
     if (!status) {
-      if (
-        A != null &&
-        B != null &&
-        C != null &&
-        D != null &&
-        E != null &&
-        F != null
-      ) {
+      if (A != null && B != null && C != null && D != null && E != null && F != null) {
         A.classList.remove('disabled');
         B.classList.remove('disabled');
         C.classList.remove('disabled');

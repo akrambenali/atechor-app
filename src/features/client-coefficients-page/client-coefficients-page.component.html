@@ -1,16 +1,13 @@
 <div class="container">
   <div class="row pos">
-    <app-progress-bar
-      [size]="'STEPSIZE.STEP_15' | translate"
-      [title]="'STEPS.STEP_15' | translate"
-    ></app-progress-bar>
+    <app-progress-bar [size]="'STEPSIZE.STEP_15' | translate" [title]="'STEPS.STEP_15' | translate"></app-progress-bar>
   </div>
 </div>
 
 <div class="container">
-  <h3 class="text-center">{{ "COEFFICIENTS.TITLE" | translate }}</h3>
+  <h3 class="text-center">{{ 'COEFFICIENTS.TITLE' | translate }}</h3>
   <div class="text-center pos-sub-title">
-    <span> {{ "COEFFICIENTS.SUBTITLE" | translate }}</span>
+    <span> {{ 'COEFFICIENTS.SUBTITLE' | translate }}</span>
   </div>
 
   <div class="container">
@@ -57,8 +54,5 @@
       </div>
     </div>
   </div>
-  <app-item-button-steps
-    [next]="'/select-data'"
-    [solution]="solutionModel"
-  ></app-item-button-steps>
+  <app-item-button-steps [next]="'erp/select-data'" [solution]="solutionModel"></app-item-button-steps>
 </div>

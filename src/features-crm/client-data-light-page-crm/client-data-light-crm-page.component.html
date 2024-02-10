@@ -1,0 +1,111 @@
+<div class="container">
+  <div class="row pos">
+    <app-progress-bar [size]="'STEPSIZE.STEP_14' | translate" [title]="'STEPS.STEP_14' | translate"></app-progress-bar>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="text-center">{{ 'FROM_1.TITLE' | translate }}</h3>
+</div>
+
+<ng-container *ngIf="responsive.deviceType === 'Handset'; then mobile; else web"></ng-container>
+<ng-template #web>
+  <div class="container">
+    <main class="pos-card">
+      <div class="row g-5 justify-content-center">
+        <div class="col-8">
+          <form class="needs-validation" [formGroup]="contactFormLight" (ngSubmit)="onSubmit()">
+            <div class="row justify-content-center g-3 form-top">
+              <div class="col-10 offset-md-3 form-input-top m-0">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  formControlName="email"
+                  [placeholder]="'FROM_1.ITEM_7' | translate"
+                  required
+                />
+                <div class="invalid-feedback">Please enter your shipping address.</div>
+              </div>
+            </div>
+
+            <div class="row pos-buttons">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="btn-group" role="group" aria-label="Default button group">
+                    <button type="button" class="btn btn-back" (click)="goToRoute('crm/select-data')">
+                      <i class="retour"></i>
+                    </button>
+                    <button type="button" class="btn btn-reset" [routerLink]="'/crm'">
+                      <i class="reset"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-md-4 text-center">
+                  <button class="btn btn-primary me-md-2 btn-next" type="submit">
+                    {{ 'FOOTER_BUTTONS.BUTTON_1' | translate }}
+                    <i class="suivant"></i>
+                  </button>
+                </div>
+                <div class="col-md-4 ms-auto text-end align-self-end">
+                  <a href="https://atechor.com/"> <img class="logo" src="assets/logo/atechor-logo-png.png" alt="" /></a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+</ng-template>
+<ng-template #mobile>
+  <div class="container">
+    <main class="pos-card">
+      <div class="row">
+        <div class="col-12">
+          <form class="needs-validation" [formGroup]="contactFormLight" (ngSubmit)="onSubmit()">
+            <div class="row justify-content-center form-top">
+              <div class="col-12 form-input-top">
+                <input
+                  type="email"
+                  class="form-control-mobile"
+                  id="email"
+                  name="email"
+                  formControlName="email"
+                  [placeholder]="'FROM_1.ITEM_7' | translate"
+                  required
+                />
+                <div class="invalid-feedback">Please enter your shipping address.</div>
+              </div>
+            </div>
+
+            <div class="pos-buttons">
+              <div class="row">
+                <div class="col-6">
+                  <div class="btn-group" role="group" aria-label="Default button group">
+                    <button type="button" class="btn btn-back" (click)="goToRoute('crm/select-data')">
+                      <i class="retour"></i>
+                    </button>
+                    <button type="button" class="btn btn-reset" [routerLink]="'/crm'">
+                      <i class="reset"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <button class="btn btn-primary me-md-2 btn-next" type="submit">
+                    {{ 'FOOTER_BUTTONS.BUTTON_1' | translate }}
+                    <i class="suivant"></i>
+                  </button>
+                </div>
+                <div class="col-xs-12 mt-4 text-center">
+                  <a href="https://atechor.com/"> <img class="logo" src="assets/logo/atechor-logo-png.png" alt="" /></a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+</ng-template>

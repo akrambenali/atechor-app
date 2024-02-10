@@ -1,20 +1,15 @@
 <div class="container">
   <div class="row pos">
-    <app-progress-bar
-      [size]="'STEPSIZE.STEP_12' | translate"
-      [title]="'STEPS.STEP_12' | translate"
-    ></app-progress-bar>
+    <app-progress-bar [size]="'STEPSIZE.STEP_12' | translate" [title]="'STEPS.STEP_12' | translate"></app-progress-bar>
   </div>
 </div>
 
 <div class="container">
   <h3 class="pos-title text-center">
-    {{ "RAISONS.TITLE" | translate }}
+    {{ 'RAISONS.TITLE' | translate }}
   </h3>
 
-  <div
-    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4 pos-card"
-  >
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4 pos-card">
     <secteur-item
       [title]="'RAISONS.ITEM_1' | translate"
       [image]="'assets/icons/solution_obsolete.png'"
@@ -59,7 +54,7 @@
     ></secteur-item>
   </div>
   <app-item-button-steps
-    [next]="'/cabinet-conseil'"
+    [next]="'erp/cabinet-conseil'"
     [solution]="solutionModel"
     [isEmpty]="isEmpty"
   ></app-item-button-steps>

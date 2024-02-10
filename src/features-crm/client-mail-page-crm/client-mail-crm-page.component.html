@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="pos-logo text-center">
+    <img src="assets/logo/atechor-logo-png.png" class="img-fluid img-size" alt="atechor" />
+    <h3 class="pos-title">
+      {{ 'EMAIL.TITLE' | translate }}
+    </h3>
+    <h3 class="">{{ email }}</h3>
+    <div class="pos-btn">
+      <button type="button" class="btn btn-reset" [routerLink]="'/crm'">Recommencer</button>
+      <button type="button" class="btn btn-home" onclick="window.location.href='https://atechor.fr/';">
+        Aller à l’accueil
+      </button>
+    </div>
+  </div>
+</div>

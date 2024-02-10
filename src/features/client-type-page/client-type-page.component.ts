@@ -16,12 +16,11 @@ export class ClientTypePageComponent implements OnInit {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    public responsive: ResponsiveService
+    public responsive: ResponsiveService,
   ) {}
 
   ngOnInit(): void {
     this.solutionModel = history.state;
-
   }
 
   pushClientType(newItem: any) {
@@ -29,7 +28,7 @@ export class ClientTypePageComponent implements OnInit {
     this.checkDisabledItem(this.clientBusiness);
     this.solutionModel.clientBusiness = this.clientBusiness;
     this.isEmpty = false;
-    this.goToRoute('/revenue-client')
+    this.goToRoute('erp/revenue-client');
   }
 
   checkDisabledItem(item: ClientBusiness) {

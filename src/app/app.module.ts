@@ -5,9 +5,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LayoutModule } from '@angular/cdk/layout';
 
 import { CardItemComponent } from 'src/components/card-item/card-item.component';
@@ -42,7 +42,29 @@ import { ClientCabinetConseilComponent } from 'src/features/client-cabinet-conse
 import { ClientDataSelectPageComponent } from 'src/features/client-data-select-page/client-data-select-page .component';
 import { ClientDataPageLightComponent } from 'src/features/client-data-light-page/client-data-light-page.component';
 
+/* CRM Module*/
 
+import { SecteurPageCrmComponent } from 'src/features-crm/secteur-page-crm/secteur-crm-page.component';
+import { ClientCabinetConseilCrmComponent } from 'src/features-crm/client-cabinet-conseil-page-crm/client-cabinet-conseil-crm-page.component';
+import { ClientCoefficientsPageCrmComponent } from 'src/features-crm/client-coefficients-page-crm/client-coefficients-crm-page.component';
+import { ClientConnexionPageCrmComponent } from 'src/features-crm/client-connexion-page-crm/client-connexion-crm-page.component';
+import { ClientDataPageLightCrmComponent } from 'src/features-crm/client-data-light-page-crm/client-data-light-crm-page.component';
+import { ClientTypePageCrmComponent } from 'src/features-crm/client-type-page-crm/client-type-crm-page.component';
+import { ClientRevenuesPageCrmComponent } from 'src/features-crm/client-revenues-page-crm/client-revenues-crm-page.component';
+import { ClientDataPageCrmComponent } from 'src/features-crm/client-data-page-crm/client-data-crm-page.component';
+import { ClientDataSelectPageCrmComponent } from 'src/features-crm/client-data-select-page-crm/client-data-select-crm-page .component';
+import { ClientDeadlinePageCrmComponent } from 'src/features-crm/client-deadline-page-crm/client-deadline-crm-page.component';
+import { ClientDeploymentPageCrmComponent } from 'src/features-crm/client-deployment-page-crm/client-deployment-crm-page.component';
+import { ClientDevPageCrmComponent } from 'src/features-crm/client-dev-page-crm/client-dev-crm-page.component';
+import { ClientHostingPageCrmComponent } from 'src/features-crm/client-hosting-page-crm/client-hosting-crm-page.component';
+import { ClientMailPageCrmComponent } from 'src/features-crm/client-mail-page-crm/client-mail-crm-page.component';
+import { ClientNumbersPageCrmComponent } from 'src/features-crm/client-numbers-page-crm/client-numbers-page.component';
+import { ClientReasonPageCrmComponent } from 'src/features-crm/client-reason-page-crm/client-reason-crm-page.component';
+import { ClientFonctionsPageCrmComponent } from 'src/features-crm/client-fonctions-page-crm/client-fonctions-crm-page.component';
+import { UsersPageCrmComponent } from 'src/features-crm/users-page-crm/users-crm-page.component';
+import { ResultPageCrmComponent } from 'src/features-crm/result-page/result-crm-page.component';
+import { CoefficientsCrmComponent } from 'src/features-crm/result-page/components/coefficients-crm/coefficients-crm.component';
+import { RatingCrmComponent } from 'src/features-crm/result-page/components/rating-crm/rating-crm.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -80,7 +102,28 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     RatingComponent,
     ClientCabinetConseilComponent,
     ClientDataSelectPageComponent,
-    ClientDataPageLightComponent
+    ClientDataPageLightComponent,
+    SecteurPageCrmComponent,
+    ClientCabinetConseilCrmComponent,
+    ClientCoefficientsPageCrmComponent,
+    ClientConnexionPageCrmComponent,
+    ClientDataPageLightCrmComponent,
+    ClientTypePageCrmComponent,
+    ClientRevenuesPageCrmComponent,
+    ClientDataPageCrmComponent,
+    ClientDataSelectPageCrmComponent,
+    ClientDeadlinePageCrmComponent,
+    ClientDeploymentPageCrmComponent,
+    ClientDevPageCrmComponent,
+    ClientHostingPageCrmComponent,
+    ClientMailPageCrmComponent,
+    ClientNumbersPageCrmComponent,
+    ClientReasonPageCrmComponent,
+    ClientFonctionsPageCrmComponent,
+    UsersPageCrmComponent,
+    ResultPageCrmComponent,
+    CoefficientsCrmComponent,
+    RatingCrmComponent,
   ],
   imports: [
     BrowserModule,
@@ -93,11 +136,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    })
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [ClientService, SolutionService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

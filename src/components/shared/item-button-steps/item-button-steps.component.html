@@ -6,27 +6,20 @@
           <button type="button" class="btn btn-back" (click)="back()">
             <i class="retour"></i>
           </button>
-          <button type="button" class="btn btn-reset" [routerLink]="'/'">
+          <button type="button" class="btn btn-reset" [routerLink]="'/erp'">
             <i class="reset"></i>
           </button>
         </div>
       </div>
       <div class="col-md-4 text-center">
-        <button
-          class="btn btn-primary me-md-2 btn-next"
-          type="button"
-          (click)="goToRoute(next)"
-          [disabled]="isEmpty"
-        >
-          {{ "FOOTER_BUTTONS.BUTTON_1" | translate }}
+        <button class="btn btn-primary me-md-2 btn-next" type="button" (click)="goToRoute(next)" [disabled]="isEmpty">
+          {{ 'FOOTER_BUTTONS.BUTTON_1' | translate }}
           <!--  <i class="bi bi-arrow-right"></i> -->
           <i class="suivant"></i>
         </button>
       </div>
       <div class="col-md-4 ms-auto text-end align-self-end">
-        <a href="https://atechor.com/">
-          <img class="logo" src="assets/logo/atechor-logo-png.png" alt=""
-        /></a>
+        <a href="https://atechor.com/"> <img class="logo" src="assets/logo/atechor-logo-png.png" alt="" /></a>
       </div>
     </div>
   </div>
@@ -48,15 +41,13 @@
           (click)="goToRoute(next)"
           [disabled]="isEmpty"
         >
-          {{ "FOOTER_BUTTONS.BUTTON_1" | translate }}
+          {{ 'FOOTER_BUTTONS.BUTTON_1' | translate }}
           <!--  <i class="bi bi-arrow-right"></i> -->
           <i class="suivant"></i>
         </button>
       </div>
       <div class="col-xs-12 mt-4 text-center">
-        <a href="https://atechor.com/">
-          <img class="logo" src="assets/logo/atechor-logo-png.png" alt=""
-        /></a>
+        <a href="https://atechor.com/"> <img class="logo" src="assets/logo/atechor-logo-png.png" alt="" /></a>
       </div>
     </div>
   </div>

@@ -12,7 +12,11 @@ export class UsersPageComponent implements OnInit {
   solutionModel = {} as Solutions;
   companySize = {} as CompanySize;
   isEmpty: boolean = true;
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, public responsive: ResponsiveService) {}
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    public responsive: ResponsiveService,
+  ) {}
 
   ngOnInit(): void {
     this.solutionModel = history.state;
@@ -23,9 +27,9 @@ export class UsersPageComponent implements OnInit {
     this.checkDisabledItem(this.companySize);
     this.solutionModel.compatibility.companySize = this.companySize;
     this.isEmpty = false;
-    this.goToRoute('/deploiment-client');
+    this.goToRoute('erp/deploiment-client');
   }
-  
+
   checkDisabledItem(item: CompanySize) {
     const A = document.getElementById('A');
     const B = document.getElementById('B');
@@ -34,7 +38,7 @@ export class UsersPageComponent implements OnInit {
     const E = document.getElementById('E');
     const F = document.getElementById('F');
     if (item.A === true) {
-      if (B != null && C != null && D != null && E != null && F !=null) {
+      if (B != null && C != null && D != null && E != null && F != null) {
         B.classList.add('disabled');
         C.classList.add('disabled');
         D.classList.add('disabled');
@@ -42,7 +46,7 @@ export class UsersPageComponent implements OnInit {
         F.classList.add('disabled');
       }
     } else if (item.B === true) {
-      if (A != null && C != null && D != null && E != null && F != null ) {
+      if (A != null && C != null && D != null && E != null && F != null) {
         A.classList.add('disabled');
         C.classList.add('disabled');
         D.classList.add('disabled');
@@ -50,33 +54,31 @@ export class UsersPageComponent implements OnInit {
         F.classList.add('disabled');
       }
     } else if (item.C === true) {
-      if (A != null && B != null && D != null && E != null && F != null ) {
+      if (A != null && B != null && D != null && E != null && F != null) {
         A.classList.add('disabled');
         B.classList.add('disabled');
         D.classList.add('disabled');
         E.classList.add('disabled');
         F.classList.add('disabled');
       }
-    }
-    else if(item.D === true ) {
-      if (A != null && B != null && C != null && E != null && F != null ) {
+    } else if (item.D === true) {
+      if (A != null && B != null && C != null && E != null && F != null) {
         A.classList.add('disabled');
         B.classList.add('disabled');
         C.classList.add('disabled');
         E.classList.add('disabled');
         F.classList.add('disabled');
       }
-
-    } else  if(item.E === true) {
-      if (A != null && B != null && C != null && D != null && F != null ) {
+    } else if (item.E === true) {
+      if (A != null && B != null && C != null && D != null && F != null) {
         A.classList.add('disabled');
         B.classList.add('disabled');
         C.classList.add('disabled');
         D.classList.add('disabled');
         F.classList.add('disabled');
       }
-    } else if(item.F === true) {
-      if (A != null && B != null && C != null && D != null && E != null ) {
+    } else if (item.F === true) {
+      if (A != null && B != null && C != null && D != null && E != null) {
         A.classList.add('disabled');
         B.classList.add('disabled');
         C.classList.add('disabled');

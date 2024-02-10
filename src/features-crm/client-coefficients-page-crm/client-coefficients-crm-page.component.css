@@ -1,0 +1,25 @@
+
+.pos {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.pos-sub-title {
+    padding-bottom: 47px;
+}
+
+.pos-card {
+    padding-bottom: 78px;
+}
+
+app-item-coefficient {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+app-item-coefficient:last-child {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+  }

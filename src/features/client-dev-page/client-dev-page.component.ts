@@ -6,27 +6,29 @@ import { ResponsiveService } from '../services/responsive/responsive.service';
 @Component({
   selector: 'app-client-dev-page',
   templateUrl: './client-dev-page.component.html',
-  styleUrls: ['./client-dev-page.component.css']
+  styleUrls: ['./client-dev-page.component.css'],
 })
 export class ClientDevPageComponent implements OnInit {
-
   solutionModel = {} as Solutions;
   dev = {} as Dev;
   isEmpty: boolean = true;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, public responsive: ResponsiveService) {}
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    public responsive: ResponsiveService,
+  ) {}
 
   ngOnInit(): void {
-    (this.solutionModel = history. state);
-       
+    this.solutionModel = history.state;
   }
 
   pushClientDev(newItem: any) {
     this.dev = newItem;
-    this.checkDisabledItem(this.dev)
+    this.checkDisabledItem(this.dev);
     this.solutionModel.dev = this.dev;
     this.isEmpty = false;
-    this.goToRoute('/connexion-client');
+    this.goToRoute('erp/connexion-client');
   }
 
   checkDisabledItem(item: Dev) {
@@ -34,22 +36,19 @@ export class ClientDevPageComponent implements OnInit {
     const H = document.getElementById('H');
     const N = document.getElementById('N');
     if (item.low === true) {
-      if (H != null && N != null ) {
+      if (H != null && N != null) {
         H.classList.add('disabled');
         N.classList.add('disabled');
-      
       }
     } else if (item.high === true) {
-      if (L != null && N != null ) {
+      if (L != null && N != null) {
         L.classList.add('disabled');
         N.classList.add('disabled');
-       
       }
     } else if (item.none === true) {
-      if (L != null && H != null  ) {
+      if (L != null && H != null) {
         L.classList.add('disabled');
         H.classList.add('disabled');
-       
       }
     }
   }
@@ -58,7 +57,7 @@ export class ClientDevPageComponent implements OnInit {
     const L = document.getElementById('L');
     const H = document.getElementById('H');
     const N = document.getElementById('N');
-   
+
     if (!status) {
       if (L != null && H != null && N != null) {
         L.classList.remove('disabled');
@@ -71,5 +70,4 @@ export class ClientDevPageComponent implements OnInit {
   goToRoute(route: string): void {
     this.router.navigateByUrl(route, { state: this.solutionModel });
   }
-
 }

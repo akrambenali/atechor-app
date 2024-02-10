@@ -15,7 +15,7 @@ export class ClientConnexionPageComponent implements OnInit {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    public responsive: ResponsiveService
+    public responsive: ResponsiveService,
   ) {}
 
   ngOnInit(): void {
@@ -26,7 +26,7 @@ export class ClientConnexionPageComponent implements OnInit {
     this.solutionModel.connexion = newItem;
     this.checkDisabledItem(newItem);
     this.isEmpty = false;
-    this.goToRoute('/deadline-client');
+    this.goToRoute('erp/deadline-client');
   }
 
   checkDisabledItem(item: boolean) {

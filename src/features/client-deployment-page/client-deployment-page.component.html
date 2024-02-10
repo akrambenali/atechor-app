@@ -1,20 +1,15 @@
 <div class="container">
   <div class="row pos">
-    <app-progress-bar
-      [size]="'STEPSIZE.STEP_5' | translate"
-      [title]="'STEPS.STEP_5' | translate"
-    ></app-progress-bar>
+    <app-progress-bar [size]="'STEPSIZE.STEP_5' | translate" [title]="'STEPS.STEP_5' | translate"></app-progress-bar>
   </div>
 </div>
 
 <div class="container">
   <h3 class="pos-title text-center">
-    {{ "DEPLOYMENT.TITLE" | translate }}
+    {{ 'DEPLOYMENT.TITLE' | translate }}
   </h3>
 
-  <ng-container
-    *ngIf="responsive.deviceType === 'Handset'; then mobile; else web"
-  ></ng-container>
+  <ng-container *ngIf="responsive.deviceType === 'Handset'; then mobile; else web"></ng-container>
   <ng-template #web>
     <div class="pos-card">
       <div>
@@ -43,9 +38,7 @@
           <app-item-button
             id="N"
             [title]="'DEPLOYMENT.ITEM_1' | translate"
-            (sendClientDeploymentEvent)="
-              pushClientinternationnalBusiness($event)
-            "
+            (sendClientDeploymentEvent)="pushClientinternationnalBusiness($event)"
             [clientDeployment]="'N'"
             (sendStatusEvent)="getStatus($event)"
           ></app-item-button>
@@ -55,9 +48,7 @@
             id="I"
             [title]="'DEPLOYMENT.ITEM_2' | translate"
             [clientDeployment]="'I'"
-            (sendClientDeploymentEvent)="
-              pushClientinternationnalBusiness($event)
-            "
+            (sendClientDeploymentEvent)="pushClientinternationnalBusiness($event)"
             (sendStatusEvent)="getStatus($event)"
           ></app-item-button>
         </div>
@@ -65,7 +56,7 @@
     </div>
   </ng-template>
   <app-item-button-steps
-    [next]="'/fonctions-client'"
+    [next]="'erp/fonctions-client'"
     [solution]="solutionModel"
     [isEmpty]="isEmpty"
   ></app-item-button-steps>

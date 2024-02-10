@@ -15,7 +15,7 @@ export class ClientCabinetConseilComponent implements OnInit {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    public responsive: ResponsiveService
+    public responsive: ResponsiveService,
   ) {}
 
   ngOnInit(): void {
@@ -26,7 +26,7 @@ export class ClientCabinetConseilComponent implements OnInit {
     this.solutionModel.cabinetConseil = newItem;
     this.checkDisabledItem(newItem);
     this.isEmpty = false;
-    this.goToRoute('/coefficients-client');
+    this.goToRoute('erp/coefficients-client');
   }
 
   checkDisabledItem(item: boolean) {
@@ -58,5 +58,4 @@ export class ClientCabinetConseilComponent implements OnInit {
   goToRoute(route: string): void {
     this.router.navigateByUrl(route, { state: this.solutionModel });
   }
-
 }

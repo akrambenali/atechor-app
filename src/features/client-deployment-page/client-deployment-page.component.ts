@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import {
-  InternationnalBusiness,
-  Solutions,
-} from 'src/business/model/solution.model';
+import { InternationnalBusiness, Solutions } from 'src/business/model/solution.model';
 import { ResponsiveService } from '../services/responsive/responsive.service';
 
 @Component({
@@ -19,7 +16,7 @@ export class ClientDeploymentPageComponent implements OnInit {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    public responsive: ResponsiveService
+    public responsive: ResponsiveService,
   ) {}
 
   ngOnInit(): void {
@@ -31,7 +28,7 @@ export class ClientDeploymentPageComponent implements OnInit {
     this.checkDisabledItem(this.internationnalBusiness);
     this.solutionModel.internationnalBusiness = this.internationnalBusiness;
     this.isEmpty = false;
-    this.goToRoute('/fonctions-client');
+    this.goToRoute('erp/fonctions-client');
   }
 
   checkDisabledItem(item: InternationnalBusiness) {

@@ -10,13 +10,13 @@ import { ResponsiveService } from '../services/responsive/responsive.service';
 })
 export class ClientHostingPageComponent implements OnInit {
   solutionModel = {} as Solutions;
-  hosting: any ;
+  hosting: any;
   isEmpty: boolean = true;
 
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    public responsive: ResponsiveService
+    public responsive: ResponsiveService,
   ) {}
 
   ngOnInit(): void {
@@ -25,13 +25,11 @@ export class ClientHostingPageComponent implements OnInit {
 
   pushClientHosting(newItem: any) {
     this.hosting = newItem;
-    this.checkDisabledItem(this.hosting)
+    this.checkDisabledItem(this.hosting);
     this.solutionModel.hosting = this.hosting;
     this.isEmpty = false;
-    this.goToRoute('/dev-client');
+    this.goToRoute('erp/dev-client');
   }
-
- 
 
   checkDisabledItem(item: any) {
     const A = document.getElementById('A');
@@ -47,36 +45,34 @@ export class ClientHostingPageComponent implements OnInit {
         E.classList.add('disabled');
       }
     } else if (item.onPremise === true) {
-      if (A != null && C != null && D != null && E != null ) {
+      if (A != null && C != null && D != null && E != null) {
         A.classList.add('disabled');
         C.classList.add('disabled');
         D.classList.add('disabled');
         E.classList.add('disabled');
       }
     } else if (item.hybrid === true) {
-      if (A != null && B != null && D != null && E != null ) {
+      if (A != null && B != null && D != null && E != null) {
         A.classList.add('disabled');
         B.classList.add('disabled');
         D.classList.add('disabled');
         E.classList.add('disabled');
+      }
+    } else if (item.saas === true) {
+      if (A != null && B != null && C != null && E != null) {
+        A.classList.add('disabled');
+        B.classList.add('disabled');
+        C.classList.add('disabled');
+        E.classList.add('disabled');
+      }
+    } else if (item.any === true) {
+      if (A != null && B != null && C != null && D != null) {
+        A.classList.add('disabled');
+        B.classList.add('disabled');
+        C.classList.add('disabled');
+        D.classList.add('disabled');
       }
     }
-    else if(item.saas === true ) {
-      if (A != null && B != null && C != null && E != null ) {
-        A.classList.add('disabled');
-        B.classList.add('disabled');
-        C.classList.add('disabled');
-        E.classList.add('disabled');
-      }
-
-    } else  if(item.any === true) {
-      if (A != null && B != null && C != null && D != null  ) {
-        A.classList.add('disabled');
-        B.classList.add('disabled');
-        C.classList.add('disabled');
-        D.classList.add('disabled');
-      }
-    } 
   }
 
   getStatus(status: boolean) {

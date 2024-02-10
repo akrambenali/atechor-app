@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import {
-  Compatibility,
-  SecteurItem,
-  Solutions,
-} from 'src/business/model/solution.model';
+import { Compatibility, SecteurItem, Solutions } from 'src/business/model/solution.model';
 
 @Component({
   selector: 'app-secteur-page',
@@ -17,7 +13,10 @@ export class SecteurPageComponent implements OnInit {
   secteur!: SecteurItem;
   isEmpty: boolean = true;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+  ) {}
 
   ngOnInit(): void {}
 
@@ -27,7 +26,7 @@ export class SecteurPageComponent implements OnInit {
     this.isEmpty = false;
     this.compatibility.secteur = this.secteur;
     this.solutionModel.compatibility = this.compatibility;
-    this.goToRoute('/type-client')
+    this.goToRoute('erp/type-client');
   }
 
   checkDisabledItem(item: SecteurItem) {
@@ -41,16 +40,7 @@ export class SecteurPageComponent implements OnInit {
     const H = document.getElementById('H');
     const I = document.getElementById('I');
     if (item.codeSecteur === 'services') {
-      if (
-        B != null &&
-        C != null &&
-        D != null &&
-        E != null &&
-        F != null &&
-        G != null &&
-        H != null &&
-        I != null
-      ) {
+      if (B != null && C != null && D != null && E != null && F != null && G != null && H != null && I != null) {
         B.classList.add('disabled');
         C.classList.add('disabled');
         D.classList.add('disabled');
@@ -61,16 +51,7 @@ export class SecteurPageComponent implements OnInit {
         I.classList.add('disabled');
       }
     } else if (item.codeSecteur === 'manufacturing') {
-      if (
-        A != null &&
-        C != null &&
-        D != null &&
-        E != null &&
-        F != null &&
-        G != null &&
-        H != null &&
-        I != null
-      ) {
+      if (A != null && C != null && D != null && E != null && F != null && G != null && H != null && I != null) {
         A.classList.add('disabled');
         C.classList.add('disabled');
         D.classList.add('disabled');
@@ -81,16 +62,7 @@ export class SecteurPageComponent implements OnInit {
         I.classList.add('disabled');
       }
     } else if (item.codeSecteur === 'construction') {
-      if (
-        A != null &&
-        B != null &&
-        D != null &&
-        E != null &&
-        F != null &&
-        G != null &&
-        H != null &&
-        I != null
-      ) {
+      if (A != null && B != null && D != null && E != null && F != null && G != null && H != null && I != null) {
         A.classList.add('disabled');
         B.classList.add('disabled');
         D.classList.add('disabled');
@@ -101,16 +73,7 @@ export class SecteurPageComponent implements OnInit {
         I.classList.add('disabled');
       }
     } else if (item.codeSecteur === 'retail') {
-      if (
-        A != null &&
-        B != null &&
-        C != null &&
-        E != null &&
-        F != null &&
-        G != null &&
-        H != null &&
-        I != null
-      ) {
+      if (A != null && B != null && C != null && E != null && F != null && G != null && H != null && I != null) {
         A.classList.add('disabled');
         B.classList.add('disabled');
         C.classList.add('disabled');
@@ -121,16 +84,7 @@ export class SecteurPageComponent implements OnInit {
         I.classList.add('disabled');
       }
     } else if (item.codeSecteur === 'finance') {
-      if (
-        A != null &&
-        B != null &&
-        C != null &&
-        D != null &&
-        F != null &&
-        G != null &&
-        H != null &&
-        I != null
-      ) {
+      if (A != null && B != null && C != null && D != null && F != null && G != null && H != null && I != null) {
         A.classList.add('disabled');
         B.classList.add('disabled');
         C.classList.add('disabled');
@@ -141,16 +95,7 @@ export class SecteurPageComponent implements OnInit {
         I.classList.add('disabled');
       }
     } else if (item.codeSecteur === 'govNgo') {
-      if (
-        A != null &&
-        B != null &&
-        C != null &&
-        D != null &&
-        E != null &&
-        G != null &&
-        H != null &&
-        I != null
-      ) {
+      if (A != null && B != null && C != null && D != null && E != null && G != null && H != null && I != null) {
         A.classList.add('disabled');
         B.classList.add('disabled');
         C.classList.add('disabled');
@@ -161,16 +106,7 @@ export class SecteurPageComponent implements OnInit {
         I.classList.add('disabled');
       }
     } else if (item.codeSecteur === 'energy') {
-      if (
-        A != null &&
-        B != null &&
-        C != null &&
-        D != null &&
-        E != null &&
-        F != null &&
-        H != null &&
-        I != null
-      ) {
+      if (A != null && B != null && C != null && D != null && E != null && F != null && H != null && I != null) {
         A.classList.add('disabled');
         B.classList.add('disabled');
         C.classList.add('disabled');
@@ -181,16 +117,7 @@ export class SecteurPageComponent implements OnInit {
         I.classList.add('disabled');
       }
     } else if (item.codeSecteur === 'transport') {
-      if (
-        A != null &&
-        B != null &&
-        C != null &&
-        D != null &&
-        E != null &&
-        F != null &&
-        G != null &&
-        I != null
-      ) {
+      if (A != null && B != null && C != null && D != null && E != null && F != null && G != null && I != null) {
         A.classList.add('disabled');
         B.classList.add('disabled');
         C.classList.add('disabled');
@@ -201,16 +128,7 @@ export class SecteurPageComponent implements OnInit {
         I.classList.add('disabled');
       }
     } else if (item.codeSecteur === 'aerospace') {
-      if (
-        A != null &&
-        B != null &&
-        C != null &&
-        D != null &&
-        E != null &&
-        F != null &&
-        G != null &&
-        H != null
-      ) {
+      if (A != null && B != null && C != null && D != null && E != null && F != null && G != null && H != null) {
         A.classList.add('disabled');
         B.classList.add('disabled');
         C.classList.add('disabled');

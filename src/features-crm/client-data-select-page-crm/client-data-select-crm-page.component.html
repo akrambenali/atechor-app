@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row pos">
+    <app-progress-bar [size]="'STEPSIZE.STEP_14' | translate" [title]="'STEPS.STEP_14' | translate"></app-progress-bar>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="pos-title text-center">
+    {{ 'CLIENTDATASELECT.TITLE' | translate }}
+  </h3>
+  <ng-container *ngIf="responsive.deviceType === 'Handset'; then mobile; else web"></ng-container>
+  <ng-template #web>
+    <div class="pos-card">
+      <div class="btn-pos" (click)="goToRoute('crm/infos-client')">
+        <div class="card text-center card-secteur no-border">
+          <div class="card-body mt-2">
+            <h5 class="card-title">
+              {{ 'CLIENTDATASELECT.BUTTON_1' | translate }}
+            </h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-pos" (click)="goToRoute('crm/infos-client-light')">
+        <div class="card text-center card-secteur no-border">
+          <div class="card-body mt-2">
+            <h5 class="card-title">
+              {{ 'CLIENTDATASELECT.BUTTON_2' | translate }}
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #mobile>
+    <div class="pos-card-mobile">
+      <div class="row justify-content-md-center">
+        <div class="col-12 mb-4">
+          <div class="btn-pos" (click)="goToRoute('crm/infos-client')">
+            <div class="card text-center card-secteur no-border">
+              <div class="card-body mt-2">
+                <h5 class="card-title">
+                  {{ 'CLIENTDATASELECT.BUTTON_1' | translate }}
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mb-4">
+          <div class="btn-pos" (click)="goToRoute('crm/infos-client-light')">
+            <div class="card text-center card-secteur no-border">
+              <div class="card-body mt-2">
+                <h5 class="card-title">
+                  {{ 'CLIENTDATASELECT.BUTTON_2' | translate }}
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

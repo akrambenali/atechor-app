@@ -1,20 +1,15 @@
 <div class="container">
   <div class="row pos">
-    <app-progress-bar
-      [size]="'STEPSIZE.STEP_2' | translate"
-      [title]="'STEPS.STEP_2' | translate"
-    ></app-progress-bar>
+    <app-progress-bar [size]="'STEPSIZE.STEP_2' | translate" [title]="'STEPS.STEP_2' | translate"></app-progress-bar>
   </div>
 </div>
 
 <div class="container">
   <h3 class="pos-title text-center">
-    {{ "TYPE_CLIENT.TITLE" | translate }}
+    {{ 'TYPE_CLIENT.TITLE' | translate }}
   </h3>
 
-  <ng-container
-    *ngIf="responsive.deviceType === 'Handset'; then mobile; else web"
-  ></ng-container>
+  <ng-container *ngIf="responsive.deviceType === 'Handset'; then mobile; else web"></ng-container>
 
   <ng-template #web
     ><div class="g-4 pos-card">
@@ -74,7 +69,7 @@
     </div>
   </ng-template>
   <app-item-button-steps
-    [next]="'/revenue-client'"
+    [next]="'/erp/revenue-client'"
     [solution]="solutionModel"
     [isEmpty]="isEmpty"
   ></app-item-button-steps>

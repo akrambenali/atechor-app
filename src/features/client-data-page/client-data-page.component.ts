@@ -23,7 +23,7 @@ export class ClientDataPageComponent implements OnInit {
     private clientService: ClientService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    public responsive: ResponsiveService
+    public responsive: ResponsiveService,
   ) {}
   contactForm = new FormGroup({
     firstName: new FormControl(),
@@ -56,7 +56,7 @@ export class ClientDataPageComponent implements OnInit {
 
     this.clientService.getSolutions(this.solutionModel).subscribe((res) => {
       if (res) {
-        this.router.navigate(['/mail-client'], {
+        this.router.navigate(['erp/mail-client'], {
           queryParams: { email: this.clientData.email },
         });
       }

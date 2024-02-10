@@ -1,0 +1,26 @@
+.pos-card {
+  padding-bottom: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.pos-card-mobile {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pos {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.pos-title {
+  padding-bottom: 70px;
+}
+
+.disabled {
+  cursor: none;
+  opacity: 0.65;
+  pointer-events: none;
+}

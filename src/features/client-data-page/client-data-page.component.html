@@ -1,29 +1,20 @@
 <div class="container">
   <div class="row pos">
-    <app-progress-bar
-      [size]="'STEPSIZE.STEP_14' | translate"
-      [title]="'STEPS.STEP_14' | translate"
-    ></app-progress-bar>
+    <app-progress-bar [size]="'STEPSIZE.STEP_14' | translate" [title]="'STEPS.STEP_14' | translate"></app-progress-bar>
   </div>
 </div>
 
 <div class="container">
-  <h3 class="text-center">{{ "FROM_1.TITLE" | translate }}</h3>
+  <h3 class="text-center">{{ 'FROM_1.TITLE' | translate }}</h3>
 </div>
 
-<ng-container
-  *ngIf="responsive.deviceType === 'Handset'; then mobile; else web"
-></ng-container>
+<ng-container *ngIf="responsive.deviceType === 'Handset'; then mobile; else web"></ng-container>
 <ng-template #web>
   <div class="container">
     <main class="pos-card">
       <div class="row g-5">
         <div class="col-md-7 col-lg-8 offset-md-3">
-          <form
-            class="needs-validation"
-            [formGroup]="contactForm"
-            (ngSubmit)="onSubmit()"
-          >
+          <form class="needs-validation" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
             <div class="row g-3 form-top">
               <div class="col-sm-6 form-input-size m-0">
                 <input
@@ -36,9 +27,7 @@
                   value=""
                   required
                 />
-                <div class="invalid-feedback">
-                  Valid first name is required.
-                </div>
+                <div class="invalid-feedback">Valid first name is required.</div>
               </div>
 
               <div class="col-sm-6 m-0">
@@ -64,9 +53,7 @@
                   [placeholder]="'FROM_1.ITEM_3' | translate"
                   required
                 />
-                <div class="invalid-feedback">
-                  Valid first name is required.
-                </div>
+                <div class="invalid-feedback">Valid first name is required.</div>
               </div>
 
               <div class="col-sm-6 form-input-size form-input-top m-0">
@@ -79,9 +66,7 @@
                   [placeholder]="'FROM_1.ITEM_12' | translate"
                   required
                 />
-                <div class="invalid-feedback">
-                  Valid first name is required.
-                </div>
+                <div class="invalid-feedback">Valid first name is required.</div>
               </div>
 
               <div class="col-sm-6 form-input-size form-input-top m-0">
@@ -93,9 +78,7 @@
                   formControlName="role"
                   [placeholder]="'FROM_1.ITEM_6' | translate"
                 />
-                <div class="invalid-feedback">
-                  Please enter a valid email address for shipping updates.
-                </div>
+                <div class="invalid-feedback">Please enter a valid email address for shipping updates.</div>
               </div>
 
               <div class="col-sm-6 form-input-top m-0">
@@ -108,9 +91,7 @@
                   [placeholder]="'FROM_1.ITEM_7' | translate"
                   required
                 />
-                <div class="invalid-feedback">
-                  Please enter your shipping address.
-                </div>
+                <div class="invalid-feedback">Please enter your shipping address.</div>
               </div>
             </div>
 
@@ -126,63 +107,38 @@
               />
               <p class="form-check-label required mb-0" for="acceptTerms">
                 <strong
-                  >{{ "FROM_1.ITEM_8" | translate }}
-                  <a href="https://atechor.com/mentions-legales">{{
-                    "FROM_1.ITEM_9" | translate
-                  }}</a>
+                  >{{ 'FROM_1.ITEM_8' | translate }}
+                  <a href="https://atechor.com/mentions-legales">{{ 'FROM_1.ITEM_9' | translate }}</a>
                 </strong>
               </p>
               <p class="mb-0">
-                {{ "FROM_1.ITEM_13" | translate }}
+                {{ 'FROM_1.ITEM_13' | translate }}
               </p>
-              <div
-                *ngIf="submitted && f.acceptTerms.errors"
-                class="invalid-feedback"
-              >
-                {{ "FROM_1.ITEM_11" | translate }}
+              <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">
+                {{ 'FROM_1.ITEM_11' | translate }}
               </div>
             </div>
 
             <div class="row pos-buttons">
               <div class="row">
                 <div class="col-md-4">
-                  <div
-                    class="btn-group"
-                    role="group"
-                    aria-label="Default button group"
-                  >
-                    <button
-                      type="button"
-                      class="btn btn-back"
-                      (click)="goToRoute('/select-data')"
-                    >
+                  <div class="btn-group" role="group" aria-label="Default button group">
+                    <button type="button" class="btn btn-back" (click)="goToRoute('erp/select-data')">
                       <i class="retour"></i>
                     </button>
-                    <button
-                      type="button"
-                      class="btn btn-reset"
-                      [routerLink]="'/'"
-                    >
+                    <button type="button" class="btn btn-reset" [routerLink]="'/'">
                       <i class="reset"></i>
                     </button>
                   </div>
                 </div>
                 <div class="col-md-4 text-center">
-                  <button
-                    class="btn btn-primary me-md-2 btn-next"
-                    type="submit"
-                  >
-                    {{ "FOOTER_BUTTONS.BUTTON_1" | translate }}
+                  <button class="btn btn-primary me-md-2 btn-next" type="submit">
+                    {{ 'FOOTER_BUTTONS.BUTTON_1' | translate }}
                     <i class="suivant"></i>
                   </button>
                 </div>
                 <div class="col-md-4 ms-auto text-end align-self-end">
-                  <a href="https://atechor.com/">
-                    <img
-                      class="logo"
-                      src="assets/logo/atechor-logo-png.png"
-                      alt=""
-                  /></a>
+                  <a href="https://atechor.com/"> <img class="logo" src="assets/logo/atechor-logo-png.png" alt="" /></a>
                 </div>
               </div>
             </div>
@@ -197,11 +153,7 @@
     <main class="pos-card">
       <div class="row">
         <div class="col-12">
-          <form
-            class="needs-validation"
-            [formGroup]="contactForm"
-            (ngSubmit)="onSubmit()"
-          >
+          <form class="needs-validation" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
             <div class="row justify-content-center form-top">
               <div class="col-12">
                 <input
@@ -214,9 +166,7 @@
                   value=""
                   required
                 />
-                <div class="invalid-feedback">
-                  Valid first name is required.
-                </div>
+                <div class="invalid-feedback">Valid first name is required.</div>
               </div>
 
               <div class="col-12 form-input-top">
@@ -242,9 +192,7 @@
                   [placeholder]="'FROM_1.ITEM_3' | translate"
                   required
                 />
-                <div class="invalid-feedback">
-                  Valid first name is required.
-                </div>
+                <div class="invalid-feedback">Valid first name is required.</div>
               </div>
 
               <div class="col-12 form-input-top">
@@ -268,9 +216,7 @@
                   formControlName="role"
                   [placeholder]="'FROM_1.ITEM_6' | translate"
                 />
-                <div class="invalid-feedback">
-                  Please enter a valid email address for shipping updates.
-                </div>
+                <div class="invalid-feedback">Please enter a valid email address for shipping updates.</div>
               </div>
 
               <div class="col-12 form-input-top">
@@ -283,9 +229,7 @@
                   [placeholder]="'FROM_1.ITEM_7' | translate"
                   required
                 />
-                <div class="invalid-feedback">
-                  Please enter your shipping address.
-                </div>
+                <div class="invalid-feedback">Please enter your shipping address.</div>
               </div>
               <div class="col-12 form-check form-input-top ml">
                 <input
@@ -299,64 +243,37 @@
                 />
                 <p class="form-check-label required mb-0" for="acceptTerms">
                   <strong
-                    >{{ "FROM_1.ITEM_8" | translate }}
-                    <a href="https://atechor.com/mentions-legales">{{
-                      "FROM_1.ITEM_9" | translate
-                    }}</a>
+                    >{{ 'FROM_1.ITEM_8' | translate }}
+                    <a href="https://atechor.com/mentions-legales">{{ 'FROM_1.ITEM_9' | translate }}</a>
                   </strong>
                 </p>
                 <p class="mb-0">
-                  {{ "FROM_1.ITEM_13" | translate }}
+                  {{ 'FROM_1.ITEM_13' | translate }}
                 </p>
-                <div
-                  *ngIf="submitted && f.acceptTerms.errors"
-                  class="invalid-feedback"
-                >
-                  Accept Ts & Cs is required
-                </div>
+                <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
               </div>
             </div>
 
             <div class="pos-buttons">
               <div class="row">
                 <div class="col-6">
-                  <div
-                    class="btn-group"
-                    role="group"
-                    aria-label="Default button group"
-                  >
-                    <button
-                      type="button"
-                      class="btn btn-back"
-                      (click)="goToRoute('/select-data')"
-                    >
+                  <div class="btn-group" role="group" aria-label="Default button group">
+                    <button type="button" class="btn btn-back" (click)="goToRoute('erp/select-data')">
                       <i class="retour"></i>
                     </button>
-                    <button
-                      type="button"
-                      class="btn btn-reset"
-                      [routerLink]="'/'"
-                    >
+                    <button type="button" class="btn btn-reset" [routerLink]="'/'">
                       <i class="reset"></i>
                     </button>
                   </div>
                 </div>
                 <div class="col-6">
-                  <button
-                    class="btn btn-primary me-md-2 btn-next"
-                    type="submit"
-                  >
-                    {{ "FOOTER_BUTTONS.BUTTON_1" | translate }}
+                  <button class="btn btn-primary me-md-2 btn-next" type="submit">
+                    {{ 'FOOTER_BUTTONS.BUTTON_1' | translate }}
                     <i class="suivant"></i>
                   </button>
                 </div>
                 <div class="col-xs-12 mt-4 text-center">
-                  <a href="https://atechor.com/">
-                    <img
-                      class="logo"
-                      src="assets/logo/atechor-logo-png.png"
-                      alt=""
-                  /></a>
+                  <a href="https://atechor.com/"> <img class="logo" src="assets/logo/atechor-logo-png.png" alt="" /></a>
                 </div>
               </div>
             </div>

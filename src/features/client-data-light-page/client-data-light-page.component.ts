@@ -23,13 +23,10 @@ export class ClientDataPageLightComponent implements OnInit {
     private clientService: ClientService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    public responsive: ResponsiveService
+    public responsive: ResponsiveService,
   ) {}
   contactFormLight = new FormGroup({
-    email: new FormControl('', [
-      Validators.required,
-      Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
-    ]),
+    email: new FormControl('', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]),
 
     contactOk: new FormControl(),
   });
@@ -38,13 +35,15 @@ export class ClientDataPageLightComponent implements OnInit {
     this.solutionModel = history.state;
   }
 
-  get f() { return this.contactFormLight.controls; }
+  get f() {
+    return this.contactFormLight.controls;
+  }
 
   onSubmit() {
     this.submitted = true;
     if (this.contactFormLight.invalid) {
       return;
-  }
+    }
     this.clientData = this.contactFormLight.value as Client;
     this.clientData.contactOk = false;
 
@@ -54,7 +53,7 @@ export class ClientDataPageLightComponent implements OnInit {
 
     this.clientService.getSolutions(this.solutionModel).subscribe((res) => {
       if (res) {
-        this.router.navigate(['/mail-client'], {
+        this.router.navigate(['erp/mail-client'], {
           queryParams: { email: this.clientData.email },
         });
       }

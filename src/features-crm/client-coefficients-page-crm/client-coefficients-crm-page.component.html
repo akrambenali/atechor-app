@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row pos">
+    <app-progress-bar [size]="'STEPSIZE.STEP_15' | translate" [title]="'STEPS.STEP_15' | translate"></app-progress-bar>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="text-center">{{ 'COEFFICIENTS.TITLE' | translate }}</h3>
+  <div class="text-center pos-sub-title">
+    <span> {{ 'COEFFICIENTS.SUBTITLE' | translate }}</span>
+  </div>
+
+  <div class="container">
+    <div class="row pos-card justify-content-center">
+      <div class="col-lg-5 col-sm-12">
+        <app-item-coefficient
+          [title]="'COEFFICIENTS.ITEM_1' | translate"
+          [icon]="'assets/icons/logiciel.png'"
+          [type]="'software'"
+          (sendcoefficientsEvent)="pushClientCoefficients($event)"
+        ></app-item-coefficient>
+      </div>
+      <div class="col-lg-5 col-sm-12">
+        <app-item-coefficient
+          [title]="'COEFFICIENTS.ITEM_2' | translate"
+          [icon]="'assets/icons/prix.png'"
+          [type]="'price'"
+          (sendcoefficientsEvent)="pushClientCoefficients($event)"
+        ></app-item-coefficient>
+      </div>
+      <div class="col-lg-5 col-sm-12">
+        <app-item-coefficient
+          [title]="'COEFFICIENTS.ITEM_3' | translate"
+          [icon]="'assets/icons/vendors.png'"
+          [type]="'vendor'"
+          (sendcoefficientsEvent)="pushClientCoefficients($event)"
+        ></app-item-coefficient>
+      </div>
+      <div class="col-lg-5 col-sm-12">
+        <app-item-coefficient
+          [title]="'COEFFICIENTS.ITEM_4' | translate"
+          [icon]="'assets/icons/compatib.png'"
+          [type]="'Compatibility'"
+          (sendcoefficientsEvent)="pushClientCoefficients($event)"
+        ></app-item-coefficient>
+      </div>
+      <div class="col-lg-10 col-sm-12">
+        <app-item-coefficient
+          [title]="'COEFFICIENTS.ITEM_5' | translate"
+          [icon]="'assets/icons/positionnement.png'"
+          [type]="'position'"
+          (sendcoefficientsEvent)="pushClientCoefficients($event)"
+        ></app-item-coefficient>
+      </div>
+    </div>
+  </div>
+  <app-item-button-steps [next]="'crm/select-data'" [solution]="solutionModel"></app-item-button-steps>
+</div>

@@ -16,7 +16,7 @@ export class ClientDeadlinePageComponent implements OnInit {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    public responsive: ResponsiveService
+    public responsive: ResponsiveService,
   ) {}
 
   ngOnInit(): void {
@@ -28,7 +28,7 @@ export class ClientDeadlinePageComponent implements OnInit {
     this.checkDisabledItem(this.deadline);
     this.solutionModel.compatibility.implemntation = this.deadline;
     this.isEmpty = false;
-    this.goToRoute('/reason-client');
+    this.goToRoute('erp/reason-client');
   }
 
   checkDisabledItem(item: Implemntation) {
@@ -82,13 +82,7 @@ export class ClientDeadlinePageComponent implements OnInit {
     const A100 = document.getElementById('A100');
     const any = document.getElementById('any');
     if (!status) {
-      if (
-        M1 != null &&
-        M6 != null &&
-        A1 != null &&
-        A100 != null &&
-        any != null
-      ) {
+      if (M1 != null && M6 != null && A1 != null && A100 != null && any != null) {
         M1.classList.remove('disabled');
         M6.classList.remove('disabled');
         A1.classList.remove('disabled');
@@ -101,5 +95,4 @@ export class ClientDeadlinePageComponent implements OnInit {
   goToRoute(route: string): void {
     this.router.navigateByUrl(route, { state: this.solutionModel });
   }
-
 }
