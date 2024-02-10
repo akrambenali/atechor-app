@@ -11,21 +11,24 @@ import { NavigationService } from 'src/features/services/navigation.services';
 export class ItemButtonStepsComponent implements OnInit {
   @Input()
   next!: string;
-  
+
   @Input()
   solution!: Solutions;
 
   @Input()
   isEmpty!: Boolean;
 
-  constructor(private router: Router, private navigation: NavigationService) {}
+  constructor(
+    private router: Router,
+    private navigation: NavigationService,
+  ) {}
 
   ngOnInit(): void {}
 
   goToRoute(route: string): void {
     this.router.navigateByUrl(route, { state: this.solution });
   }
-  back(): void {
-    this.navigation.back();
+  back(route: string): void {
+    this.navigation.back(route);
   }
 }

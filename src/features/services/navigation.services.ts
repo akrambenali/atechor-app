@@ -17,12 +17,12 @@ export class NavigationService {
     });
   }
 
-  back(): void {
+  back(url: string): void {
     this.history.pop();
     if (this.history.length > 0) {
       this.location.back();
     } else {
-      this.router.navigateByUrl('/erp');
+      this.router.navigateByUrl(url.includes('erp') ? '/erp' : 'crm');
     }
   }
 }

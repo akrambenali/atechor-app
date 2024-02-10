@@ -3,10 +3,10 @@
     <div class="row">
       <div class="col-md-4">
         <div class="btn-group" role="group" aria-label="Default button group">
-          <button type="button" class="btn btn-back" (click)="back()">
+          <button type="button" class="btn btn-back" (click)="back(next)">
             <i class="retour"></i>
           </button>
-          <button type="button" class="btn btn-reset" [routerLink]="'/erp'">
+          <button type="button" class="btn btn-reset" [routerLink]="next.includes('erp') ? '/erp' : '/crm'">
             <i class="reset"></i>
           </button>
         </div>
@@ -28,7 +28,7 @@
     <div class="row">
       <div class="col-xs-6">
         <div class="btn-group" role="group" aria-label="Default button group">
-          <button type="button" class="btn btn-back" (click)="back()">
+          <button type="button" class="btn btn-back" (click)="back(next)">
             <i class="retour"></i>
           </button>
           <button type="button" class="btn btn-reset" [routerLink]="'/'">
