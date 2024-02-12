@@ -7,7 +7,7 @@ import { Solutions } from 'src/business/model/solution.model';
 @Injectable({
   providedIn: 'root',
 })
-export class SolutionService {
+export class SolutionCrmService {
   constructor(private _httpClient: HttpClient) {}
 
   public sendSolution(solution: Solutions) {
@@ -18,6 +18,6 @@ export class SolutionService {
       'Access-Control-Allow-Methods': 'POST',
     };
     const body = JSON.stringify(solution);
-    return this._httpClient.post(`${environment.apiUrl}/v1/solutions/`, body, { headers: headers });
+    return this._httpClient.post(`${environment.apiUrl}/v1/solutionsCrm/`, body, { headers: headers });
   }
 }

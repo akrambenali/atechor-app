@@ -1,18 +1,9 @@
 export interface Solutions {
-  userRate: number;
-  expertRate: number;
-  solutionPopularty: number;
-  uiux: number;
-  featuresCoverage: number;
-  security: number;
-  performance: number;
-  connectivity: number;
   internationnalBusiness: InternationnalBusiness;
   clientBusiness: ClientBusiness;
   hosting: any;
   dev: Dev;
   valueForMoney: number;
-  software: Software;
   compatibility: Compatibility;
   connexion: boolean;
   cabinetConseil: boolean;
@@ -35,21 +26,6 @@ export interface Dev {
   none: boolean;
 }
 
-export interface Software {
-  companyOldness: number;
-  revenuePerClient: number;
-  innovations: number;
-  TerritoryMesh: number;
-  userRate: number;
-  siteWebQuality: number;
-  partnershipEchoSystem: number;
-  numberOfEmployes: number;
-  SAV: number;
-  RSE: number;
-  eventOrganisation: number;
-  ResourcesMadeAvailable: number;
-}
-
 export interface Compatibility {
   secteur: SecteurItem;
   fonctions: FonctionItem[];
@@ -59,17 +35,17 @@ export interface Compatibility {
   implemntation: Implemntation;
   position: number;
   reason: any;
-  coefficients: Coefficients
+  coefficients: Coefficients;
 }
 
 export interface SecteurItem {
   title: string;
   value: boolean;
-  codeSecteur: string
+  codeSecteur: string;
 }
 
 export interface FonctionItem {
-  code: string
+  code: string;
   title: string;
   value: boolean;
 }
@@ -109,21 +85,10 @@ export interface Implemntation {
   any: boolean;
 }
 
-/* export interface Reason {
-  sao: boolean;
-  mf: boolean;
-  pi: boolean;
-  in: boolean;
-  vt: boolean;
-  other: boolean;
-} */
-
 export interface Coefficients {
-  software:  number;
-  price:  number;
+  software: number;
+  price: number;
   vendor: number;
   Compatibility: number;
   position: number;
-
-
 }

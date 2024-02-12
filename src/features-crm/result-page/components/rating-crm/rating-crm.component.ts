@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Rating } from 'src/business/model/rating.model';
-import { ClientService } from 'src/features/services/client.services';
+import { ClientCrmService } from 'src/features-crm/services/client-crm.services';
 import { ResponsiveService } from 'src/features/services/responsive/responsive.service';
 
 @Component({
@@ -20,7 +20,7 @@ export class RatingCrmComponent implements OnInit {
   send = false;
 
   constructor(
-    private clientService: ClientService,
+    private clientService: ClientCrmService,
     public responsive: ResponsiveService,
     public config: NgbRatingConfig,
   ) {}
@@ -28,6 +28,7 @@ export class RatingCrmComponent implements OnInit {
   ratingForm = new FormGroup({
     rate: new FormControl<number | null>(null, Validators.required),
     comment: new FormControl<string | null>(null, Validators.required),
+    type: new FormControl<string>('CRM', Validators.required),
   });
 
   ngOnInit(): void {}

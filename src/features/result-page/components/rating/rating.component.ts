@@ -17,17 +17,18 @@ export class RatingComponent implements OnInit {
   contactforms = true;
   submitted = false;
   currentRate!: number;
-  send = false
+  send = false;
 
   constructor(
     private clientService: ClientService,
     public responsive: ResponsiveService,
-    public config: NgbRatingConfig
+    public config: NgbRatingConfig,
   ) {}
 
   ratingForm = new FormGroup({
     rate: new FormControl<number | null>(null, Validators.required),
     comment: new FormControl<string | null>(null, Validators.required),
+    type: new FormControl('ERP'),
   });
 
   ngOnInit(): void {}
@@ -38,9 +39,9 @@ export class RatingComponent implements OnInit {
       return;
     }
     this.ratingData = this.ratingForm.value as Rating;
-     this.clientService.addRating(this.ratingData).subscribe((res: any) => {
+    this.clientService.addRating(this.ratingData).subscribe((res: any) => {
       this.RespMessage = res;
-      this.send =  true
-    }); 
+      this.send = true;
+    });
   }
 }

@@ -27,8 +27,8 @@ export class ClientDataPageLightComponent implements OnInit {
   ) {}
   contactFormLight = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]),
-
     contactOk: new FormControl(),
+    type: new FormControl('ERP'),
   });
 
   ngOnInit(): void {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
-import { ClientService } from '../services/client.services';
+import { ClientCrmService } from '../services/client-crm.services';
 import { Client } from 'src/business/model/client.model';
 import { Solutions } from 'src/business/model/solution.model';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -20,15 +20,15 @@ export class ClientDataPageLightCrmComponent implements OnInit {
   submitted = false;
 
   constructor(
-    private clientService: ClientService,
+    private clientService: ClientCrmService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
     public responsive: ResponsiveService,
   ) {}
   contactFormLight = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]),
-
     contactOk: new FormControl(),
+    type: new FormControl('CRM'),
   });
 
   ngOnInit(): void {

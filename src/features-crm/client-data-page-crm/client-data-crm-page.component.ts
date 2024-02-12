@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
-import { ClientService } from '../services/client.services';
+import { ClientCrmService } from '../services/client-crm.services';
 import { Client } from 'src/business/model/client.model';
 import { Solutions } from 'src/business/model/solution.model';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -20,7 +20,7 @@ export class ClientDataPageCrmComponent implements OnInit {
   submitted = false;
 
   constructor(
-    private clientService: ClientService,
+    private clientService: ClientCrmService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
     public responsive: ResponsiveService,
@@ -34,6 +34,7 @@ export class ClientDataPageCrmComponent implements OnInit {
     phoneNumber: new FormControl(),
     acceptTerms: new FormControl(false, Validators.requiredTrue),
     contactOk: new FormControl(true),
+    type: new FormControl('CRM'),
   });
 
   ngOnInit(): void {

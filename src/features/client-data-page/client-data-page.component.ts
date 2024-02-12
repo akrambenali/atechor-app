@@ -34,6 +34,7 @@ export class ClientDataPageComponent implements OnInit {
     phoneNumber: new FormControl(),
     acceptTerms: new FormControl(false, Validators.requiredTrue),
     contactOk: new FormControl(true),
+    type: new FormControl('ERP'),
   });
 
   ngOnInit(): void {

@@ -11,7 +11,7 @@ import { Rating } from 'src/business/model/rating.model';
 @Injectable({
   providedIn: 'root',
 })
-export class ClientService {
+export class ClientCrmService {
   constructor(private _httpClient: HttpClient) {}
 
   public addClient(client: Client) {
@@ -48,7 +48,7 @@ export class ClientService {
       'Access-Control-Allow-Methods': 'POST',
     };
     const body = solution;
-    return this._httpClient.post(`${environment.apiUrl}/v1/search/`, body, {
+    return this._httpClient.post(`${environment.apiUrl}/v1/searchCrm/`, body, {
       headers: headers,
     });
   }

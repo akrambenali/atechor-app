@@ -4,7 +4,7 @@ import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
 import { CoefficientsViewModel } from 'src/business/model/views.model/coefficients-view.model';
-import { ClientService } from '../services/client.services';
+import { ClientCrmService } from '../services/client-crm.services';
 import { ReasonEnum } from 'src/business/model/views.model/reasonEnum';
 import { implemntationEnum } from 'src/business/model/views.model/implemntationEnum';
 import { HostingEnum } from 'src/business/model/views.model/hostinhEnum';
@@ -41,7 +41,7 @@ export class ResultPageCrmComponent implements OnInit {
   @ViewChild('content') htmlData!: ElementRef;
 
   constructor(
-    private clientService: ClientService,
+    private clientService: ClientCrmService,
     private route: ActivatedRoute,
   ) {}
 
