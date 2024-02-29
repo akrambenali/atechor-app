@@ -5,18 +5,20 @@
     </div>
 
     <h3 class="pos-title text-center">
-      {{ "SCORES.TITLE" | translate : { length: result?.scores?.length } }}
+      {{ 'SCORES.TITLE' | translate: { length: result?.scores?.length } }}
     </h3>
   </div>
   <div class="container py-3">
     <main>
       <ng-container *ngIf="result && result.scores.length > 0">
         <div class="row mb-3 text-center">
-          <div
-            class="col-md-4 col-lg-4 col-sm-12 card-pos"
-            *ngFor="let item of scores"
-          >
-            <app-card-item [score]="item"></app-card-item>
+          <div class="col-md-4 col-lg-4 col-sm-12 card-pos" *ngFor="let item of scores">
+            <app-card-item
+              [score]="item"
+              [isAdvisor]="isAdvisor"
+              [advisorSolutionName]="advisorSolutionName"
+              [advisorItem]="advisor"
+            ></app-card-item>
           </div>
         </div>
       </ng-container>
@@ -29,72 +31,64 @@
       <div class="clearfix">
         <ng-container *ngIf="coefficientsViewModel">
           <div class="col-md-3 float-md-end mb-3 ms-md-3">
-            <app-coefficients
-              [coefficients]="coefficientsViewModel"
-            ></app-coefficients>
+            <app-coefficients [coefficients]="coefficientsViewModel"></app-coefficients>
           </div>
         </ng-container>
 
-        <h3 class="pos-resume">{{ "SCORES.ITEM_7" | translate }}</h3>
+        <h3 class="pos-resume">{{ 'SCORES.ITEM_7' | translate }}</h3>
         <ul class="list-unstyled resume-style">
           <li>
-            <b class="dark">{{ "SCORES.ITEM_8" | translate }}</b>
+            <b class="dark">{{ 'SCORES.ITEM_8' | translate }}</b>
             <ng-container *ngIf="secteur.length > 0">
               <span> {{ secteurStr }}</span>
             </ng-container>
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_9" | translate }} </b>
+            <b class="dark">{{ 'SCORES.ITEM_9' | translate }} </b>
             <ng-container *ngIf="clientType"> {{ clientType }}</ng-container>
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_10" | translate }}</b>
+            <b class="dark">{{ 'SCORES.ITEM_10' | translate }}</b>
             <ng-container *ngIf="cA"> {{ cA }}</ng-container>
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_11" | translate }}</b>
-            <ng-container *ngIf="employNumber">
-              {{ employNumber }}</ng-container
-            >
+            <b class="dark">{{ 'SCORES.ITEM_11' | translate }}</b>
+            <ng-container *ngIf="employNumber"> {{ employNumber }}</ng-container>
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_12" | translate }}</b>
-            <ng-container *ngIf="internationnalBusiness">
-              {{ internationnalBusiness }}</ng-container
-            >
+            <b class="dark">{{ 'SCORES.ITEM_12' | translate }}</b>
+            <ng-container *ngIf="internationnalBusiness"> {{ internationnalBusiness }}</ng-container>
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_13" | translate }}</b>
+            <b class="dark">{{ 'SCORES.ITEM_13' | translate }}</b>
             <ng-container *ngIf="fonctionsStr">
               <span> {{ fonctionsStr }}</span>
             </ng-container>
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_14" | translate }}</b>
+            <b class="dark">{{ 'SCORES.ITEM_14' | translate }}</b>
             <ng-container *ngIf="usersNumber"> {{ usersNumber }}</ng-container>
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_15" | translate }}</b>
+            <b class="dark">{{ 'SCORES.ITEM_15' | translate }}</b>
             <ng-container *ngIf="hostingTypeStr">
               <span> {{ hostingTypeStr }}</span>
             </ng-container>
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_16" | translate }}</b>
+            <b class="dark">{{ 'SCORES.ITEM_16' | translate }}</b>
             <ng-container *ngIf="dev"> {{ dev }}</ng-container>
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_17" | translate }}</b>
+            <b class="dark">{{ 'SCORES.ITEM_17' | translate }}</b>
             <ng-container *ngIf="connexion"> {{ connexion }}</ng-container>
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_18" | translate }}</b>
-            <ng-container *ngIf="implemntation">
-              {{ implemntation }}</ng-container
-            >
+            <b class="dark">{{ 'SCORES.ITEM_18' | translate }}</b>
+            <ng-container *ngIf="implemntation"> {{ implemntation }}</ng-container>
           </li>
           <li>
-            <b class="dark">{{ "SCORES.ITEM_19" | translate }}</b>
+            <b class="dark">{{ 'SCORES.ITEM_19' | translate }}</b>
             <ng-container *ngIf="reasonType.length > 0">
               <span> {{ reasonTypeStr }}</span>
             </ng-container>

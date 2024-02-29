@@ -1,6 +1,25 @@
-<div class="card mb-4 rounded-3 shadow-sm color-grey no-border">
+<div
+  class="card mb-4 rounded-3 shadow-sm color-grey no-border"
+  [class.border-advisor]="isAdvisor && score.title === advisorSolutionName"
+>
+  <ng-container *ngIf="isAdvisor && score.title === advisorSolutionName">
+    <div class="card-advisor text-center">
+      <p>
+        <strong>Expert</strong> <br />
+        <strong>recommandé</strong>
+      </p>
+      <img src="assets/advisor/ey.png" alt="" /></div
+  ></ng-container>
   <div class="card-body p-0">
-    <img [src]="score.urlImage" alt="" class="img-card" />
+    <img
+      [src]="score.urlImage"
+      alt=""
+      class="img-card"
+      [ngClass]="isAdvisor && score.title === advisorSolutionName ? 'pt-img-advisor' : 'pt-img'"
+    />
+    <ng-container *ngIf="isAdvisor && score.title === advisorSolutionName">
+      <img src="assets/advisor/star.png" class="img-star"
+    /></ng-container>
     <h5 class="card-title pricing-card-title pos-pb m-0">
       {{ score.title }}
     </h5>
@@ -10,50 +29,44 @@
       </div>
     </div>
     <ul class="list-group mt-3 mb-4">
-      <li
-        class="list-group-item d-flex align-items-center no-border pos-score-item"
-      >
+      <li class="list-group-item d-flex align-items-center no-border pos-score-item">
         <span class="badge badge-score badge-grey item pos">{{ software }}</span
-        ><span class="item"> {{ "COEFFICIENTS.ITEM_1" | translate }}</span>
+        ><span class="item"> {{ 'COEFFICIENTS.ITEM_1' | translate }}</span>
       </li>
-      <li
-        class="list-group-item d-flex align-items-center no-border pos-score-item"
-      >
+      <li class="list-group-item d-flex align-items-center no-border pos-score-item">
         <span class="badge badge-score badge-grey item pos">{{ price }}</span>
-        <span class="item"> {{ "COEFFICIENTS.ITEM_2" | translate }}</span>
+        <span class="item"> {{ 'COEFFICIENTS.ITEM_2' | translate }}</span>
       </li>
-      <li
-        class="list-group-item d-flex align-items-center no-border pos-score-item"
-      >
-        <span class="badge badge-score badge-grey item pos">{{
-          provider
-        }}</span>
-        <span class="item"> {{ "COEFFICIENTS.ITEM_3" | translate }}</span>
+      <li class="list-group-item d-flex align-items-center no-border pos-score-item">
+        <span class="badge badge-score badge-grey item pos">{{ provider }}</span>
+        <span class="item"> {{ 'COEFFICIENTS.ITEM_3' | translate }}</span>
       </li>
-      <li
-        class="list-group-item d-flex align-items-center no-border pos-score-item"
-      >
+      <li class="list-group-item d-flex align-items-center no-border pos-score-item">
         <div class="badge badge-score badge-grey item pos">
           {{ compatibility }}
         </div>
-        <span class="item"> {{ "COEFFICIENTS.ITEM_4" | translate }}</span>
+        <span class="item"> {{ 'COEFFICIENTS.ITEM_4' | translate }}</span>
       </li>
-      <li
-        class="list-group-item d-flex align-items-center no-border pos-score-item"
-      >
+      <li class="list-group-item d-flex align-items-center no-border pos-score-item">
         <div class="badge badge-score badge-grey item pos">
           {{ positionning }}
         </div>
-        <span class="item"> {{ "COEFFICIENTS.ITEM_5" | translate }}</span>
+        <span class="item"> {{ 'COEFFICIENTS.ITEM_5' | translate }}</span>
       </li>
     </ul>
     <div class="d-grid gap-2 col-10 mx-auto pb-40">
-      <a
-        class="btn btn-card"
-        type="button"
-        [href]="score.urlCompany"
-        target="_blank"
-        >site web</a
+      <ng-container
+        [ngTemplateOutlet]="isAdvisor && score.title === advisorSolutionName ? advisor : any"
+      ></ng-container>
+      <ng-template #advisor>
+        <a class="btn btn-card-advisor" type="button" [href]="advisorItem.result.link" target="_blank">{{
+          'RESULTS.ITEM_23' | translate
+        }}</a>
+      </ng-template>
+      <ng-template #any>
+        <a class="btn btn-card" type="button" [href]="score.urlCompany" target="_blank">{{
+          'RESULTS.ITEM_22' | translate
+        }}</a></ng-template
       >
     </div>
   </div>

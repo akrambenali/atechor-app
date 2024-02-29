@@ -8,6 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CardItemComponent implements OnInit {
   @Input()
   score: any;
+  @Input()
+  isAdvisor: boolean | undefined;
+  @Input()
+  advisorSolutionName: string | undefined;
+  @Input()
+  advisorItem: any | undefined;
+
   solutionScore!: string;
   software!: string;
   price!: string;

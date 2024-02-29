@@ -77,4 +77,16 @@ export class ClientService {
       headers: headers,
     });
   }
+
+  public getAdvisor(solutionName: string): Observable<any> {
+    const headers = {
+      'content-type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'X-Requested-With,content-type',
+      'Access-Control-Allow-Methods': 'GET',
+    };
+    return this._httpClient.get(`${environment.apiUrl}/v1/advisor/` + solutionName, {
+      headers: headers,
+    });
+  }
 }

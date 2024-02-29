@@ -1,66 +1,83 @@
 .color-grey {
- background-color: var(--card);
+  background-color: var(--card);
 }
 
 .color-blue {
-    color: var(--secondaryColor);
+  color: var(--secondaryColor);
 }
 
 .badge-score {
-    background-color: #E8ECFF;
-    color:#000000;
-
+  background-color: #e8ecff;
+  color: #000000;
 }
 
 .btn-card {
-    background-color: var(--secondaryColor);
-    color: white;
-    border-radius: 15px;
-    font-family: Roboto;
-    font-size: 1.25rem ;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #042c5d;
+  color: white;
+  border-radius: 15px;
+  font-family: Roboto;
+  font-size: 1.25rem;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-card-advisor {
+  background-color: #066fef;
+  color: white;
+  border-radius: 15px;
+  font-family: Roboto;
+  font-size: 1.25rem;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .badge-card {
-    background-color: #B7EDAC;
-    color: #003329;
+  background-color: #b7edac;
+  color: #003329;
 }
 
 .img-card {
-    width: 125px;
-    padding-top: 49px;
-    padding-bottom: 25px;
+  width: 125px;
+  padding-bottom: 25px;
+}
+
+.pt-img {
+  padding-top: 49px;
+}
+
+.pt-img-advisor {
+  padding-top: 35px;
 }
 
 .no-border {
-    border: none;
+  border: none;
 }
 
 .list-group-item {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .card-title {
-    font-family: Roboto;
-    font-size: 1.688rem;
+  font-family: Roboto;
+  font-size: 1.688rem;
 }
 
 .card-score {
-    font-family: Roboto;
-    font-size: 18px;
+  font-family: Roboto;
+  font-size: 18px;
 }
 
 .item {
-    font-family: Roboto;
-    font-size: 18px;
-
+  font-family: Roboto;
+  font-size: 18px;
 }
 
 .pos {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .pos-pb {
@@ -76,25 +93,46 @@
   padding-bottom: 25px;
 }
 
-.card{
-    border-radius: 20px !important;
+.card {
+  border-radius: 20px !important;
 }
 
 .badge-score {
-    width: 105px;
-    height: 45px;
-    font-family: Roboto;
-    font-size: 25px ;
+  width: 105px;
+  height: 45px;
+  font-family: Roboto;
+  font-size: 25px;
 }
 
 .badge-grey {
-    width: 4.375rem;
-    height: 1.875rem;
-    font-family: Roboto;
-    font-size:1.125rem ;
+  width: 4.375rem;
+  height: 1.875rem;
+  font-family: Roboto;
+  font-size: 1.125rem;
 }
 
 .pb-40 {
-    padding-bottom: 40px;
+  padding-bottom: 40px;
 }
 
+.img-star {
+  width: 22px;
+  position: absolute;
+  right: 35px;
+  top: 35px;
+}
+
+.border-advisor {
+  border: 3px solid #066fef;
+}
+
+.card-advisor {
+  width: 164px;
+  height: 130px;
+  background-color: #ffffff;
+  border-radius: 19px;
+  position: absolute;
+  top: -90px;
+  left: -30px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}

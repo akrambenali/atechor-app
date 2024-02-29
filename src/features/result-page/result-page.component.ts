@@ -37,12 +37,15 @@ export class ResultPageComponent implements OnInit {
   secteurStr!: string;
   hostingTypeStr!: string;
   scores!: any;
+  advisor!: any;
+  isAdvisor = false;
+  advisorSolutionName: any;
 
   @ViewChild('content') htmlData!: ElementRef;
 
   constructor(
     private clientService: ClientService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) {}
 
   ngOnInit(): void {
@@ -56,6 +59,47 @@ export class ResultPageComponent implements OnInit {
       this.scores = this.result.scores.slice(0, 6);
       this.extractHistory(this.result.history);
     });
+    this.clientService.getAdvisor('Cegid XRP Flex').subscribe((res) => {
+      this.advisor = res;
+      this.checkAdvisor(this.advisor, this.result);
+      this.scores.forEach((item: any, i: any) => {
+        if (item.title === this.advisorSolutionName) {
+          this.scores.splice(i, 1);
+          this.scores.unshift(item);
+        }
+      });
+    });
+  }
+
+  checkAdvisor(advisor: any, result: any) {
+    const reasons = result.history[0].compatibility.reason;
+    const ca = result.history[0].compatibility.size;
+    let isScore = false;
+    let isNotVI = false;
+    if (result.iScontact === false && advisor.result.rules[0].contact === false) {
+      for (let i = 0; i < result.scores.length; i++) {
+        const element = result.scores[i];
+        if (element.title === advisor.result.solutionName) {
+          isScore = true;
+          this.advisorSolutionName = element.title;
+        }
+      }
+      for (let i = 0; i < reasons.length; i++) {
+        const element = reasons[i];
+        if (element.value !== advisor.result.rules[0].reasonType) {
+          isNotVI = true;
+        }
+      }
+
+      if (isScore && isNotVI) {
+        for (let i = 0; i < advisor.result.rules[0].ca.length; i++) {
+          const element = advisor.result.rules[0].ca[i];
+          if (ca[element] === true) {
+            this.isAdvisor = true;
+          }
+        }
+      }
+    }
   }
 
   public openPDF(): void {
@@ -73,29 +117,11 @@ export class ResultPageComponent implements OnInit {
         let position = 0;
         heightLeft -= pageHeight;
         const doc = new jsPDF('p', 'mm');
-        doc.addImage(
-          canvas,
-          'PNG',
-          0,
-          position,
-          imgWidth,
-          imgHeight + 70,
-          '',
-          'FAST'
-        );
+        doc.addImage(canvas, 'PNG', 0, position, imgWidth, imgHeight + 70, '', 'FAST');
         while (heightLeft >= 0) {
           position = heightLeft - imgHeight;
           doc.addPage();
-          doc.addImage(
-            canvas,
-            'PNG',
-            0,
-            position,
-            imgWidth,
-            imgHeight + 100,
-            '',
-            'FAST'
-          );
+          doc.addImage(canvas, 'PNG', 0, position, imgWidth, imgHeight + 100, '', 'FAST');
           heightLeft -= pageHeight;
         }
         doc.save('Atechor.pdf');
@@ -192,11 +218,7 @@ export class ResultPageComponent implements OnInit {
       }
 
       if (history[0].compatibility.reason) {
-        for (
-          let index = 0;
-          index < history[0].compatibility.reason.length;
-          index++
-        ) {
+        for (let index = 0; index < history[0].compatibility.reason.length; index++) {
           const element = history[0].compatibility.reason[index];
           if (element.sao) {
             this.reasonType.push(ReasonEnum.sao);
@@ -278,11 +300,7 @@ export class ResultPageComponent implements OnInit {
         }
       }
       if (history[0].compatibility.fonctions[0]) {
-        for (
-          let index = 0;
-          index < history[0].compatibility.fonctions.length;
-          index++
-        ) {
+        for (let index = 0; index < history[0].compatibility.fonctions.length; index++) {
           if (history[0].compatibility.fonctions[index].value === true) {
             const element = history[0].compatibility.fonctions[index].title;
             this.fonctions.push(element);
